@@ -1,0 +1,9 @@
+# AccountGetCustomerTokenPaymentMethodRequest
+
+
+## Fields
+
+| Field                                                                                            | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `accountId`                                                                                      | *string*                                                                                         | :heavy_check_mark:                                                                               | The Account identifier. Represents the Merchant that this operation is going to be executed for. |
+| `customerToken`                                                                                  | *string*                                                                                         | :heavy_check_mark:                                                                               | N/A                                                                                              |

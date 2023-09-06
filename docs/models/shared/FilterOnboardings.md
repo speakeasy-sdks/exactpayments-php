@@ -1,0 +1,11 @@
+# FilterOnboardings
+
+**OK**
+
+
+## Fields
+
+| Field                                                                                                              | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `account`                                                                                                          | array<*string*>                                                                                                    | :heavy_minus_sign:                                                                                                 | List of Organization identifiers that you have access to and which can be used to filter Onboardings Applications. |
+| `status`                                                                                                           | array<[AccountStatus](../../models/shared/AccountStatus.md)>                                                       | :heavy_minus_sign:                                                                                                 | The list of Onboarding statuses an Organization can use to filter the Onboarding Applications.                     |

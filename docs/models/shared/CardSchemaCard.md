@@ -1,0 +1,12 @@
+# CardSchemaCard
+
+
+## Fields
+
+| Field                                                                            | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `cvc`                                                                            | *?string*                                                                        | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `cvcIndicator`                                                                   | [?CardSchemaCardCvcIndicator](../../models/shared/CardSchemaCardCvcIndicator.md) | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `expiry`                                                                         | [CardSchemaCardExpiry](../../models/shared/CardSchemaCardExpiry.md)              | :heavy_check_mark:                                                               | N/A                                                                              |
+| `number`                                                                         | *string*                                                                         | :heavy_check_mark:                                                               | N/A                                                                              |
+| `tokenType`                                                                      | *?string*                                                                        | :heavy_minus_sign:                                                               | N/A                                                                              |

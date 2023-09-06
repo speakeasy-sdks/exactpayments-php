@@ -1,0 +1,10 @@
+# PostCreateNotesRequest
+
+
+## Fields
+
+| Field                                                                                          | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `requestBody`                                                                                  | [?PostCreateNotesRequestBodyInput](../../models/operations/PostCreateNotesRequestBodyInput.md) | :heavy_minus_sign:                                                                             | N/A                                                                                            |
+| `onboardingId`                                                                                 | *string*                                                                                       | :heavy_check_mark:                                                                             | The Onboarding Application identifier.                                                         |
+| `organizationId`                                                                               | *string*                                                                                       | :heavy_check_mark:                                                                             | The Organization identifier.                                                                   |

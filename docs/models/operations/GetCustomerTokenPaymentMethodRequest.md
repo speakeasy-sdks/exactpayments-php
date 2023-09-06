@@ -1,0 +1,10 @@
+# GetCustomerTokenPaymentMethodRequest
+
+
+## Fields
+
+| Field                                                                                  | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `dollarLimit`                                                                          | *?string*                                                                              | :heavy_minus_sign:                                                                     | Sets the number of documents to return, and defaults to 100. It has a maximum of 1000. |
+| `dollarSkip`                                                                           | *?string*                                                                              | :heavy_minus_sign:                                                                     | Sets the number of documents to skip.                                                  |
+| `customerToken`                                                                        | *string*                                                                               | :heavy_check_mark:                                                                     | N/A                                                                                    |

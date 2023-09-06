@@ -1,0 +1,9 @@
+# BusinessClassification
+
+
+## Fields
+
+| Field                                                                                     | Type                                                                                      | Required                                                                                  | Description                                                                               | Example                                                                                   |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `id`                                                                                      | *?string*                                                                                 | :heavy_minus_sign:                                                                        | Dwolla's Business classification Identifier mapped to Organization or Account's MCC code. | 9ed4449a-7d6f-11e3-a380-5404a6144203                                                      |
+| `name`                                                                                    | *?string*                                                                                 | :heavy_minus_sign:                                                                        | Business classification name mapped to Organization or Account's MCC code.                | Miscellaneous store retailer                                                              |

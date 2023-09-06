@@ -1,0 +1,9 @@
+# AccountDisableWebhookRequest
+
+
+## Fields
+
+| Field                                                                                            | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `accountId`                                                                                      | *string*                                                                                         | :heavy_check_mark:                                                                               | The Account identifier. Represents the Merchant that this operation is going to be executed for. |
+| `webhookId`                                                                                      | *string*                                                                                         | :heavy_check_mark:                                                                               | The customers webhook definition Id                                                              |

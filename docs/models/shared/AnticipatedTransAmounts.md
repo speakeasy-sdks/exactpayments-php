@@ -1,0 +1,10 @@
+# AnticipatedTransAmounts
+
+
+## Fields
+
+| Field                                                                   | Type                                                                    | Required                                                                | Description                                                             | Example                                                                 |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `anticipatedMonthlyVolume`                                              | *float*                                                                 | :heavy_check_mark:                                                      | Anticipated total $ amount per month. It must be a non-negative number. | 500000                                                                  |
+| `averageTicketSize`                                                     | *float*                                                                 | :heavy_check_mark:                                                      | Average $ amount per transaction. It must be a non-negative number.     | 100                                                                     |
+| `maxTicketSize`                                                         | *float*                                                                 | :heavy_check_mark:                                                      | Maximum $ amount per transaction. It must be a non-negative number.     | 250                                                                     |
