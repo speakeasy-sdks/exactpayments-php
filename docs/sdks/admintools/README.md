@@ -1,4 +1,4 @@
-# adminTools
+# AdminTools
 
 ### Available Operations
 
@@ -32,8 +32,8 @@ try {
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = 'createdAt:asc';
-    $request->onboardingId = 'magnam';
-    $request->organizationId = 'debitis';
+    $request->onboardingId = 'deserunt';
+    $request->organizationId = 'suscipit';
 
     $requestSecurity = new GetListNotesSecurity();
     $requestSecurity->apiKey = '';
@@ -86,8 +86,8 @@ try {
     $request->requestBody = new PostCreateNotesRequestBodyInput();
     $request->requestBody->note = 'Some more documents are needed to verify the account's eligibility. Jen Will contact the merchant to collect further details by 2nd Aug.';
     $request->requestBody->onboardingIsDeleted = false;
-    $request->onboardingId = 'ipsa';
-    $request->organizationId = 'delectus';
+    $request->onboardingId = 'iure';
+    $request->organizationId = 'magnam';
 
     $requestSecurity = new PostCreateNotesSecurity();
     $requestSecurity->apiKey = '';
@@ -136,8 +136,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new PutOrganizationOrganizationIdOnboardingOnboardingIdRecheckRequest();
-    $request->onboardingId = 'tempora';
-    $request->organizationId = 'suscipit';
+    $request->onboardingId = 'debitis';
+    $request->organizationId = 'ipsa';
 
     $requestSecurity = new PutOrganizationOrganizationIdOnboardingOnboardingIdRecheckSecurity();
     $requestSecurity->apiKey = '';
@@ -188,9 +188,9 @@ $sdk = ExactPayments::builder()
 try {
     $request = new PutOrganizationOrganizationIdOnboardingOnboardingIdRetryRuleRequest();
     $request->onboardingRetryRuleRequest = new OnboardingRetryRuleRequest();
-    $request->onboardingRetryRuleRequest->ruleName = 'molestiae';
-    $request->onboardingId = 'minus';
-    $request->organizationId = 'placeat';
+    $request->onboardingRetryRuleRequest->ruleName = 'delectus';
+    $request->onboardingId = 'tempora';
+    $request->organizationId = 'suscipit';
 
     $requestSecurity = new PutOrganizationOrganizationIdOnboardingOnboardingIdRetryRuleSecurity();
     $requestSecurity->apiKey = '';
@@ -243,12 +243,12 @@ $sdk = ExactPayments::builder()
 try {
     $request = new PutOrganizationOrganizationIdOnboardingOnboardingIdStatusRequest();
     $request->updateOnboardingStatusRequest = new UpdateOnboardingStatusRequest();
-    $request->updateOnboardingStatusRequest->isDeleted = 'voluptatum';
-    $request->updateOnboardingStatusRequest->status = UpdateOnboardingStatusRequestStatus::Declined;
-    $request->updateOnboardingStatusRequest->statusChangeReason = UpdateOnboardingStatusRequestStatusChangeReason::GeneralRiskConcern;
-    $request->updateOnboardingStatusRequest->statusChangeReasonNote = 'nisi';
-    $request->onboardingId = 'recusandae';
-    $request->organizationId = 'temporibus';
+    $request->updateOnboardingStatusRequest->isDeleted = 'molestiae';
+    $request->updateOnboardingStatusRequest->status = UpdateOnboardingStatusRequestStatus::InRiskReview;
+    $request->updateOnboardingStatusRequest->statusChangeReason = UpdateOnboardingStatusRequestStatusChangeReason::ProhibitedMerchant;
+    $request->updateOnboardingStatusRequest->statusChangeReasonNote = 'voluptatum';
+    $request->onboardingId = 'iusto';
+    $request->organizationId = 'excepturi';
 
     $requestSecurity = new PutOrganizationOrganizationIdOnboardingOnboardingIdStatusSecurity();
     $requestSecurity->apiKey = '';

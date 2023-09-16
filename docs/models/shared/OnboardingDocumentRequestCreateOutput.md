@@ -1,7 +1,5 @@
 # OnboardingDocumentRequestCreateOutput
 
-**Created**
-
 
 ## Fields
 

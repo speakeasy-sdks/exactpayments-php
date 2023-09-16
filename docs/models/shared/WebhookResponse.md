@@ -1,7 +1,5 @@
 # WebhookResponse
 
-The response object that indicates the ID of the webhook created in the system.
-
 
 ## Fields
 

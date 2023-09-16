@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace TheLogicStudio\ExactPayments\Models\Shared;
 
 
-/**
- * AccountRequest - Fields that are required in the request body.
- * 
- * @package TheLogicStudio\ExactPayments\Models\Shared
- * @access public
- */
 class AccountRequest
 {
 	#[\JMS\Serializer\Annotation\SerializedName('address')]

@@ -1,9 +1,5 @@
 # NotFoundError
 
-**Not Found**\
-The requested resource can not be found.
-
-
 
 ## Fields
 

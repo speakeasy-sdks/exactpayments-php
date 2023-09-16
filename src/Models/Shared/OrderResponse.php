@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace TheLogicStudio\ExactPayments\Models\Shared;
 
 
-/**
- * OrderResponse - Order created.
- * 
- * @package TheLogicStudio\ExactPayments\Models\Shared
- * @access public
- */
 class OrderResponse
 {
 	#[\JMS\Serializer\Annotation\SerializedName('accessToken')]

@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace TheLogicStudio\ExactPayments\Models\Shared;
 
 
-/**
- * WebhookRequest - Fields that compose a webhook definition inside Exact Payments ecosystem.
- * 
- * @package TheLogicStudio\ExactPayments\Models\Shared
- * @access public
- */
 class WebhookRequest
 {
     /**

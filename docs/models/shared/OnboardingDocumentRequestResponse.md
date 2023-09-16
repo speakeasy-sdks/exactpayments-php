@@ -1,7 +1,5 @@
 # OnboardingDocumentRequestResponse
 
-**OK**
-
 
 ## Fields
 

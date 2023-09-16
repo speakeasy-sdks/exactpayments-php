@@ -1,4 +1,4 @@
-# accountManagement
+# AccountManagement
 
 ### Available Operations
 
@@ -35,11 +35,9 @@ try {
     $request = new AccountRegisterApplePayDomainsRequest();
     $request->applePayDomains = new ApplePayDomains();
     $request->applePayDomains->domains = [
-        'provident',
-        'distinctio',
-        'quibusdam',
+        'corrupti',
     ];
-    $request->accountId = 'unde';
+    $request->accountId = 'provident';
 
     $requestSecurity = new AccountRegisterApplePayDomainsSecurity();
     $requestSecurity->apiKey = '';
@@ -88,7 +86,7 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new GetOrganizationOrganizationIdAccountRequest();
-    $request->organizationId = 'nulla';
+    $request->organizationId = 'distinctio';
 
     $requestSecurity = new GetOrganizationOrganizationIdAccountSecurity();
     $requestSecurity->apiKey = '';
@@ -137,8 +135,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new GetOrganizationOrganizationIdAccountSearchRequest();
-    $request->organizationId = 'corrupti';
-    $request->q = 'illum';
+    $request->organizationId = 'quibusdam';
+    $request->q = 'unde';
 
     $requestSecurity = new GetOrganizationOrganizationIdAccountSearchSecurity();
     $requestSecurity->apiKey = '';
@@ -187,8 +185,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new GetOrganizationOrganizationIdAccountAccountIdRequest();
-    $request->accountId = 'vel';
-    $request->organizationId = 'error';
+    $request->accountId = 'nulla';
+    $request->organizationId = 'corrupti';
 
     $requestSecurity = new GetOrganizationOrganizationIdAccountAccountIdSecurity();
     $requestSecurity->apiKey = '';
@@ -237,7 +235,7 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new ListApplePayDomainsRequest();
-    $request->accountId = 'deserunt';
+    $request->accountId = 'illum';
 
     $requestSecurity = new ListApplePayDomainsSecurity();
     $requestSecurity->apiKey = '';
@@ -303,8 +301,8 @@ try {
     $request->accountRequest->onlinePresence = 'Online presence';
     $request->accountRequest->phone = '1111111111';
     $request->accountRequest->twitter = 'twitter';
-    $request->accountId = 'suscipit';
-    $request->organizationId = 'iure';
+    $request->accountId = 'vel';
+    $request->organizationId = 'error';
 
     $requestSecurity = new PutOrganizationOrganizationIdAccountAccountIdSecurity();
     $requestSecurity->apiKey = '';

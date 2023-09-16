@@ -1,7 +1,5 @@
 # ApplicationTokenOutput
 
-**Created**
-
 
 ## Fields
 

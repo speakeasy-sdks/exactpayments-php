@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace TheLogicStudio\ExactPayments\Models\Shared;
 
 
-/**
- * OrderAccessToken - New order access token created.
- * 
- * @package TheLogicStudio\ExactPayments\Models\Shared
- * @access public
- */
 class OrderAccessToken
 {
 	#[\JMS\Serializer\Annotation\SerializedName('accessToken')]

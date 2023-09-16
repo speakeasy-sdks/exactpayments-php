@@ -1,4 +1,4 @@
-# orders
+# Orders
 
 ## Overview
 
@@ -36,8 +36,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new GetAccountAccountIdOrdersOrderIdRequest();
-    $request->accountId = 'in';
-    $request->orderId = 'illum';
+    $request->accountId = 'officia';
+    $request->orderId = 'dolor';
 
     $requestSecurity = new GetAccountAccountIdOrdersOrderIdSecurity();
     $requestSecurity->apiKey = '';
@@ -143,8 +143,8 @@ try {
     $request->requestBody = new PostAccountAccountIdOrdersOrderIdPayRequestBody();
     $request->requestBody->paymentMethod = new PostAccountAccountIdOrdersOrderIdPayRequestBodyPaymentMethod();
     $request->requestBody->paymentMethod->token = 'f0db7065-be66-4501-b49b-5eb56e265cb1';
-    $request->accountId = 'maiores';
-    $request->orderId = 'rerum';
+    $request->accountId = 'debitis';
+    $request->orderId = 'a';
 
     $requestSecurity = new PostAccountAccountIdOrdersOrderIdPaySecurity();
     $requestSecurity->apiKey = '';
@@ -205,7 +205,7 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new PostAccountAccountIdOrdersRequest();
-    $request->accountId = 'dicta';
+    $request->accountId = 'dolorum';
     $request->order = new Order();
     $request->order->amount = 123;
     $request->order->billing = new CustomerDetails();
@@ -230,9 +230,6 @@ try {
     $request->order->level3->freightAmount = 5;
     $request->order->level3->lineItems = [
         new LineItem(),
-        new LineItem(),
-        new LineItem(),
-        new LineItem(),
     ];
     $request->order->level3->shipFromZip = '91710';
     $request->order->level3->shipTo = new ShipTo();
@@ -247,12 +244,12 @@ try {
     $request->order->level3->shipTo->email = 'john@acmecorp.com';
     $request->order->level3->shipTo->name = 'John Doe';
     $request->order->level3->shipTo->phone = '5551234567';
-    $request->order->level3->shipTo->phoneType = ShipToPhoneType::D;
+    $request->order->level3->shipTo->phoneType = ShipToPhoneType::W;
     $request->order->level3->taxAmount = 5;
     $request->order->level3->taxRate = 0.5;
     $request->order->options = new OrderOptions();
     $request->order->options->customerIp = '198.51.100.42';
-    $request->order->options->ecommerceFlag = OrderOptionsEcommerceFlag::Five;
+    $request->order->options->ecommerceFlag = OrderOptionsEcommerceFlag::I;
     $request->order->options->orderTrackingNumber = 'trackid123';
     $request->order->reference = new Reference();
     $request->order->reference->correlationId = 'abc123';
@@ -347,7 +344,7 @@ try {
     $request->billing->email = 'john@acmecorp.com';
     $request->billing->name = 'John Doe';
     $request->billing->phone = '5551234567';
-    $request->billing->phoneType = CustomerDetailsPhoneType::W;
+    $request->billing->phoneType = CustomerDetailsPhoneType::D;
     $request->capture = true;
     $request->description = 'Order description';
     $request->level3 = new Level3();
@@ -357,8 +354,6 @@ try {
     $request->level3->dutyAmount = 5;
     $request->level3->freightAmount = 5;
     $request->level3->lineItems = [
-        new LineItem(),
-        new LineItem(),
         new LineItem(),
     ];
     $request->level3->shipFromZip = '91710';
@@ -374,12 +369,12 @@ try {
     $request->level3->shipTo->email = 'john@acmecorp.com';
     $request->level3->shipTo->name = 'John Doe';
     $request->level3->shipTo->phone = '5551234567';
-    $request->level3->shipTo->phoneType = ShipToPhoneType::D;
+    $request->level3->shipTo->phoneType = ShipToPhoneType::N;
     $request->level3->taxAmount = 5;
     $request->level3->taxRate = 0.5;
     $request->options = new OrderOptions();
     $request->options->customerIp = '198.51.100.42';
-    $request->options->ecommerceFlag = OrderOptionsEcommerceFlag::Three;
+    $request->options->ecommerceFlag = OrderOptionsEcommerceFlag::Two;
     $request->options->orderTrackingNumber = 'trackid123';
     $request->reference = new Reference();
     $request->reference->correlationId = 'abc123';
@@ -451,7 +446,7 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new PostOrdersOrderIdAccessTokenRequest();
-    $request->orderId = 'occaecati';
+    $request->orderId = 'magnam';
 
     $requestSecurity = new PostOrdersOrderIdAccessTokenSecurity();
     $requestSecurity->apiKey = '';
@@ -512,7 +507,7 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new PutAccountAccountIdOrdersOrderIdRequest();
-    $request->accountId = 'enim';
+    $request->accountId = 'cumque';
     $request->order = new Order();
     $request->order->amount = 123;
     $request->order->billing = new CustomerDetails();
@@ -537,9 +532,6 @@ try {
     $request->order->level3->freightAmount = 5;
     $request->order->level3->lineItems = [
         new LineItem(),
-        new LineItem(),
-        new LineItem(),
-        new LineItem(),
     ];
     $request->order->level3->shipFromZip = '91710';
     $request->order->level3->shipTo = new ShipTo();
@@ -554,12 +546,12 @@ try {
     $request->order->level3->shipTo->email = 'john@acmecorp.com';
     $request->order->level3->shipTo->name = 'John Doe';
     $request->order->level3->shipTo->phone = '5551234567';
-    $request->order->level3->shipTo->phoneType = ShipToPhoneType::N;
+    $request->order->level3->shipTo->phoneType = ShipToPhoneType::W;
     $request->order->level3->taxAmount = 5;
     $request->order->level3->taxRate = 0.5;
     $request->order->options = new OrderOptions();
     $request->order->options->customerIp = '198.51.100.42';
-    $request->order->options->ecommerceFlag = OrderOptionsEcommerceFlag::Seven;
+    $request->order->options->ecommerceFlag = OrderOptionsEcommerceFlag::Five;
     $request->order->options->orderTrackingNumber = 'trackid123';
     $request->order->reference = new Reference();
     $request->order->reference->correlationId = 'abc123';
@@ -583,7 +575,7 @@ try {
     $request->order->softDescriptor->taxId = 'abc123';
     $request->order->surchargeAmount = 123;
     $request->order->taxAmount = 123;
-    $request->orderId = 'nam';
+    $request->orderId = 'laborum';
 
     $requestSecurity = new PutAccountAccountIdOrdersOrderIdSecurity();
     $requestSecurity->apiKey = '';
@@ -632,7 +624,7 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new PutOrdersOrderIdResetRequest();
-    $request->orderId = 'id';
+    $request->orderId = 'accusamus';
 
     $requestSecurity = new PutOrdersOrderIdResetSecurity();
     $requestSecurity->apiKey = '';

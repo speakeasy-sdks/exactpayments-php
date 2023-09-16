@@ -1,7 +1,5 @@
 # OnboardingNoteOutput
 
-**Created**
-
 
 ## Fields
 

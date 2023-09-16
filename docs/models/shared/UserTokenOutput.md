@@ -1,8 +1,5 @@
 # UserTokenOutput
 
-**Created**
-
-
 
 ## Fields
 

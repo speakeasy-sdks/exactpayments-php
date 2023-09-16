@@ -1,7 +1,5 @@
 # PaymentAchSchema
 
-Example response
-
 
 ## Fields
 

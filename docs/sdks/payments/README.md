@@ -1,4 +1,4 @@
-# payments
+# Payments
 
 ## Overview
 
@@ -54,7 +54,7 @@ try {
     $request->referencedPayment->authorization = 'ET3516';
     $request->referencedPayment->options = new ReferencedPaymentOptions();
     $request->referencedPayment->options->customerIp = '138.84.54.82';
-    $request->referencedPayment->options->ecommerceFlag = ReferencedPaymentOptionsEcommerceFlag::Seven;
+    $request->referencedPayment->options->ecommerceFlag = ReferencedPaymentOptionsEcommerceFlag::I;
     $request->referencedPayment->options->generateReceipt = true;
     $request->referencedPayment->options->installmentNumber = '12';
     $request->referencedPayment->options->thirdPartyId = 'partyid123';
@@ -77,8 +77,8 @@ try {
     $request->referencedPayment->softDescriptor->street = 'Fairfield Ranch';
     $request->referencedPayment->softDescriptor->submerchantId = 'xyz123';
     $request->referencedPayment->softDescriptor->taxId = 'abc123';
-    $request->accountId = 'facilis';
-    $request->paymentId = 'perspiciatis';
+    $request->accountId = 'amet';
+    $request->paymentId = 'aut';
 
     $requestSecurity = new AccountCapturePaymentSecurity();
     $requestSecurity->apiKey = '';
@@ -129,8 +129,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new AccountGetPaymentRequest();
-    $request->accountId = 'voluptatem';
-    $request->paymentId = 'porro';
+    $request->accountId = 'cumque';
+    $request->paymentId = 'corporis';
 
     $requestSecurity = new AccountGetPaymentSecurity();
     $requestSecurity->apiKey = '';
@@ -184,7 +184,7 @@ try {
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = '-name';
-    $request->accountId = 'consequuntur';
+    $request->accountId = 'hic';
 
     $requestSecurity = new AccountGetPaymentsSecurity();
     $requestSecurity->apiKey = '';
@@ -290,59 +290,16 @@ try {
     $request->newPayment->level3->shipTo->email = 'john@example.com';
     $request->newPayment->level3->shipTo->name = 'John Doe';
     $request->newPayment->level3->shipTo->phone = '8886178190';
-    $request->newPayment->level3->shipTo->phoneType = NewPaymentLevel3ShipToPhoneType::D;
+    $request->newPayment->level3->shipTo->phoneType = NewPaymentLevel3ShipToPhoneType::H;
     $request->newPayment->level3->taxAmount = 10;
     $request->newPayment->level3->taxRate = 5;
     $request->newPayment->options = new NewPaymentOptions();
     $request->newPayment->options->customerIp = '198.168.71.51';
-    $request->newPayment->options->ecommerceFlag = NewPaymentOptionsEcommerceFlag::Eight;
+    $request->newPayment->options->ecommerceFlag = NewPaymentOptionsEcommerceFlag::Four;
     $request->newPayment->options->generateReceipt = true;
     $request->newPayment->options->installmentNumber = '12';
     $request->newPayment->options->thirdPartyId = 'partyid123';
-    $request->newPayment->paymentMethod = new NewPaymentPaymentMethod1();
-    $request->newPayment->paymentMethod->ach = new NewPaymentPaymentMethod1Ach();
-    $request->newPayment->paymentMethod->ach->accountNumber = '11112222333';
-    $request->newPayment->paymentMethod->ach->bankAccountType = 'checking';
-    $request->newPayment->paymentMethod->ach->plaidToken = 'processor-sandbox-45841cd3-3d54-422e-ba7b-9ae14c5c00cc';
-    $request->newPayment->paymentMethod->ach->routingNumber = '12345678';
-    $request->newPayment->paymentMethod->applePay = new NewPaymentPaymentMethod1ApplePay();
-    $request->newPayment->paymentMethod->applePay->cardholder = 'John Doe';
-    $request->newPayment->paymentMethod->applePay->cryptogram = 'kiwewruhflkjsdfblaseabc';
-    $request->newPayment->paymentMethod->applePay->expiryMonth = '12';
-    $request->newPayment->paymentMethod->applePay->expiryYear = '23';
-    $request->newPayment->paymentMethod->applePay->number = '4111111111111111';
-    $request->newPayment->paymentMethod->applePay->transactionId = 'ABVD93934123';
-    $request->newPayment->paymentMethod->creditCard = new NewPaymentPaymentMethod1CreditCard();
-    $request->newPayment->paymentMethod->creditCard->cardholder = 'John Doe';
-    $request->newPayment->paymentMethod->creditCard->cvd = '456';
-    $request->newPayment->paymentMethod->creditCard->cvdIndicator = NewPaymentPaymentMethod1CreditCardCvdIndicator::Zero;
-    $request->newPayment->paymentMethod->creditCard->expiryMonth = '03';
-    $request->newPayment->paymentMethod->creditCard->expiryYear = '2023';
-    $request->newPayment->paymentMethod->creditCard->number = '4111111111111111';
-    $request->newPayment->paymentMethod->debitBillPay = new NewPaymentPaymentMethod1DebitBillPay();
-    $request->newPayment->paymentMethod->debitBillPay->cardholder = 'John Doe';
-    $request->newPayment->paymentMethod->debitBillPay->cvd = '123';
-    $request->newPayment->paymentMethod->debitBillPay->cvdIndicator = '1';
-    $request->newPayment->paymentMethod->debitBillPay->expiryMonth = '02';
-    $request->newPayment->paymentMethod->debitBillPay->expiryYear = '23';
-    $request->newPayment->paymentMethod->debitBillPay->number = '4111111111111111';
-    $request->newPayment->paymentMethod->googlePay = new NewPaymentPaymentMethod1GooglePay();
-    $request->newPayment->paymentMethod->googlePay->cryptogram = 'kiwewruhflkjsdfblaseabc';
-    $request->newPayment->paymentMethod->googlePay->cvd = '1234';
-    $request->newPayment->paymentMethod->googlePay->expiryMonth = '12';
-    $request->newPayment->paymentMethod->googlePay->expiryYear = '23';
-    $request->newPayment->paymentMethod->googlePay->number = '5544332211';
-    $request->newPayment->paymentMethod->paypal = new NewPaymentPaymentMethod1Paypal();
-    $request->newPayment->paymentMethod->paypal->authorization = 'auth123';
-    $request->newPayment->paymentMethod->paypal->code = '404';
-    $request->newPayment->paymentMethod->paypal->correlationId = 'corId123';
-    $request->newPayment->paymentMethod->paypal->grossAmountCurrencyId = '1234';
-    $request->newPayment->paymentMethod->paypal->message = 'Paypal response text.';
-    $request->newPayment->paymentMethod->paypal->order = false;
-    $request->newPayment->paymentMethod->paypal->payerId = '5544667722';
-    $request->newPayment->paymentMethod->paypal->success = true;
-    $request->newPayment->paymentMethod->paypal->timestamp = '2023-07-26T23:32:32Z';
-    $request->newPayment->paymentMethod->token = 'f0db7065-be66-4501-b49b-5eb56e265sdf';
+    $request->newPayment->paymentMethod = 'totam';
     $request->newPayment->reference = new NewPaymentReference();
     $request->newPayment->reference->correlationId = 'abc123';
     $request->newPayment->reference->customerRef = 'ref123';
@@ -374,9 +331,9 @@ try {
     $request->newPayment->threeDSecure = new NewPaymentThreeDSecure();
     $request->newPayment->threeDSecure->cavv = 'cavv123';
     $request->newPayment->threeDSecure->directoryServerTransactionId = 'trans123';
-    $request->newPayment->threeDSecure->programProtocol = NewPaymentThreeDSecureProgramProtocol::Two;
+    $request->newPayment->threeDSecure->programProtocol = NewPaymentThreeDSecureProgramProtocol::One;
     $request->newPayment->threeDSecure->xid = 'id123';
-    $request->accountId = 'earum';
+    $request->accountId = 'eaque';
 
     $requestSecurity = new AccountPostPaymentSecurity();
     $requestSecurity->apiKey = '';
@@ -439,7 +396,7 @@ try {
     $request->referencedPayment->authorization = 'ET3516';
     $request->referencedPayment->options = new ReferencedPaymentOptions();
     $request->referencedPayment->options->customerIp = '138.84.54.82';
-    $request->referencedPayment->options->ecommerceFlag = ReferencedPaymentOptionsEcommerceFlag::Three;
+    $request->referencedPayment->options->ecommerceFlag = ReferencedPaymentOptionsEcommerceFlag::Four;
     $request->referencedPayment->options->generateReceipt = true;
     $request->referencedPayment->options->installmentNumber = '12';
     $request->referencedPayment->options->thirdPartyId = 'partyid123';
@@ -462,8 +419,8 @@ try {
     $request->referencedPayment->softDescriptor->street = 'Fairfield Ranch';
     $request->referencedPayment->softDescriptor->submerchantId = 'xyz123';
     $request->referencedPayment->softDescriptor->taxId = 'abc123';
-    $request->accountId = 'iste';
-    $request->paymentId = 'dolorum';
+    $request->accountId = 'nesciunt';
+    $request->paymentId = 'eos';
 
     $requestSecurity = new AccountRefundPaymentSecurity();
     $requestSecurity->apiKey = '';
@@ -526,7 +483,7 @@ try {
     $request->referencedPayment->authorization = 'ET3516';
     $request->referencedPayment->options = new ReferencedPaymentOptions();
     $request->referencedPayment->options->customerIp = '138.84.54.82';
-    $request->referencedPayment->options->ecommerceFlag = ReferencedPaymentOptionsEcommerceFlag::Six;
+    $request->referencedPayment->options->ecommerceFlag = ReferencedPaymentOptionsEcommerceFlag::One;
     $request->referencedPayment->options->generateReceipt = true;
     $request->referencedPayment->options->installmentNumber = '12';
     $request->referencedPayment->options->thirdPartyId = 'partyid123';
@@ -549,8 +506,8 @@ try {
     $request->referencedPayment->softDescriptor->street = 'Fairfield Ranch';
     $request->referencedPayment->softDescriptor->submerchantId = 'xyz123';
     $request->referencedPayment->softDescriptor->taxId = 'abc123';
-    $request->accountId = 'pariatur';
-    $request->paymentId = 'provident';
+    $request->accountId = 'dolores';
+    $request->paymentId = 'minus';
 
     $requestSecurity = new AccountVoidPaymentSecurity();
     $requestSecurity->apiKey = '';
@@ -611,7 +568,7 @@ try {
     $request->referencedPayment->authorization = 'ET3516';
     $request->referencedPayment->options = new ReferencedPaymentOptions();
     $request->referencedPayment->options->customerIp = '138.84.54.82';
-    $request->referencedPayment->options->ecommerceFlag = ReferencedPaymentOptionsEcommerceFlag::R;
+    $request->referencedPayment->options->ecommerceFlag = ReferencedPaymentOptionsEcommerceFlag::Six;
     $request->referencedPayment->options->generateReceipt = true;
     $request->referencedPayment->options->installmentNumber = '12';
     $request->referencedPayment->options->thirdPartyId = 'partyid123';
@@ -634,7 +591,7 @@ try {
     $request->referencedPayment->softDescriptor->street = 'Fairfield Ranch';
     $request->referencedPayment->softDescriptor->submerchantId = 'xyz123';
     $request->referencedPayment->softDescriptor->taxId = 'abc123';
-    $request->paymentId = 'libero';
+    $request->paymentId = 'dolor';
 
     $requestSecurity = new CapturePaymentSecurity();
     $requestSecurity->apiKey = '';
@@ -683,7 +640,7 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new GetPaymentRequest();
-    $request->paymentId = 'delectus';
+    $request->paymentId = 'vero';
 
     $requestSecurity = new GetPaymentSecurity();
     $requestSecurity->apiKey = '';
@@ -822,7 +779,6 @@ try {
     $request->level3->freightAmount = 4;
     $request->level3->lineItems = [
         new NewPaymentLevel3LineItems(),
-        new NewPaymentLevel3LineItems(),
     ];
     $request->level3->shipFromZip = '901601';
     $request->level3->shipTo = new NewPaymentLevel3ShipTo();
@@ -837,59 +793,16 @@ try {
     $request->level3->shipTo->email = 'john@example.com';
     $request->level3->shipTo->name = 'John Doe';
     $request->level3->shipTo->phone = '8886178190';
-    $request->level3->shipTo->phoneType = NewPaymentLevel3ShipToPhoneType::H;
+    $request->level3->shipTo->phoneType = NewPaymentLevel3ShipToPhoneType::N;
     $request->level3->taxAmount = 10;
     $request->level3->taxRate = 5;
     $request->options = new NewPaymentOptions();
     $request->options->customerIp = '198.168.71.51';
-    $request->options->ecommerceFlag = NewPaymentOptionsEcommerceFlag::Three;
+    $request->options->ecommerceFlag = NewPaymentOptionsEcommerceFlag::Seven;
     $request->options->generateReceipt = true;
     $request->options->installmentNumber = '12';
     $request->options->thirdPartyId = 'partyid123';
-    $request->paymentMethod = new NewPaymentPaymentMethod1();
-    $request->paymentMethod->ach = new NewPaymentPaymentMethod1Ach();
-    $request->paymentMethod->ach->accountNumber = '11112222333';
-    $request->paymentMethod->ach->bankAccountType = 'checking';
-    $request->paymentMethod->ach->plaidToken = 'processor-sandbox-45841cd3-3d54-422e-ba7b-9ae14c5c00cc';
-    $request->paymentMethod->ach->routingNumber = '12345678';
-    $request->paymentMethod->applePay = new NewPaymentPaymentMethod1ApplePay();
-    $request->paymentMethod->applePay->cardholder = 'John Doe';
-    $request->paymentMethod->applePay->cryptogram = 'kiwewruhflkjsdfblaseabc';
-    $request->paymentMethod->applePay->expiryMonth = '12';
-    $request->paymentMethod->applePay->expiryYear = '23';
-    $request->paymentMethod->applePay->number = '4111111111111111';
-    $request->paymentMethod->applePay->transactionId = 'ABVD93934123';
-    $request->paymentMethod->creditCard = new NewPaymentPaymentMethod1CreditCard();
-    $request->paymentMethod->creditCard->cardholder = 'John Doe';
-    $request->paymentMethod->creditCard->cvd = '456';
-    $request->paymentMethod->creditCard->cvdIndicator = NewPaymentPaymentMethod1CreditCardCvdIndicator::Zero;
-    $request->paymentMethod->creditCard->expiryMonth = '03';
-    $request->paymentMethod->creditCard->expiryYear = '2023';
-    $request->paymentMethod->creditCard->number = '4111111111111111';
-    $request->paymentMethod->debitBillPay = new NewPaymentPaymentMethod1DebitBillPay();
-    $request->paymentMethod->debitBillPay->cardholder = 'John Doe';
-    $request->paymentMethod->debitBillPay->cvd = '123';
-    $request->paymentMethod->debitBillPay->cvdIndicator = '1';
-    $request->paymentMethod->debitBillPay->expiryMonth = '02';
-    $request->paymentMethod->debitBillPay->expiryYear = '23';
-    $request->paymentMethod->debitBillPay->number = '4111111111111111';
-    $request->paymentMethod->googlePay = new NewPaymentPaymentMethod1GooglePay();
-    $request->paymentMethod->googlePay->cryptogram = 'kiwewruhflkjsdfblaseabc';
-    $request->paymentMethod->googlePay->cvd = '1234';
-    $request->paymentMethod->googlePay->expiryMonth = '12';
-    $request->paymentMethod->googlePay->expiryYear = '23';
-    $request->paymentMethod->googlePay->number = '5544332211';
-    $request->paymentMethod->paypal = new NewPaymentPaymentMethod1Paypal();
-    $request->paymentMethod->paypal->authorization = 'auth123';
-    $request->paymentMethod->paypal->code = '404';
-    $request->paymentMethod->paypal->correlationId = 'corId123';
-    $request->paymentMethod->paypal->grossAmountCurrencyId = '1234';
-    $request->paymentMethod->paypal->message = 'Paypal response text.';
-    $request->paymentMethod->paypal->order = false;
-    $request->paymentMethod->paypal->payerId = '5544667722';
-    $request->paymentMethod->paypal->success = true;
-    $request->paymentMethod->paypal->timestamp = '2023-07-26T23:32:32Z';
-    $request->paymentMethod->token = 'f0db7065-be66-4501-b49b-5eb56e265sdf';
+    $request->paymentMethod = 'facilis';
     $request->reference = new NewPaymentReference();
     $request->reference->correlationId = 'abc123';
     $request->reference->customerRef = 'ref123';
@@ -921,7 +834,7 @@ try {
     $request->threeDSecure = new NewPaymentThreeDSecure();
     $request->threeDSecure->cavv = 'cavv123';
     $request->threeDSecure->directoryServerTransactionId = 'trans123';
-    $request->threeDSecure->programProtocol = NewPaymentThreeDSecureProgramProtocol::One;
+    $request->threeDSecure->programProtocol = NewPaymentThreeDSecureProgramProtocol::Two;
     $request->threeDSecure->xid = 'id123';
 
     $requestSecurity = new PostPaymentSecurity();
@@ -981,7 +894,7 @@ try {
     $request->referencedPayment->authorization = 'ET3516';
     $request->referencedPayment->options = new ReferencedPaymentOptions();
     $request->referencedPayment->options->customerIp = '138.84.54.82';
-    $request->referencedPayment->options->ecommerceFlag = ReferencedPaymentOptionsEcommerceFlag::Three;
+    $request->referencedPayment->options->ecommerceFlag = ReferencedPaymentOptionsEcommerceFlag::One;
     $request->referencedPayment->options->generateReceipt = true;
     $request->referencedPayment->options->installmentNumber = '12';
     $request->referencedPayment->options->thirdPartyId = 'partyid123';
@@ -1004,7 +917,7 @@ try {
     $request->referencedPayment->softDescriptor->street = 'Fairfield Ranch';
     $request->referencedPayment->softDescriptor->submerchantId = 'xyz123';
     $request->referencedPayment->softDescriptor->taxId = 'abc123';
-    $request->paymentId = 'hic';
+    $request->paymentId = 'porro';
 
     $requestSecurity = new RefundPaymentSecurity();
     $requestSecurity->apiKey = '';
@@ -1063,7 +976,7 @@ try {
     $request->referencedPayment->authorization = 'ET3516';
     $request->referencedPayment->options = new ReferencedPaymentOptions();
     $request->referencedPayment->options->customerIp = '138.84.54.82';
-    $request->referencedPayment->options->ecommerceFlag = ReferencedPaymentOptionsEcommerceFlag::Seven;
+    $request->referencedPayment->options->ecommerceFlag = ReferencedPaymentOptionsEcommerceFlag::Two;
     $request->referencedPayment->options->generateReceipt = true;
     $request->referencedPayment->options->installmentNumber = '12';
     $request->referencedPayment->options->thirdPartyId = 'partyid123';
@@ -1086,7 +999,7 @@ try {
     $request->referencedPayment->softDescriptor->street = 'Fairfield Ranch';
     $request->referencedPayment->softDescriptor->submerchantId = 'xyz123';
     $request->referencedPayment->softDescriptor->taxId = 'abc123';
-    $request->paymentId = 'cum';
+    $request->paymentId = 'blanditiis';
 
     $requestSecurity = new VoidPaymentSecurity();
     $requestSecurity->apiKey = '';

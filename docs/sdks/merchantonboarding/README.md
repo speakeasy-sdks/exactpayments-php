@@ -1,4 +1,4 @@
-# merchantOnboarding
+# MerchantOnboarding
 
 ### Available Operations
 
@@ -101,8 +101,6 @@ try {
     $request->onboardingRequest->merchant->onlinePresence = 'www.acmecorp.com';
     $request->onboardingRequest->merchant->principal = [
         new Principal(),
-        new Principal(),
-        new Principal(),
     ];
     $request->onboardingRequest->merchant->telephone = '2255441120';
     $request->onboardingRequest->merchant->termsNConditions = new OnboardingTermsNConditions();
@@ -112,7 +110,7 @@ try {
     $request->onboardingRequest->merchant->twitter = 'www.twitter.com/acmecorp';
     $request->onboardingRequest->type = OnboardingRequestType::Organization;
     $request->onboardingRequest->workflow = '63efb29650b4bb4b4f6fd5f4';
-    $request->organizationId = 'necessitatibus';
+    $request->organizationId = 'eum';
 
     $response = $sdk->merchantOnboarding->createOnboarding($request);
 
@@ -157,8 +155,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new DeleteOnboardingByIdRequest();
-    $request->onboardingId = 'sint';
-    $request->organizationId = 'officia';
+    $request->onboardingId = 'non';
+    $request->organizationId = 'eligendi';
 
     $requestSecurity = new DeleteOnboardingByIdSecurity();
     $requestSecurity->apiKey = '';
@@ -208,7 +206,7 @@ $sdk = ExactPayments::builder()
 try {
     $request = new ListFilterOptionsRequest();
     $request->isDeleted = false;
-    $request->organizationId = 'dolor';
+    $request->organizationId = 'sint';
 
     $requestSecurity = new ListFilterOptionsSecurity();
     $requestSecurity->apiKey = '';
@@ -295,7 +293,7 @@ try {
     $request->dollarSelect = 'createdAt,status,merchant.name';
     $request->dollarSkip = 10;
     $request->dollarSort = 'createdAt:asc';
-    $request->organizationId = 'debitis';
+    $request->organizationId = 'aliquid';
 
     $requestSecurity = new ListOnboardingByOrganizationSecurity();
     $requestSecurity->apiKey = '';
@@ -396,8 +394,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new RetrieveOnboardingByIdRequest();
-    $request->onboardingId = 'a';
-    $request->organizationId = 'dolorum';
+    $request->onboardingId = 'provident';
+    $request->organizationId = 'necessitatibus';
 
     $requestSecurity = new RetrieveOnboardingByIdSecurity();
     $requestSecurity->apiKey = '';
@@ -502,7 +500,7 @@ try {
     $request->dollarSkip = 10;
     $request->dollarSort = 'createdAt:asc';
     $request->businessName = 'ACME';
-    $request->organizationId = 'in';
+    $request->organizationId = 'sint';
 
     $requestSecurity = new SearchOnboardingByOrganizationIdAndBusinessNameSecurity();
     $requestSecurity->apiKey = '';

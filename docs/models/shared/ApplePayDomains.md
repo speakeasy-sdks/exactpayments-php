@@ -1,7 +1,5 @@
 # ApplePayDomains
 
-**OK**
-
 
 ## Fields
 

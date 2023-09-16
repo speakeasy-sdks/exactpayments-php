@@ -1,7 +1,5 @@
 # AccountResponse
 
-The merchant's account.
-
 
 ## Fields
 

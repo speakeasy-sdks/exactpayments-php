@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace TheLogicStudio\ExactPayments\Models\Shared;
 
 
-/**
- * WebhookResponse - The response object that indicates the ID of the webhook created in the system.
- * 
- * @package TheLogicStudio\ExactPayments\Models\Shared
- * @access public
- */
 class WebhookResponse
 {
     /**

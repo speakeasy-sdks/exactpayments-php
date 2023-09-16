@@ -1,7 +1,5 @@
 # OrderSearch
 
-Details of an existing orders.
-
 
 ## Fields
 

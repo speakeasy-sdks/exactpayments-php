@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace TheLogicStudio\ExactPayments\Models\Shared;
 
 
-/**
- * UpdateOnboardingStatusRequest - The new status and the change reason
- * 
- * @package TheLogicStudio\ExactPayments\Models\Shared
- * @access public
- */
 class UpdateOnboardingStatusRequest
 {
 	#[\JMS\Serializer\Annotation\SerializedName('isDeleted')]

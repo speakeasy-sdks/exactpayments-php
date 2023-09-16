@@ -9,15 +9,6 @@ declare(strict_types=1);
 namespace TheLogicStudio\ExactPayments\Models\Shared;
 
 
-/**
- * NotFoundError - **Not Found**\
- * 
- * The requested resource can not be found.
- * 
- * 
- * @package TheLogicStudio\ExactPayments\Models\Shared
- * @access public
- */
 class NotFoundError
 {
     /**

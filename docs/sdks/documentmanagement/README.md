@@ -1,4 +1,4 @@
-# documentManagement
+# DocumentManagement
 
 ### Available Operations
 
@@ -51,8 +51,8 @@ try {
     $request->requestBody->onboardingIsDeleted = false;
     $request->requestBody->subject = 'Application Status Update Pending Documentation';
     $request->requestBody->type = CreateDocumentRequestRequestBodyType::OnboardingDocumentRequest;
-    $request->onboardingId = 'repudiandae';
-    $request->organizationId = 'sint';
+    $request->onboardingId = 'modi';
+    $request->organizationId = 'praesentium';
 
     $requestSecurity = new CreateDocumentRequestSecurity();
     $requestSecurity->apiKey = '';
@@ -101,9 +101,9 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new DeleteDocumentByIdRequest();
-    $request->documentId = 'veritatis';
-    $request->onboardingId = 'itaque';
-    $request->organizationId = 'incidunt';
+    $request->documentId = 'rem';
+    $request->onboardingId = 'voluptates';
+    $request->organizationId = 'quasi';
 
     $requestSecurity = new DeleteDocumentByIdSecurity();
     $requestSecurity->apiKey = '';
@@ -152,9 +152,9 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new DeleteDocumentRequestByIdRequest();
-    $request->documentRequestId = 'enim';
-    $request->onboardingId = 'consequatur';
-    $request->organizationId = 'est';
+    $request->documentRequestId = 'repudiandae';
+    $request->onboardingId = 'sint';
+    $request->organizationId = 'veritatis';
 
     $requestSecurity = new DeleteDocumentRequestByIdSecurity();
     $requestSecurity->apiKey = '';
@@ -203,10 +203,10 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new GetDocumentByIdRequest();
-    $request->documentId = 'quibusdam';
+    $request->documentId = 'itaque';
     $request->isDeleted = false;
-    $request->onboardingId = 'explicabo';
-    $request->organizationId = 'deserunt';
+    $request->onboardingId = 'incidunt';
+    $request->organizationId = 'enim';
 
     $requestSecurity = new GetDocumentByIdSecurity();
     $requestSecurity->apiKey = '';
@@ -258,8 +258,8 @@ try {
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = 'createdAt:asc';
-    $request->onboardingId = 'distinctio';
-    $request->organizationId = 'quibusdam';
+    $request->onboardingId = 'consequatur';
+    $request->organizationId = 'est';
 
     $requestSecurity = new GetDocumentsSecurity();
     $requestSecurity->apiKey = '';
@@ -309,8 +309,8 @@ $sdk = ExactPayments::builder()
 try {
     $request = new GetDownloadAllDocumentsRequest();
     $request->isDeleted = false;
-    $request->onboardingId = 'labore';
-    $request->organizationId = 'modi';
+    $request->onboardingId = 'quibusdam';
+    $request->organizationId = 'explicabo';
 
     $requestSecurity = new GetDownloadAllDocumentsSecurity();
     $requestSecurity->apiKey = '';
@@ -362,8 +362,8 @@ try {
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = 'createdAt:asc';
-    $request->onboardingId = 'qui';
-    $request->organizationId = 'aliquid';
+    $request->onboardingId = 'deserunt';
+    $request->organizationId = 'distinctio';
 
     $requestSecurity = new GetListDocumentRequestsSecurity();
     $requestSecurity->apiKey = '';
@@ -412,9 +412,9 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new GetRetrieveDocumentRequest();
-    $request->documentId = 'cupiditate';
-    $request->onboardingId = 'quos';
-    $request->organizationId = 'perferendis';
+    $request->documentId = 'quibusdam';
+    $request->onboardingId = 'labore';
+    $request->organizationId = 'modi';
 
     $requestSecurity = new GetRetrieveDocumentSecurity();
     $requestSecurity->apiKey = '';
@@ -463,9 +463,9 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new GetRetrieveDocumentRequestRequest();
-    $request->documentRequestId = 'magni';
-    $request->onboardingId = 'assumenda';
-    $request->organizationId = 'ipsam';
+    $request->documentRequestId = 'qui';
+    $request->onboardingId = 'aliquid';
+    $request->organizationId = 'cupiditate';
 
     $requestSecurity = new GetRetrieveDocumentRequestSecurity();
     $requestSecurity->apiKey = '';
@@ -513,7 +513,7 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new ListDocumentRequestByTokenRequest();
-    $request->documentRequestToken = 'alias';
+    $request->documentRequestToken = 'quos';
 
     $response = $sdk->documentManagement->listDocumentRequestByToken($request);
 
@@ -562,9 +562,9 @@ try {
     $request = new PutUpdateDocumentTypeByIdRequest();
     $request->requestBody = new PutUpdateDocumentTypeByIdRequestBody();
     $request->requestBody->type = PutUpdateDocumentTypeByIdRequestBodyType::DriversLicense;
-    $request->documentId = 'fugit';
-    $request->onboardingId = 'dolorum';
-    $request->organizationId = 'excepturi';
+    $request->documentId = 'perferendis';
+    $request->onboardingId = 'magni';
+    $request->organizationId = 'assumenda';
 
     $requestSecurity = new PutUpdateDocumentTypeByIdSecurity();
     $requestSecurity->apiKey = '';
@@ -625,9 +625,9 @@ try {
     Stay-tuned for the next update!';
     $request->onboardingDocumentRequestUpdate->subject = 'Application Status Update Pending Documentation';
     $request->onboardingDocumentRequestUpdate->type = OnboardingDocumentRequestUpdateType::OnboardingDocumentRequest;
-    $request->documentRequestId = 'tempora';
-    $request->onboardingId = 'facilis';
-    $request->organizationId = 'tempore';
+    $request->documentRequestId = 'ipsam';
+    $request->onboardingId = 'alias';
+    $request->organizationId = 'fugit';
 
     $requestSecurity = new UpdateDocumentRequestSecurity();
     $requestSecurity->apiKey = '';
@@ -682,14 +682,14 @@ try {
     $request->onboardingDocumentUploadRequest = new OnboardingDocumentUploadRequest();
     $request->onboardingDocumentUploadRequest->documentRequest = '64c446af29cef96ce25bc519';
     $request->onboardingDocumentUploadRequest->files = new OnboardingDocumentUploadRequestFiles();
-    $request->onboardingDocumentUploadRequest->files->content = 'labore';
-    $request->onboardingDocumentUploadRequest->files->files = 'delectus';
+    $request->onboardingDocumentUploadRequest->files->content = 'dolorum';
+    $request->onboardingDocumentUploadRequest->files->files = 'excepturi';
     $request->onboardingDocumentUploadRequest->name = 'Business document';
     $request->onboardingDocumentUploadRequest->onboardingIsDeleted = 'true';
     $request->onboardingDocumentUploadRequest->principal = '64ca7b2e4ab69839f78db609';
     $request->onboardingDocumentUploadRequest->type = DocumentUploadType::DriversLicense;
-    $request->onboardingId = 'eum';
-    $request->organizationId = 'non';
+    $request->onboardingId = 'tempora';
+    $request->organizationId = 'facilis';
 
     $requestSecurity = new UploadDocumentSecurity();
     $requestSecurity->apiKey = '';
@@ -742,12 +742,12 @@ try {
     $request = new UploadDocumentByTokenRequest();
     $request->onboardingDocumentUploadTokenRequest = new OnboardingDocumentUploadTokenRequest();
     $request->onboardingDocumentUploadTokenRequest->files = new OnboardingDocumentUploadTokenRequestFiles();
-    $request->onboardingDocumentUploadTokenRequest->files->content = 'eligendi';
-    $request->onboardingDocumentUploadTokenRequest->files->files = 'sint';
+    $request->onboardingDocumentUploadTokenRequest->files->content = 'tempore';
+    $request->onboardingDocumentUploadTokenRequest->files->files = 'labore';
     $request->onboardingDocumentUploadTokenRequest->name = 'Business document';
     $request->onboardingDocumentUploadTokenRequest->principal = '64ca7b2e4ab69839f78db609';
     $request->onboardingDocumentUploadTokenRequest->type = DocumentUploadType::DriversLicense;
-    $request->token = 'aliquid';
+    $request->token = 'delectus';
 
     $response = $sdk->documentManagement->uploadDocumentByToken($request);
 

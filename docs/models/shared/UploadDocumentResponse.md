@@ -1,7 +1,5 @@
 # UploadDocumentResponse
 
-**Created**
-
 
 ## Fields
 

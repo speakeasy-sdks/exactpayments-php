@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace TheLogicStudio\ExactPayments\Models\Shared;
 
 
-/**
- * UpdatableWebhookRequest - Fields that are updatable in the webhook definition.
- * 
- * @package TheLogicStudio\ExactPayments\Models\Shared
- * @access public
- */
 class UpdatableWebhookRequest
 {
     /**

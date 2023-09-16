@@ -1,7 +1,5 @@
 # AccountRequest
 
-Fields that are required in the request body.
-
 
 ## Fields
 

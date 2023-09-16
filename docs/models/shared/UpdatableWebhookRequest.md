@@ -1,7 +1,5 @@
 # UpdatableWebhookRequest
 
-Fields that are updatable in the webhook definition.
-
 
 ## Fields
 

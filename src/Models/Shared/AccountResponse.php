@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace TheLogicStudio\ExactPayments\Models\Shared;
 
 
-/**
- * AccountResponse - The merchant's account.
- * 
- * @package TheLogicStudio\ExactPayments\Models\Shared
- * @access public
- */
 class AccountResponse
 {
 	#[\JMS\Serializer\Annotation\SerializedName('ach')]

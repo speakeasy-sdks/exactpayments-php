@@ -1,7 +1,5 @@
 # UnderwritingWorkflowResponse
 
-The underwriting workflow indicated by the ID.
-
 
 ## Fields
 

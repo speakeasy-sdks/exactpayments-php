@@ -1,4 +1,4 @@
-# reporting
+# Reporting
 
 ### Available Operations
 
@@ -28,7 +28,7 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new DeleteReportRequest();
-    $request->reportId = 'voluptate';
+    $request->reportId = 'error';
 
     $requestSecurity = new DeleteReportSecurity();
     $requestSecurity->apiKey = '';
@@ -79,8 +79,8 @@ $sdk = ExactPayments::builder()
 try {
     $request = new GetReportRequest();
     $request->format = GetReportFormat::Csv;
-    $request->reportId = 'reiciendis';
-    $request->select = 'amet';
+    $request->reportId = 'occaecati';
+    $request->select = 'rerum';
 
     $requestSecurity = new GetReportSecurity();
     $requestSecurity->apiKey = '';
@@ -132,7 +132,7 @@ try {
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = '-name';
-    $request->reportId = 'dolorum';
+    $request->reportId = 'adipisci';
 
     $requestSecurity = new GetReportDetailsSecurity();
     $requestSecurity->apiKey = '';

@@ -1,7 +1,5 @@
 # OnboardingWithPrincipalResponse
 
-**OK**
-
 
 ## Fields
 

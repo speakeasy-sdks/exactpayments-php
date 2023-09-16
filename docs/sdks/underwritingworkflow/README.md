@@ -1,4 +1,4 @@
-# underwritingWorkflow
+# UnderwritingWorkflow
 
 ### Available Operations
 
@@ -32,8 +32,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new DeleteWorkflowByIdRequest();
-    $request->organizationId = 'numquam';
-    $request->workflowId = 'veritatis';
+    $request->organizationId = 'asperiores';
+    $request->workflowId = 'earum';
 
     $requestSecurity = new DeleteWorkflowByIdSecurity();
     $requestSecurity->apiKey = '';
@@ -82,8 +82,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new DisableWorkflowByIdRequest();
-    $request->organizationId = 'ipsa';
-    $request->workflowId = 'ipsa';
+    $request->organizationId = 'modi';
+    $request->workflowId = 'iste';
 
     $requestSecurity = new DisableWorkflowByIdSecurity();
     $requestSecurity->apiKey = '';
@@ -132,8 +132,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new EnableWorkflowByIdRequest();
-    $request->organizationId = 'iure';
-    $request->workflowId = 'odio';
+    $request->organizationId = 'dolorum';
+    $request->workflowId = 'deleniti';
 
     $requestSecurity = new EnableWorkflowByIdSecurity();
     $requestSecurity->apiKey = '';
@@ -185,7 +185,7 @@ try {
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = '-name';
-    $request->organizationId = 'quaerat';
+    $request->organizationId = 'pariatur';
 
     $requestSecurity = new GetOrganizationOrganizationIdOnboardingWorkflowSecurity();
     $requestSecurity->apiKey = '';
@@ -234,8 +234,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new GetOrganizationOrganizationIdOnboardingWorkflowWorkflowIdRequest();
-    $request->organizationId = 'accusamus';
-    $request->workflowId = 'quidem';
+    $request->organizationId = 'provident';
+    $request->workflowId = 'nobis';
 
     $requestSecurity = new GetOrganizationOrganizationIdOnboardingWorkflowWorkflowIdSecurity();
     $requestSecurity->apiKey = '';
@@ -291,12 +291,9 @@ try {
     $request->underwritingWorkflowRequestCreateWorkflow->metadata = new UnderwritingWorkflowRequestCreateWorkflowMetadata();
     $request->underwritingWorkflowRequestCreateWorkflow->name = 'Main Workflow';
     $request->underwritingWorkflowRequestCreateWorkflow->rules = [
-        new UnderwritingRule3(),
-        new UnderwritingRule4(),
-        new UnderwritingRule1(),
-        new UnderwritingRule4(),
+        new UnderwritingRule5(),
     ];
-    $request->organizationId = 'sit';
+    $request->organizationId = 'delectus';
 
     $requestSecurity = new PostOrganizationOrganizationIdOnboardingWorkflowSecurity();
     $requestSecurity->apiKey = '';
@@ -352,13 +349,10 @@ try {
     $request->underwritingWorkflowRequestUpdateWorkflow->metadata = new UnderwritingWorkflowRequestUpdateWorkflowMetadata();
     $request->underwritingWorkflowRequestUpdateWorkflow->name = 'Main Workflow';
     $request->underwritingWorkflowRequestUpdateWorkflow->rules = [
-        new UnderwritingRule(),
-        new UnderwritingRule5(),
-        new UnderwritingRule5(),
-        new UnderwritingRule3(),
+        new UnderwritingRule2(),
     ];
-    $request->organizationId = 'voluptate';
-    $request->workflowId = 'dolorum';
+    $request->organizationId = 'quos';
+    $request->workflowId = 'aliquid';
 
     $requestSecurity = new PutOrganizationOrganizationIdOnboardingWorkflowWorkflowIdSecurity();
     $requestSecurity->apiKey = '';
@@ -407,8 +401,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new SetDefaultWorkflowByIdRequest();
-    $request->organizationId = 'deleniti';
-    $request->workflowId = 'omnis';
+    $request->organizationId = 'dolorem';
+    $request->workflowId = 'dolorem';
 
     $requestSecurity = new SetDefaultWorkflowByIdSecurity();
     $requestSecurity->apiKey = '';

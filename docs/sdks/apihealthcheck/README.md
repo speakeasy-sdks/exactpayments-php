@@ -1,4 +1,4 @@
-# apiHealthCheck
+# APIHealthCheck
 
 ### Available Operations
 

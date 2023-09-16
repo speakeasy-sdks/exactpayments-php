@@ -1,7 +1,5 @@
 # WebhookRequest
 
-Fields that compose a webhook definition inside Exact Payments ecosystem.
-
 
 ## Fields
 

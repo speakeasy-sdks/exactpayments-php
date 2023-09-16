@@ -1,10 +1,5 @@
 # BadRequestZodError
 
-**Bad Request**\
-\
-The request body contains a malformed request or is incomplete.
-
-
 
 ## Fields
 

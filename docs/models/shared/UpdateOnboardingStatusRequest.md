@@ -1,7 +1,5 @@
 # UpdateOnboardingStatusRequest
 
-The new status and the change reason
-
 
 ## Fields
 

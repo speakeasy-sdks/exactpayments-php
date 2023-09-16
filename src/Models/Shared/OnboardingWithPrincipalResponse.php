@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace TheLogicStudio\ExactPayments\Models\Shared;
 
 
-/**
- * OnboardingWithPrincipalResponse - **OK**
- * 
- * @package TheLogicStudio\ExactPayments\Models\Shared
- * @access public
- */
 class OnboardingWithPrincipalResponse
 {
     /**

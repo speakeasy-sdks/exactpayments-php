@@ -9,14 +9,6 @@ declare(strict_types=1);
 namespace TheLogicStudio\ExactPayments\Models\Shared;
 
 
-/**
- * UserTokenOutput - **Created**
- * 
- * 
- * 
- * @package TheLogicStudio\ExactPayments\Models\Shared
- * @access public
- */
 class UserTokenOutput
 {
 	#[\JMS\Serializer\Annotation\SerializedName('account')]

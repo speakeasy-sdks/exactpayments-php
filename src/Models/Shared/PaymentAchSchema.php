@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace TheLogicStudio\ExactPayments\Models\Shared;
 
 
-/**
- * PaymentAchSchema - Example response
- * 
- * @package TheLogicStudio\ExactPayments\Models\Shared
- * @access public
- */
 class PaymentAchSchema
 {
 	#[\JMS\Serializer\Annotation\SerializedName('ach')]

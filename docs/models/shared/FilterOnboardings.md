@@ -1,7 +1,5 @@
 # FilterOnboardings
 
-**OK**
-
 
 ## Fields
 

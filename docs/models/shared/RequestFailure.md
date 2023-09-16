@@ -1,7 +1,5 @@
 # RequestFailure
 
-Problems with the request
-
 
 ## Fields
 

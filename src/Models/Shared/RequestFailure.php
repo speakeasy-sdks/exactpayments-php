@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace TheLogicStudio\ExactPayments\Models\Shared;
 
 
-/**
- * RequestFailure - Problems with the request
- * 
- * @package TheLogicStudio\ExactPayments\Models\Shared
- * @access public
- */
 class RequestFailure
 {
     /**

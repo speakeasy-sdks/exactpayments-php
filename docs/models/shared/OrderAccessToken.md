@@ -1,7 +1,5 @@
 # OrderAccessToken
 
-New order access token created.
-
 
 ## Fields
 

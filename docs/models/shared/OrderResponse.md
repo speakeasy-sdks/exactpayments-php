@@ -1,7 +1,5 @@
 # OrderResponse
 
-Order created.
-
 
 ## Fields
 

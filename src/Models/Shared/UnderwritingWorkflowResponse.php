@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace TheLogicStudio\ExactPayments\Models\Shared;
 
 
-/**
- * UnderwritingWorkflowResponse - The underwriting workflow indicated by the ID.
- * 
- * @package TheLogicStudio\ExactPayments\Models\Shared
- * @access public
- */
 class UnderwritingWorkflowResponse
 {
     /**

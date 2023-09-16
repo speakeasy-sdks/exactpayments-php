@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace TheLogicStudio\ExactPayments\Models\Shared;
 
 
-/**
- * OnboardingRetryRuleRequest - ruleName is an existing rule name in the workflow assigned to a merchant application
- * 
- * @package TheLogicStudio\ExactPayments\Models\Shared
- * @access public
- */
 class OnboardingRetryRuleRequest
 {
 	#[\JMS\Serializer\Annotation\SerializedName('ruleName')]

@@ -1,4 +1,4 @@
-# authentication
+# Authentication
 
 ### Available Operations
 
@@ -37,7 +37,7 @@ try {
     $request->requestBody->permissions = [
         Permissions::ChargesCreate,
     ];
-    $request->applicationId = 'quis';
+    $request->applicationId = 'nisi';
 
     $requestSecurity = new CreateApplicationTokenSecurity();
     $requestSecurity->apiKey = '';
@@ -141,8 +141,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new DeleteApplicationTokenRequest();
-    $request->applicationId = 'veritatis';
-    $request->tokenId = 'deserunt';
+    $request->applicationId = 'recusandae';
+    $request->tokenId = 'temporibus';
 
     $requestSecurity = new DeleteApplicationTokenSecurity();
     $requestSecurity->apiKey = '';
@@ -194,7 +194,7 @@ try {
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = 'createdAt:asc';
-    $request->applicationId = 'perferendis';
+    $request->applicationId = 'ab';
 
     $requestSecurity = new QueryApplicationTokenSecurity();
     $requestSecurity->apiKey = '';
