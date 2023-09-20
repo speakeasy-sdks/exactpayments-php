@@ -62,11 +62,12 @@ class UnderwritingRule6
     /**
      * Type of rule that will be evaluated by the decision engine
      * 
-     * @var \TheLogicStudio\ExactPayments\Models\Shared\UnderwritingRuleType6 $type
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\UnderwritingRuleType6 $type
      */
 	#[\JMS\Serializer\Annotation\SerializedName('type')]
     #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\UnderwritingRuleType6>')]
-    public UnderwritingRuleType6 $type;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?UnderwritingRuleType6 $type = null;
     
 	public function __construct()
 	{
@@ -74,6 +75,6 @@ class UnderwritingRule6
 		$this->onFail = "";
 		$this->onPass = "";
 		$this->options = new \TheLogicStudio\ExactPayments\Models\Shared\UnderwritingRuleOptions3();
-		$this->type = \TheLogicStudio\ExactPayments\Models\Shared\UnderwritingRuleType6::PlaidBalance;
+		$this->type = null;
 	}
 }

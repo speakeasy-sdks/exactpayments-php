@@ -60,11 +60,12 @@ class UnderwritingRule
     /**
      * Type of rule that will be evaluated by the decision engine
      * 
-     * @var \TheLogicStudio\ExactPayments\Models\Shared\UnderwritingRuleType $type
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\UnderwritingRuleType $type
      */
 	#[\JMS\Serializer\Annotation\SerializedName('type')]
     #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\UnderwritingRuleType>')]
-    public UnderwritingRuleType $type;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?UnderwritingRuleType $type = null;
     
 	public function __construct()
 	{
@@ -72,6 +73,6 @@ class UnderwritingRule
 		$this->onFail = "";
 		$this->onPass = "";
 		$this->options = new \TheLogicStudio\ExactPayments\Models\Shared\EmptyRuleOptionsField();
-		$this->type = \TheLogicStudio\ExactPayments\Models\Shared\UnderwritingRuleType::TruliooKYB;
+		$this->type = null;
 	}
 }

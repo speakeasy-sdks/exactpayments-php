@@ -62,11 +62,12 @@ class UnderwritingRule3
     /**
      * Type of rule that will be evaluated by the decision engine
      * 
-     * @var \TheLogicStudio\ExactPayments\Models\Shared\UnderwritingRuleType3 $type
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\UnderwritingRuleType3 $type
      */
 	#[\JMS\Serializer\Annotation\SerializedName('type')]
     #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\UnderwritingRuleType3>')]
-    public UnderwritingRuleType3 $type;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?UnderwritingRuleType3 $type = null;
     
 	public function __construct()
 	{
@@ -74,6 +75,6 @@ class UnderwritingRule3
 		$this->onFail = "";
 		$this->onPass = "";
 		$this->options = new \TheLogicStudio\ExactPayments\Models\Shared\UnderwritingRuleOptions1();
-		$this->type = \TheLogicStudio\ExactPayments\Models\Shared\UnderwritingRuleType3::MastercardMatch;
+		$this->type = null;
 	}
 }

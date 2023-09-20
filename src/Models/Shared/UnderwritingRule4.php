@@ -63,11 +63,12 @@ class UnderwritingRule4
     /**
      * Type of rule that will be evaluated by the decision engine
      * 
-     * @var \TheLogicStudio\ExactPayments\Models\Shared\UnderwritingRuleType4 $type
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\UnderwritingRuleType4 $type
      */
 	#[\JMS\Serializer\Annotation\SerializedName('type')]
     #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\UnderwritingRuleType4>')]
-    public UnderwritingRuleType4 $type;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?UnderwritingRuleType4 $type = null;
     
 	public function __construct()
 	{
@@ -75,6 +76,6 @@ class UnderwritingRule4
 		$this->onFail = "";
 		$this->onPass = "";
 		$this->options = [];
-		$this->type = \TheLogicStudio\ExactPayments\Models\Shared\UnderwritingRuleType4::BusinessInformation;
+		$this->type = null;
 	}
 }

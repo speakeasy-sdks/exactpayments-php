@@ -60,11 +60,12 @@ class UnderwritingRule2
     /**
      * Type of rule that will be evaluated by the decision engine.
      * 
-     * @var \TheLogicStudio\ExactPayments\Models\Shared\UnderwritingRuleType2 $type
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\UnderwritingRuleType2 $type
      */
 	#[\JMS\Serializer\Annotation\SerializedName('type')]
     #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\UnderwritingRuleType2>')]
-    public UnderwritingRuleType2 $type;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?UnderwritingRuleType2 $type = null;
     
 	public function __construct()
 	{
@@ -72,6 +73,6 @@ class UnderwritingRule2
 		$this->onFail = "";
 		$this->onPass = "";
 		$this->options = new \TheLogicStudio\ExactPayments\Models\Shared\UnderwritingRuleOptions();
-		$this->type = \TheLogicStudio\ExactPayments\Models\Shared\UnderwritingRuleType2::Ofac;
+		$this->type = null;
 	}
 }
