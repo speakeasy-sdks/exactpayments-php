@@ -20,8 +20,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\DeleteReportRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\DeleteReportSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -30,10 +30,7 @@ try {
     $request = new DeleteReportRequest();
     $request->reportId = 'error';
 
-    $requestSecurity = new DeleteReportSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->reporting->deleteReport($request, $requestSecurity);
+    $response = $sdk->reporting->deleteReport($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -45,10 +42,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\DeleteReportRequest](../../models/operations/DeleteReportRequest.md)   | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
-| `security`                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\DeleteReportSecurity](../../models/operations/DeleteReportSecurity.md) | :heavy_check_mark:                                                                                                      | The security requirements to use for the request.                                                                       |
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\DeleteReportRequest](../../models/operations/DeleteReportRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
 
 
 ### Response
@@ -69,9 +65,9 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetReportRequest;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetReportFormat;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetReportSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -82,10 +78,7 @@ try {
     $request->reportId = 'occaecati';
     $request->select = 'rerum';
 
-    $requestSecurity = new GetReportSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->reporting->getReport($request, $requestSecurity);
+    $response = $sdk->reporting->getReport($request);
 
     if ($response->reportDetailsResponses !== null) {
         // handle response
@@ -97,10 +90,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\GetReportRequest](../../models/operations/GetReportRequest.md)   | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
-| `security`                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\GetReportSecurity](../../models/operations/GetReportSecurity.md) | :heavy_check_mark:                                                                                                | The security requirements to use for the request.                                                                 |
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\GetReportRequest](../../models/operations/GetReportRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
 
 
 ### Response
@@ -121,8 +113,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetReportDetailsRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetReportDetailsSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -134,10 +126,7 @@ try {
     $request->dollarSort = '-name';
     $request->reportId = 'adipisci';
 
-    $requestSecurity = new GetReportDetailsSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->reporting->getReportDetails($request, $requestSecurity);
+    $response = $sdk->reporting->getReportDetails($request);
 
     if ($response->reportDetailsResponses !== null) {
         // handle response
@@ -149,10 +138,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\GetReportDetailsRequest](../../models/operations/GetReportDetailsRequest.md)   | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
-| `security`                                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\GetReportDetailsSecurity](../../models/operations/GetReportDetailsSecurity.md) | :heavy_check_mark:                                                                                                              | The security requirements to use for the request.                                                                               |
+| Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
+| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                    | [\TheLogicStudio\ExactPayments\Models\Operations\GetReportDetailsRequest](../../models/operations/GetReportDetailsRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
 
 
 ### Response
@@ -173,8 +161,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetReportsRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetReportsSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -185,10 +173,7 @@ try {
     $request->dollarSkip = 10;
     $request->dollarSort = '-name';
 
-    $requestSecurity = new GetReportsSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->reporting->getReports($request, $requestSecurity);
+    $response = $sdk->reporting->getReports($request);
 
     if ($response->reportQueryResponses !== null) {
         // handle response
@@ -200,10 +185,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                          | [\TheLogicStudio\ExactPayments\Models\Operations\GetReportsRequest](../../models/operations/GetReportsRequest.md)   | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
-| `security`                                                                                                          | [\TheLogicStudio\ExactPayments\Models\Operations\GetReportsSecurity](../../models/operations/GetReportsSecurity.md) | :heavy_check_mark:                                                                                                  | The security requirements to use for the request.                                                                   |
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\GetReportsRequest](../../models/operations/GetReportsRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
 
 
 ### Response

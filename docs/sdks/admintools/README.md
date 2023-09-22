@@ -21,8 +21,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetListNotesRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetListNotesSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -35,10 +35,7 @@ try {
     $request->onboardingId = 'deserunt';
     $request->organizationId = 'suscipit';
 
-    $requestSecurity = new GetListNotesSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->adminTools->getListNotes($request, $requestSecurity);
+    $response = $sdk->adminTools->getListNotes($request);
 
     if ($response->onboardingNotes !== null) {
         // handle response
@@ -50,10 +47,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\GetListNotesRequest](../../models/operations/GetListNotesRequest.md)   | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
-| `security`                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\GetListNotesSecurity](../../models/operations/GetListNotesSecurity.md) | :heavy_check_mark:                                                                                                      | The security requirements to use for the request.                                                                       |
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\GetListNotesRequest](../../models/operations/GetListNotesRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
 
 
 ### Response
@@ -74,9 +70,9 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\PostCreateNotesRequest;
 use \TheLogicStudio\ExactPayments\Models\Operations\PostCreateNotesRequestBodyInput;
-use \TheLogicStudio\ExactPayments\Models\Operations\PostCreateNotesSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -89,10 +85,7 @@ try {
     $request->onboardingId = 'iure';
     $request->organizationId = 'magnam';
 
-    $requestSecurity = new PostCreateNotesSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->adminTools->postCreateNotes($request, $requestSecurity);
+    $response = $sdk->adminTools->postCreateNotes($request);
 
     if ($response->onboardingNote !== null) {
         // handle response
@@ -104,10 +97,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                    | [\TheLogicStudio\ExactPayments\Models\Operations\PostCreateNotesRequest](../../models/operations/PostCreateNotesRequest.md)   | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
-| `security`                                                                                                                    | [\TheLogicStudio\ExactPayments\Models\Operations\PostCreateNotesSecurity](../../models/operations/PostCreateNotesSecurity.md) | :heavy_check_mark:                                                                                                            | The security requirements to use for the request.                                                                             |
+| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
+| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\PostCreateNotesRequest](../../models/operations/PostCreateNotesRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
 
 
 ### Response
@@ -128,8 +120,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdRecheckRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdRecheckSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -139,10 +131,7 @@ try {
     $request->onboardingId = 'debitis';
     $request->organizationId = 'ipsa';
 
-    $requestSecurity = new PutOrganizationOrganizationIdOnboardingOnboardingIdRecheckSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->adminTools->putOrganizationOrganizationIdOnboardingOnboardingIdRecheck($request, $requestSecurity);
+    $response = $sdk->adminTools->putOrganizationOrganizationIdOnboardingOnboardingIdRecheck($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -154,10 +143,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                                                                           | Type                                                                                                                                                                                                                | Required                                                                                                                                                                                                            | Description                                                                                                                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                                                                          | [\TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdRecheckRequest](../../models/operations/PutOrganizationOrganizationIdOnboardingOnboardingIdRecheckRequest.md)   | :heavy_check_mark:                                                                                                                                                                                                  | The request object to use for the request.                                                                                                                                                                          |
-| `security`                                                                                                                                                                                                          | [\TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdRecheckSecurity](../../models/operations/PutOrganizationOrganizationIdOnboardingOnboardingIdRecheckSecurity.md) | :heavy_check_mark:                                                                                                                                                                                                  | The security requirements to use for the request.                                                                                                                                                                   |
+| Parameter                                                                                                                                                                                                         | Type                                                                                                                                                                                                              | Required                                                                                                                                                                                                          | Description                                                                                                                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdRecheckRequest](../../models/operations/PutOrganizationOrganizationIdOnboardingOnboardingIdRecheckRequest.md) | :heavy_check_mark:                                                                                                                                                                                                | The request object to use for the request.                                                                                                                                                                        |
 
 
 ### Response
@@ -178,9 +166,9 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdRetryRuleRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\OnboardingRetryRuleRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdRetryRuleSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -192,10 +180,7 @@ try {
     $request->onboardingId = 'tempora';
     $request->organizationId = 'suscipit';
 
-    $requestSecurity = new PutOrganizationOrganizationIdOnboardingOnboardingIdRetryRuleSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->adminTools->putOrganizationOrganizationIdOnboardingOnboardingIdRetryRule($request, $requestSecurity);
+    $response = $sdk->adminTools->putOrganizationOrganizationIdOnboardingOnboardingIdRetryRule($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -207,10 +192,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                                                                               | Type                                                                                                                                                                                                                    | Required                                                                                                                                                                                                                | Description                                                                                                                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdRetryRuleRequest](../../models/operations/PutOrganizationOrganizationIdOnboardingOnboardingIdRetryRuleRequest.md)   | :heavy_check_mark:                                                                                                                                                                                                      | The request object to use for the request.                                                                                                                                                                              |
-| `security`                                                                                                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdRetryRuleSecurity](../../models/operations/PutOrganizationOrganizationIdOnboardingOnboardingIdRetryRuleSecurity.md) | :heavy_check_mark:                                                                                                                                                                                                      | The security requirements to use for the request.                                                                                                                                                                       |
+| Parameter                                                                                                                                                                                                             | Type                                                                                                                                                                                                                  | Required                                                                                                                                                                                                              | Description                                                                                                                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdRetryRuleRequest](../../models/operations/PutOrganizationOrganizationIdOnboardingOnboardingIdRetryRuleRequest.md) | :heavy_check_mark:                                                                                                                                                                                                    | The request object to use for the request.                                                                                                                                                                            |
 
 
 ### Response
@@ -231,11 +215,11 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdStatusRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\UpdateOnboardingStatusRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\UpdateOnboardingStatusRequestStatus;
 use \TheLogicStudio\ExactPayments\Models\Shared\UpdateOnboardingStatusRequestStatusChangeReason;
-use \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdStatusSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -250,10 +234,7 @@ try {
     $request->onboardingId = 'iusto';
     $request->organizationId = 'excepturi';
 
-    $requestSecurity = new PutOrganizationOrganizationIdOnboardingOnboardingIdStatusSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->adminTools->putOrganizationOrganizationIdOnboardingOnboardingIdStatus($request, $requestSecurity);
+    $response = $sdk->adminTools->putOrganizationOrganizationIdOnboardingOnboardingIdStatus($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -265,10 +246,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                                                                         | Type                                                                                                                                                                                                              | Required                                                                                                                                                                                                          | Description                                                                                                                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdStatusRequest](../../models/operations/PutOrganizationOrganizationIdOnboardingOnboardingIdStatusRequest.md)   | :heavy_check_mark:                                                                                                                                                                                                | The request object to use for the request.                                                                                                                                                                        |
-| `security`                                                                                                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdStatusSecurity](../../models/operations/PutOrganizationOrganizationIdOnboardingOnboardingIdStatusSecurity.md) | :heavy_check_mark:                                                                                                                                                                                                | The security requirements to use for the request.                                                                                                                                                                 |
+| Parameter                                                                                                                                                                                                       | Type                                                                                                                                                                                                            | Required                                                                                                                                                                                                        | Description                                                                                                                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdStatusRequest](../../models/operations/PutOrganizationOrganizationIdOnboardingOnboardingIdStatusRequest.md) | :heavy_check_mark:                                                                                                                                                                                              | The request object to use for the request.                                                                                                                                                                      |
 
 
 ### Response

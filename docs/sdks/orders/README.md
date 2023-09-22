@@ -28,8 +28,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetAccountAccountIdOrdersOrderIdRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetAccountAccountIdOrdersOrderIdSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -39,10 +39,7 @@ try {
     $request->accountId = 'officia';
     $request->orderId = 'dolor';
 
-    $requestSecurity = new GetAccountAccountIdOrdersOrderIdSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->orders->getAccountAccountIdOrdersOrderId($request, $requestSecurity);
+    $response = $sdk->orders->getAccountAccountIdOrdersOrderId($request);
 
     if ($response->orderResponse !== null) {
         // handle response
@@ -54,10 +51,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                       | Type                                                                                                                                                            | Required                                                                                                                                                        | Description                                                                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\GetAccountAccountIdOrdersOrderIdRequest](../../models/operations/GetAccountAccountIdOrdersOrderIdRequest.md)   | :heavy_check_mark:                                                                                                                                              | The request object to use for the request.                                                                                                                      |
-| `security`                                                                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\GetAccountAccountIdOrdersOrderIdSecurity](../../models/operations/GetAccountAccountIdOrdersOrderIdSecurity.md) | :heavy_check_mark:                                                                                                                                              | The security requirements to use for the request.                                                                                                               |
+| Parameter                                                                                                                                                     | Type                                                                                                                                                          | Required                                                                                                                                                      | Description                                                                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                    | [\TheLogicStudio\ExactPayments\Models\Operations\GetAccountAccountIdOrdersOrderIdRequest](../../models/operations/GetAccountAccountIdOrdersOrderIdRequest.md) | :heavy_check_mark:                                                                                                                                            | The request object to use for the request.                                                                                                                    |
 
 
 ### Response
@@ -78,8 +74,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetOrdersRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetOrdersSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -91,10 +87,7 @@ try {
     $request->from = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-01T00:00:00.000Z');
     $request->to = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-31T00:00:00.000Z');
 
-    $requestSecurity = new GetOrdersSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->orders->getOrders($request, $requestSecurity);
+    $response = $sdk->orders->getOrders($request);
 
     if ($response->orderSearch !== null) {
         // handle response
@@ -106,10 +99,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\GetOrdersRequest](../../models/operations/GetOrdersRequest.md)   | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
-| `security`                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\GetOrdersSecurity](../../models/operations/GetOrdersSecurity.md) | :heavy_check_mark:                                                                                                | The security requirements to use for the request.                                                                 |
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\GetOrdersRequest](../../models/operations/GetOrdersRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
 
 
 ### Response
@@ -130,10 +122,10 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrderIdPayRequest;
 use \TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrderIdPayRequestBody;
 use \TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrderIdPayRequestBodyPaymentMethod;
-use \TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrderIdPaySecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -146,10 +138,7 @@ try {
     $request->accountId = 'debitis';
     $request->orderId = 'a';
 
-    $requestSecurity = new PostAccountAccountIdOrdersOrderIdPaySecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->orders->postAccountAccountIdOrdersOrderIdPay($request, $requestSecurity);
+    $response = $sdk->orders->postAccountAccountIdOrdersOrderIdPay($request);
 
     if ($response->postAccountAccountIdOrdersOrderIdPay200ApplicationJSONObject !== null) {
         // handle response
@@ -161,10 +150,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                               | Type                                                                                                                                                                    | Required                                                                                                                                                                | Description                                                                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrderIdPayRequest](../../models/operations/PostAccountAccountIdOrdersOrderIdPayRequest.md)   | :heavy_check_mark:                                                                                                                                                      | The request object to use for the request.                                                                                                                              |
-| `security`                                                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrderIdPaySecurity](../../models/operations/PostAccountAccountIdOrdersOrderIdPaySecurity.md) | :heavy_check_mark:                                                                                                                                                      | The security requirements to use for the request.                                                                                                                       |
+| Parameter                                                                                                                                                             | Type                                                                                                                                                                  | Required                                                                                                                                                              | Description                                                                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrderIdPayRequest](../../models/operations/PostAccountAccountIdOrdersOrderIdPayRequest.md) | :heavy_check_mark:                                                                                                                                                    | The request object to use for the request.                                                                                                                            |
 
 
 ### Response
@@ -185,6 +173,7 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\Order;
 use \TheLogicStudio\ExactPayments\Models\Shared\CustomerDetails;
@@ -198,7 +187,6 @@ use \TheLogicStudio\ExactPayments\Models\Shared\OrderOptions;
 use \TheLogicStudio\ExactPayments\Models\Shared\OrderOptionsEcommerceFlag;
 use \TheLogicStudio\ExactPayments\Models\Shared\Reference;
 use \TheLogicStudio\ExactPayments\Models\Shared\SoftDescriptor;
-use \TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -274,10 +262,7 @@ try {
     $request->order->surchargeAmount = 123;
     $request->order->taxAmount = 123;
 
-    $requestSecurity = new PostAccountAccountIdOrdersSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->orders->postAccountAccountIdOrders($request, $requestSecurity);
+    $response = $sdk->orders->postAccountAccountIdOrders($request);
 
     if ($response->orderResponse !== null) {
         // handle response
@@ -289,10 +274,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                           | Type                                                                                                                                                | Required                                                                                                                                            | Description                                                                                                                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                          | [\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersRequest](../../models/operations/PostAccountAccountIdOrdersRequest.md)   | :heavy_check_mark:                                                                                                                                  | The request object to use for the request.                                                                                                          |
-| `security`                                                                                                                                          | [\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersSecurity](../../models/operations/PostAccountAccountIdOrdersSecurity.md) | :heavy_check_mark:                                                                                                                                  | The security requirements to use for the request.                                                                                                   |
+| Parameter                                                                                                                                         | Type                                                                                                                                              | Required                                                                                                                                          | Description                                                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersRequest](../../models/operations/PostAccountAccountIdOrdersRequest.md) | :heavy_check_mark:                                                                                                                                | The request object to use for the request.                                                                                                        |
 
 
 ### Response
@@ -313,6 +297,7 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Shared\Order;
 use \TheLogicStudio\ExactPayments\Models\Shared\CustomerDetails;
 use \TheLogicStudio\ExactPayments\Models\Shared\BillingAddress;
@@ -325,7 +310,6 @@ use \TheLogicStudio\ExactPayments\Models\Shared\OrderOptions;
 use \TheLogicStudio\ExactPayments\Models\Shared\OrderOptionsEcommerceFlag;
 use \TheLogicStudio\ExactPayments\Models\Shared\Reference;
 use \TheLogicStudio\ExactPayments\Models\Shared\SoftDescriptor;
-use \TheLogicStudio\ExactPayments\Models\Operations\PostOrdersSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -399,10 +383,7 @@ try {
     $request->surchargeAmount = 123;
     $request->taxAmount = 123;
 
-    $requestSecurity = new PostOrdersSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->orders->postOrders($request, $requestSecurity);
+    $response = $sdk->orders->postOrders($request);
 
     if ($response->orderResponse !== null) {
         // handle response
@@ -414,10 +395,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                          | [\TheLogicStudio\ExactPayments\Models\Shared\Order](../../models/shared/Order.md)                                   | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
-| `security`                                                                                                          | [\TheLogicStudio\ExactPayments\Models\Operations\PostOrdersSecurity](../../models/operations/PostOrdersSecurity.md) | :heavy_check_mark:                                                                                                  | The security requirements to use for the request.                                                                   |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `$request`                                                                        | [\TheLogicStudio\ExactPayments\Models\Shared\Order](../../models/shared/Order.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 
 ### Response
@@ -438,8 +418,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\PostOrdersOrderIdAccessTokenRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\PostOrdersOrderIdAccessTokenSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -448,10 +428,7 @@ try {
     $request = new PostOrdersOrderIdAccessTokenRequest();
     $request->orderId = 'magnam';
 
-    $requestSecurity = new PostOrdersOrderIdAccessTokenSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->orders->postOrdersOrderIdAccessToken($request, $requestSecurity);
+    $response = $sdk->orders->postOrdersOrderIdAccessToken($request);
 
     if ($response->orderAccessToken !== null) {
         // handle response
@@ -463,10 +440,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                               | Type                                                                                                                                                    | Required                                                                                                                                                | Description                                                                                                                                             |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\PostOrdersOrderIdAccessTokenRequest](../../models/operations/PostOrdersOrderIdAccessTokenRequest.md)   | :heavy_check_mark:                                                                                                                                      | The request object to use for the request.                                                                                                              |
-| `security`                                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\PostOrdersOrderIdAccessTokenSecurity](../../models/operations/PostOrdersOrderIdAccessTokenSecurity.md) | :heavy_check_mark:                                                                                                                                      | The security requirements to use for the request.                                                                                                       |
+| Parameter                                                                                                                                             | Type                                                                                                                                                  | Required                                                                                                                                              | Description                                                                                                                                           |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\PostOrdersOrderIdAccessTokenRequest](../../models/operations/PostOrdersOrderIdAccessTokenRequest.md) | :heavy_check_mark:                                                                                                                                    | The request object to use for the request.                                                                                                            |
 
 
 ### Response
@@ -487,6 +463,7 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\PutAccountAccountIdOrdersOrderIdRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\Order;
 use \TheLogicStudio\ExactPayments\Models\Shared\CustomerDetails;
@@ -500,7 +477,6 @@ use \TheLogicStudio\ExactPayments\Models\Shared\OrderOptions;
 use \TheLogicStudio\ExactPayments\Models\Shared\OrderOptionsEcommerceFlag;
 use \TheLogicStudio\ExactPayments\Models\Shared\Reference;
 use \TheLogicStudio\ExactPayments\Models\Shared\SoftDescriptor;
-use \TheLogicStudio\ExactPayments\Models\Operations\PutAccountAccountIdOrdersOrderIdSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -577,10 +553,7 @@ try {
     $request->order->taxAmount = 123;
     $request->orderId = 'laborum';
 
-    $requestSecurity = new PutAccountAccountIdOrdersOrderIdSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->orders->putAccountAccountIdOrdersOrderId($request, $requestSecurity);
+    $response = $sdk->orders->putAccountAccountIdOrdersOrderId($request);
 
     if ($response->orderResponse !== null) {
         // handle response
@@ -592,10 +565,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                       | Type                                                                                                                                                            | Required                                                                                                                                                        | Description                                                                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\PutAccountAccountIdOrdersOrderIdRequest](../../models/operations/PutAccountAccountIdOrdersOrderIdRequest.md)   | :heavy_check_mark:                                                                                                                                              | The request object to use for the request.                                                                                                                      |
-| `security`                                                                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\PutAccountAccountIdOrdersOrderIdSecurity](../../models/operations/PutAccountAccountIdOrdersOrderIdSecurity.md) | :heavy_check_mark:                                                                                                                                              | The security requirements to use for the request.                                                                                                               |
+| Parameter                                                                                                                                                     | Type                                                                                                                                                          | Required                                                                                                                                                      | Description                                                                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                    | [\TheLogicStudio\ExactPayments\Models\Operations\PutAccountAccountIdOrdersOrderIdRequest](../../models/operations/PutAccountAccountIdOrdersOrderIdRequest.md) | :heavy_check_mark:                                                                                                                                            | The request object to use for the request.                                                                                                                    |
 
 
 ### Response
@@ -616,8 +588,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\PutOrdersOrderIdResetRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\PutOrdersOrderIdResetSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -626,10 +598,7 @@ try {
     $request = new PutOrdersOrderIdResetRequest();
     $request->orderId = 'accusamus';
 
-    $requestSecurity = new PutOrdersOrderIdResetSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->orders->putOrdersOrderIdReset($request, $requestSecurity);
+    $response = $sdk->orders->putOrdersOrderIdReset($request);
 
     if ($response->orderResponse !== null) {
         // handle response
@@ -641,10 +610,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\PutOrdersOrderIdResetRequest](../../models/operations/PutOrdersOrderIdResetRequest.md)   | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
-| `security`                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\PutOrdersOrderIdResetSecurity](../../models/operations/PutOrdersOrderIdResetSecurity.md) | :heavy_check_mark:                                                                                                                        | The security requirements to use for the request.                                                                                         |
+| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\PutOrdersOrderIdResetRequest](../../models/operations/PutOrdersOrderIdResetRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
 
 
 ### Response

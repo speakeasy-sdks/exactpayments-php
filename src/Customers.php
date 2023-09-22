@@ -27,12 +27,10 @@ class Customers
      * In order to unlink a payment method from a customer, the following call can be made.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteCustomerCustomerIdPaymentMethodTokenRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteCustomerCustomerIdPaymentMethodTokenSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteCustomerCustomerIdPaymentMethodTokenResponse
      */
 	public function accountDeleteCustomerCustomerIdPaymentMethodToken(
         ?\TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteCustomerCustomerIdPaymentMethodTokenRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteCustomerCustomerIdPaymentMethodTokenSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteCustomerCustomerIdPaymentMethodTokenResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -42,8 +40,7 @@ class Customers
         $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -64,12 +61,10 @@ class Customers
      * On occasion it is necessary for an API consumer to delete customers. The following call supports this use case.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteCustomerIdRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteCustomerIdSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteCustomerIdResponse
      */
 	public function accountDeleteCustomerId(
         ?\TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteCustomerIdRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteCustomerIdSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteCustomerIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -79,8 +74,7 @@ class Customers
         $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -101,12 +95,10 @@ class Customers
      * This API returns the list of customers under a given merchant. It is meant to be invoked by a Organization(partner) to fetch the list of all customers for a given merchant(accountId) in the request URI.  Please note that the Organization(partner) needs to authenticate using the partner or org token. 
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerResponse
      */
 	public function accountGetCustomer(
         ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -117,8 +109,7 @@ class Customers
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -145,12 +136,10 @@ class Customers
      * For fetching singular customer objects API consumers can issue a call to the following endpoint. If the id provided in the path exists it will be returned in the response body. It is meant to be invoked by a Organization(partner) for a given merchant(accountId) in the request URI.  Please note that the Organization(partner) needs to authenticate using the partner or org token. 
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerIdRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerIdSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerIdResponse
      */
 	public function accountGetCustomerId(
         ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerIdRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerIdSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -160,8 +149,7 @@ class Customers
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -188,12 +176,10 @@ class Customers
      * To retrieve a payment method as well as ensure it is associated with a customer. The following call can be used.  It is meant to be invoked by a Organization(partner) for a given merchant(accountId) in the request URI.  Please note that the Organization(partner) needs to authenticate using the partner or org token. 
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerCustomerIdPaymentMethodTokenRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerCustomerIdPaymentMethodTokenSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerCustomerIdPaymentMethodTokenResponse
      */
 	public function accountGetCustomerCustomerIdPaymentMethodToken(
         ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerCustomerIdPaymentMethodTokenRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerCustomerIdPaymentMethodTokenSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerCustomerIdPaymentMethodTokenResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -203,8 +189,7 @@ class Customers
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -231,12 +216,10 @@ class Customers
      * In order to fetch payments performed by a customer, the following endpoint can be called. It is meant to be invoked by a Organization(partner) for a given merchant(accountId) in the request URI.  Please note that the Organization(partner) needs to authenticate using the partner or org token.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerCustomerIdPaymentsRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerCustomerIdPaymentsSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerCustomerIdPaymentsResponse
      */
 	public function accountGetCustomerCustomerIdPayments(
         ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerCustomerIdPaymentsRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerCustomerIdPaymentsSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerCustomerIdPaymentsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -247,8 +230,7 @@ class Customers
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -277,12 +259,10 @@ class Customers
      * You can associate multiple Payment Methods to a single Customer; however, only one of those can be used as default. This endpoint will allow you to retrieve the Payment Method marked as default for the specified Customer. It is meant to be invoked by an Organization (Partner) for a given merchant (`accountId`) in the request URI. Please note that the Organization (Partner) needs to authenticate using the Partner or Organization token.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerDefaultPaymentMethodRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerDefaultPaymentMethodSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerDefaultPaymentMethodResponse
      */
 	public function accountGetCustomerDefaultPaymentMethod(
         ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerDefaultPaymentMethodRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerDefaultPaymentMethodSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerDefaultPaymentMethodResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -292,8 +272,7 @@ class Customers
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -342,12 +321,10 @@ class Customers
      * To query payment methods associated with a customer the following call can be used. Note that because card information is encrypted, query string filtering is not supported. That said $limit and $skip can still be used for pagination.  It is meant to be invoked by a Organization(partner) for a given merchant(accountId) in the request URI.  Please note that the Organization(partner) needs to authenticate using the partner or org token. 
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerIdPaymentMethodRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerIdPaymentMethodSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerIdPaymentMethodResponse
      */
 	public function accountGetCustomerIdPaymentMethod(
         ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerIdPaymentMethodRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerIdPaymentMethodSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerIdPaymentMethodResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -357,8 +334,7 @@ class Customers
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -385,12 +361,10 @@ class Customers
      * This route takes the customer token instead of an id to enable users to list  payment methods associated with a customer when they do not have the customer's id. Please note that there is no need to provide the (accountId) in the request URI, since the merchant needs to provide the account token to limit the scope for their own account
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerTokenPaymentMethodRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerTokenPaymentMethodSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerTokenPaymentMethodResponse
      */
 	public function accountGetCustomerTokenPaymentMethod(
         ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerTokenPaymentMethodRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerTokenPaymentMethodSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerTokenPaymentMethodResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -400,8 +374,7 @@ class Customers
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -428,12 +401,10 @@ class Customers
      * In order to create a customer API consumers can issue a call to the following endpoint. Note that as mentioned at the start of the document, an account id can be provided in the path.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountPostCustomerRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountPostCustomerSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\AccountPostCustomerResponse
      */
 	public function accountPostCustomer(
         ?\TheLogicStudio\ExactPayments\Models\Operations\AccountPostCustomerRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\AccountPostCustomerSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\AccountPostCustomerResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -447,8 +418,7 @@ class Customers
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -475,12 +445,10 @@ class Customers
      * This API associates a payment method with a customer. It is meant to be invoked by a partner to associate the payment method for specific customer  under a specific sub-merchant as identified by the {customer Id} and {accountId) parameters in the request URI. Please note that the partner needs to authenticate using the partner or org token when making this API call. Please note that the payment method is represented by a token returned earlier as a response to the POST method of the resource endpoint: /account/{accountId}/payment-method
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountPostCustomerIdPaymentMethodRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountPostCustomerIdPaymentMethodSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\AccountPostCustomerIdPaymentMethodResponse
      */
 	public function accountPostCustomerIdPaymentMethod(
         ?\TheLogicStudio\ExactPayments\Models\Operations\AccountPostCustomerIdPaymentMethodRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\AccountPostCustomerIdPaymentMethodSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\AccountPostCustomerIdPaymentMethodResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -494,8 +462,7 @@ class Customers
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -524,12 +491,10 @@ class Customers
      * 
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountPutCustomerIdRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountPutCustomerIdSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\AccountPutCustomerIdResponse
      */
 	public function accountPutCustomerId(
         ?\TheLogicStudio\ExactPayments\Models\Operations\AccountPutCustomerIdRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\AccountPutCustomerIdSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\AccountPutCustomerIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -543,8 +508,7 @@ class Customers
         $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -565,12 +529,10 @@ class Customers
      * In order to unlink a payment method from a customer, the following call can be made.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\DeleteCustomerCustomerIdPaymentMethodTokenRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\DeleteCustomerCustomerIdPaymentMethodTokenSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\DeleteCustomerCustomerIdPaymentMethodTokenResponse
      */
 	public function deleteCustomerCustomerIdPaymentMethodToken(
         ?\TheLogicStudio\ExactPayments\Models\Operations\DeleteCustomerCustomerIdPaymentMethodTokenRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\DeleteCustomerCustomerIdPaymentMethodTokenSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\DeleteCustomerCustomerIdPaymentMethodTokenResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -580,8 +542,7 @@ class Customers
         $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -602,12 +563,10 @@ class Customers
      * On occasion it is necessary for an API consumer to delete customers. The following call supports this use case.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\DeleteCustomerIdRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\DeleteCustomerIdSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\DeleteCustomerIdResponse
      */
 	public function deleteCustomerId(
         ?\TheLogicStudio\ExactPayments\Models\Operations\DeleteCustomerIdRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\DeleteCustomerIdSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\DeleteCustomerIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -617,8 +576,7 @@ class Customers
         $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -639,12 +597,10 @@ class Customers
      * This API returns the list of customers for a given merchant. It is meant to be invoked by a merchant to fetch the list of their own customers. Please note that there is no need to provide the (accountId) in the request URI, since the merchant needs to provide the account token to limit the scope for their own account
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerResponse
      */
 	public function getCustomer(
         ?\TheLogicStudio\ExactPayments\Models\Operations\GetCustomerRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -655,8 +611,7 @@ class Customers
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -683,12 +638,10 @@ class Customers
      * For fetching singular customer objects API consumers can issue a call to the following endpoint. If the id provided in the path exists it will be returned in the response body. Please note that there is no need to provide the (accountId) in the request URI, since the merchant needs to provide the account token to limit the scope for their own account
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerIdRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerIdSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerIdResponse
      */
 	public function getCustomerId(
         ?\TheLogicStudio\ExactPayments\Models\Operations\GetCustomerIdRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerIdSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -698,8 +651,7 @@ class Customers
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -726,12 +678,10 @@ class Customers
      * To retrieve a payment method as well as ensure it is associated with a customer. The following call can be used.  Please note that there is no need to provide the (accountId) in the request URI, since the merchant needs to provide the account token to limit the scope for their own account
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerCustomerIdPaymentMethodTokenRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerCustomerIdPaymentMethodTokenSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerCustomerIdPaymentMethodTokenResponse
      */
 	public function getCustomerCustomerIdPaymentMethodToken(
         ?\TheLogicStudio\ExactPayments\Models\Operations\GetCustomerCustomerIdPaymentMethodTokenRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerCustomerIdPaymentMethodTokenSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerCustomerIdPaymentMethodTokenResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -741,8 +691,7 @@ class Customers
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -769,12 +718,10 @@ class Customers
      * In order to fetch payments performed by a customer, the following endpoint can be called. Please note that there is no need to provide the (accountId) in the request URI, since the merchant needs to provide the account token to limit the scope for their own account
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerCustomerIdPaymentsRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerCustomerIdPaymentsSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerCustomerIdPaymentsResponse
      */
 	public function getCustomerCustomerIdPayments(
         ?\TheLogicStudio\ExactPayments\Models\Operations\GetCustomerCustomerIdPaymentsRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerCustomerIdPaymentsSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerCustomerIdPaymentsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -785,8 +732,7 @@ class Customers
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -815,12 +761,10 @@ class Customers
      * To query payment methods associated with a customer the following call can be used. Note that because card information is encrypted, query string filtering is not supported. That said $limit and $skip can still be used for pagination.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerIdPaymentMethodRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerIdPaymentMethodSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerIdPaymentMethodResponse
      */
 	public function getCustomerIdPaymentMethod(
         ?\TheLogicStudio\ExactPayments\Models\Operations\GetCustomerIdPaymentMethodRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerIdPaymentMethodSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerIdPaymentMethodResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -830,8 +774,7 @@ class Customers
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -858,12 +801,10 @@ class Customers
      * This route takes the customer token instead of an id to enable users to list  payment methods associated with a customer when they do not have the customer's id.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerTokenPaymentMethodRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerTokenPaymentMethodSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerTokenPaymentMethodResponse
      */
 	public function getCustomerTokenPaymentMethod(
         ?\TheLogicStudio\ExactPayments\Models\Operations\GetCustomerTokenPaymentMethodRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerTokenPaymentMethodSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerTokenPaymentMethodResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -874,8 +815,7 @@ class Customers
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -904,12 +844,10 @@ class Customers
      * In order to create a customer API consumers can issue a call to the following endpoint. Note that as mentioned at the start of the document, an account id can be provided in the path.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Shared\NewCustomer $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\PostCustomerSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\PostCustomerResponse
      */
 	public function postCustomer(
         ?\TheLogicStudio\ExactPayments\Models\Shared\NewCustomer $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\PostCustomerSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\PostCustomerResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -923,8 +861,7 @@ class Customers
         $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -945,12 +882,10 @@ class Customers
      * This API associates a payment method with a customer. It is meant to be invoked by a sub-merchant to associate the payment method for a specific customer as identified by the {customer Id} parameter in the request URI. Please note that the sub-merchant needs to provide the account authentication token when making this API call. Please note that the payment method in the request is represented by a token returned earlier as a response to the POST method of the resource endpoint: /payment-method
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\PostCustomerIdPaymentMethodRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\PostCustomerIdPaymentMethodSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\PostCustomerIdPaymentMethodResponse
      */
 	public function postCustomerIdPaymentMethod(
         ?\TheLogicStudio\ExactPayments\Models\Operations\PostCustomerIdPaymentMethodRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\PostCustomerIdPaymentMethodSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\PostCustomerIdPaymentMethodResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -964,8 +899,7 @@ class Customers
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -994,12 +928,10 @@ class Customers
      * 
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\PutCustomerIdRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\PutCustomerIdSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\PutCustomerIdResponse
      */
 	public function putCustomerId(
         ?\TheLogicStudio\ExactPayments\Models\Operations\PutCustomerIdRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\PutCustomerIdSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\PutCustomerIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -1013,8 +945,7 @@ class Customers
         $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

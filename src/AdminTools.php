@@ -27,12 +27,10 @@ class AdminTools
      * Retrieve a list of Notes for the given Organization and Onboarding identifier.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\GetListNotesRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\GetListNotesSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\GetListNotesResponse
      */
 	public function getListNotes(
         ?\TheLogicStudio\ExactPayments\Models\Operations\GetListNotesRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\GetListNotesSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\GetListNotesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -43,8 +41,7 @@ class AdminTools
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0.7, plain/text;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -95,12 +92,10 @@ class AdminTools
      * Create a Note for a specific Onboarding Application for the given Organization and Onboarding Application identifiers.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\PostCreateNotesRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\PostCreateNotesSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\PostCreateNotesResponse
      */
 	public function postCreateNotes(
         ?\TheLogicStudio\ExactPayments\Models\Operations\PostCreateNotesRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\PostCreateNotesSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\PostCreateNotesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -114,8 +109,7 @@ class AdminTools
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0.7, plain/text;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -169,12 +163,10 @@ class AdminTools
      * Manually request all verifications in an underwriting workflow to be performed outside of the initial onboarding process.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdRecheckRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdRecheckSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdRecheckResponse
      */
 	public function putOrganizationOrganizationIdOnboardingOnboardingIdRecheck(
         ?\TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdRecheckRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdRecheckSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdRecheckResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -184,8 +176,7 @@ class AdminTools
         $options['headers']['Accept'] = 'text/plain';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -216,12 +207,10 @@ class AdminTools
      * Manually request an underwriting workflow verification to be performed outside of the initial onboarding workflow.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdRetryRuleRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdRetryRuleSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdRetryRuleResponse
      */
 	public function putOrganizationOrganizationIdOnboardingOnboardingIdRetryRule(
         \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdRetryRuleRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdRetryRuleSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdRetryRuleResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -236,8 +225,7 @@ class AdminTools
         $options['headers']['Accept'] = 'text/plain';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -268,12 +256,10 @@ class AdminTools
      * Manually update the merchant onboarding application status after being automatically determined by the decision engine.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdStatusRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdStatusSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdStatusResponse
      */
 	public function putOrganizationOrganizationIdOnboardingOnboardingIdStatus(
         \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdStatusRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdStatusSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdStatusResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -288,8 +274,7 @@ class AdminTools
         $options['headers']['Accept'] = 'text/plain';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

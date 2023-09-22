@@ -27,12 +27,10 @@ class DocumentManagement
      * Create a Document Request asking the Organization or Account for additional verification.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\CreateDocumentRequestRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\CreateDocumentRequestSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\CreateDocumentRequestResponse
      */
 	public function createDocumentRequest(
         ?\TheLogicStudio\ExactPayments\Models\Operations\CreateDocumentRequestRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\CreateDocumentRequestSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\CreateDocumentRequestResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -46,8 +44,7 @@ class DocumentManagement
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -98,12 +95,10 @@ class DocumentManagement
      * Delete an uploaded document associated with a specific document ID.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\DeleteDocumentByIdRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\DeleteDocumentByIdSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\DeleteDocumentByIdResponse
      */
 	public function deleteDocumentById(
         ?\TheLogicStudio\ExactPayments\Models\Operations\DeleteDocumentByIdRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\DeleteDocumentByIdSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\DeleteDocumentByIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -113,8 +108,7 @@ class DocumentManagement
         $options['headers']['Accept'] = 'text/plain';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -145,12 +139,10 @@ class DocumentManagement
      * Delete a Document Request for an Onboarding Application for the given Organization, Onboarding, and Document Request identifiers.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\DeleteDocumentRequestByIdRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\DeleteDocumentRequestByIdSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\DeleteDocumentRequestByIdResponse
      */
 	public function deleteDocumentRequestById(
         ?\TheLogicStudio\ExactPayments\Models\Operations\DeleteDocumentRequestByIdRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\DeleteDocumentRequestByIdSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\DeleteDocumentRequestByIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -160,8 +152,7 @@ class DocumentManagement
         $options['headers']['Accept'] = 'text/plain';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -202,12 +193,10 @@ class DocumentManagement
      * Download a specific Document for the given Organization, Onboarding Application, and Document identifiers.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\GetDocumentByIdRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\GetDocumentByIdSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\GetDocumentByIdResponse
      */
 	public function getDocumentById(
         ?\TheLogicStudio\ExactPayments\Models\Operations\GetDocumentByIdRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\GetDocumentByIdSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\GetDocumentByIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -218,8 +207,7 @@ class DocumentManagement
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0.8, application/zip;q=0.5, plain/text;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -267,12 +255,10 @@ class DocumentManagement
      * Retrieve a list of Documents for the given Organization and Onboarding Application identifiers.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\GetDocumentsRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\GetDocumentsSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\GetDocumentsResponse
      */
 	public function getDocuments(
         ?\TheLogicStudio\ExactPayments\Models\Operations\GetDocumentsRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\GetDocumentsSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\GetDocumentsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -283,8 +269,7 @@ class DocumentManagement
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0.7, plain/text;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -335,12 +320,10 @@ class DocumentManagement
      * Download all Documents for the given Organization and Onboarding Application identifiers.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\GetDownloadAllDocumentsRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\GetDownloadAllDocumentsSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\GetDownloadAllDocumentsResponse
      */
 	public function getDownloadAllDocuments(
         ?\TheLogicStudio\ExactPayments\Models\Operations\GetDownloadAllDocumentsRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\GetDownloadAllDocumentsSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\GetDownloadAllDocumentsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -351,8 +334,7 @@ class DocumentManagement
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0.8, application/zip;q=0.5, plain/text;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -400,12 +382,10 @@ class DocumentManagement
      * Retrieve a list of Document Requests for the given Organization and Onboarding Application identifiers.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\GetListDocumentRequestsRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\GetListDocumentRequestsSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\GetListDocumentRequestsResponse
      */
 	public function getListDocumentRequests(
         ?\TheLogicStudio\ExactPayments\Models\Operations\GetListDocumentRequestsRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\GetListDocumentRequestsSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\GetListDocumentRequestsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -416,8 +396,7 @@ class DocumentManagement
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0.7, plain/text;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -468,12 +447,10 @@ class DocumentManagement
      * Retrieve a specific uploaded Document for the given Organization and Onboarding Application identifiers.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\GetRetrieveDocumentRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\GetRetrieveDocumentSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\GetRetrieveDocumentResponse
      */
 	public function getRetrieveDocument(
         ?\TheLogicStudio\ExactPayments\Models\Operations\GetRetrieveDocumentRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\GetRetrieveDocumentSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\GetRetrieveDocumentResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -483,8 +460,7 @@ class DocumentManagement
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0.7, plain/text;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -529,12 +505,10 @@ class DocumentManagement
      * Retrieve a specific Document Request for the given Organization and Onboarding Application identifiers.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\GetRetrieveDocumentRequestRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\GetRetrieveDocumentRequestSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\GetRetrieveDocumentRequestResponse
      */
 	public function getRetrieveDocumentRequest(
         ?\TheLogicStudio\ExactPayments\Models\Operations\GetRetrieveDocumentRequestRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\GetRetrieveDocumentRequestSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\GetRetrieveDocumentRequestResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -544,8 +518,7 @@ class DocumentManagement
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0.7, plain/text;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -607,7 +580,7 @@ class DocumentManagement
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $httpResponse = $this->sdkConfiguration->defaultClient->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -647,12 +620,10 @@ class DocumentManagement
      * Update the `type` of a specific Document for the given Organization, Onboarding Application, and Document identifiers.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\PutUpdateDocumentTypeByIdRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\PutUpdateDocumentTypeByIdSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\PutUpdateDocumentTypeByIdResponse
      */
 	public function putUpdateDocumentTypeById(
         ?\TheLogicStudio\ExactPayments\Models\Operations\PutUpdateDocumentTypeByIdRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\PutUpdateDocumentTypeByIdSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\PutUpdateDocumentTypeByIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -666,8 +637,7 @@ class DocumentManagement
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0.7, plain/text;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -717,12 +687,10 @@ class DocumentManagement
      * Update a Document Request for an Onboarding Application for the given Organization, Onboarding, and Document Request identifiers.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\UpdateDocumentRequestRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\UpdateDocumentRequestSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\UpdateDocumentRequestResponse
      */
 	public function updateDocumentRequest(
         ?\TheLogicStudio\ExactPayments\Models\Operations\UpdateDocumentRequestRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\UpdateDocumentRequestSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\UpdateDocumentRequestResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -736,8 +704,7 @@ class DocumentManagement
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -784,12 +751,10 @@ class DocumentManagement
      * Upload a Document for an Onboarding Application for the given Organization and Onboarding identifiers.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\UploadDocumentRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\UploadDocumentSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\UploadDocumentResponse
      */
 	public function uploadDocument(
         ?\TheLogicStudio\ExactPayments\Models\Operations\UploadDocumentRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\UploadDocumentSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\UploadDocumentResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -803,8 +768,7 @@ class DocumentManagement
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0.7, plain/text;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -893,7 +857,7 @@ class DocumentManagement
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0.7, plain/text;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $httpResponse = $this->sdkConfiguration->defaultClient->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

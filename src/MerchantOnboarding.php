@@ -45,7 +45,7 @@ class MerchantOnboarding
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $httpResponse = $this->sdkConfiguration->defaultClient->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -92,12 +92,10 @@ class MerchantOnboarding
      * Delete a specific Onboarding Application for the given Organization and Onboarding Identifiers.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\DeleteOnboardingByIdRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\DeleteOnboardingByIdSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\DeleteOnboardingByIdResponse
      */
 	public function deleteOnboardingById(
         ?\TheLogicStudio\ExactPayments\Models\Operations\DeleteOnboardingByIdRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\DeleteOnboardingByIdSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\DeleteOnboardingByIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -107,8 +105,7 @@ class MerchantOnboarding
         $options['headers']['Accept'] = 'text/plain';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -149,12 +146,10 @@ class MerchantOnboarding
      * Retrieve a list of options that can be used as a filter when retrieving the Onboarding Applications associated to the given Organization Identifier.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\ListFilterOptionsRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\ListFilterOptionsSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\ListFilterOptionsResponse
      */
 	public function listFilterOptions(
         ?\TheLogicStudio\ExactPayments\Models\Operations\ListFilterOptionsRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\ListFilterOptionsSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\ListFilterOptionsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -165,8 +160,7 @@ class MerchantOnboarding
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -222,7 +216,7 @@ class MerchantOnboarding
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $httpResponse = $this->sdkConfiguration->defaultClient->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -257,12 +251,10 @@ class MerchantOnboarding
      * Retrieve the list of Onboarding Applications associated for the given Organization Identifier.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\ListOnboardingByOrganizationRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\ListOnboardingByOrganizationSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\ListOnboardingByOrganizationResponse
      */
 	public function listOnboardingByOrganization(
         ?\TheLogicStudio\ExactPayments\Models\Operations\ListOnboardingByOrganizationRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\ListOnboardingByOrganizationSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\ListOnboardingByOrganizationResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -273,8 +265,7 @@ class MerchantOnboarding
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -321,12 +312,10 @@ class MerchantOnboarding
      * Retrieve the list of Onboarding Applications under the session account.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\ListOnboardingsRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\ListOnboardingsSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\ListOnboardingsResponse
      */
 	public function listOnboardings(
         ?\TheLogicStudio\ExactPayments\Models\Operations\ListOnboardingsRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\ListOnboardingsSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\ListOnboardingsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -337,8 +326,7 @@ class MerchantOnboarding
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -385,12 +373,10 @@ class MerchantOnboarding
      * Retrieve a specific Onboarding Application for the given Organization and Onboarding identifier.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\RetrieveOnboardingByIdRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\RetrieveOnboardingByIdSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\RetrieveOnboardingByIdResponse
      */
 	public function retrieveOnboardingById(
         ?\TheLogicStudio\ExactPayments\Models\Operations\RetrieveOnboardingByIdRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\RetrieveOnboardingByIdSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\RetrieveOnboardingByIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -400,8 +386,7 @@ class MerchantOnboarding
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -446,12 +431,10 @@ class MerchantOnboarding
      * Retrieve the list of Onboarding Applications submitted under your Organization matching the Business Name provided as a search parameter.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\SearchOnboardingByBusinessNameRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\SearchOnboardingByBusinessNameSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\SearchOnboardingByBusinessNameResponse
      */
 	public function searchOnboardingByBusinessName(
         ?\TheLogicStudio\ExactPayments\Models\Operations\SearchOnboardingByBusinessNameRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\SearchOnboardingByBusinessNameSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\SearchOnboardingByBusinessNameResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -462,8 +445,7 @@ class MerchantOnboarding
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -510,12 +492,10 @@ class MerchantOnboarding
      * Retrieve the list of Onboarding Applications matching the Business Name provided as a search parameter for the given Organization identifier.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\SearchOnboardingByOrganizationIdAndBusinessNameRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\SearchOnboardingByOrganizationIdAndBusinessNameSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\SearchOnboardingByOrganizationIdAndBusinessNameResponse
      */
 	public function searchOnboardingByOrganizationIdAndBusinessName(
         ?\TheLogicStudio\ExactPayments\Models\Operations\SearchOnboardingByOrganizationIdAndBusinessNameRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\SearchOnboardingByOrganizationIdAndBusinessNameSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\SearchOnboardingByOrganizationIdAndBusinessNameResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -526,8 +506,7 @@ class MerchantOnboarding
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

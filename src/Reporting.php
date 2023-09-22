@@ -27,12 +27,10 @@ class Reporting
      * Deletes an specific Report for the given Report identifier.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\DeleteReportRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\DeleteReportSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\DeleteReportResponse
      */
 	public function deleteReport(
         ?\TheLogicStudio\ExactPayments\Models\Operations\DeleteReportRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\DeleteReportSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\DeleteReportResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -42,8 +40,7 @@ class Reporting
         $options['headers']['Accept'] = 'text/plain';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -84,12 +81,10 @@ class Reporting
      * Download report query results in JSON or CSV format.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\GetReportRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\GetReportSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\GetReportResponse
      */
 	public function getReport(
         ?\TheLogicStudio\ExactPayments\Models\Operations\GetReportRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\GetReportSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\GetReportResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -100,8 +95,7 @@ class Reporting
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -146,12 +140,10 @@ class Reporting
      * Retrieves the details of a report query that a user has previously created.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\GetReportDetailsRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\GetReportDetailsSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\GetReportDetailsResponse
      */
 	public function getReportDetails(
         ?\TheLogicStudio\ExactPayments\Models\Operations\GetReportDetailsRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\GetReportDetailsSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\GetReportDetailsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -162,8 +154,7 @@ class Reporting
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -214,12 +205,10 @@ class Reporting
      * Retrieves a list of report queries that a user has previously created.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\GetReportsRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\GetReportsSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\GetReportsResponse
      */
 	public function getReports(
         ?\TheLogicStudio\ExactPayments\Models\Operations\GetReportsRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\GetReportsSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\GetReportsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -230,8 +219,7 @@ class Reporting
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

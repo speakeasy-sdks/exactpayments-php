@@ -27,12 +27,10 @@ class PaymentMethods
      * API to allow an Organization to delete a Payment Method for a merchant (accountId).
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountDeletePaymentMethodRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountDeletePaymentMethodSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\AccountDeletePaymentMethodResponse
      */
 	public function accountDeletePaymentMethod(
         ?\TheLogicStudio\ExactPayments\Models\Operations\AccountDeletePaymentMethodRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\AccountDeletePaymentMethodSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\AccountDeletePaymentMethodResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -42,8 +40,7 @@ class PaymentMethods
         $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -66,12 +63,10 @@ class PaymentMethods
      * Please note that the Organization(partner) needs to authenticate using the partner or org token.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentMethodRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentMethodSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentMethodResponse
      */
 	public function accountGetPaymentMethod(
         ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentMethodRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentMethodSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentMethodResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -81,8 +76,7 @@ class PaymentMethods
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -113,12 +107,10 @@ class PaymentMethods
      * If you are storing ACH related account information, then the data will only be stored on the `platform`.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountPostPaymentMethodRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountPostPaymentMethodSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\AccountPostPaymentMethodResponse
      */
 	public function accountPostPaymentMethod(
         ?\TheLogicStudio\ExactPayments\Models\Operations\AccountPostPaymentMethodRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\AccountPostPaymentMethodSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\AccountPostPaymentMethodResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -132,8 +124,7 @@ class PaymentMethods
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -164,12 +155,10 @@ class PaymentMethods
      * The amounts can then be submitted through this endpoint to complete account verification.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountPostVerifyMicrodepositsRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountPostVerifyMicrodepositsSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\AccountPostVerifyMicrodepositsResponse
      */
 	public function accountPostVerifyMicrodeposits(
         ?\TheLogicStudio\ExactPayments\Models\Operations\AccountPostVerifyMicrodepositsRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\AccountPostVerifyMicrodepositsSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\AccountPostVerifyMicrodepositsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -183,8 +172,7 @@ class PaymentMethods
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -217,12 +205,10 @@ class PaymentMethods
      * API to allow a merchant to delete a Payment Method.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\DeletePaymentMethodRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\DeletePaymentMethodSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\DeletePaymentMethodResponse
      */
 	public function deletePaymentMethod(
         ?\TheLogicStudio\ExactPayments\Models\Operations\DeletePaymentMethodRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\DeletePaymentMethodSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\DeletePaymentMethodResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -232,8 +218,7 @@ class PaymentMethods
         $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -254,12 +239,10 @@ class PaymentMethods
      * API to allow a merchant to retrieve a specific Payment Method.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\GetPaymentMethodRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\GetPaymentMethodSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\GetPaymentMethodResponse
      */
 	public function getPaymentMethod(
         ?\TheLogicStudio\ExactPayments\Models\Operations\GetPaymentMethodRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\GetPaymentMethodSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\GetPaymentMethodResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -269,8 +252,7 @@ class PaymentMethods
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -301,12 +283,10 @@ class PaymentMethods
      * If you are storing ACH related account information, then the data will only be stored on the `platform`.
      * 
      * @param mixed $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\PostPaymentMethodSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\PostPaymentMethodResponse
      */
 	public function postPaymentMethod(
         mixed $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\PostPaymentMethodSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\PostPaymentMethodResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -320,8 +300,7 @@ class PaymentMethods
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -352,12 +331,10 @@ class PaymentMethods
      * The amounts can then be submitted through this endpoint to complete account verification.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\PostVerifyMicrodepositsRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\PostVerifyMicrodepositsSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\PostVerifyMicrodepositsResponse
      */
 	public function postVerifyMicrodeposits(
         ?\TheLogicStudio\ExactPayments\Models\Operations\PostVerifyMicrodepositsRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\PostVerifyMicrodepositsSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\PostVerifyMicrodepositsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -371,8 +348,7 @@ class PaymentMethods
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

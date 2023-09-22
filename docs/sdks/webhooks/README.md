@@ -30,8 +30,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteWebhookRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteWebhookSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -41,10 +41,7 @@ try {
     $request->accountId = 'dolor';
     $request->webhookId = 'qui';
 
-    $requestSecurity = new AccountDeleteWebhookSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->webhooks->accountDeleteWebhook($request, $requestSecurity);
+    $response = $sdk->webhooks->accountDeleteWebhook($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -56,10 +53,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
-| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteWebhookRequest](../../models/operations/AccountDeleteWebhookRequest.md)   | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
-| `security`                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteWebhookSecurity](../../models/operations/AccountDeleteWebhookSecurity.md) | :heavy_check_mark:                                                                                                                      | The security requirements to use for the request.                                                                                       |
+| Parameter                                                                                                                             | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteWebhookRequest](../../models/operations/AccountDeleteWebhookRequest.md) | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
 
 
 ### Response
@@ -80,8 +76,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountDisableWebhookRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\AccountDisableWebhookSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -91,10 +87,7 @@ try {
     $request->accountId = 'ipsum';
     $request->webhookId = 'hic';
 
-    $requestSecurity = new AccountDisableWebhookSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->webhooks->accountDisableWebhook($request, $requestSecurity);
+    $response = $sdk->webhooks->accountDisableWebhook($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -106,10 +99,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\AccountDisableWebhookRequest](../../models/operations/AccountDisableWebhookRequest.md)   | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
-| `security`                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\AccountDisableWebhookSecurity](../../models/operations/AccountDisableWebhookSecurity.md) | :heavy_check_mark:                                                                                                                        | The security requirements to use for the request.                                                                                         |
+| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\AccountDisableWebhookRequest](../../models/operations/AccountDisableWebhookRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
 
 
 ### Response
@@ -130,8 +122,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountEnableWebhookRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\AccountEnableWebhookSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -141,10 +133,7 @@ try {
     $request->accountId = 'excepturi';
     $request->webhookId = 'cum';
 
-    $requestSecurity = new AccountEnableWebhookSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->webhooks->accountEnableWebhook($request, $requestSecurity);
+    $response = $sdk->webhooks->accountEnableWebhook($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -156,10 +145,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
-| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\AccountEnableWebhookRequest](../../models/operations/AccountEnableWebhookRequest.md)   | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
-| `security`                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\AccountEnableWebhookSecurity](../../models/operations/AccountEnableWebhookSecurity.md) | :heavy_check_mark:                                                                                                                      | The security requirements to use for the request.                                                                                       |
+| Parameter                                                                                                                             | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\AccountEnableWebhookRequest](../../models/operations/AccountEnableWebhookRequest.md) | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
 
 
 ### Response
@@ -180,8 +168,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountGetListWebhooksRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\AccountGetListWebhooksSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -193,10 +181,7 @@ try {
     $request->dollarSort = '-name';
     $request->accountId = 'voluptate';
 
-    $requestSecurity = new AccountGetListWebhooksSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->webhooks->accountGetListWebhooks($request, $requestSecurity);
+    $response = $sdk->webhooks->accountGetListWebhooks($request);
 
     if ($response->webhookResponses !== null) {
         // handle response
@@ -208,10 +193,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                   | Type                                                                                                                                        | Required                                                                                                                                    | Description                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\AccountGetListWebhooksRequest](../../models/operations/AccountGetListWebhooksRequest.md)   | :heavy_check_mark:                                                                                                                          | The request object to use for the request.                                                                                                  |
-| `security`                                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\AccountGetListWebhooksSecurity](../../models/operations/AccountGetListWebhooksSecurity.md) | :heavy_check_mark:                                                                                                                          | The security requirements to use for the request.                                                                                           |
+| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\AccountGetListWebhooksRequest](../../models/operations/AccountGetListWebhooksRequest.md) | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
 
 
 ### Response
@@ -232,8 +216,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountGetRetrieveWebhookRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\AccountGetRetrieveWebhookSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -243,10 +227,7 @@ try {
     $request->accountId = 'dignissimos';
     $request->webhookId = 'reiciendis';
 
-    $requestSecurity = new AccountGetRetrieveWebhookSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->webhooks->accountGetRetrieveWebhook($request, $requestSecurity);
+    $response = $sdk->webhooks->accountGetRetrieveWebhook($request);
 
     if ($response->webhookResponse !== null) {
         // handle response
@@ -258,10 +239,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                         | Type                                                                                                                                              | Required                                                                                                                                          | Description                                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\AccountGetRetrieveWebhookRequest](../../models/operations/AccountGetRetrieveWebhookRequest.md)   | :heavy_check_mark:                                                                                                                                | The request object to use for the request.                                                                                                        |
-| `security`                                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\AccountGetRetrieveWebhookSecurity](../../models/operations/AccountGetRetrieveWebhookSecurity.md) | :heavy_check_mark:                                                                                                                                | The security requirements to use for the request.                                                                                                 |
+| Parameter                                                                                                                                       | Type                                                                                                                                            | Required                                                                                                                                        | Description                                                                                                                                     |
+| ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\AccountGetRetrieveWebhookRequest](../../models/operations/AccountGetRetrieveWebhookRequest.md) | :heavy_check_mark:                                                                                                                              | The request object to use for the request.                                                                                                      |
 
 
 ### Response
@@ -282,10 +262,10 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountPostCreateWebhookRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\WebhookRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\WebhookEventField;
-use \TheLogicStudio\ExactPayments\Models\Operations\AccountPostCreateWebhookSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -300,10 +280,7 @@ try {
     ];
     $request->accountId = 'dolorum';
 
-    $requestSecurity = new AccountPostCreateWebhookSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->webhooks->accountPostCreateWebhook($request, $requestSecurity);
+    $response = $sdk->webhooks->accountPostCreateWebhook($request);
 
     if ($response->webhookResponse !== null) {
         // handle response
@@ -315,10 +292,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                       | Type                                                                                                                                            | Required                                                                                                                                        | Description                                                                                                                                     |
-| ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\AccountPostCreateWebhookRequest](../../models/operations/AccountPostCreateWebhookRequest.md)   | :heavy_check_mark:                                                                                                                              | The request object to use for the request.                                                                                                      |
-| `security`                                                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\AccountPostCreateWebhookSecurity](../../models/operations/AccountPostCreateWebhookSecurity.md) | :heavy_check_mark:                                                                                                                              | The security requirements to use for the request.                                                                                               |
+| Parameter                                                                                                                                     | Type                                                                                                                                          | Required                                                                                                                                      | Description                                                                                                                                   |
+| --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                    | [\TheLogicStudio\ExactPayments\Models\Operations\AccountPostCreateWebhookRequest](../../models/operations/AccountPostCreateWebhookRequest.md) | :heavy_check_mark:                                                                                                                            | The request object to use for the request.                                                                                                    |
 
 
 ### Response
@@ -339,10 +315,10 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountUpdateWebhookRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\UpdatableWebhookRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\WebhookEventField;
-use \TheLogicStudio\ExactPayments\Models\Operations\AccountUpdateWebhookSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -358,10 +334,7 @@ try {
     $request->accountId = 'veritatis';
     $request->webhookId = 'ipsa';
 
-    $requestSecurity = new AccountUpdateWebhookSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->webhooks->accountUpdateWebhook($request, $requestSecurity);
+    $response = $sdk->webhooks->accountUpdateWebhook($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -373,10 +346,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
-| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\AccountUpdateWebhookRequest](../../models/operations/AccountUpdateWebhookRequest.md)   | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
-| `security`                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\AccountUpdateWebhookSecurity](../../models/operations/AccountUpdateWebhookSecurity.md) | :heavy_check_mark:                                                                                                                      | The security requirements to use for the request.                                                                                       |
+| Parameter                                                                                                                             | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\AccountUpdateWebhookRequest](../../models/operations/AccountUpdateWebhookRequest.md) | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
 
 
 ### Response
@@ -397,8 +369,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\DeleteOrganizationOrganizationIdWebhookWebhookIdRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\DeleteOrganizationOrganizationIdWebhookWebhookIdSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -408,10 +380,7 @@ try {
     $request->organizationId = 'ipsa';
     $request->webhookId = 'iure';
 
-    $requestSecurity = new DeleteOrganizationOrganizationIdWebhookWebhookIdSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->webhooks->deleteOrganizationOrganizationIdWebhookWebhookId($request, $requestSecurity);
+    $response = $sdk->webhooks->deleteOrganizationOrganizationIdWebhookWebhookId($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -423,10 +392,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                                                       | Type                                                                                                                                                                                            | Required                                                                                                                                                                                        | Description                                                                                                                                                                                     |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\DeleteOrganizationOrganizationIdWebhookWebhookIdRequest](../../models/operations/DeleteOrganizationOrganizationIdWebhookWebhookIdRequest.md)   | :heavy_check_mark:                                                                                                                                                                              | The request object to use for the request.                                                                                                                                                      |
-| `security`                                                                                                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\DeleteOrganizationOrganizationIdWebhookWebhookIdSecurity](../../models/operations/DeleteOrganizationOrganizationIdWebhookWebhookIdSecurity.md) | :heavy_check_mark:                                                                                                                                                                              | The security requirements to use for the request.                                                                                                                                               |
+| Parameter                                                                                                                                                                                     | Type                                                                                                                                                                                          | Required                                                                                                                                                                                      | Description                                                                                                                                                                                   |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                                                    | [\TheLogicStudio\ExactPayments\Models\Operations\DeleteOrganizationOrganizationIdWebhookWebhookIdRequest](../../models/operations/DeleteOrganizationOrganizationIdWebhookWebhookIdRequest.md) | :heavy_check_mark:                                                                                                                                                                            | The request object to use for the request.                                                                                                                                                    |
 
 
 ### Response
@@ -447,8 +415,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdWebhookRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdWebhookSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -460,10 +428,7 @@ try {
     $request->dollarSort = '-name';
     $request->organizationId = 'odio';
 
-    $requestSecurity = new GetOrganizationOrganizationIdWebhookSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->webhooks->getOrganizationOrganizationIdWebhook($request, $requestSecurity);
+    $response = $sdk->webhooks->getOrganizationOrganizationIdWebhook($request);
 
     if ($response->webhookResponses !== null) {
         // handle response
@@ -475,10 +440,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                               | Type                                                                                                                                                                    | Required                                                                                                                                                                | Description                                                                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdWebhookRequest](../../models/operations/GetOrganizationOrganizationIdWebhookRequest.md)   | :heavy_check_mark:                                                                                                                                                      | The request object to use for the request.                                                                                                                              |
-| `security`                                                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdWebhookSecurity](../../models/operations/GetOrganizationOrganizationIdWebhookSecurity.md) | :heavy_check_mark:                                                                                                                                                      | The security requirements to use for the request.                                                                                                                       |
+| Parameter                                                                                                                                                             | Type                                                                                                                                                                  | Required                                                                                                                                                              | Description                                                                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdWebhookRequest](../../models/operations/GetOrganizationOrganizationIdWebhookRequest.md) | :heavy_check_mark:                                                                                                                                                    | The request object to use for the request.                                                                                                                            |
 
 
 ### Response
@@ -499,8 +463,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdWebhookWebhookIdRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdWebhookWebhookIdSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -510,10 +474,7 @@ try {
     $request->organizationId = 'quaerat';
     $request->webhookId = 'accusamus';
 
-    $requestSecurity = new GetOrganizationOrganizationIdWebhookWebhookIdSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->webhooks->getOrganizationOrganizationIdWebhookWebhookId($request, $requestSecurity);
+    $response = $sdk->webhooks->getOrganizationOrganizationIdWebhookWebhookId($request);
 
     if ($response->webhookResponse !== null) {
         // handle response
@@ -525,10 +486,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                                                 | Type                                                                                                                                                                                      | Required                                                                                                                                                                                  | Description                                                                                                                                                                               |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdWebhookWebhookIdRequest](../../models/operations/GetOrganizationOrganizationIdWebhookWebhookIdRequest.md)   | :heavy_check_mark:                                                                                                                                                                        | The request object to use for the request.                                                                                                                                                |
-| `security`                                                                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdWebhookWebhookIdSecurity](../../models/operations/GetOrganizationOrganizationIdWebhookWebhookIdSecurity.md) | :heavy_check_mark:                                                                                                                                                                        | The security requirements to use for the request.                                                                                                                                         |
+| Parameter                                                                                                                                                                               | Type                                                                                                                                                                                    | Required                                                                                                                                                                                | Description                                                                                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdWebhookWebhookIdRequest](../../models/operations/GetOrganizationOrganizationIdWebhookWebhookIdRequest.md) | :heavy_check_mark:                                                                                                                                                                      | The request object to use for the request.                                                                                                                                              |
 
 
 ### Response
@@ -549,10 +509,10 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\PostOrganizationOrganizationIdWebhookRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\WebhookRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\WebhookEventField;
-use \TheLogicStudio\ExactPayments\Models\Operations\PostOrganizationOrganizationIdWebhookSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -567,10 +527,7 @@ try {
     ];
     $request->organizationId = 'voluptatibus';
 
-    $requestSecurity = new PostOrganizationOrganizationIdWebhookSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->webhooks->postOrganizationOrganizationIdWebhook($request, $requestSecurity);
+    $response = $sdk->webhooks->postOrganizationOrganizationIdWebhook($request);
 
     if ($response->webhookResponse !== null) {
         // handle response
@@ -582,10 +539,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                                 | Type                                                                                                                                                                      | Required                                                                                                                                                                  | Description                                                                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\PostOrganizationOrganizationIdWebhookRequest](../../models/operations/PostOrganizationOrganizationIdWebhookRequest.md)   | :heavy_check_mark:                                                                                                                                                        | The request object to use for the request.                                                                                                                                |
-| `security`                                                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\PostOrganizationOrganizationIdWebhookSecurity](../../models/operations/PostOrganizationOrganizationIdWebhookSecurity.md) | :heavy_check_mark:                                                                                                                                                        | The security requirements to use for the request.                                                                                                                         |
+| Parameter                                                                                                                                                               | Type                                                                                                                                                                    | Required                                                                                                                                                                | Description                                                                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\PostOrganizationOrganizationIdWebhookRequest](../../models/operations/PostOrganizationOrganizationIdWebhookRequest.md) | :heavy_check_mark:                                                                                                                                                      | The request object to use for the request.                                                                                                                              |
 
 
 ### Response
@@ -606,10 +562,10 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdWebhookWebhookIdRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\UpdatableWebhookRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\WebhookEventField;
-use \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdWebhookWebhookIdSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -625,10 +581,7 @@ try {
     $request->organizationId = 'natus';
     $request->webhookId = 'eos';
 
-    $requestSecurity = new PutOrganizationOrganizationIdWebhookWebhookIdSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->webhooks->putOrganizationOrganizationIdWebhookWebhookId($request, $requestSecurity);
+    $response = $sdk->webhooks->putOrganizationOrganizationIdWebhookWebhookId($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -640,10 +593,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                                                 | Type                                                                                                                                                                                      | Required                                                                                                                                                                                  | Description                                                                                                                                                                               |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdWebhookWebhookIdRequest](../../models/operations/PutOrganizationOrganizationIdWebhookWebhookIdRequest.md)   | :heavy_check_mark:                                                                                                                                                                        | The request object to use for the request.                                                                                                                                                |
-| `security`                                                                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdWebhookWebhookIdSecurity](../../models/operations/PutOrganizationOrganizationIdWebhookWebhookIdSecurity.md) | :heavy_check_mark:                                                                                                                                                                        | The security requirements to use for the request.                                                                                                                                         |
+| Parameter                                                                                                                                                                               | Type                                                                                                                                                                                    | Required                                                                                                                                                                                | Description                                                                                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdWebhookWebhookIdRequest](../../models/operations/PutOrganizationOrganizationIdWebhookWebhookIdRequest.md) | :heavy_check_mark:                                                                                                                                                                      | The request object to use for the request.                                                                                                                                              |
 
 
 ### Response
@@ -664,8 +616,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdWebhookWebhookIdDisableRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdWebhookWebhookIdDisableSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -675,10 +627,7 @@ try {
     $request->organizationId = 'atque';
     $request->webhookId = 'sit';
 
-    $requestSecurity = new PutOrganizationOrganizationIdWebhookWebhookIdDisableSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->webhooks->putOrganizationOrganizationIdWebhookWebhookIdDisable($request, $requestSecurity);
+    $response = $sdk->webhooks->putOrganizationOrganizationIdWebhookWebhookIdDisable($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -690,10 +639,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                                                               | Type                                                                                                                                                                                                    | Required                                                                                                                                                                                                | Description                                                                                                                                                                                             |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdWebhookWebhookIdDisableRequest](../../models/operations/PutOrganizationOrganizationIdWebhookWebhookIdDisableRequest.md)   | :heavy_check_mark:                                                                                                                                                                                      | The request object to use for the request.                                                                                                                                                              |
-| `security`                                                                                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdWebhookWebhookIdDisableSecurity](../../models/operations/PutOrganizationOrganizationIdWebhookWebhookIdDisableSecurity.md) | :heavy_check_mark:                                                                                                                                                                                      | The security requirements to use for the request.                                                                                                                                                       |
+| Parameter                                                                                                                                                                                             | Type                                                                                                                                                                                                  | Required                                                                                                                                                                                              | Description                                                                                                                                                                                           |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdWebhookWebhookIdDisableRequest](../../models/operations/PutOrganizationOrganizationIdWebhookWebhookIdDisableRequest.md) | :heavy_check_mark:                                                                                                                                                                                    | The request object to use for the request.                                                                                                                                                            |
 
 
 ### Response
@@ -714,8 +662,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdWebhookWebhookIdEnableRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdWebhookWebhookIdEnableSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -725,10 +673,7 @@ try {
     $request->organizationId = 'fugiat';
     $request->webhookId = 'ab';
 
-    $requestSecurity = new PutOrganizationOrganizationIdWebhookWebhookIdEnableSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->webhooks->putOrganizationOrganizationIdWebhookWebhookIdEnable($request, $requestSecurity);
+    $response = $sdk->webhooks->putOrganizationOrganizationIdWebhookWebhookIdEnable($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -740,10 +685,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                                                             | Type                                                                                                                                                                                                  | Required                                                                                                                                                                                              | Description                                                                                                                                                                                           |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdWebhookWebhookIdEnableRequest](../../models/operations/PutOrganizationOrganizationIdWebhookWebhookIdEnableRequest.md)   | :heavy_check_mark:                                                                                                                                                                                    | The request object to use for the request.                                                                                                                                                            |
-| `security`                                                                                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdWebhookWebhookIdEnableSecurity](../../models/operations/PutOrganizationOrganizationIdWebhookWebhookIdEnableSecurity.md) | :heavy_check_mark:                                                                                                                                                                                    | The security requirements to use for the request.                                                                                                                                                     |
+| Parameter                                                                                                                                                                                           | Type                                                                                                                                                                                                | Required                                                                                                                                                                                            | Description                                                                                                                                                                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                                                          | [\TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdWebhookWebhookIdEnableRequest](../../models/operations/PutOrganizationOrganizationIdWebhookWebhookIdEnableRequest.md) | :heavy_check_mark:                                                                                                                                                                                  | The request object to use for the request.                                                                                                                                                          |
 
 
 ### Response

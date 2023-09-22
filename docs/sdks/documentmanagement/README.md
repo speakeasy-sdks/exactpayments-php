@@ -30,10 +30,10 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\CreateDocumentRequestRequest;
 use \TheLogicStudio\ExactPayments\Models\Operations\CreateDocumentRequestRequestBodyInput;
 use \TheLogicStudio\ExactPayments\Models\Operations\CreateDocumentRequestRequestBodyType;
-use \TheLogicStudio\ExactPayments\Models\Operations\CreateDocumentRequestSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -54,10 +54,7 @@ try {
     $request->onboardingId = 'modi';
     $request->organizationId = 'praesentium';
 
-    $requestSecurity = new CreateDocumentRequestSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->documentManagement->createDocumentRequest($request, $requestSecurity);
+    $response = $sdk->documentManagement->createDocumentRequest($request);
 
     if ($response->onboardingDocumentRequestCreate !== null) {
         // handle response
@@ -69,10 +66,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\CreateDocumentRequestRequest](../../models/operations/CreateDocumentRequestRequest.md)   | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
-| `security`                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\CreateDocumentRequestSecurity](../../models/operations/CreateDocumentRequestSecurity.md) | :heavy_check_mark:                                                                                                                        | The security requirements to use for the request.                                                                                         |
+| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\CreateDocumentRequestRequest](../../models/operations/CreateDocumentRequestRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
 
 
 ### Response
@@ -93,8 +89,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\DeleteDocumentByIdRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\DeleteDocumentByIdSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -105,10 +101,7 @@ try {
     $request->onboardingId = 'voluptates';
     $request->organizationId = 'quasi';
 
-    $requestSecurity = new DeleteDocumentByIdSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->documentManagement->deleteDocumentById($request, $requestSecurity);
+    $response = $sdk->documentManagement->deleteDocumentById($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -120,10 +113,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                          | [\TheLogicStudio\ExactPayments\Models\Operations\DeleteDocumentByIdRequest](../../models/operations/DeleteDocumentByIdRequest.md)   | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
-| `security`                                                                                                                          | [\TheLogicStudio\ExactPayments\Models\Operations\DeleteDocumentByIdSecurity](../../models/operations/DeleteDocumentByIdSecurity.md) | :heavy_check_mark:                                                                                                                  | The security requirements to use for the request.                                                                                   |
+| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\DeleteDocumentByIdRequest](../../models/operations/DeleteDocumentByIdRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
 
 
 ### Response
@@ -144,8 +136,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\DeleteDocumentRequestByIdRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\DeleteDocumentRequestByIdSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -156,10 +148,7 @@ try {
     $request->onboardingId = 'sint';
     $request->organizationId = 'veritatis';
 
-    $requestSecurity = new DeleteDocumentRequestByIdSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->documentManagement->deleteDocumentRequestById($request, $requestSecurity);
+    $response = $sdk->documentManagement->deleteDocumentRequestById($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -171,10 +160,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                         | Type                                                                                                                                              | Required                                                                                                                                          | Description                                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\DeleteDocumentRequestByIdRequest](../../models/operations/DeleteDocumentRequestByIdRequest.md)   | :heavy_check_mark:                                                                                                                                | The request object to use for the request.                                                                                                        |
-| `security`                                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\DeleteDocumentRequestByIdSecurity](../../models/operations/DeleteDocumentRequestByIdSecurity.md) | :heavy_check_mark:                                                                                                                                | The security requirements to use for the request.                                                                                                 |
+| Parameter                                                                                                                                       | Type                                                                                                                                            | Required                                                                                                                                        | Description                                                                                                                                     |
+| ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\DeleteDocumentRequestByIdRequest](../../models/operations/DeleteDocumentRequestByIdRequest.md) | :heavy_check_mark:                                                                                                                              | The request object to use for the request.                                                                                                      |
 
 
 ### Response
@@ -195,8 +183,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetDocumentByIdRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetDocumentByIdSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -208,10 +196,7 @@ try {
     $request->onboardingId = 'incidunt';
     $request->organizationId = 'enim';
 
-    $requestSecurity = new GetDocumentByIdSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->documentManagement->getDocumentById($request, $requestSecurity);
+    $response = $sdk->documentManagement->getDocumentById($request);
 
     if ($response->getDocumentById200ApplicationZipBinaryString !== null) {
         // handle response
@@ -223,10 +208,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                    | [\TheLogicStudio\ExactPayments\Models\Operations\GetDocumentByIdRequest](../../models/operations/GetDocumentByIdRequest.md)   | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
-| `security`                                                                                                                    | [\TheLogicStudio\ExactPayments\Models\Operations\GetDocumentByIdSecurity](../../models/operations/GetDocumentByIdSecurity.md) | :heavy_check_mark:                                                                                                            | The security requirements to use for the request.                                                                             |
+| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
+| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\GetDocumentByIdRequest](../../models/operations/GetDocumentByIdRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
 
 
 ### Response
@@ -247,8 +231,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetDocumentsRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetDocumentsSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -261,10 +245,7 @@ try {
     $request->onboardingId = 'consequatur';
     $request->organizationId = 'est';
 
-    $requestSecurity = new GetDocumentsSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->documentManagement->getDocuments($request, $requestSecurity);
+    $response = $sdk->documentManagement->getDocuments($request);
 
     if ($response->documents !== null) {
         // handle response
@@ -276,10 +257,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\GetDocumentsRequest](../../models/operations/GetDocumentsRequest.md)   | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
-| `security`                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\GetDocumentsSecurity](../../models/operations/GetDocumentsSecurity.md) | :heavy_check_mark:                                                                                                      | The security requirements to use for the request.                                                                       |
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\GetDocumentsRequest](../../models/operations/GetDocumentsRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
 
 
 ### Response
@@ -300,8 +280,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetDownloadAllDocumentsRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetDownloadAllDocumentsSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -312,10 +292,7 @@ try {
     $request->onboardingId = 'quibusdam';
     $request->organizationId = 'explicabo';
 
-    $requestSecurity = new GetDownloadAllDocumentsSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->documentManagement->getDownloadAllDocuments($request, $requestSecurity);
+    $response = $sdk->documentManagement->getDownloadAllDocuments($request);
 
     if ($response->getDownloadAllDocuments200ApplicationZipBinaryString !== null) {
         // handle response
@@ -327,10 +304,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                     | Type                                                                                                                                          | Required                                                                                                                                      | Description                                                                                                                                   |
-| --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                    | [\TheLogicStudio\ExactPayments\Models\Operations\GetDownloadAllDocumentsRequest](../../models/operations/GetDownloadAllDocumentsRequest.md)   | :heavy_check_mark:                                                                                                                            | The request object to use for the request.                                                                                                    |
-| `security`                                                                                                                                    | [\TheLogicStudio\ExactPayments\Models\Operations\GetDownloadAllDocumentsSecurity](../../models/operations/GetDownloadAllDocumentsSecurity.md) | :heavy_check_mark:                                                                                                                            | The security requirements to use for the request.                                                                                             |
+| Parameter                                                                                                                                   | Type                                                                                                                                        | Required                                                                                                                                    | Description                                                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\GetDownloadAllDocumentsRequest](../../models/operations/GetDownloadAllDocumentsRequest.md) | :heavy_check_mark:                                                                                                                          | The request object to use for the request.                                                                                                  |
 
 
 ### Response
@@ -351,8 +327,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetListDocumentRequestsRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetListDocumentRequestsSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -365,10 +341,7 @@ try {
     $request->onboardingId = 'deserunt';
     $request->organizationId = 'distinctio';
 
-    $requestSecurity = new GetListDocumentRequestsSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->documentManagement->getListDocumentRequests($request, $requestSecurity);
+    $response = $sdk->documentManagement->getListDocumentRequests($request);
 
     if ($response->onboardingDocumentRequestsResponse !== null) {
         // handle response
@@ -380,10 +353,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                     | Type                                                                                                                                          | Required                                                                                                                                      | Description                                                                                                                                   |
-| --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                    | [\TheLogicStudio\ExactPayments\Models\Operations\GetListDocumentRequestsRequest](../../models/operations/GetListDocumentRequestsRequest.md)   | :heavy_check_mark:                                                                                                                            | The request object to use for the request.                                                                                                    |
-| `security`                                                                                                                                    | [\TheLogicStudio\ExactPayments\Models\Operations\GetListDocumentRequestsSecurity](../../models/operations/GetListDocumentRequestsSecurity.md) | :heavy_check_mark:                                                                                                                            | The security requirements to use for the request.                                                                                             |
+| Parameter                                                                                                                                   | Type                                                                                                                                        | Required                                                                                                                                    | Description                                                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\GetListDocumentRequestsRequest](../../models/operations/GetListDocumentRequestsRequest.md) | :heavy_check_mark:                                                                                                                          | The request object to use for the request.                                                                                                  |
 
 
 ### Response
@@ -404,8 +376,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetRetrieveDocumentRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetRetrieveDocumentSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -416,10 +388,7 @@ try {
     $request->onboardingId = 'labore';
     $request->organizationId = 'modi';
 
-    $requestSecurity = new GetRetrieveDocumentSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->documentManagement->getRetrieveDocument($request, $requestSecurity);
+    $response = $sdk->documentManagement->getRetrieveDocument($request);
 
     if ($response->document !== null) {
         // handle response
@@ -431,10 +400,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                             | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\GetRetrieveDocumentRequest](../../models/operations/GetRetrieveDocumentRequest.md)   | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
-| `security`                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\GetRetrieveDocumentSecurity](../../models/operations/GetRetrieveDocumentSecurity.md) | :heavy_check_mark:                                                                                                                    | The security requirements to use for the request.                                                                                     |
+| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                          | [\TheLogicStudio\ExactPayments\Models\Operations\GetRetrieveDocumentRequest](../../models/operations/GetRetrieveDocumentRequest.md) | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
 
 
 ### Response
@@ -455,8 +423,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetRetrieveDocumentRequestRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetRetrieveDocumentRequestSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -467,10 +435,7 @@ try {
     $request->onboardingId = 'aliquid';
     $request->organizationId = 'cupiditate';
 
-    $requestSecurity = new GetRetrieveDocumentRequestSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->documentManagement->getRetrieveDocumentRequest($request, $requestSecurity);
+    $response = $sdk->documentManagement->getRetrieveDocumentRequest($request);
 
     if ($response->onboardingDocumentRequestResponse !== null) {
         // handle response
@@ -482,10 +447,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                           | Type                                                                                                                                                | Required                                                                                                                                            | Description                                                                                                                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                          | [\TheLogicStudio\ExactPayments\Models\Operations\GetRetrieveDocumentRequestRequest](../../models/operations/GetRetrieveDocumentRequestRequest.md)   | :heavy_check_mark:                                                                                                                                  | The request object to use for the request.                                                                                                          |
-| `security`                                                                                                                                          | [\TheLogicStudio\ExactPayments\Models\Operations\GetRetrieveDocumentRequestSecurity](../../models/operations/GetRetrieveDocumentRequestSecurity.md) | :heavy_check_mark:                                                                                                                                  | The security requirements to use for the request.                                                                                                   |
+| Parameter                                                                                                                                         | Type                                                                                                                                              | Required                                                                                                                                          | Description                                                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\GetRetrieveDocumentRequestRequest](../../models/operations/GetRetrieveDocumentRequestRequest.md) | :heavy_check_mark:                                                                                                                                | The request object to use for the request.                                                                                                        |
 
 
 ### Response
@@ -506,6 +470,7 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\ListDocumentRequestByTokenRequest;
 
 $sdk = ExactPayments::builder()
@@ -550,10 +515,10 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\PutUpdateDocumentTypeByIdRequest;
 use \TheLogicStudio\ExactPayments\Models\Operations\PutUpdateDocumentTypeByIdRequestBody;
 use \TheLogicStudio\ExactPayments\Models\Operations\PutUpdateDocumentTypeByIdRequestBodyType;
-use \TheLogicStudio\ExactPayments\Models\Operations\PutUpdateDocumentTypeByIdSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -566,10 +531,7 @@ try {
     $request->onboardingId = 'magni';
     $request->organizationId = 'assumenda';
 
-    $requestSecurity = new PutUpdateDocumentTypeByIdSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->documentManagement->putUpdateDocumentTypeById($request, $requestSecurity);
+    $response = $sdk->documentManagement->putUpdateDocumentTypeById($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -581,10 +543,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                         | Type                                                                                                                                              | Required                                                                                                                                          | Description                                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\PutUpdateDocumentTypeByIdRequest](../../models/operations/PutUpdateDocumentTypeByIdRequest.md)   | :heavy_check_mark:                                                                                                                                | The request object to use for the request.                                                                                                        |
-| `security`                                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\PutUpdateDocumentTypeByIdSecurity](../../models/operations/PutUpdateDocumentTypeByIdSecurity.md) | :heavy_check_mark:                                                                                                                                | The security requirements to use for the request.                                                                                                 |
+| Parameter                                                                                                                                       | Type                                                                                                                                            | Required                                                                                                                                        | Description                                                                                                                                     |
+| ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\PutUpdateDocumentTypeByIdRequest](../../models/operations/PutUpdateDocumentTypeByIdRequest.md) | :heavy_check_mark:                                                                                                                              | The request object to use for the request.                                                                                                      |
 
 
 ### Response
@@ -605,10 +566,10 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\UpdateDocumentRequestRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\OnboardingDocumentRequestUpdate;
 use \TheLogicStudio\ExactPayments\Models\Shared\OnboardingDocumentRequestUpdateType;
-use \TheLogicStudio\ExactPayments\Models\Operations\UpdateDocumentRequestSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -629,10 +590,7 @@ try {
     $request->onboardingId = 'alias';
     $request->organizationId = 'fugit';
 
-    $requestSecurity = new UpdateDocumentRequestSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->documentManagement->updateDocumentRequest($request, $requestSecurity);
+    $response = $sdk->documentManagement->updateDocumentRequest($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -644,10 +602,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\UpdateDocumentRequestRequest](../../models/operations/UpdateDocumentRequestRequest.md)   | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
-| `security`                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\UpdateDocumentRequestSecurity](../../models/operations/UpdateDocumentRequestSecurity.md) | :heavy_check_mark:                                                                                                                        | The security requirements to use for the request.                                                                                         |
+| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\UpdateDocumentRequestRequest](../../models/operations/UpdateDocumentRequestRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
 
 
 ### Response
@@ -668,11 +625,11 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\UploadDocumentRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\OnboardingDocumentUploadRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\OnboardingDocumentUploadRequestFiles;
 use \TheLogicStudio\ExactPayments\Models\Shared\DocumentUploadType;
-use \TheLogicStudio\ExactPayments\Models\Operations\UploadDocumentSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -691,10 +648,7 @@ try {
     $request->onboardingId = 'tempora';
     $request->organizationId = 'facilis';
 
-    $requestSecurity = new UploadDocumentSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->documentManagement->uploadDocument($request, $requestSecurity);
+    $response = $sdk->documentManagement->uploadDocument($request);
 
     if ($response->uploadDocumentResponse !== null) {
         // handle response
@@ -706,10 +660,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
-| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\UploadDocumentRequest](../../models/operations/UploadDocumentRequest.md)   | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
-| `security`                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\UploadDocumentSecurity](../../models/operations/UploadDocumentSecurity.md) | :heavy_check_mark:                                                                                                          | The security requirements to use for the request.                                                                           |
+| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\UploadDocumentRequest](../../models/operations/UploadDocumentRequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
 
 
 ### Response
@@ -730,6 +683,7 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\UploadDocumentByTokenRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\OnboardingDocumentUploadTokenRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\OnboardingDocumentUploadTokenRequestFiles;

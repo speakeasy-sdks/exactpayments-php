@@ -25,6 +25,7 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\CreateOnboardingRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\OnboardingRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\OnboardingMerchant;
@@ -147,8 +148,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\DeleteOnboardingByIdRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\DeleteOnboardingByIdSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -158,10 +159,7 @@ try {
     $request->onboardingId = 'non';
     $request->organizationId = 'eligendi';
 
-    $requestSecurity = new DeleteOnboardingByIdSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->merchantOnboarding->deleteOnboardingById($request, $requestSecurity);
+    $response = $sdk->merchantOnboarding->deleteOnboardingById($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -173,10 +171,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
-| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\DeleteOnboardingByIdRequest](../../models/operations/DeleteOnboardingByIdRequest.md)   | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
-| `security`                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\DeleteOnboardingByIdSecurity](../../models/operations/DeleteOnboardingByIdSecurity.md) | :heavy_check_mark:                                                                                                                      | The security requirements to use for the request.                                                                                       |
+| Parameter                                                                                                                             | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\DeleteOnboardingByIdRequest](../../models/operations/DeleteOnboardingByIdRequest.md) | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
 
 
 ### Response
@@ -197,8 +194,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\ListFilterOptionsRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\ListFilterOptionsSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -208,10 +205,7 @@ try {
     $request->isDeleted = false;
     $request->organizationId = 'sint';
 
-    $requestSecurity = new ListFilterOptionsSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->merchantOnboarding->listFilterOptions($request, $requestSecurity);
+    $response = $sdk->merchantOnboarding->listFilterOptions($request);
 
     if ($response->filterOnboardings !== null) {
         // handle response
@@ -223,10 +217,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\ListFilterOptionsRequest](../../models/operations/ListFilterOptionsRequest.md)   | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
-| `security`                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\ListFilterOptionsSecurity](../../models/operations/ListFilterOptionsSecurity.md) | :heavy_check_mark:                                                                                                                | The security requirements to use for the request.                                                                                 |
+| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\ListFilterOptionsRequest](../../models/operations/ListFilterOptionsRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
 
 
 ### Response
@@ -247,6 +240,7 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -281,8 +275,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\ListOnboardingByOrganizationRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\ListOnboardingByOrganizationSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -295,10 +289,7 @@ try {
     $request->dollarSort = 'createdAt:asc';
     $request->organizationId = 'aliquid';
 
-    $requestSecurity = new ListOnboardingByOrganizationSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->merchantOnboarding->listOnboardingByOrganization($request, $requestSecurity);
+    $response = $sdk->merchantOnboarding->listOnboardingByOrganization($request);
 
     if ($response->onboardingWithoutPrincipals !== null) {
         // handle response
@@ -310,10 +301,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                               | Type                                                                                                                                                    | Required                                                                                                                                                | Description                                                                                                                                             |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\ListOnboardingByOrganizationRequest](../../models/operations/ListOnboardingByOrganizationRequest.md)   | :heavy_check_mark:                                                                                                                                      | The request object to use for the request.                                                                                                              |
-| `security`                                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\ListOnboardingByOrganizationSecurity](../../models/operations/ListOnboardingByOrganizationSecurity.md) | :heavy_check_mark:                                                                                                                                      | The security requirements to use for the request.                                                                                                       |
+| Parameter                                                                                                                                             | Type                                                                                                                                                  | Required                                                                                                                                              | Description                                                                                                                                           |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\ListOnboardingByOrganizationRequest](../../models/operations/ListOnboardingByOrganizationRequest.md) | :heavy_check_mark:                                                                                                                                    | The request object to use for the request.                                                                                                            |
 
 
 ### Response
@@ -334,8 +324,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\ListOnboardingsRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\ListOnboardingsSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -347,10 +337,7 @@ try {
     $request->dollarSkip = 10;
     $request->dollarSort = 'createdAt:asc';
 
-    $requestSecurity = new ListOnboardingsSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->merchantOnboarding->listOnboardings($request, $requestSecurity);
+    $response = $sdk->merchantOnboarding->listOnboardings($request);
 
     if ($response->onboardingWithoutPrincipals !== null) {
         // handle response
@@ -362,10 +349,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                    | [\TheLogicStudio\ExactPayments\Models\Operations\ListOnboardingsRequest](../../models/operations/ListOnboardingsRequest.md)   | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
-| `security`                                                                                                                    | [\TheLogicStudio\ExactPayments\Models\Operations\ListOnboardingsSecurity](../../models/operations/ListOnboardingsSecurity.md) | :heavy_check_mark:                                                                                                            | The security requirements to use for the request.                                                                             |
+| Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
+| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\ListOnboardingsRequest](../../models/operations/ListOnboardingsRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
 
 
 ### Response
@@ -386,8 +372,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\RetrieveOnboardingByIdRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\RetrieveOnboardingByIdSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -397,10 +383,7 @@ try {
     $request->onboardingId = 'provident';
     $request->organizationId = 'necessitatibus';
 
-    $requestSecurity = new RetrieveOnboardingByIdSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->merchantOnboarding->retrieveOnboardingById($request, $requestSecurity);
+    $response = $sdk->merchantOnboarding->retrieveOnboardingById($request);
 
     if ($response->onboardingWithPrincipalResponse !== null) {
         // handle response
@@ -412,10 +395,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                   | Type                                                                                                                                        | Required                                                                                                                                    | Description                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\RetrieveOnboardingByIdRequest](../../models/operations/RetrieveOnboardingByIdRequest.md)   | :heavy_check_mark:                                                                                                                          | The request object to use for the request.                                                                                                  |
-| `security`                                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\RetrieveOnboardingByIdSecurity](../../models/operations/RetrieveOnboardingByIdSecurity.md) | :heavy_check_mark:                                                                                                                          | The security requirements to use for the request.                                                                                           |
+| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\RetrieveOnboardingByIdRequest](../../models/operations/RetrieveOnboardingByIdRequest.md) | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
 
 
 ### Response
@@ -436,8 +418,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\SearchOnboardingByBusinessNameRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\SearchOnboardingByBusinessNameSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -449,10 +431,7 @@ try {
     $request->dollarSort = 'createdAt:asc';
     $request->businessName = 'ACME';
 
-    $requestSecurity = new SearchOnboardingByBusinessNameSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->merchantOnboarding->searchOnboardingByBusinessName($request, $requestSecurity);
+    $response = $sdk->merchantOnboarding->searchOnboardingByBusinessName($request);
 
     if ($response->onboardingWithoutPrincipals !== null) {
         // handle response
@@ -464,10 +443,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                   | Type                                                                                                                                                        | Required                                                                                                                                                    | Description                                                                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\SearchOnboardingByBusinessNameRequest](../../models/operations/SearchOnboardingByBusinessNameRequest.md)   | :heavy_check_mark:                                                                                                                                          | The request object to use for the request.                                                                                                                  |
-| `security`                                                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\SearchOnboardingByBusinessNameSecurity](../../models/operations/SearchOnboardingByBusinessNameSecurity.md) | :heavy_check_mark:                                                                                                                                          | The security requirements to use for the request.                                                                                                           |
+| Parameter                                                                                                                                                 | Type                                                                                                                                                      | Required                                                                                                                                                  | Description                                                                                                                                               |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\SearchOnboardingByBusinessNameRequest](../../models/operations/SearchOnboardingByBusinessNameRequest.md) | :heavy_check_mark:                                                                                                                                        | The request object to use for the request.                                                                                                                |
 
 
 ### Response
@@ -488,8 +466,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\SearchOnboardingByOrganizationIdAndBusinessNameRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\SearchOnboardingByOrganizationIdAndBusinessNameSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -502,10 +480,7 @@ try {
     $request->businessName = 'ACME';
     $request->organizationId = 'sint';
 
-    $requestSecurity = new SearchOnboardingByOrganizationIdAndBusinessNameSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->merchantOnboarding->searchOnboardingByOrganizationIdAndBusinessName($request, $requestSecurity);
+    $response = $sdk->merchantOnboarding->searchOnboardingByOrganizationIdAndBusinessName($request);
 
     if ($response->onboardingWithoutPrincipals !== null) {
         // handle response
@@ -517,10 +492,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                                                     | Type                                                                                                                                                                                          | Required                                                                                                                                                                                      | Description                                                                                                                                                                                   |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                                                    | [\TheLogicStudio\ExactPayments\Models\Operations\SearchOnboardingByOrganizationIdAndBusinessNameRequest](../../models/operations/SearchOnboardingByOrganizationIdAndBusinessNameRequest.md)   | :heavy_check_mark:                                                                                                                                                                            | The request object to use for the request.                                                                                                                                                    |
-| `security`                                                                                                                                                                                    | [\TheLogicStudio\ExactPayments\Models\Operations\SearchOnboardingByOrganizationIdAndBusinessNameSecurity](../../models/operations/SearchOnboardingByOrganizationIdAndBusinessNameSecurity.md) | :heavy_check_mark:                                                                                                                                                                            | The security requirements to use for the request.                                                                                                                                             |
+| Parameter                                                                                                                                                                                   | Type                                                                                                                                                                                        | Required                                                                                                                                                                                    | Description                                                                                                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\SearchOnboardingByOrganizationIdAndBusinessNameRequest](../../models/operations/SearchOnboardingByOrganizationIdAndBusinessNameRequest.md) | :heavy_check_mark:                                                                                                                                                                          | The request object to use for the request.                                                                                                                                                  |
 
 
 ### Response

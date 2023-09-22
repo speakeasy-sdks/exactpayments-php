@@ -27,12 +27,10 @@ class Authentication
      * Create a new Application Token for non-human users, like external APIs or User Interfaces to access our API under the session account.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\CreateApplicationTokenRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\CreateApplicationTokenSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\CreateApplicationTokenResponse
      */
 	public function createApplicationToken(
         \TheLogicStudio\ExactPayments\Models\Operations\CreateApplicationTokenRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\CreateApplicationTokenSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\CreateApplicationTokenResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -47,8 +45,7 @@ class Authentication
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -121,7 +118,7 @@ class Authentication
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $httpResponse = $this->sdkConfiguration->defaultClient->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -182,12 +179,10 @@ class Authentication
      * Delete a specific Application Token by the given Application Identifier under the session account.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\DeleteApplicationTokenRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\DeleteApplicationTokenSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\DeleteApplicationTokenResponse
      */
 	public function deleteApplicationToken(
         ?\TheLogicStudio\ExactPayments\Models\Operations\DeleteApplicationTokenRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\DeleteApplicationTokenSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\DeleteApplicationTokenResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -197,8 +192,7 @@ class Authentication
         $options['headers']['Accept'] = 'text/plain';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -239,12 +233,10 @@ class Authentication
      * Query Application Tokens for non-human users, like external APIs or User Interfaces to access our API under the session account.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\QueryApplicationTokenRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\QueryApplicationTokenSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\QueryApplicationTokenResponse
      */
 	public function queryApplicationToken(
         ?\TheLogicStudio\ExactPayments\Models\Operations\QueryApplicationTokenRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\QueryApplicationTokenSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\QueryApplicationTokenResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -255,8 +247,7 @@ class Authentication
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

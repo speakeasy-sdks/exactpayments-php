@@ -27,12 +27,10 @@ class UnderwritingWorkflow
      * Delete a specific Workflow by Organization and Workflow identifiers.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\DeleteWorkflowByIdRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\DeleteWorkflowByIdSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\DeleteWorkflowByIdResponse
      */
 	public function deleteWorkflowById(
         ?\TheLogicStudio\ExactPayments\Models\Operations\DeleteWorkflowByIdRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\DeleteWorkflowByIdSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\DeleteWorkflowByIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -42,8 +40,7 @@ class UnderwritingWorkflow
         $options['headers']['Accept'] = 'text/plain';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -89,12 +86,10 @@ class UnderwritingWorkflow
      * Disable a specific Workflow by Organization and Workflow identifiers.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\DisableWorkflowByIdRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\DisableWorkflowByIdSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\DisableWorkflowByIdResponse
      */
 	public function disableWorkflowById(
         ?\TheLogicStudio\ExactPayments\Models\Operations\DisableWorkflowByIdRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\DisableWorkflowByIdSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\DisableWorkflowByIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -104,8 +99,7 @@ class UnderwritingWorkflow
         $options['headers']['Accept'] = 'text/plain';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -146,12 +140,10 @@ class UnderwritingWorkflow
      * Enable a specific Workflow by Organization and Workflow identifiers.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\EnableWorkflowByIdRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\EnableWorkflowByIdSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\EnableWorkflowByIdResponse
      */
 	public function enableWorkflowById(
         ?\TheLogicStudio\ExactPayments\Models\Operations\EnableWorkflowByIdRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\EnableWorkflowByIdSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\EnableWorkflowByIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -161,8 +153,7 @@ class UnderwritingWorkflow
         $options['headers']['Accept'] = 'text/plain';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -203,12 +194,10 @@ class UnderwritingWorkflow
      * Retrieve a list of active underwriting workflows associated with your organization.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdOnboardingWorkflowRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdOnboardingWorkflowSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdOnboardingWorkflowResponse
      */
 	public function getOrganizationOrganizationIdOnboardingWorkflow(
         ?\TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdOnboardingWorkflowRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdOnboardingWorkflowSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdOnboardingWorkflowResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -219,8 +208,7 @@ class UnderwritingWorkflow
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -259,12 +247,10 @@ class UnderwritingWorkflow
      * Retrieve a list of properties associated with a specific workflow ID.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdOnboardingWorkflowWorkflowIdRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdOnboardingWorkflowWorkflowIdSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdOnboardingWorkflowWorkflowIdResponse
      */
 	public function getOrganizationOrganizationIdOnboardingWorkflowWorkflowId(
         ?\TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdOnboardingWorkflowWorkflowIdRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdOnboardingWorkflowWorkflowIdSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdOnboardingWorkflowWorkflowIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -274,8 +260,7 @@ class UnderwritingWorkflow
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -312,12 +297,10 @@ class UnderwritingWorkflow
      * Create a new Underwriting Workflow for the Organization to evaluate Onboarding Applications.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\PostOrganizationOrganizationIdOnboardingWorkflowRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\PostOrganizationOrganizationIdOnboardingWorkflowSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\PostOrganizationOrganizationIdOnboardingWorkflowResponse
      */
 	public function postOrganizationOrganizationIdOnboardingWorkflow(
         \TheLogicStudio\ExactPayments\Models\Operations\PostOrganizationOrganizationIdOnboardingWorkflowRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\PostOrganizationOrganizationIdOnboardingWorkflowSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\PostOrganizationOrganizationIdOnboardingWorkflowResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -332,8 +315,7 @@ class UnderwritingWorkflow
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -384,12 +366,10 @@ class UnderwritingWorkflow
      * Update Underwriting Workflow properties for the given Organization and Workflow identifiers.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingWorkflowWorkflowIdRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingWorkflowWorkflowIdSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingWorkflowWorkflowIdResponse
      */
 	public function putOrganizationOrganizationIdOnboardingWorkflowWorkflowId(
         \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingWorkflowWorkflowIdRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingWorkflowWorkflowIdSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingWorkflowWorkflowIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -404,8 +384,7 @@ class UnderwritingWorkflow
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -452,12 +431,10 @@ class UnderwritingWorkflow
      * Set a specific Workflow as the default to process the new Onboarding for the given Organization and Workflow identifiers. The current default Workflow will lose the defaulted assignment.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\SetDefaultWorkflowByIdRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\SetDefaultWorkflowByIdSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\SetDefaultWorkflowByIdResponse
      */
 	public function setDefaultWorkflowById(
         ?\TheLogicStudio\ExactPayments\Models\Operations\SetDefaultWorkflowByIdRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\SetDefaultWorkflowByIdSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\SetDefaultWorkflowByIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -467,8 +444,7 @@ class UnderwritingWorkflow
         $options['headers']['Accept'] = 'text/plain';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

@@ -29,12 +29,10 @@ class AccountManagement
      * Please [read our guide](./docs/ExactJS-ApplePay) on the setup steps required before you can use this endpoint.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountRegisterApplePayDomainsRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountRegisterApplePayDomainsSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\AccountRegisterApplePayDomainsResponse
      */
 	public function accountRegisterApplePayDomains(
         \TheLogicStudio\ExactPayments\Models\Operations\AccountRegisterApplePayDomainsRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\AccountRegisterApplePayDomainsSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\AccountRegisterApplePayDomainsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -49,8 +47,7 @@ class AccountManagement
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -101,12 +98,10 @@ class AccountManagement
      * Retrieve a list of accounts underneath an organization.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountResponse
      */
 	public function getOrganizationOrganizationIdAccount(
         ?\TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -116,8 +111,7 @@ class AccountManagement
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -156,12 +150,10 @@ class AccountManagement
      * Retrieve a segmented list of merchant accounts under a parent organization that meet the filtered criteria requirements.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountSearchRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountSearchSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountSearchResponse
      */
 	public function getOrganizationOrganizationIdAccountSearch(
         ?\TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountSearchRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountSearchSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountSearchResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -172,8 +164,7 @@ class AccountManagement
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -212,12 +203,10 @@ class AccountManagement
      * Retrieve a list of properties associated with a specific merchant account by ID.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountAccountIdRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountAccountIdSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountAccountIdResponse
      */
 	public function getOrganizationOrganizationIdAccountAccountId(
         ?\TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountAccountIdRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountAccountIdSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountAccountIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -227,8 +216,7 @@ class AccountManagement
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -265,12 +253,10 @@ class AccountManagement
      * This endpoint allows you to retrieve a list of your domains which are registered for Apple Pay &amp; ExactJS.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\ListApplePayDomainsRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\ListApplePayDomainsSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\ListApplePayDomainsResponse
      */
 	public function listApplePayDomains(
         ?\TheLogicStudio\ExactPayments\Models\Operations\ListApplePayDomainsRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\ListApplePayDomainsSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\ListApplePayDomainsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -280,8 +266,7 @@ class AccountManagement
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -326,12 +311,10 @@ class AccountManagement
      * Update a specific merchant account by ID.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdAccountAccountIdRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdAccountAccountIdSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdAccountAccountIdResponse
      */
 	public function putOrganizationOrganizationIdAccountAccountId(
         \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdAccountAccountIdRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdAccountAccountIdSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdAccountAccountIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -346,8 +329,7 @@ class AccountManagement
         $options['headers']['Accept'] = 'text/plain';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

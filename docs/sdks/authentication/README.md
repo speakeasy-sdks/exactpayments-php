@@ -20,11 +20,11 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\CreateApplicationTokenRequest;
 use \TheLogicStudio\ExactPayments\Models\Operations\CreateApplicationTokenRequestBodyInput;
 use \TheLogicStudio\ExactPayments\Models\Operations\CreateApplicationTokenRequestBodyMode;
 use \TheLogicStudio\ExactPayments\Models\Shared\Permissions;
-use \TheLogicStudio\ExactPayments\Models\Operations\CreateApplicationTokenSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -39,10 +39,7 @@ try {
     ];
     $request->applicationId = 'nisi';
 
-    $requestSecurity = new CreateApplicationTokenSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->authentication->createApplicationToken($request, $requestSecurity);
+    $response = $sdk->authentication->createApplicationToken($request);
 
     if ($response->applicationToken !== null) {
         // handle response
@@ -54,10 +51,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                   | Type                                                                                                                                        | Required                                                                                                                                    | Description                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\CreateApplicationTokenRequest](../../models/operations/CreateApplicationTokenRequest.md)   | :heavy_check_mark:                                                                                                                          | The request object to use for the request.                                                                                                  |
-| `security`                                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\CreateApplicationTokenSecurity](../../models/operations/CreateApplicationTokenSecurity.md) | :heavy_check_mark:                                                                                                                          | The security requirements to use for the request.                                                                                           |
+| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\CreateApplicationTokenRequest](../../models/operations/CreateApplicationTokenRequest.md) | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
 
 
 ### Response
@@ -78,6 +74,7 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\CreateUserTokenRequest;
 use \TheLogicStudio\ExactPayments\Models\Operations\CreateUserTokenRequestBodyInput;
 use \TheLogicStudio\ExactPayments\Models\Operations\CreateUserTokenRequestBodyAccountType;
@@ -133,8 +130,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\DeleteApplicationTokenRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\DeleteApplicationTokenSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -144,10 +141,7 @@ try {
     $request->applicationId = 'recusandae';
     $request->tokenId = 'temporibus';
 
-    $requestSecurity = new DeleteApplicationTokenSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->authentication->deleteApplicationToken($request, $requestSecurity);
+    $response = $sdk->authentication->deleteApplicationToken($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -159,10 +153,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                   | Type                                                                                                                                        | Required                                                                                                                                    | Description                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\DeleteApplicationTokenRequest](../../models/operations/DeleteApplicationTokenRequest.md)   | :heavy_check_mark:                                                                                                                          | The request object to use for the request.                                                                                                  |
-| `security`                                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\DeleteApplicationTokenSecurity](../../models/operations/DeleteApplicationTokenSecurity.md) | :heavy_check_mark:                                                                                                                          | The security requirements to use for the request.                                                                                           |
+| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\DeleteApplicationTokenRequest](../../models/operations/DeleteApplicationTokenRequest.md) | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
 
 
 ### Response
@@ -183,8 +176,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\QueryApplicationTokenRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\QueryApplicationTokenSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -196,10 +189,7 @@ try {
     $request->dollarSort = 'createdAt:asc';
     $request->applicationId = 'ab';
 
-    $requestSecurity = new QueryApplicationTokenSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->authentication->queryApplicationToken($request, $requestSecurity);
+    $response = $sdk->authentication->queryApplicationToken($request);
 
     if ($response->applicationTokenResponses !== null) {
         // handle response
@@ -211,10 +201,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\QueryApplicationTokenRequest](../../models/operations/QueryApplicationTokenRequest.md)   | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
-| `security`                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\QueryApplicationTokenSecurity](../../models/operations/QueryApplicationTokenSecurity.md) | :heavy_check_mark:                                                                                                                        | The security requirements to use for the request.                                                                                         |
+| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\QueryApplicationTokenRequest](../../models/operations/QueryApplicationTokenRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
 
 
 ### Response

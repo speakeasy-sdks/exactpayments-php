@@ -36,8 +36,6 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```php
 <?php
 
@@ -45,6 +43,7 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -220,6 +219,18 @@ try {
 * [putOrganizationOrganizationIdWebhookWebhookIdDisable](docs/sdks/webhooks/README.md#putorganizationorganizationidwebhookwebhookiddisable) - Disable Webhook
 * [putOrganizationOrganizationIdWebhookWebhookIdEnable](docs/sdks/webhooks/README.md#putorganizationorganizationidwebhookwebhookidenable) - Enable Webhook
 <!-- End SDK Available Operations -->
+
+
+
+<!-- Start Dev Containers -->
+
+
+
+<!-- End Dev Containers -->
+
+<!-- Placeholder for Future Speakeasy SDK Sections -->
+
+
 
 ### Maturity
 

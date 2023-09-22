@@ -27,12 +27,10 @@ class Orders
      * Retrieve a specific Order for the given Account and Order identifiers.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\GetAccountAccountIdOrdersOrderIdRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\GetAccountAccountIdOrdersOrderIdSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\GetAccountAccountIdOrdersOrderIdResponse
      */
 	public function getAccountAccountIdOrdersOrderId(
         ?\TheLogicStudio\ExactPayments\Models\Operations\GetAccountAccountIdOrdersOrderIdRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\GetAccountAccountIdOrdersOrderIdSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\GetAccountAccountIdOrdersOrderIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -42,8 +40,7 @@ class Orders
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -92,12 +89,10 @@ class Orders
      * List all Orders for API key's account, paginated and optionally restricted to a date range. Date range must be no more than six months.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\GetOrdersRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\GetOrdersSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\GetOrdersResponse
      */
 	public function getOrders(
         ?\TheLogicStudio\ExactPayments\Models\Operations\GetOrdersRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\GetOrdersSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\GetOrdersResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -108,8 +103,7 @@ class Orders
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -150,12 +144,10 @@ class Orders
      * Pay for Order with Token
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrderIdPayRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrderIdPaySecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrderIdPayResponse
      */
 	public function postAccountAccountIdOrdersOrderIdPay(
         ?\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrderIdPayRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrderIdPaySecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrderIdPayResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -169,8 +161,7 @@ class Orders
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -225,12 +216,10 @@ class Orders
      * Create an Order, needs to specify which account the Order will belong to.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersResponse
      */
 	public function postAccountAccountIdOrders(
         ?\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -244,8 +233,7 @@ class Orders
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -294,12 +282,10 @@ class Orders
      * Create an Order.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Shared\Order $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\PostOrdersSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\PostOrdersResponse
      */
 	public function postOrders(
         ?\TheLogicStudio\ExactPayments\Models\Shared\Order $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\PostOrdersSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\PostOrdersResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -313,8 +299,7 @@ class Orders
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -363,12 +348,10 @@ class Orders
      * Create a new access token for this Order. This will invalidate any existing access tokens.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\PostOrdersOrderIdAccessTokenRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\PostOrdersOrderIdAccessTokenSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\PostOrdersOrderIdAccessTokenResponse
      */
 	public function postOrdersOrderIdAccessToken(
         ?\TheLogicStudio\ExactPayments\Models\Operations\PostOrdersOrderIdAccessTokenRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\PostOrdersOrderIdAccessTokenSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\PostOrdersOrderIdAccessTokenResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -378,8 +361,7 @@ class Orders
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -428,12 +410,10 @@ class Orders
      * Update details of an existing Order.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\PutAccountAccountIdOrdersOrderIdRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\PutAccountAccountIdOrdersOrderIdSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\PutAccountAccountIdOrdersOrderIdResponse
      */
 	public function putAccountAccountIdOrdersOrderId(
         ?\TheLogicStudio\ExactPayments\Models\Operations\PutAccountAccountIdOrdersOrderIdRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\PutAccountAccountIdOrdersOrderIdSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\PutAccountAccountIdOrdersOrderIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -447,8 +427,7 @@ class Orders
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -503,12 +482,10 @@ class Orders
      * Reset failed payment attempts count to zero for this Order.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\PutOrdersOrderIdResetRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\PutOrdersOrderIdResetSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\PutOrdersOrderIdResetResponse
      */
 	public function putOrdersOrderIdReset(
         ?\TheLogicStudio\ExactPayments\Models\Operations\PutOrdersOrderIdResetRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\PutOrdersOrderIdResetSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\PutOrdersOrderIdResetResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -518,8 +495,7 @@ class Orders
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

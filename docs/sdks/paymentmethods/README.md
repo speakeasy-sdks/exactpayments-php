@@ -28,8 +28,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountDeletePaymentMethodRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\AccountDeletePaymentMethodSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -39,10 +39,7 @@ try {
     $request->accountId = 'non';
     $request->tokenId = 'occaecati';
 
-    $requestSecurity = new AccountDeletePaymentMethodSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->paymentMethods->accountDeletePaymentMethod($request, $requestSecurity);
+    $response = $sdk->paymentMethods->accountDeletePaymentMethod($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -54,10 +51,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                           | Type                                                                                                                                                | Required                                                                                                                                            | Description                                                                                                                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                          | [\TheLogicStudio\ExactPayments\Models\Operations\AccountDeletePaymentMethodRequest](../../models/operations/AccountDeletePaymentMethodRequest.md)   | :heavy_check_mark:                                                                                                                                  | The request object to use for the request.                                                                                                          |
-| `security`                                                                                                                                          | [\TheLogicStudio\ExactPayments\Models\Operations\AccountDeletePaymentMethodSecurity](../../models/operations/AccountDeletePaymentMethodSecurity.md) | :heavy_check_mark:                                                                                                                                  | The security requirements to use for the request.                                                                                                   |
+| Parameter                                                                                                                                         | Type                                                                                                                                              | Required                                                                                                                                          | Description                                                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\AccountDeletePaymentMethodRequest](../../models/operations/AccountDeletePaymentMethodRequest.md) | :heavy_check_mark:                                                                                                                                | The request object to use for the request.                                                                                                        |
 
 
 ### Response
@@ -80,8 +76,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentMethodRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentMethodSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -91,10 +87,7 @@ try {
     $request->accountId = 'enim';
     $request->tokenId = 'accusamus';
 
-    $requestSecurity = new AccountGetPaymentMethodSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->paymentMethods->accountGetPaymentMethod($request, $requestSecurity);
+    $response = $sdk->paymentMethods->accountGetPaymentMethod($request);
 
     if ($response->lookupNPaymentMethod !== null) {
         // handle response
@@ -106,10 +99,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                     | Type                                                                                                                                          | Required                                                                                                                                      | Description                                                                                                                                   |
-| --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                    | [\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentMethodRequest](../../models/operations/AccountGetPaymentMethodRequest.md)   | :heavy_check_mark:                                                                                                                            | The request object to use for the request.                                                                                                    |
-| `security`                                                                                                                                    | [\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentMethodSecurity](../../models/operations/AccountGetPaymentMethodSecurity.md) | :heavy_check_mark:                                                                                                                            | The security requirements to use for the request.                                                                                             |
+| Parameter                                                                                                                                   | Type                                                                                                                                        | Required                                                                                                                                    | Description                                                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentMethodRequest](../../models/operations/AccountGetPaymentMethodRequest.md) | :heavy_check_mark:                                                                                                                          | The request object to use for the request.                                                                                                  |
 
 
 ### Response
@@ -134,8 +126,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountPostPaymentMethodRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\AccountPostPaymentMethodSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -163,10 +155,7 @@ try {
     $request->requestBody->type = 'eum';
     $request->accountId = 'dolor';
 
-    $requestSecurity = new AccountPostPaymentMethodSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->paymentMethods->accountPostPaymentMethod($request, $requestSecurity);
+    $response = $sdk->paymentMethods->accountPostPaymentMethod($request);
 
     if ($response->paymentMethod !== null) {
         // handle response
@@ -178,10 +167,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                       | Type                                                                                                                                            | Required                                                                                                                                        | Description                                                                                                                                     |
-| ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\AccountPostPaymentMethodRequest](../../models/operations/AccountPostPaymentMethodRequest.md)   | :heavy_check_mark:                                                                                                                              | The request object to use for the request.                                                                                                      |
-| `security`                                                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\AccountPostPaymentMethodSecurity](../../models/operations/AccountPostPaymentMethodSecurity.md) | :heavy_check_mark:                                                                                                                              | The security requirements to use for the request.                                                                                               |
+| Parameter                                                                                                                                     | Type                                                                                                                                          | Required                                                                                                                                      | Description                                                                                                                                   |
+| --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                    | [\TheLogicStudio\ExactPayments\Models\Operations\AccountPostPaymentMethodRequest](../../models/operations/AccountPostPaymentMethodRequest.md) | :heavy_check_mark:                                                                                                                            | The request object to use for the request.                                                                                                    |
 
 
 ### Response
@@ -206,9 +194,9 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountPostVerifyMicrodepositsRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\MicroDepositVerificationRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\AccountPostVerifyMicrodepositsSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -221,10 +209,7 @@ try {
     $request->accountId = 'nemo';
     $request->paymentToken = 'quasi';
 
-    $requestSecurity = new AccountPostVerifyMicrodepositsSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->paymentMethods->accountPostVerifyMicrodeposits($request, $requestSecurity);
+    $response = $sdk->paymentMethods->accountPostVerifyMicrodeposits($request);
 
     if ($response->paymentAchSchema !== null) {
         // handle response
@@ -236,10 +221,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                   | Type                                                                                                                                                        | Required                                                                                                                                                    | Description                                                                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\AccountPostVerifyMicrodepositsRequest](../../models/operations/AccountPostVerifyMicrodepositsRequest.md)   | :heavy_check_mark:                                                                                                                                          | The request object to use for the request.                                                                                                                  |
-| `security`                                                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\AccountPostVerifyMicrodepositsSecurity](../../models/operations/AccountPostVerifyMicrodepositsSecurity.md) | :heavy_check_mark:                                                                                                                                          | The security requirements to use for the request.                                                                                                           |
+| Parameter                                                                                                                                                 | Type                                                                                                                                                      | Required                                                                                                                                                  | Description                                                                                                                                               |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\AccountPostVerifyMicrodepositsRequest](../../models/operations/AccountPostVerifyMicrodepositsRequest.md) | :heavy_check_mark:                                                                                                                                        | The request object to use for the request.                                                                                                                |
 
 
 ### Response
@@ -260,8 +244,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\DeletePaymentMethodRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\DeletePaymentMethodSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -270,10 +254,7 @@ try {
     $request = new DeletePaymentMethodRequest();
     $request->tokenId = 'iure';
 
-    $requestSecurity = new DeletePaymentMethodSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->paymentMethods->deletePaymentMethod($request, $requestSecurity);
+    $response = $sdk->paymentMethods->deletePaymentMethod($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -285,10 +266,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                             | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\DeletePaymentMethodRequest](../../models/operations/DeletePaymentMethodRequest.md)   | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
-| `security`                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\DeletePaymentMethodSecurity](../../models/operations/DeletePaymentMethodSecurity.md) | :heavy_check_mark:                                                                                                                    | The security requirements to use for the request.                                                                                     |
+| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                          | [\TheLogicStudio\ExactPayments\Models\Operations\DeletePaymentMethodRequest](../../models/operations/DeletePaymentMethodRequest.md) | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
 
 
 ### Response
@@ -309,8 +289,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetPaymentMethodRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetPaymentMethodSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -319,10 +299,7 @@ try {
     $request = new GetPaymentMethodRequest();
     $request->tokenId = 'doloribus';
 
-    $requestSecurity = new GetPaymentMethodSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->paymentMethods->getPaymentMethod($request, $requestSecurity);
+    $response = $sdk->paymentMethods->getPaymentMethod($request);
 
     if ($response->lookupNPaymentMethod !== null) {
         // handle response
@@ -334,10 +311,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\GetPaymentMethodRequest](../../models/operations/GetPaymentMethodRequest.md)   | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
-| `security`                                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\GetPaymentMethodSecurity](../../models/operations/GetPaymentMethodSecurity.md) | :heavy_check_mark:                                                                                                              | The security requirements to use for the request.                                                                               |
+| Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
+| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                    | [\TheLogicStudio\ExactPayments\Models\Operations\GetPaymentMethodRequest](../../models/operations/GetPaymentMethodRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
 
 
 ### Response
@@ -362,7 +338,7 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Operations\PostPaymentMethodSecurity;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -388,10 +364,7 @@ try {
     $request->billingDetails->phone = '1-500-963-4470';
     $request->type = 'pariatur';
 
-    $requestSecurity = new PostPaymentMethodSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->paymentMethods->postPaymentMethod($request, $requestSecurity);
+    $response = $sdk->paymentMethods->postPaymentMethod($request);
 
     if ($response->paymentMethod !== null) {
         // handle response
@@ -403,10 +376,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                        | [mixed](../../models//.md)                                                                                                        | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
-| `security`                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\PostPaymentMethodSecurity](../../models/operations/PostPaymentMethodSecurity.md) | :heavy_check_mark:                                                                                                                | The security requirements to use for the request.                                                                                 |
+| Parameter                                  | Type                                       | Required                                   | Description                                |
+| ------------------------------------------ | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
+| `$request`                                 | [mixed](../../models//.md)                 | :heavy_check_mark:                         | The request object to use for the request. |
 
 
 ### Response
@@ -431,9 +403,9 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\PostVerifyMicrodepositsRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\MicroDepositVerificationRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\PostVerifyMicrodepositsSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -445,10 +417,7 @@ try {
     $request->microDepositVerificationRequest->amount2 = 975522;
     $request->paymentToken = 'perferendis';
 
-    $requestSecurity = new PostVerifyMicrodepositsSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->paymentMethods->postVerifyMicrodeposits($request, $requestSecurity);
+    $response = $sdk->paymentMethods->postVerifyMicrodeposits($request);
 
     if ($response->paymentAchSchema !== null) {
         // handle response
@@ -460,10 +429,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                     | Type                                                                                                                                          | Required                                                                                                                                      | Description                                                                                                                                   |
-| --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                    | [\TheLogicStudio\ExactPayments\Models\Operations\PostVerifyMicrodepositsRequest](../../models/operations/PostVerifyMicrodepositsRequest.md)   | :heavy_check_mark:                                                                                                                            | The request object to use for the request.                                                                                                    |
-| `security`                                                                                                                                    | [\TheLogicStudio\ExactPayments\Models\Operations\PostVerifyMicrodepositsSecurity](../../models/operations/PostVerifyMicrodepositsSecurity.md) | :heavy_check_mark:                                                                                                                            | The security requirements to use for the request.                                                                                             |
+| Parameter                                                                                                                                   | Type                                                                                                                                        | Required                                                                                                                                    | Description                                                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\PostVerifyMicrodepositsRequest](../../models/operations/PostVerifyMicrodepositsRequest.md) | :heavy_check_mark:                                                                                                                          | The request object to use for the request.                                                                                                  |
 
 
 ### Response

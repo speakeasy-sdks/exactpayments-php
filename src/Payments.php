@@ -31,12 +31,10 @@ class Payments
      * Capture completes the transaction so that it can be funded. Captures can be for less, same or more than the original authorization.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountCapturePaymentRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountCapturePaymentSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\AccountCapturePaymentResponse
      */
 	public function accountCapturePayment(
         ?\TheLogicStudio\ExactPayments\Models\Operations\AccountCapturePaymentRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\AccountCapturePaymentSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\AccountCapturePaymentResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -50,8 +48,7 @@ class Payments
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -108,12 +105,10 @@ class Payments
      * Please note that the Organization(partner) needs to authenticate using the partner or org token.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentResponse
      */
 	public function accountGetPayment(
         ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -123,8 +118,7 @@ class Payments
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -175,12 +169,10 @@ class Payments
      * Please note that the Organization(partner) needs to authenticate using the partner or org token.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentsRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentsSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentsResponse
      */
 	public function accountGetPayments(
         ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentsRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentsSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -191,8 +183,7 @@ class Payments
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -245,12 +236,10 @@ class Payments
      * Please note that the Organization(partner) needs to authenticate using the partner or organization token.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountPostPaymentRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountPostPaymentSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\AccountPostPaymentResponse
      */
 	public function accountPostPayment(
         ?\TheLogicStudio\ExactPayments\Models\Operations\AccountPostPaymentRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\AccountPostPaymentSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\AccountPostPaymentResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -264,8 +253,7 @@ class Payments
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -324,12 +312,10 @@ class Payments
      * Refunds typically happen after a batch closes and refunds a partial or whole amount of the transaction.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountRefundPaymentRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountRefundPaymentSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\AccountRefundPaymentResponse
      */
 	public function accountRefundPayment(
         ?\TheLogicStudio\ExactPayments\Models\Operations\AccountRefundPaymentRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\AccountRefundPaymentSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\AccountRefundPaymentResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -343,8 +329,7 @@ class Payments
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -403,12 +388,10 @@ class Payments
      * Note that ACH transactions are not voidable. Voids typically happen before a batch closes and removes the transaction from the batch.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountVoidPaymentRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountVoidPaymentSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\AccountVoidPaymentResponse
      */
 	public function accountVoidPayment(
         ?\TheLogicStudio\ExactPayments\Models\Operations\AccountVoidPaymentRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\AccountVoidPaymentSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\AccountVoidPaymentResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -422,8 +405,7 @@ class Payments
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -480,12 +462,10 @@ class Payments
      * Capture completes the transaction so that it can be funded. Captures can be for less, same or more than the original authorization.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\CapturePaymentRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\CapturePaymentSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\CapturePaymentResponse
      */
 	public function capturePayment(
         ?\TheLogicStudio\ExactPayments\Models\Operations\CapturePaymentRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\CapturePaymentSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\CapturePaymentResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -499,8 +479,7 @@ class Payments
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -555,12 +534,10 @@ class Payments
      * API for a merchant to retrieve the details of a specific Payment.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\GetPaymentRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\GetPaymentSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\GetPaymentResponse
      */
 	public function getPayment(
         ?\TheLogicStudio\ExactPayments\Models\Operations\GetPaymentRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\GetPaymentSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\GetPaymentResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -570,8 +547,7 @@ class Payments
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -620,12 +596,10 @@ class Payments
      * API for a merchant to fetch a list of Payments.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\GetPaymentsRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\GetPaymentsSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\GetPaymentsResponse
      */
 	public function getPayments(
         ?\TheLogicStudio\ExactPayments\Models\Operations\GetPaymentsRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\GetPaymentsSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\GetPaymentsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -636,8 +610,7 @@ class Payments
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -688,12 +661,10 @@ class Payments
      * API for a merchant to create a Payment.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Shared\NewPayment $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\PostPaymentSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\PostPaymentResponse
      */
 	public function postPayment(
         ?\TheLogicStudio\ExactPayments\Models\Shared\NewPayment $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\PostPaymentSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\PostPaymentResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -707,8 +678,7 @@ class Payments
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -763,12 +733,10 @@ class Payments
      * API for a merchant to refund a specific payment. Note that ACH transactions are not refundable. Refunds typically happen after a batch closes and refunds a partial or whole amount of the transaction.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\RefundPaymentRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\RefundPaymentSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\RefundPaymentResponse
      */
 	public function refundPayment(
         ?\TheLogicStudio\ExactPayments\Models\Operations\RefundPaymentRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\RefundPaymentSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\RefundPaymentResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -782,8 +750,7 @@ class Payments
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -838,12 +805,10 @@ class Payments
      * API for a merchant to void a specific Payment. Note that ACH transactions are not voidable. Voids typically happen before a batch closes and removes the transaction from the batch.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\VoidPaymentRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\VoidPaymentSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\VoidPaymentResponse
      */
 	public function voidPayment(
         ?\TheLogicStudio\ExactPayments\Models\Operations\VoidPaymentRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\VoidPaymentSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\VoidPaymentResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -857,8 +822,7 @@ class Payments
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

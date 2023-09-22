@@ -24,9 +24,9 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountRegisterApplePayDomainsRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\ApplePayDomains;
-use \TheLogicStudio\ExactPayments\Models\Operations\AccountRegisterApplePayDomainsSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -39,10 +39,7 @@ try {
     ];
     $request->accountId = 'provident';
 
-    $requestSecurity = new AccountRegisterApplePayDomainsSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->accountManagement->accountRegisterApplePayDomains($request, $requestSecurity);
+    $response = $sdk->accountManagement->accountRegisterApplePayDomains($request);
 
     if ($response->applePayDomains !== null) {
         // handle response
@@ -54,10 +51,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                   | Type                                                                                                                                                        | Required                                                                                                                                                    | Description                                                                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\AccountRegisterApplePayDomainsRequest](../../models/operations/AccountRegisterApplePayDomainsRequest.md)   | :heavy_check_mark:                                                                                                                                          | The request object to use for the request.                                                                                                                  |
-| `security`                                                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\AccountRegisterApplePayDomainsSecurity](../../models/operations/AccountRegisterApplePayDomainsSecurity.md) | :heavy_check_mark:                                                                                                                                          | The security requirements to use for the request.                                                                                                           |
+| Parameter                                                                                                                                                 | Type                                                                                                                                                      | Required                                                                                                                                                  | Description                                                                                                                                               |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\AccountRegisterApplePayDomainsRequest](../../models/operations/AccountRegisterApplePayDomainsRequest.md) | :heavy_check_mark:                                                                                                                                        | The request object to use for the request.                                                                                                                |
 
 
 ### Response
@@ -78,8 +74,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -88,10 +84,7 @@ try {
     $request = new GetOrganizationOrganizationIdAccountRequest();
     $request->organizationId = 'distinctio';
 
-    $requestSecurity = new GetOrganizationOrganizationIdAccountSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->accountManagement->getOrganizationOrganizationIdAccount($request, $requestSecurity);
+    $response = $sdk->accountManagement->getOrganizationOrganizationIdAccount($request);
 
     if ($response->accountResponses !== null) {
         // handle response
@@ -103,10 +96,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                               | Type                                                                                                                                                                    | Required                                                                                                                                                                | Description                                                                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountRequest](../../models/operations/GetOrganizationOrganizationIdAccountRequest.md)   | :heavy_check_mark:                                                                                                                                                      | The request object to use for the request.                                                                                                                              |
-| `security`                                                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountSecurity](../../models/operations/GetOrganizationOrganizationIdAccountSecurity.md) | :heavy_check_mark:                                                                                                                                                      | The security requirements to use for the request.                                                                                                                       |
+| Parameter                                                                                                                                                             | Type                                                                                                                                                                  | Required                                                                                                                                                              | Description                                                                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountRequest](../../models/operations/GetOrganizationOrganizationIdAccountRequest.md) | :heavy_check_mark:                                                                                                                                                    | The request object to use for the request.                                                                                                                            |
 
 
 ### Response
@@ -127,8 +119,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountSearchRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountSearchSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -138,10 +130,7 @@ try {
     $request->organizationId = 'quibusdam';
     $request->q = 'unde';
 
-    $requestSecurity = new GetOrganizationOrganizationIdAccountSearchSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->accountManagement->getOrganizationOrganizationIdAccountSearch($request, $requestSecurity);
+    $response = $sdk->accountManagement->getOrganizationOrganizationIdAccountSearch($request);
 
     if ($response->accountResponses !== null) {
         // handle response
@@ -153,10 +142,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                                           | Type                                                                                                                                                                                | Required                                                                                                                                                                            | Description                                                                                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                                          | [\TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountSearchRequest](../../models/operations/GetOrganizationOrganizationIdAccountSearchRequest.md)   | :heavy_check_mark:                                                                                                                                                                  | The request object to use for the request.                                                                                                                                          |
-| `security`                                                                                                                                                                          | [\TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountSearchSecurity](../../models/operations/GetOrganizationOrganizationIdAccountSearchSecurity.md) | :heavy_check_mark:                                                                                                                                                                  | The security requirements to use for the request.                                                                                                                                   |
+| Parameter                                                                                                                                                                         | Type                                                                                                                                                                              | Required                                                                                                                                                                          | Description                                                                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountSearchRequest](../../models/operations/GetOrganizationOrganizationIdAccountSearchRequest.md) | :heavy_check_mark:                                                                                                                                                                | The request object to use for the request.                                                                                                                                        |
 
 
 ### Response
@@ -177,8 +165,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountAccountIdRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountAccountIdSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -188,10 +176,7 @@ try {
     $request->accountId = 'nulla';
     $request->organizationId = 'corrupti';
 
-    $requestSecurity = new GetOrganizationOrganizationIdAccountAccountIdSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->accountManagement->getOrganizationOrganizationIdAccountAccountId($request, $requestSecurity);
+    $response = $sdk->accountManagement->getOrganizationOrganizationIdAccountAccountId($request);
 
     if ($response->accountResponse !== null) {
         // handle response
@@ -203,10 +188,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                                                 | Type                                                                                                                                                                                      | Required                                                                                                                                                                                  | Description                                                                                                                                                                               |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountAccountIdRequest](../../models/operations/GetOrganizationOrganizationIdAccountAccountIdRequest.md)   | :heavy_check_mark:                                                                                                                                                                        | The request object to use for the request.                                                                                                                                                |
-| `security`                                                                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountAccountIdSecurity](../../models/operations/GetOrganizationOrganizationIdAccountAccountIdSecurity.md) | :heavy_check_mark:                                                                                                                                                                        | The security requirements to use for the request.                                                                                                                                         |
+| Parameter                                                                                                                                                                               | Type                                                                                                                                                                                    | Required                                                                                                                                                                                | Description                                                                                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountAccountIdRequest](../../models/operations/GetOrganizationOrganizationIdAccountAccountIdRequest.md) | :heavy_check_mark:                                                                                                                                                                      | The request object to use for the request.                                                                                                                                              |
 
 
 ### Response
@@ -227,8 +211,8 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\ListApplePayDomainsRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\ListApplePayDomainsSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -237,10 +221,7 @@ try {
     $request = new ListApplePayDomainsRequest();
     $request->accountId = 'illum';
 
-    $requestSecurity = new ListApplePayDomainsSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->accountManagement->listApplePayDomains($request, $requestSecurity);
+    $response = $sdk->accountManagement->listApplePayDomains($request);
 
     if ($response->applePayDomains !== null) {
         // handle response
@@ -252,10 +233,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                             | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\ListApplePayDomainsRequest](../../models/operations/ListApplePayDomainsRequest.md)   | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
-| `security`                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\ListApplePayDomainsSecurity](../../models/operations/ListApplePayDomainsSecurity.md) | :heavy_check_mark:                                                                                                                    | The security requirements to use for the request.                                                                                     |
+| Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                          | [\TheLogicStudio\ExactPayments\Models\Operations\ListApplePayDomainsRequest](../../models/operations/ListApplePayDomainsRequest.md) | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
 
 
 ### Response
@@ -276,10 +256,10 @@ declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdAccountAccountIdRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\AccountRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\AccountRequestAddress;
-use \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdAccountAccountIdSecurity;
 
 $sdk = ExactPayments::builder()
     ->build();
@@ -304,10 +284,7 @@ try {
     $request->accountId = 'vel';
     $request->organizationId = 'error';
 
-    $requestSecurity = new PutOrganizationOrganizationIdAccountAccountIdSecurity();
-    $requestSecurity->apiKey = '';
-
-    $response = $sdk->accountManagement->putOrganizationOrganizationIdAccountAccountId($request, $requestSecurity);
+    $response = $sdk->accountManagement->putOrganizationOrganizationIdAccountAccountId($request);
 
     if ($response->statusCode === 200) {
         // handle response
@@ -319,10 +296,9 @@ try {
 
 ### Parameters
 
-| Parameter                                                                                                                                                                                 | Type                                                                                                                                                                                      | Required                                                                                                                                                                                  | Description                                                                                                                                                                               |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdAccountAccountIdRequest](../../models/operations/PutOrganizationOrganizationIdAccountAccountIdRequest.md)   | :heavy_check_mark:                                                                                                                                                                        | The request object to use for the request.                                                                                                                                                |
-| `security`                                                                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdAccountAccountIdSecurity](../../models/operations/PutOrganizationOrganizationIdAccountAccountIdSecurity.md) | :heavy_check_mark:                                                                                                                                                                        | The security requirements to use for the request.                                                                                                                                         |
+| Parameter                                                                                                                                                                               | Type                                                                                                                                                                                    | Required                                                                                                                                                                                | Description                                                                                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdAccountAccountIdRequest](../../models/operations/PutOrganizationOrganizationIdAccountAccountIdRequest.md) | :heavy_check_mark:                                                                                                                                                                      | The request object to use for the request.                                                                                                                                              |
 
 
 ### Response

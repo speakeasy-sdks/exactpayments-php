@@ -27,12 +27,10 @@ class Webhooks
      * Delete a webhook and its associated properties.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteWebhookRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteWebhookSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteWebhookResponse
      */
 	public function accountDeleteWebhook(
         ?\TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteWebhookRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteWebhookSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteWebhookResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -42,8 +40,7 @@ class Webhooks
         $options['headers']['Accept'] = 'text/plain';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -74,12 +71,10 @@ class Webhooks
      * Disable a webhook notification.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountDisableWebhookRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountDisableWebhookSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\AccountDisableWebhookResponse
      */
 	public function accountDisableWebhook(
         ?\TheLogicStudio\ExactPayments\Models\Operations\AccountDisableWebhookRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\AccountDisableWebhookSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\AccountDisableWebhookResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -89,8 +84,7 @@ class Webhooks
         $options['headers']['Accept'] = 'text/plain';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -121,12 +115,10 @@ class Webhooks
      * Enable a webhook notification to be sent to requestor
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountEnableWebhookRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountEnableWebhookSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\AccountEnableWebhookResponse
      */
 	public function accountEnableWebhook(
         ?\TheLogicStudio\ExactPayments\Models\Operations\AccountEnableWebhookRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\AccountEnableWebhookSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\AccountEnableWebhookResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -136,8 +128,7 @@ class Webhooks
         $options['headers']['Accept'] = 'text/plain';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -168,12 +159,10 @@ class Webhooks
      * Retrieve a list of webhooks created under an organization.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountGetListWebhooksRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountGetListWebhooksSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\AccountGetListWebhooksResponse
      */
 	public function accountGetListWebhooks(
         ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetListWebhooksRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\AccountGetListWebhooksSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\AccountGetListWebhooksResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -184,8 +173,7 @@ class Webhooks
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -219,12 +207,10 @@ class Webhooks
      * Retrieve the details associated with an existing webhook.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountGetRetrieveWebhookRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountGetRetrieveWebhookSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\AccountGetRetrieveWebhookResponse
      */
 	public function accountGetRetrieveWebhook(
         ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetRetrieveWebhookRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\AccountGetRetrieveWebhookSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\AccountGetRetrieveWebhookResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -234,8 +220,7 @@ class Webhooks
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -272,12 +257,10 @@ class Webhooks
      * Create a new webhook and associate a callback URL.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountPostCreateWebhookRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountPostCreateWebhookSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\AccountPostCreateWebhookResponse
      */
 	public function accountPostCreateWebhook(
         \TheLogicStudio\ExactPayments\Models\Operations\AccountPostCreateWebhookRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\AccountPostCreateWebhookSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\AccountPostCreateWebhookResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -292,8 +275,7 @@ class Webhooks
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -330,12 +312,10 @@ class Webhooks
      * Update the properties of an existing webhook.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountUpdateWebhookRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\AccountUpdateWebhookSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\AccountUpdateWebhookResponse
      */
 	public function accountUpdateWebhook(
         \TheLogicStudio\ExactPayments\Models\Operations\AccountUpdateWebhookRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\AccountUpdateWebhookSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\AccountUpdateWebhookResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -350,8 +330,7 @@ class Webhooks
         $options['headers']['Accept'] = 'text/plain';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -382,12 +361,10 @@ class Webhooks
      * Delete a webhook and its associated properties.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\DeleteOrganizationOrganizationIdWebhookWebhookIdRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\DeleteOrganizationOrganizationIdWebhookWebhookIdSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\DeleteOrganizationOrganizationIdWebhookWebhookIdResponse
      */
 	public function deleteOrganizationOrganizationIdWebhookWebhookId(
         ?\TheLogicStudio\ExactPayments\Models\Operations\DeleteOrganizationOrganizationIdWebhookWebhookIdRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\DeleteOrganizationOrganizationIdWebhookWebhookIdSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\DeleteOrganizationOrganizationIdWebhookWebhookIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -397,8 +374,7 @@ class Webhooks
         $options['headers']['Accept'] = 'text/plain';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -429,12 +405,10 @@ class Webhooks
      * Retrieve a list of webhooks created under an organization.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdWebhookRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdWebhookSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdWebhookResponse
      */
 	public function getOrganizationOrganizationIdWebhook(
         ?\TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdWebhookRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdWebhookSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdWebhookResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -445,8 +419,7 @@ class Webhooks
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -480,12 +453,10 @@ class Webhooks
      * Retrieve the details associated with an existing webhook.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdWebhookWebhookIdRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdWebhookWebhookIdSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdWebhookWebhookIdResponse
      */
 	public function getOrganizationOrganizationIdWebhookWebhookId(
         ?\TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdWebhookWebhookIdRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdWebhookWebhookIdSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdWebhookWebhookIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -495,8 +466,7 @@ class Webhooks
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -533,12 +503,10 @@ class Webhooks
      * Create a new webhook and associate a callback URL.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\PostOrganizationOrganizationIdWebhookRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\PostOrganizationOrganizationIdWebhookSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\PostOrganizationOrganizationIdWebhookResponse
      */
 	public function postOrganizationOrganizationIdWebhook(
         \TheLogicStudio\ExactPayments\Models\Operations\PostOrganizationOrganizationIdWebhookRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\PostOrganizationOrganizationIdWebhookSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\PostOrganizationOrganizationIdWebhookResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -553,8 +521,7 @@ class Webhooks
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -591,12 +558,10 @@ class Webhooks
      * Update the properties of an existing webhook.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdWebhookWebhookIdRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdWebhookWebhookIdSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdWebhookWebhookIdResponse
      */
 	public function putOrganizationOrganizationIdWebhookWebhookId(
         \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdWebhookWebhookIdRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdWebhookWebhookIdSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdWebhookWebhookIdResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -611,8 +576,7 @@ class Webhooks
         $options['headers']['Accept'] = 'text/plain';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -643,12 +607,10 @@ class Webhooks
      * Disable a webhook notification.
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdWebhookWebhookIdDisableRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdWebhookWebhookIdDisableSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdWebhookWebhookIdDisableResponse
      */
 	public function putOrganizationOrganizationIdWebhookWebhookIdDisable(
         ?\TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdWebhookWebhookIdDisableRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdWebhookWebhookIdDisableSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdWebhookWebhookIdDisableResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -658,8 +620,7 @@ class Webhooks
         $options['headers']['Accept'] = 'text/plain';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -690,12 +651,10 @@ class Webhooks
      * Enable a webhook notification to be sent to requestor
      * 
      * @param \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdWebhookWebhookIdEnableRequest $request
-     * @param \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdWebhookWebhookIdEnableSecurity $security
      * @return \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdWebhookWebhookIdEnableResponse
      */
 	public function putOrganizationOrganizationIdWebhookWebhookIdEnable(
         ?\TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdWebhookWebhookIdEnableRequest $request,
-        \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdWebhookWebhookIdEnableSecurity $security,
     ): \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdWebhookWebhookIdEnableResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -705,8 +664,7 @@ class Webhooks
         $options['headers']['Accept'] = 'text/plain';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $client = Utils\Utils::configureSecurityClient($this->sdkConfiguration->defaultClient, $security);
-        $httpResponse = $client->request('PUT', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
