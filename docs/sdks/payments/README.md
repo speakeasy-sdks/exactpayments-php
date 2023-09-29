@@ -1,4 +1,5 @@
 # Payments
+(*payments*)
 
 ## Overview
 
@@ -54,7 +55,7 @@ try {
     $request->referencedPayment->authorization = 'ET3516';
     $request->referencedPayment->options = new ReferencedPaymentOptions();
     $request->referencedPayment->options->customerIp = '138.84.54.82';
-    $request->referencedPayment->options->ecommerceFlag = ReferencedPaymentOptionsEcommerceFlag::I;
+    $request->referencedPayment->options->ecommerceFlag = ReferencedPaymentOptionsEcommerceFlag::Three;
     $request->referencedPayment->options->generateReceipt = true;
     $request->referencedPayment->options->installmentNumber = '12';
     $request->referencedPayment->options->thirdPartyId = 'partyid123';
@@ -77,8 +78,8 @@ try {
     $request->referencedPayment->softDescriptor->street = 'Fairfield Ranch';
     $request->referencedPayment->softDescriptor->submerchantId = 'xyz123';
     $request->referencedPayment->softDescriptor->taxId = 'abc123';
-    $request->accountId = 'amet';
-    $request->paymentId = 'aut';
+    $request->accountId = 'Unbranded';
+    $request->paymentId = 'integrated';
 
     $response = $sdk->payments->accountCapturePayment($request);
 
@@ -125,8 +126,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new AccountGetPaymentRequest();
-    $request->accountId = 'cumque';
-    $request->paymentId = 'corporis';
+    $request->accountId = 'Mendelevium base';
+    $request->paymentId = 'Savings remote Dalasi';
 
     $response = $sdk->payments->accountGetPayment($request);
 
@@ -176,7 +177,7 @@ try {
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = '-name';
-    $request->accountId = 'hic';
+    $request->accountId = 'nasalise unabashedly grenade';
 
     $response = $sdk->payments->accountGetPayments($request);
 
@@ -254,7 +255,7 @@ try {
     $request->newPayment->customer->email = 'john@acmecorp.com';
     $request->newPayment->customer->name = 'John Doe';
     $request->newPayment->customer->phone = '8886178190';
-    $request->newPayment->customer->phoneType = NewPaymentCustomerPhoneType::D;
+    $request->newPayment->customer->phoneType = NewPaymentCustomerPhoneType::H;
     $request->newPayment->language = NewPaymentLanguage::Es;
     $request->newPayment->level3 = new NewPaymentLevel3();
     $request->newPayment->level3->altTaxAmount = 4;
@@ -278,16 +279,16 @@ try {
     $request->newPayment->level3->shipTo->email = 'john@example.com';
     $request->newPayment->level3->shipTo->name = 'John Doe';
     $request->newPayment->level3->shipTo->phone = '8886178190';
-    $request->newPayment->level3->shipTo->phoneType = NewPaymentLevel3ShipToPhoneType::H;
+    $request->newPayment->level3->shipTo->phoneType = NewPaymentLevel3ShipToPhoneType::N;
     $request->newPayment->level3->taxAmount = 10;
     $request->newPayment->level3->taxRate = 5;
     $request->newPayment->options = new NewPaymentOptions();
     $request->newPayment->options->customerIp = '198.168.71.51';
-    $request->newPayment->options->ecommerceFlag = NewPaymentOptionsEcommerceFlag::Four;
+    $request->newPayment->options->ecommerceFlag = NewPaymentOptionsEcommerceFlag::One;
     $request->newPayment->options->generateReceipt = true;
     $request->newPayment->options->installmentNumber = '12';
     $request->newPayment->options->thirdPartyId = 'partyid123';
-    $request->newPayment->paymentMethod = 'totam';
+    $request->newPayment->paymentMethod = 'Investor';
     $request->newPayment->reference = new NewPaymentReference();
     $request->newPayment->reference->correlationId = 'abc123';
     $request->newPayment->reference->customerRef = 'ref123';
@@ -319,9 +320,9 @@ try {
     $request->newPayment->threeDSecure = new NewPaymentThreeDSecure();
     $request->newPayment->threeDSecure->cavv = 'cavv123';
     $request->newPayment->threeDSecure->directoryServerTransactionId = 'trans123';
-    $request->newPayment->threeDSecure->programProtocol = NewPaymentThreeDSecureProgramProtocol::One;
+    $request->newPayment->threeDSecure->programProtocol = NewPaymentThreeDSecureProgramProtocol::Two;
     $request->newPayment->threeDSecure->xid = 'id123';
-    $request->accountId = 'eaque';
+    $request->accountId = 'Account Inverse Tricycle';
 
     $response = $sdk->payments->accountPostPayment($request);
 
@@ -380,7 +381,7 @@ try {
     $request->referencedPayment->authorization = 'ET3516';
     $request->referencedPayment->options = new ReferencedPaymentOptions();
     $request->referencedPayment->options->customerIp = '138.84.54.82';
-    $request->referencedPayment->options->ecommerceFlag = ReferencedPaymentOptionsEcommerceFlag::Four;
+    $request->referencedPayment->options->ecommerceFlag = ReferencedPaymentOptionsEcommerceFlag::R;
     $request->referencedPayment->options->generateReceipt = true;
     $request->referencedPayment->options->installmentNumber = '12';
     $request->referencedPayment->options->thirdPartyId = 'partyid123';
@@ -403,8 +404,8 @@ try {
     $request->referencedPayment->softDescriptor->street = 'Fairfield Ranch';
     $request->referencedPayment->softDescriptor->submerchantId = 'xyz123';
     $request->referencedPayment->softDescriptor->taxId = 'abc123';
-    $request->accountId = 'nesciunt';
-    $request->paymentId = 'eos';
+    $request->accountId = 'Factors';
+    $request->paymentId = 'piece whiteboard';
 
     $response = $sdk->payments->accountRefundPayment($request);
 
@@ -463,7 +464,7 @@ try {
     $request->referencedPayment->authorization = 'ET3516';
     $request->referencedPayment->options = new ReferencedPaymentOptions();
     $request->referencedPayment->options->customerIp = '138.84.54.82';
-    $request->referencedPayment->options->ecommerceFlag = ReferencedPaymentOptionsEcommerceFlag::One;
+    $request->referencedPayment->options->ecommerceFlag = ReferencedPaymentOptionsEcommerceFlag::Seven;
     $request->referencedPayment->options->generateReceipt = true;
     $request->referencedPayment->options->installmentNumber = '12';
     $request->referencedPayment->options->thirdPartyId = 'partyid123';
@@ -486,8 +487,8 @@ try {
     $request->referencedPayment->softDescriptor->street = 'Fairfield Ranch';
     $request->referencedPayment->softDescriptor->submerchantId = 'xyz123';
     $request->referencedPayment->softDescriptor->taxId = 'abc123';
-    $request->accountId = 'dolores';
-    $request->paymentId = 'minus';
+    $request->accountId = 'reboot migration shrivel';
+    $request->paymentId = 'Licensed';
 
     $response = $sdk->payments->accountVoidPayment($request);
 
@@ -544,7 +545,7 @@ try {
     $request->referencedPayment->authorization = 'ET3516';
     $request->referencedPayment->options = new ReferencedPaymentOptions();
     $request->referencedPayment->options->customerIp = '138.84.54.82';
-    $request->referencedPayment->options->ecommerceFlag = ReferencedPaymentOptionsEcommerceFlag::Six;
+    $request->referencedPayment->options->ecommerceFlag = ReferencedPaymentOptionsEcommerceFlag::One;
     $request->referencedPayment->options->generateReceipt = true;
     $request->referencedPayment->options->installmentNumber = '12';
     $request->referencedPayment->options->thirdPartyId = 'partyid123';
@@ -567,7 +568,7 @@ try {
     $request->referencedPayment->softDescriptor->street = 'Fairfield Ranch';
     $request->referencedPayment->softDescriptor->submerchantId = 'xyz123';
     $request->referencedPayment->softDescriptor->taxId = 'abc123';
-    $request->paymentId = 'dolor';
+    $request->paymentId = 'alarm';
 
     $response = $sdk->payments->capturePayment($request);
 
@@ -612,7 +613,7 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new GetPaymentRequest();
-    $request->paymentId = 'vero';
+    $request->paymentId = 'unleash';
 
     $response = $sdk->payments->getPayment($request);
 
@@ -734,7 +735,7 @@ try {
     $request->customer->name = 'John Doe';
     $request->customer->phone = '8886178190';
     $request->customer->phoneType = NewPaymentCustomerPhoneType::W;
-    $request->language = NewPaymentLanguage::Es;
+    $request->language = NewPaymentLanguage::En;
     $request->level3 = new NewPaymentLevel3();
     $request->level3->altTaxAmount = 4;
     $request->level3->altTaxId = 'ref123';
@@ -757,16 +758,16 @@ try {
     $request->level3->shipTo->email = 'john@example.com';
     $request->level3->shipTo->name = 'John Doe';
     $request->level3->shipTo->phone = '8886178190';
-    $request->level3->shipTo->phoneType = NewPaymentLevel3ShipToPhoneType::N;
+    $request->level3->shipTo->phoneType = NewPaymentLevel3ShipToPhoneType::W;
     $request->level3->taxAmount = 10;
     $request->level3->taxRate = 5;
     $request->options = new NewPaymentOptions();
     $request->options->customerIp = '198.168.71.51';
-    $request->options->ecommerceFlag = NewPaymentOptionsEcommerceFlag::Seven;
+    $request->options->ecommerceFlag = NewPaymentOptionsEcommerceFlag::X;
     $request->options->generateReceipt = true;
     $request->options->installmentNumber = '12';
     $request->options->thirdPartyId = 'partyid123';
-    $request->paymentMethod = 'facilis';
+    $request->paymentMethod = 'Berkshire';
     $request->reference = new NewPaymentReference();
     $request->reference->correlationId = 'abc123';
     $request->reference->customerRef = 'ref123';
@@ -854,7 +855,7 @@ try {
     $request->referencedPayment->authorization = 'ET3516';
     $request->referencedPayment->options = new ReferencedPaymentOptions();
     $request->referencedPayment->options->customerIp = '138.84.54.82';
-    $request->referencedPayment->options->ecommerceFlag = ReferencedPaymentOptionsEcommerceFlag::One;
+    $request->referencedPayment->options->ecommerceFlag = ReferencedPaymentOptionsEcommerceFlag::Three;
     $request->referencedPayment->options->generateReceipt = true;
     $request->referencedPayment->options->installmentNumber = '12';
     $request->referencedPayment->options->thirdPartyId = 'partyid123';
@@ -877,7 +878,7 @@ try {
     $request->referencedPayment->softDescriptor->street = 'Fairfield Ranch';
     $request->referencedPayment->softDescriptor->submerchantId = 'xyz123';
     $request->referencedPayment->softDescriptor->taxId = 'abc123';
-    $request->paymentId = 'porro';
+    $request->paymentId = 'Director land SMS';
 
     $response = $sdk->payments->refundPayment($request);
 
@@ -932,7 +933,7 @@ try {
     $request->referencedPayment->authorization = 'ET3516';
     $request->referencedPayment->options = new ReferencedPaymentOptions();
     $request->referencedPayment->options->customerIp = '138.84.54.82';
-    $request->referencedPayment->options->ecommerceFlag = ReferencedPaymentOptionsEcommerceFlag::Two;
+    $request->referencedPayment->options->ecommerceFlag = ReferencedPaymentOptionsEcommerceFlag::Eight;
     $request->referencedPayment->options->generateReceipt = true;
     $request->referencedPayment->options->installmentNumber = '12';
     $request->referencedPayment->options->thirdPartyId = 'partyid123';
@@ -955,7 +956,7 @@ try {
     $request->referencedPayment->softDescriptor->street = 'Fairfield Ranch';
     $request->referencedPayment->softDescriptor->submerchantId = 'xyz123';
     $request->referencedPayment->softDescriptor->taxId = 'abc123';
-    $request->paymentId = 'blanditiis';
+    $request->paymentId = 'DNS';
 
     $response = $sdk->payments->voidPayment($request);
 

@@ -1,4 +1,5 @@
 # DocumentManagement
+(*documentManagement*)
 
 ### Available Operations
 
@@ -51,8 +52,8 @@ try {
     $request->requestBody->onboardingIsDeleted = false;
     $request->requestBody->subject = 'Application Status Update Pending Documentation';
     $request->requestBody->type = CreateDocumentRequestRequestBodyType::OnboardingDocumentRequest;
-    $request->onboardingId = 'modi';
-    $request->organizationId = 'praesentium';
+    $request->onboardingId = 'male';
+    $request->organizationId = 'Concrete Wagon calculating';
 
     $response = $sdk->documentManagement->createDocumentRequest($request);
 
@@ -97,9 +98,9 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new DeleteDocumentByIdRequest();
-    $request->documentId = 'rem';
-    $request->onboardingId = 'voluptates';
-    $request->organizationId = 'quasi';
+    $request->documentId = 'payment';
+    $request->onboardingId = 'Pickup female';
+    $request->organizationId = 'Iceland';
 
     $response = $sdk->documentManagement->deleteDocumentById($request);
 
@@ -144,9 +145,9 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new DeleteDocumentRequestByIdRequest();
-    $request->documentRequestId = 'repudiandae';
-    $request->onboardingId = 'sint';
-    $request->organizationId = 'veritatis';
+    $request->documentRequestId = 'withdrawal Cargo';
+    $request->onboardingId = 'Avon ideal Chicken';
+    $request->organizationId = 'Buckinghamshire Sulfur';
 
     $response = $sdk->documentManagement->deleteDocumentRequestById($request);
 
@@ -191,10 +192,10 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new GetDocumentByIdRequest();
-    $request->documentId = 'itaque';
+    $request->documentId = 'man program considering';
     $request->isDeleted = false;
-    $request->onboardingId = 'incidunt';
-    $request->organizationId = 'enim';
+    $request->onboardingId = 'Thornton';
+    $request->organizationId = 'Pop male';
 
     $response = $sdk->documentManagement->getDocumentById($request);
 
@@ -242,8 +243,8 @@ try {
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = 'createdAt:asc';
-    $request->onboardingId = 'consequatur';
-    $request->organizationId = 'est';
+    $request->onboardingId = 'warped';
+    $request->organizationId = 'Cis Bicycle needily';
 
     $response = $sdk->documentManagement->getDocuments($request);
 
@@ -289,8 +290,8 @@ $sdk = ExactPayments::builder()
 try {
     $request = new GetDownloadAllDocumentsRequest();
     $request->isDeleted = false;
-    $request->onboardingId = 'quibusdam';
-    $request->organizationId = 'explicabo';
+    $request->onboardingId = 'Nicole Loan';
+    $request->organizationId = 'invoice deposit lime';
 
     $response = $sdk->documentManagement->getDownloadAllDocuments($request);
 
@@ -338,8 +339,8 @@ try {
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = 'createdAt:asc';
-    $request->onboardingId = 'deserunt';
-    $request->organizationId = 'distinctio';
+    $request->onboardingId = 'Alaska input incentivize';
+    $request->organizationId = 'South state transition';
 
     $response = $sdk->documentManagement->getListDocumentRequests($request);
 
@@ -384,9 +385,9 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new GetRetrieveDocumentRequest();
-    $request->documentId = 'quibusdam';
-    $request->onboardingId = 'labore';
-    $request->organizationId = 'modi';
+    $request->documentId = 'Beaumont';
+    $request->onboardingId = 'male female';
+    $request->organizationId = 'Shanel Northeast';
 
     $response = $sdk->documentManagement->getRetrieveDocument($request);
 
@@ -431,9 +432,9 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new GetRetrieveDocumentRequestRequest();
-    $request->documentRequestId = 'qui';
-    $request->onboardingId = 'aliquid';
-    $request->organizationId = 'cupiditate';
+    $request->documentRequestId = 'Cambridgeshire Bigender Technician';
+    $request->onboardingId = 'Small';
+    $request->organizationId = 'hover Polarised';
 
     $response = $sdk->documentManagement->getRetrieveDocumentRequest($request);
 
@@ -478,7 +479,7 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new ListDocumentRequestByTokenRequest();
-    $request->documentRequestToken = 'quos';
+    $request->documentRequestToken = 'International';
 
     $response = $sdk->documentManagement->listDocumentRequestByToken($request);
 
@@ -527,9 +528,9 @@ try {
     $request = new PutUpdateDocumentTypeByIdRequest();
     $request->requestBody = new PutUpdateDocumentTypeByIdRequestBody();
     $request->requestBody->type = PutUpdateDocumentTypeByIdRequestBodyType::DriversLicense;
-    $request->documentId = 'perferendis';
-    $request->onboardingId = 'magni';
-    $request->organizationId = 'assumenda';
+    $request->documentId = 'Bahamian';
+    $request->onboardingId = 'Screen Codes synergies';
+    $request->organizationId = 'Toyota commonly';
 
     $response = $sdk->documentManagement->putUpdateDocumentTypeById($request);
 
@@ -586,9 +587,9 @@ try {
     Stay-tuned for the next update!';
     $request->onboardingDocumentRequestUpdate->subject = 'Application Status Update Pending Documentation';
     $request->onboardingDocumentRequestUpdate->type = OnboardingDocumentRequestUpdateType::OnboardingDocumentRequest;
-    $request->documentRequestId = 'ipsam';
-    $request->onboardingId = 'alias';
-    $request->organizationId = 'fugit';
+    $request->documentRequestId = 'digital healthily';
+    $request->onboardingId = 'Integration male HTTP';
+    $request->organizationId = 'tan facere Architect';
 
     $response = $sdk->documentManagement->updateDocumentRequest($request);
 
@@ -639,14 +640,14 @@ try {
     $request->onboardingDocumentUploadRequest = new OnboardingDocumentUploadRequest();
     $request->onboardingDocumentUploadRequest->documentRequest = '64c446af29cef96ce25bc519';
     $request->onboardingDocumentUploadRequest->files = new OnboardingDocumentUploadRequestFiles();
-    $request->onboardingDocumentUploadRequest->files->content = 'dolorum';
-    $request->onboardingDocumentUploadRequest->files->files = 'excepturi';
+    $request->onboardingDocumentUploadRequest->files->content = 'LgyO<[DSt8';
+    $request->onboardingDocumentUploadRequest->files->files = 'Electronic Hempstead Fresh';
     $request->onboardingDocumentUploadRequest->name = 'Business document';
     $request->onboardingDocumentUploadRequest->onboardingIsDeleted = 'true';
     $request->onboardingDocumentUploadRequest->principal = '64ca7b2e4ab69839f78db609';
     $request->onboardingDocumentUploadRequest->type = DocumentUploadType::DriversLicense;
-    $request->onboardingId = 'tempora';
-    $request->organizationId = 'facilis';
+    $request->onboardingId = 'East';
+    $request->organizationId = 'dynamic interactive hertz';
 
     $response = $sdk->documentManagement->uploadDocument($request);
 
@@ -696,12 +697,12 @@ try {
     $request = new UploadDocumentByTokenRequest();
     $request->onboardingDocumentUploadTokenRequest = new OnboardingDocumentUploadTokenRequest();
     $request->onboardingDocumentUploadTokenRequest->files = new OnboardingDocumentUploadTokenRequestFiles();
-    $request->onboardingDocumentUploadTokenRequest->files->content = 'tempore';
-    $request->onboardingDocumentUploadTokenRequest->files->files = 'labore';
+    $request->onboardingDocumentUploadTokenRequest->files->content = 'a3T7I}0L7W';
+    $request->onboardingDocumentUploadTokenRequest->files->files = 'while RSS';
     $request->onboardingDocumentUploadTokenRequest->name = 'Business document';
     $request->onboardingDocumentUploadTokenRequest->principal = '64ca7b2e4ab69839f78db609';
     $request->onboardingDocumentUploadTokenRequest->type = DocumentUploadType::DriversLicense;
-    $request->token = 'delectus';
+    $request->token = 'Markets';
 
     $response = $sdk->documentManagement->uploadDocumentByToken($request);
 

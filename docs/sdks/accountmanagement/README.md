@@ -1,4 +1,5 @@
 # AccountManagement
+(*accountManagement*)
 
 ### Available Operations
 
@@ -35,9 +36,9 @@ try {
     $request = new AccountRegisterApplePayDomainsRequest();
     $request->applePayDomains = new ApplePayDomains();
     $request->applePayDomains->domains = [
-        'corrupti',
+        'Licensed',
     ];
-    $request->accountId = 'provident';
+    $request->accountId = 'bypass';
 
     $response = $sdk->accountManagement->accountRegisterApplePayDomains($request);
 
@@ -82,7 +83,7 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new GetOrganizationOrganizationIdAccountRequest();
-    $request->organizationId = 'distinctio';
+    $request->organizationId = 'male blue degree';
 
     $response = $sdk->accountManagement->getOrganizationOrganizationIdAccount($request);
 
@@ -127,8 +128,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new GetOrganizationOrganizationIdAccountSearchRequest();
-    $request->organizationId = 'quibusdam';
-    $request->q = 'unde';
+    $request->organizationId = 'Assimilated South Hybrid';
+    $request->q = 'Northeast';
 
     $response = $sdk->accountManagement->getOrganizationOrganizationIdAccountSearch($request);
 
@@ -173,8 +174,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new GetOrganizationOrganizationIdAccountAccountIdRequest();
-    $request->accountId = 'nulla';
-    $request->organizationId = 'corrupti';
+    $request->accountId = 'Wagon channels Bicycle';
+    $request->organizationId = 'Electronic Touring Non';
 
     $response = $sdk->accountManagement->getOrganizationOrganizationIdAccountAccountId($request);
 
@@ -219,7 +220,7 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new ListApplePayDomainsRequest();
-    $request->accountId = 'illum';
+    $request->accountId = 'application';
 
     $response = $sdk->accountManagement->listApplePayDomains($request);
 
@@ -281,8 +282,8 @@ try {
     $request->accountRequest->onlinePresence = 'Online presence';
     $request->accountRequest->phone = '1111111111';
     $request->accountRequest->twitter = 'twitter';
-    $request->accountId = 'vel';
-    $request->organizationId = 'error';
+    $request->accountId = 'Lincoln distributed Automated';
+    $request->organizationId = 'male sledge willing';
 
     $response = $sdk->accountManagement->putOrganizationOrganizationIdAccountAccountId($request);
 

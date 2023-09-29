@@ -1,4 +1,5 @@
 # UnderwritingWorkflow
+(*underwritingWorkflow*)
 
 ### Available Operations
 
@@ -32,8 +33,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new DeleteWorkflowByIdRequest();
-    $request->organizationId = 'asperiores';
-    $request->workflowId = 'earum';
+    $request->organizationId = 'Chair';
+    $request->workflowId = 'reluctantly synthesize meanwhile';
 
     $response = $sdk->underwritingWorkflow->deleteWorkflowById($request);
 
@@ -78,8 +79,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new DisableWorkflowByIdRequest();
-    $request->organizationId = 'modi';
-    $request->workflowId = 'iste';
+    $request->organizationId = 'Principal Yttrium Ball';
+    $request->workflowId = 'generate';
 
     $response = $sdk->underwritingWorkflow->disableWorkflowById($request);
 
@@ -124,8 +125,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new EnableWorkflowByIdRequest();
-    $request->organizationId = 'dolorum';
-    $request->workflowId = 'deleniti';
+    $request->organizationId = 'online furthermore Southeast';
+    $request->workflowId = 'methodologies parse';
 
     $response = $sdk->underwritingWorkflow->enableWorkflowById($request);
 
@@ -173,7 +174,7 @@ try {
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = '-name';
-    $request->organizationId = 'pariatur';
+    $request->organizationId = 'architecto East black';
 
     $response = $sdk->underwritingWorkflow->getOrganizationOrganizationIdOnboardingWorkflow($request);
 
@@ -218,8 +219,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new GetOrganizationOrganizationIdOnboardingWorkflowWorkflowIdRequest();
-    $request->organizationId = 'provident';
-    $request->workflowId = 'nobis';
+    $request->organizationId = 'unsightly Emard Northeast';
+    $request->workflowId = 'standardization';
 
     $response = $sdk->underwritingWorkflow->getOrganizationOrganizationIdOnboardingWorkflowWorkflowId($request);
 
@@ -271,9 +272,9 @@ try {
     $request->underwritingWorkflowRequestCreateWorkflow->metadata = new UnderwritingWorkflowRequestCreateWorkflowMetadata();
     $request->underwritingWorkflowRequestCreateWorkflow->name = 'Main Workflow';
     $request->underwritingWorkflowRequestCreateWorkflow->rules = [
-        new PlaidAuthRule(),
+        new PlaidBalanceRule(),
     ];
-    $request->organizationId = 'delectus';
+    $request->organizationId = 'Recycled Keyboard';
 
     $response = $sdk->underwritingWorkflow->postOrganizationOrganizationIdOnboardingWorkflow($request);
 
@@ -327,8 +328,8 @@ try {
     $request->underwritingWorkflowRequestUpdateWorkflow->rules = [
         new OFACRule(),
     ];
-    $request->organizationId = 'quos';
-    $request->workflowId = 'aliquid';
+    $request->organizationId = 'gold magenta Coordinator';
+    $request->workflowId = 'Sausages';
 
     $response = $sdk->underwritingWorkflow->putOrganizationOrganizationIdOnboardingWorkflowWorkflowId($request);
 
@@ -373,8 +374,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new SetDefaultWorkflowByIdRequest();
-    $request->organizationId = 'dolorem';
-    $request->workflowId = 'dolorem';
+    $request->organizationId = 'knavishly';
+    $request->workflowId = 'teal cyan bluetooth';
 
     $response = $sdk->underwritingWorkflow->setDefaultWorkflowById($request);
 

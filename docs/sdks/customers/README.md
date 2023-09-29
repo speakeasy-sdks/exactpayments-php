@@ -1,4 +1,5 @@
 # Customers
+(*customers*)
 
 ## Overview
 
@@ -51,9 +52,9 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new AccountDeleteCustomerCustomerIdPaymentMethodTokenRequest();
-    $request->accountId = 'quis';
-    $request->customerId = 'veritatis';
-    $request->tokenId = 'deserunt';
+    $request->accountId = 'Bike transmitter Northwest';
+    $request->customerId = 'West Bicycle female';
+    $request->tokenId = 'yoga aspernatur Sandy';
 
     $response = $sdk->customers->accountDeleteCustomerCustomerIdPaymentMethodToken($request);
 
@@ -98,8 +99,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new AccountDeleteCustomerIdRequest();
-    $request->accountId = 'perferendis';
-    $request->customerId = 'ipsam';
+    $request->accountId = 'Fitness hacking furthermore';
+    $request->customerId = 'Maserati Computers Rhodium';
 
     $response = $sdk->customers->accountDeleteCustomerId($request);
 
@@ -144,10 +145,10 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new AccountGetCustomerRequest();
-    $request->dollarLimit = 8326.2;
-    $request->dollarSkip = 9571.56;
+    $request->dollarLimit = 5056.72;
+    $request->dollarSkip = 6564.29;
     $request->dollarSort = '-name';
-    $request->accountId = 'quo';
+    $request->accountId = 'Chevrolet culpa';
 
     $response = $sdk->customers->accountGetCustomer($request);
 
@@ -192,8 +193,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new AccountGetCustomerIdRequest();
-    $request->accountId = 'odit';
-    $request->customerId = 'at';
+    $request->accountId = 'Car Oriental';
+    $request->customerId = 'Program Internal Aston';
 
     $response = $sdk->customers->accountGetCustomerId($request);
 
@@ -238,9 +239,9 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new AccountGetCustomerCustomerIdPaymentMethodTokenRequest();
-    $request->accountId = 'at';
-    $request->customerId = 'maiores';
-    $request->tokenId = 'molestiae';
+    $request->accountId = 'grey';
+    $request->customerId = 'Hipolito';
+    $request->tokenId = 'South maximize';
 
     $response = $sdk->customers->accountGetCustomerCustomerIdPaymentMethodToken($request);
 
@@ -288,8 +289,8 @@ try {
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = '-name';
-    $request->accountId = 'quod';
-    $request->customerId = 'quod';
+    $request->accountId = 'bypass Global';
+    $request->customerId = 'connecting becquerel';
 
     $response = $sdk->customers->accountGetCustomerCustomerIdPayments($request);
 
@@ -334,8 +335,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new AccountGetCustomerDefaultPaymentMethodRequest();
-    $request->accountId = 'esse';
-    $request->customerId = 'totam';
+    $request->accountId = 'Mongolia Pharr';
+    $request->customerId = 'EXE Electric revolutionary';
 
     $response = $sdk->customers->accountGetCustomerDefaultPaymentMethod($request);
 
@@ -380,8 +381,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new AccountGetCustomerIdPaymentMethodRequest();
-    $request->accountId = 'porro';
-    $request->customerId = 'dolorum';
+    $request->accountId = 'Southwest Jazz Licensed';
+    $request->customerId = 'Senior deposit';
 
     $response = $sdk->customers->accountGetCustomerIdPaymentMethod($request);
 
@@ -426,8 +427,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new AccountGetCustomerTokenPaymentMethodRequest();
-    $request->accountId = 'dicta';
-    $request->customerToken = 'nam';
+    $request->accountId = 'Ferrari';
+    $request->customerToken = 'East';
 
     $response = $sdk->customers->accountGetCustomerTokenPaymentMethod($request);
 
@@ -478,10 +479,10 @@ try {
     $request->newCustomer->addresses = [
         new NewCustomerAddresses(),
     ];
-    $request->newCustomer->email = 'Kristina_Conroy@yahoo.com';
-    $request->newCustomer->name = 'Everett Breitenberg';
-    $request->newCustomer->phone = '377-525-1036 x162';
-    $request->accountId = 'natus';
+    $request->newCustomer->email = 'Tobin56@hotmail.com';
+    $request->newCustomer->name = 'SMS';
+    $request->newCustomer->phone = '(455) 466-0283 x36427';
+    $request->accountId = 'succotash Electric';
 
     $response = $sdk->customers->accountPostCustomer($request);
 
@@ -529,10 +530,10 @@ try {
     $request = new AccountPostCustomerIdPaymentMethodRequest();
     $request->requestBody = new AccountPostCustomerIdPaymentMethodRequestBody();
     $request->requestBody->isDefault = false;
-    $request->requestBody->label = 'laboriosam';
-    $request->requestBody->token = 'hic';
-    $request->accountId = 'saepe';
-    $request->customerId = 'fuga';
+    $request->requestBody->label = 'Pop bandwidth Specialist';
+    $request->requestBody->token = 'excited Passenger';
+    $request->accountId = 'olive Coordinator Modern';
+    $request->customerId = 'mole';
 
     $response = $sdk->customers->accountPostCustomerIdPaymentMethod($request);
 
@@ -585,11 +586,11 @@ try {
     $request->newCustomer->addresses = [
         new NewCustomerAddresses(),
     ];
-    $request->newCustomer->email = 'Floy_Moore@yahoo.com';
-    $request->newCustomer->name = 'Roger Beier';
-    $request->newCustomer->phone = '1-712-417-3633 x5046';
-    $request->accountId = 'doloribus';
-    $request->customerId = 'sapiente';
+    $request->newCustomer->email = 'Rashad26@hotmail.com';
+    $request->newCustomer->name = 'Denar olive facilitate';
+    $request->newCustomer->phone = '(550) 816-8728';
+    $request->accountId = 'experiences';
+    $request->customerId = 'Antimony';
 
     $response = $sdk->customers->accountPutCustomerId($request);
 
@@ -634,8 +635,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new DeleteCustomerCustomerIdPaymentMethodTokenRequest();
-    $request->customerId = 'architecto';
-    $request->tokenId = 'mollitia';
+    $request->customerId = 'Southeast';
+    $request->tokenId = 'Regional';
 
     $response = $sdk->customers->deleteCustomerCustomerIdPaymentMethodToken($request);
 
@@ -680,7 +681,7 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new DeleteCustomerIdRequest();
-    $request->customerId = 'dolorem';
+    $request->customerId = 'Colon Human East';
 
     $response = $sdk->customers->deleteCustomerId($request);
 
@@ -725,8 +726,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new GetCustomerRequest();
-    $request->dollarLimit = 6350.59;
-    $request->dollarSkip = 1613.09;
+    $request->dollarLimit = 1259.75;
+    $request->dollarSkip = 6289.72;
     $request->dollarSort = '-name';
 
     $response = $sdk->customers->getCustomer($request);
@@ -772,7 +773,7 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new GetCustomerIdRequest();
-    $request->customerId = 'repellat';
+    $request->customerId = 'magenta transmitter';
 
     $response = $sdk->customers->getCustomerId($request);
 
@@ -817,8 +818,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new GetCustomerCustomerIdPaymentMethodTokenRequest();
-    $request->customerId = 'mollitia';
-    $request->tokenId = 'occaecati';
+    $request->customerId = 'Bentonville';
+    $request->tokenId = 'Stage Mills Planner';
 
     $response = $sdk->customers->getCustomerCustomerIdPaymentMethodToken($request);
 
@@ -866,7 +867,7 @@ try {
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = '-name';
-    $request->customerId = 'numquam';
+    $request->customerId = 'little';
 
     $response = $sdk->customers->getCustomerCustomerIdPayments($request);
 
@@ -911,7 +912,7 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new GetCustomerIdPaymentMethodRequest();
-    $request->customerId = 'commodi';
+    $request->customerId = 'under Gadolinium';
 
     $response = $sdk->customers->getCustomerIdPaymentMethod($request);
 
@@ -956,9 +957,9 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new GetCustomerTokenPaymentMethodRequest();
-    $request->dollarLimit = 'quam';
-    $request->dollarSkip = 'molestiae';
-    $request->customerToken = 'velit';
+    $request->dollarLimit = 'Hybrid';
+    $request->dollarSkip = 'invoice';
+    $request->customerToken = 'Chair';
 
     $response = $sdk->customers->getCustomerTokenPaymentMethod($request);
 
@@ -1007,9 +1008,9 @@ try {
     $request->addresses = [
         new NewCustomerAddresses(),
     ];
-    $request->email = 'Carmelo67@yahoo.com';
-    $request->name = 'Bill Conn';
-    $request->phone = '468.206.8609 x98459';
+    $request->email = 'Polly.Hamill94@gmail.com';
+    $request->name = 'female';
+    $request->phone = '889-563-3898 x145';
 
     $response = $sdk->customers->postCustomer($request);
 
@@ -1057,9 +1058,9 @@ try {
     $request = new PostCustomerIdPaymentMethodRequest();
     $request->requestBody = new PostCustomerIdPaymentMethodRequestBody();
     $request->requestBody->isDefault = false;
-    $request->requestBody->label = 'ipsa';
-    $request->requestBody->token = 'omnis';
-    $request->customerId = 'voluptate';
+    $request->requestBody->label = 'synthesize platforms';
+    $request->requestBody->token = 'Intersex Elegant';
+    $request->customerId = 'Lavinia Communications vigorous';
 
     $response = $sdk->customers->postCustomerIdPaymentMethod($request);
 
@@ -1112,10 +1113,10 @@ try {
     $request->newCustomer->addresses = [
         new NewCustomerAddresses(),
     ];
-    $request->newCustomer->email = 'Aiyana.Batz@hotmail.com';
-    $request->newCustomer->name = 'Willie Hessel';
-    $request->newCustomer->phone = '(738) 590-2655';
-    $request->customerId = 'pariatur';
+    $request->newCustomer->email = 'Major43@hotmail.com';
+    $request->newCustomer->name = 'flawless Electric';
+    $request->newCustomer->phone = '(738) 538-9785 x3771';
+    $request->customerId = 'Folk Country';
 
     $response = $sdk->customers->putCustomerId($request);
 

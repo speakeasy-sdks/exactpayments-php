@@ -1,4 +1,5 @@
 # Reporting
+(*reporting*)
 
 ### Available Operations
 
@@ -28,7 +29,7 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new DeleteReportRequest();
-    $request->reportId = 'error';
+    $request->reportId = 'a';
 
     $response = $sdk->reporting->deleteReport($request);
 
@@ -75,8 +76,8 @@ $sdk = ExactPayments::builder()
 try {
     $request = new GetReportRequest();
     $request->format = GetReportFormat::Csv;
-    $request->reportId = 'occaecati';
-    $request->select = 'rerum';
+    $request->reportId = 'payment Indiana Strategist';
+    $request->select = 'Riel deposit';
 
     $response = $sdk->reporting->getReport($request);
 
@@ -124,7 +125,7 @@ try {
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = '-name';
-    $request->reportId = 'adipisci';
+    $request->reportId = 'Fresh ack';
 
     $response = $sdk->reporting->getReportDetails($request);
 

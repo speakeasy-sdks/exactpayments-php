@@ -1,4 +1,5 @@
 # Orders
+(*orders*)
 
 ## Overview
 
@@ -36,8 +37,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new GetAccountAccountIdOrdersOrderIdRequest();
-    $request->accountId = 'officia';
-    $request->orderId = 'dolor';
+    $request->accountId = 'Principal Jewelery';
+    $request->orderId = 'transmit';
 
     $response = $sdk->orders->getAccountAccountIdOrdersOrderId($request);
 
@@ -84,8 +85,8 @@ try {
     $request = new GetOrdersRequest();
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
-    $request->from = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-01T00:00:00.000Z');
-    $request->to = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-31T00:00:00.000Z');
+    $request->from = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-01T00:00:00.000Z');
+    $request->to = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-31T00:00:00.000Z');
 
     $response = $sdk->orders->getOrders($request);
 
@@ -135,8 +136,8 @@ try {
     $request->requestBody = new PostAccountAccountIdOrdersOrderIdPayRequestBody();
     $request->requestBody->paymentMethod = new PostAccountAccountIdOrdersOrderIdPayRequestBodyPaymentMethod();
     $request->requestBody->paymentMethod->token = 'f0db7065-be66-4501-b49b-5eb56e265cb1';
-    $request->accountId = 'debitis';
-    $request->orderId = 'a';
+    $request->accountId = 'improvement Northeast';
+    $request->orderId = 'how Folk';
 
     $response = $sdk->orders->postAccountAccountIdOrdersOrderIdPay($request);
 
@@ -193,7 +194,7 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new PostAccountAccountIdOrdersRequest();
-    $request->accountId = 'dolorum';
+    $request->accountId = 'Rock';
     $request->order = new Order();
     $request->order->amount = 123;
     $request->order->billing = new CustomerDetails();
@@ -207,7 +208,7 @@ try {
     $request->order->billing->email = 'john@acmecorp.com';
     $request->order->billing->name = 'John Doe';
     $request->order->billing->phone = '5551234567';
-    $request->order->billing->phoneType = CustomerDetailsPhoneType::W;
+    $request->order->billing->phoneType = CustomerDetailsPhoneType::N;
     $request->order->capture = true;
     $request->order->description = 'Order description';
     $request->order->level3 = new Level3();
@@ -232,12 +233,12 @@ try {
     $request->order->level3->shipTo->email = 'john@acmecorp.com';
     $request->order->level3->shipTo->name = 'John Doe';
     $request->order->level3->shipTo->phone = '5551234567';
-    $request->order->level3->shipTo->phoneType = ShipToPhoneType::W;
+    $request->order->level3->shipTo->phoneType = ShipToPhoneType::H;
     $request->order->level3->taxAmount = 5;
     $request->order->level3->taxRate = 0.5;
     $request->order->options = new OrderOptions();
     $request->order->options->customerIp = '198.51.100.42';
-    $request->order->options->ecommerceFlag = OrderOptionsEcommerceFlag::I;
+    $request->order->options->ecommerceFlag = OrderOptionsEcommerceFlag::Three;
     $request->order->options->orderTrackingNumber = 'trackid123';
     $request->order->reference = new Reference();
     $request->order->reference->correlationId = 'abc123';
@@ -328,7 +329,7 @@ try {
     $request->billing->email = 'john@acmecorp.com';
     $request->billing->name = 'John Doe';
     $request->billing->phone = '5551234567';
-    $request->billing->phoneType = CustomerDetailsPhoneType::D;
+    $request->billing->phoneType = CustomerDetailsPhoneType::N;
     $request->capture = true;
     $request->description = 'Order description';
     $request->level3 = new Level3();
@@ -353,12 +354,12 @@ try {
     $request->level3->shipTo->email = 'john@acmecorp.com';
     $request->level3->shipTo->name = 'John Doe';
     $request->level3->shipTo->phone = '5551234567';
-    $request->level3->shipTo->phoneType = ShipToPhoneType::N;
+    $request->level3->shipTo->phoneType = ShipToPhoneType::W;
     $request->level3->taxAmount = 5;
     $request->level3->taxRate = 0.5;
     $request->options = new OrderOptions();
     $request->options->customerIp = '198.51.100.42';
-    $request->options->ecommerceFlag = OrderOptionsEcommerceFlag::Two;
+    $request->options->ecommerceFlag = OrderOptionsEcommerceFlag::Eight;
     $request->options->orderTrackingNumber = 'trackid123';
     $request->reference = new Reference();
     $request->reference->correlationId = 'abc123';
@@ -426,7 +427,7 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new PostOrdersOrderIdAccessTokenRequest();
-    $request->orderId = 'magnam';
+    $request->orderId = 'failing Bicycle';
 
     $response = $sdk->orders->postOrdersOrderIdAccessToken($request);
 
@@ -483,7 +484,7 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new PutAccountAccountIdOrdersOrderIdRequest();
-    $request->accountId = 'cumque';
+    $request->accountId = 'labore Jersey holistic';
     $request->order = new Order();
     $request->order->amount = 123;
     $request->order->billing = new CustomerDetails();
@@ -522,12 +523,12 @@ try {
     $request->order->level3->shipTo->email = 'john@acmecorp.com';
     $request->order->level3->shipTo->name = 'John Doe';
     $request->order->level3->shipTo->phone = '5551234567';
-    $request->order->level3->shipTo->phoneType = ShipToPhoneType::W;
+    $request->order->level3->shipTo->phoneType = ShipToPhoneType::D;
     $request->order->level3->taxAmount = 5;
     $request->order->level3->taxRate = 0.5;
     $request->order->options = new OrderOptions();
     $request->order->options->customerIp = '198.51.100.42';
-    $request->order->options->ecommerceFlag = OrderOptionsEcommerceFlag::Five;
+    $request->order->options->ecommerceFlag = OrderOptionsEcommerceFlag::One;
     $request->order->options->orderTrackingNumber = 'trackid123';
     $request->order->reference = new Reference();
     $request->order->reference->correlationId = 'abc123';
@@ -551,7 +552,7 @@ try {
     $request->order->softDescriptor->taxId = 'abc123';
     $request->order->surchargeAmount = 123;
     $request->order->taxAmount = 123;
-    $request->orderId = 'laborum';
+    $request->orderId = 'Lead Tricycle Volkswagen';
 
     $response = $sdk->orders->putAccountAccountIdOrdersOrderId($request);
 
@@ -596,7 +597,7 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new PutOrdersOrderIdResetRequest();
-    $request->orderId = 'accusamus';
+    $request->orderId = 'Administrator separately Gastonia';
 
     $response = $sdk->orders->putOrdersOrderIdReset($request);
 

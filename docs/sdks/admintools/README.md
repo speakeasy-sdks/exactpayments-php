@@ -1,4 +1,5 @@
 # AdminTools
+(*adminTools*)
 
 ### Available Operations
 
@@ -32,8 +33,8 @@ try {
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = 'createdAt:asc';
-    $request->onboardingId = 'deserunt';
-    $request->organizationId = 'suscipit';
+    $request->onboardingId = 'pixel';
+    $request->organizationId = 'Southeast';
 
     $response = $sdk->adminTools->getListNotes($request);
 
@@ -80,10 +81,10 @@ $sdk = ExactPayments::builder()
 try {
     $request = new PostCreateNotesRequest();
     $request->requestBody = new PostCreateNotesRequestBodyInput();
-    $request->requestBody->note = 'Some more documents are needed to verify the account's eligibility. Jen Will contact the merchant to collect further details by 2nd Aug.';
+    $request->requestBody->note = 'Some more documents are needed to verify the account\'s eligibility. Jen Will contact the merchant to collect further details by 2nd Aug.';
     $request->requestBody->onboardingIsDeleted = false;
-    $request->onboardingId = 'iure';
-    $request->organizationId = 'magnam';
+    $request->onboardingId = 'fuchsia';
+    $request->organizationId = 'Toys hacking';
 
     $response = $sdk->adminTools->postCreateNotes($request);
 
@@ -128,8 +129,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new PutOrganizationOrganizationIdOnboardingOnboardingIdRecheckRequest();
-    $request->onboardingId = 'debitis';
-    $request->organizationId = 'ipsa';
+    $request->onboardingId = 'Organized matrices';
+    $request->organizationId = 'Bike synergize';
 
     $response = $sdk->adminTools->putOrganizationOrganizationIdOnboardingOnboardingIdRecheck($request);
 
@@ -176,9 +177,9 @@ $sdk = ExactPayments::builder()
 try {
     $request = new PutOrganizationOrganizationIdOnboardingOnboardingIdRetryRuleRequest();
     $request->onboardingRetryRuleRequest = new OnboardingRetryRuleRequest();
-    $request->onboardingRetryRuleRequest->ruleName = 'delectus';
-    $request->onboardingId = 'tempora';
-    $request->organizationId = 'suscipit';
+    $request->onboardingRetryRuleRequest->ruleName = 'Latin';
+    $request->onboardingId = 'pfft';
+    $request->organizationId = 'empty';
 
     $response = $sdk->adminTools->putOrganizationOrganizationIdOnboardingOnboardingIdRetryRule($request);
 
@@ -227,12 +228,12 @@ $sdk = ExactPayments::builder()
 try {
     $request = new PutOrganizationOrganizationIdOnboardingOnboardingIdStatusRequest();
     $request->updateOnboardingStatusRequest = new UpdateOnboardingStatusRequest();
-    $request->updateOnboardingStatusRequest->isDeleted = 'molestiae';
-    $request->updateOnboardingStatusRequest->status = UpdateOnboardingStatusRequestStatus::InRiskReview;
-    $request->updateOnboardingStatusRequest->statusChangeReason = UpdateOnboardingStatusRequestStatusChangeReason::ProhibitedMerchant;
-    $request->updateOnboardingStatusRequest->statusChangeReasonNote = 'voluptatum';
-    $request->onboardingId = 'iusto';
-    $request->organizationId = 'excepturi';
+    $request->updateOnboardingStatusRequest->isDeleted = 'Optimization Web';
+    $request->updateOnboardingStatusRequest->status = UpdateOnboardingStatusRequestStatus::Withdrawn;
+    $request->updateOnboardingStatusRequest->statusChangeReason = UpdateOnboardingStatusRequestStatusChangeReason::FailedToVerifyIdentity;
+    $request->updateOnboardingStatusRequest->statusChangeReasonNote = 'South Bicycle';
+    $request->onboardingId = 'Card Electric';
+    $request->organizationId = 'functionalities Diesel close';
 
     $response = $sdk->adminTools->putOrganizationOrganizationIdOnboardingOnboardingIdStatus($request);
 

@@ -1,4 +1,5 @@
 # Webhooks
+(*webhooks*)
 
 ### Available Operations
 
@@ -38,8 +39,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new AccountDeleteWebhookRequest();
-    $request->accountId = 'dolor';
-    $request->webhookId = 'qui';
+    $request->accountId = 'Computer Volkswagen';
+    $request->webhookId = 'Engineer sticky gurgle';
 
     $response = $sdk->webhooks->accountDeleteWebhook($request);
 
@@ -84,8 +85,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new AccountDisableWebhookRequest();
-    $request->accountId = 'ipsum';
-    $request->webhookId = 'hic';
+    $request->accountId = 'program um';
+    $request->webhookId = 'encoding';
 
     $response = $sdk->webhooks->accountDisableWebhook($request);
 
@@ -130,8 +131,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new AccountEnableWebhookRequest();
-    $request->accountId = 'excepturi';
-    $request->webhookId = 'cum';
+    $request->accountId = 'geez Avon Recumbent';
+    $request->webhookId = 'Funk Chicken append';
 
     $response = $sdk->webhooks->accountEnableWebhook($request);
 
@@ -179,7 +180,7 @@ try {
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = '-name';
-    $request->accountId = 'voluptate';
+    $request->accountId = 'poll';
 
     $response = $sdk->webhooks->accountGetListWebhooks($request);
 
@@ -224,8 +225,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new AccountGetRetrieveWebhookRequest();
-    $request->accountId = 'dignissimos';
-    $request->webhookId = 'reiciendis';
+    $request->accountId = 'siemens';
+    $request->webhookId = 'markets Hybrid Wooden';
 
     $response = $sdk->webhooks->accountGetRetrieveWebhook($request);
 
@@ -274,11 +275,11 @@ try {
     $request = new AccountPostCreateWebhookRequest();
     $request->webhookRequest = new WebhookRequest();
     $request->webhookRequest->description = 'Completed reports for this account.';
-    $request->webhookRequest->event = WebhookEventField::PaymentSettle;
+    $request->webhookRequest->event = WebhookEventField::PaymentMethodEnsure;
     $request->webhookRequest->urls = [
         '["https://736d1e71-c9ae-409b-81ff-c2c38c68ad4b.mock.pstmn.io/dev/hook/success","https://736d1e71-c9ae-409b-81ff-c2c38c68ad4b.mock.pstmn.io/dev/hook/finished"]',
     ];
-    $request->accountId = 'dolorum';
+    $request->accountId = 'infrastructure';
 
     $response = $sdk->webhooks->accountPostCreateWebhook($request);
 
@@ -327,12 +328,12 @@ try {
     $request = new AccountUpdateWebhookRequest();
     $request->updatableWebhookRequest = new UpdatableWebhookRequest();
     $request->updatableWebhookRequest->description = 'Completed reports for this account.';
-    $request->updatableWebhookRequest->event = WebhookEventField::OrderCreate;
+    $request->updatableWebhookRequest->event = WebhookEventField::PaymentMethodUnlinkFromCustomer;
     $request->updatableWebhookRequest->urls = [
         '["https://736d1e71-c9ae-409b-81ff-c2c38c68ad4b.mock.pstmn.io/dev/hook/success","https://736d1e71-c9ae-409b-81ff-c2c38c68ad4b.mock.pstmn.io/dev/hook/finished"]',
     ];
-    $request->accountId = 'veritatis';
-    $request->webhookId = 'ipsa';
+    $request->accountId = 'Account tan communities';
+    $request->webhookId = 'Gender Southeast';
 
     $response = $sdk->webhooks->accountUpdateWebhook($request);
 
@@ -377,8 +378,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new DeleteOrganizationOrganizationIdWebhookWebhookIdRequest();
-    $request->organizationId = 'ipsa';
-    $request->webhookId = 'iure';
+    $request->organizationId = 'Integration Bulgarian past';
+    $request->webhookId = 'Saint';
 
     $response = $sdk->webhooks->deleteOrganizationOrganizationIdWebhookWebhookId($request);
 
@@ -426,7 +427,7 @@ try {
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = '-name';
-    $request->organizationId = 'odio';
+    $request->organizationId = 'frenzy Small Dong';
 
     $response = $sdk->webhooks->getOrganizationOrganizationIdWebhook($request);
 
@@ -471,8 +472,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new GetOrganizationOrganizationIdWebhookWebhookIdRequest();
-    $request->organizationId = 'quaerat';
-    $request->webhookId = 'accusamus';
+    $request->organizationId = 'Mazda Cambridgeshire synthesize';
+    $request->webhookId = 'tan intuitive';
 
     $response = $sdk->webhooks->getOrganizationOrganizationIdWebhookWebhookId($request);
 
@@ -521,11 +522,11 @@ try {
     $request = new PostOrganizationOrganizationIdWebhookRequest();
     $request->webhookRequest = new WebhookRequest();
     $request->webhookRequest->description = 'Completed reports for this account.';
-    $request->webhookRequest->event = WebhookEventField::PaymentMethodQueryForCustomerByCustomerToken;
+    $request->webhookRequest->event = WebhookEventField::CustomerCreate;
     $request->webhookRequest->urls = [
         '["https://736d1e71-c9ae-409b-81ff-c2c38c68ad4b.mock.pstmn.io/dev/hook/success","https://736d1e71-c9ae-409b-81ff-c2c38c68ad4b.mock.pstmn.io/dev/hook/finished"]',
     ];
-    $request->organizationId = 'voluptatibus';
+    $request->organizationId = 'West set Account';
 
     $response = $sdk->webhooks->postOrganizationOrganizationIdWebhook($request);
 
@@ -574,12 +575,12 @@ try {
     $request = new PutOrganizationOrganizationIdWebhookWebhookIdRequest();
     $request->updatableWebhookRequest = new UpdatableWebhookRequest();
     $request->updatableWebhookRequest->description = 'Completed reports for this account.';
-    $request->updatableWebhookRequest->event = WebhookEventField::OrderUpdate;
+    $request->updatableWebhookRequest->event = WebhookEventField::ReportCreate;
     $request->updatableWebhookRequest->urls = [
         '["https://736d1e71-c9ae-409b-81ff-c2c38c68ad4b.mock.pstmn.io/dev/hook/success","https://736d1e71-c9ae-409b-81ff-c2c38c68ad4b.mock.pstmn.io/dev/hook/finished"]',
     ];
-    $request->organizationId = 'natus';
-    $request->webhookId = 'eos';
+    $request->organizationId = 'outside which';
+    $request->webhookId = 'Handmade';
 
     $response = $sdk->webhooks->putOrganizationOrganizationIdWebhookWebhookId($request);
 
@@ -624,8 +625,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new PutOrganizationOrganizationIdWebhookWebhookIdDisableRequest();
-    $request->organizationId = 'atque';
-    $request->webhookId = 'sit';
+    $request->organizationId = 'El doloremque hacking';
+    $request->webhookId = 'South Northeast';
 
     $response = $sdk->webhooks->putOrganizationOrganizationIdWebhookWebhookIdDisable($request);
 
@@ -670,8 +671,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new PutOrganizationOrganizationIdWebhookWebhookIdEnableRequest();
-    $request->organizationId = 'fugiat';
-    $request->webhookId = 'ab';
+    $request->organizationId = 'ouch';
+    $request->webhookId = 'Central';
 
     $response = $sdk->webhooks->putOrganizationOrganizationIdWebhookWebhookIdEnable($request);
 

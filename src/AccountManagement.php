@@ -45,7 +45,7 @@ class AccountManagement
         }
         $options = array_merge_recursive($options, $body);
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
-        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
         
@@ -109,7 +109,7 @@ class AccountManagement
         
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
-        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
@@ -162,7 +162,7 @@ class AccountManagement
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountSearchRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
-        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
@@ -214,7 +214,7 @@ class AccountManagement
         
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
-        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
@@ -264,7 +264,7 @@ class AccountManagement
         
         $options = ['http_errors' => false];
         $options['headers']['Accept'] = 'application/json;q=1, text/plain;q=0';
-        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
@@ -327,7 +327,7 @@ class AccountManagement
         }
         $options = array_merge_recursive($options, $body);
         $options['headers']['Accept'] = 'text/plain';
-        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
+        $options['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         
         $httpResponse = $this->sdkConfiguration->securityClient->request('PUT', $url, $options);
         

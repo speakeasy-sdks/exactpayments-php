@@ -1,4 +1,5 @@
 # PaymentMethods
+(*paymentMethods*)
 
 ## Overview
 
@@ -36,8 +37,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new AccountDeletePaymentMethodRequest();
-    $request->accountId = 'non';
-    $request->tokenId = 'occaecati';
+    $request->accountId = 'Shilling content Screen';
+    $request->tokenId = 'UTF8';
 
     $response = $sdk->paymentMethods->accountDeletePaymentMethod($request);
 
@@ -84,8 +85,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new AccountGetPaymentMethodRequest();
-    $request->accountId = 'enim';
-    $request->tokenId = 'accusamus';
+    $request->accountId = 'Saint';
+    $request->tokenId = 'around restring';
 
     $response = $sdk->paymentMethods->accountGetPaymentMethod($request);
 
@@ -134,26 +135,28 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new AccountPostPaymentMethodRequest();
-    $request->requestBody = new AchSchema();
-    $request->requestBody->ach = new AchSchemaAch();
-    $request->requestBody->ach->accountNumber = 'quidem';
-    $request->requestBody->ach->bankAccountType = 'provident';
-    $request->requestBody->ach->plaidToken = 'nam';
-    $request->requestBody->ach->routingNumber = 'id';
-    $request->requestBody->billingDetails = new AchSchemaBillingDetails();
-    $request->requestBody->billingDetails->address = new BillingDetailsAddress();
-    $request->requestBody->billingDetails->address->city = 'Kacieshire';
-    $request->requestBody->billingDetails->address->country = 'Denmark';
-    $request->requestBody->billingDetails->address->line1 = 'deserunt';
-    $request->requestBody->billingDetails->address->line2 = 'nisi';
-    $request->requestBody->billingDetails->address->postalCode = '66404';
-    $request->requestBody->billingDetails->address->state = 'magnam';
-    $request->requestBody->billingDetails->businessName = 'distinctio';
-    $request->requestBody->billingDetails->email = 'Edward_Greenfelder@yahoo.com';
-    $request->requestBody->billingDetails->name = 'Duane Thiel II';
-    $request->requestBody->billingDetails->phone = '(635) 650-6963';
-    $request->requestBody->type = 'eum';
-    $request->accountId = 'dolor';
+    $request->requestBody = new CardSchema();
+    $request->requestBody->billingDetails = new CardSchemaBillingDetails();
+    $request->requestBody->billingDetails->address = new CardSchemaBillingDetailsAddress();
+    $request->requestBody->billingDetails->address->city = 'Fort Joshuahstead';
+    $request->requestBody->billingDetails->address->country = 'New Zealand';
+    $request->requestBody->billingDetails->address->line1 = 'Chief male stable';
+    $request->requestBody->billingDetails->address->line2 = 'Kong Corwin';
+    $request->requestBody->billingDetails->address->postalCode = '97537';
+    $request->requestBody->billingDetails->address->state = 'Keyboard Southaven inasmuch';
+    $request->requestBody->billingDetails->email = 'Aubree_Thompson@yahoo.com';
+    $request->requestBody->billingDetails->name = 'ipsa quantifying';
+    $request->requestBody->billingDetails->phone = '750-792-4772 x301';
+    $request->requestBody->card = new CardSchemaCard();
+    $request->requestBody->card->cvc = 'JBOD';
+    $request->requestBody->card->cvcIndicator = CardSchemaCardCvcIndicator::Present;
+    $request->requestBody->card->expiry = new CardSchemaCardExpiry();
+    $request->requestBody->card->expiry->month = 253435;
+    $request->requestBody->card->expiry->year = 459026;
+    $request->requestBody->card->number = 'female';
+    $request->requestBody->card->tokenType = 'reboot';
+    $request->requestBody->type = 'repeatedly Virginia iusto';
+    $request->accountId = 'Palladium Diesel';
 
     $response = $sdk->paymentMethods->accountPostPaymentMethod($request);
 
@@ -204,10 +207,10 @@ $sdk = ExactPayments::builder()
 try {
     $request = new AccountPostVerifyMicrodepositsRequest();
     $request->microDepositVerificationRequest = new MicroDepositVerificationRequest();
-    $request->microDepositVerificationRequest->amount1 = 896547;
-    $request->microDepositVerificationRequest->amount2 = 141264;
-    $request->accountId = 'nemo';
-    $request->paymentToken = 'quasi';
+    $request->microDepositVerificationRequest->amount1 = 768582;
+    $request->microDepositVerificationRequest->amount2 = 195872;
+    $request->accountId = 'olive zowie Global';
+    $request->paymentToken = 'Ouguiya Kwacha up';
 
     $response = $sdk->paymentMethods->accountPostVerifyMicrodeposits($request);
 
@@ -252,7 +255,7 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new DeletePaymentMethodRequest();
-    $request->tokenId = 'iure';
+    $request->tokenId = 'Assurance Metal Money';
 
     $response = $sdk->paymentMethods->deletePaymentMethod($request);
 
@@ -297,7 +300,7 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new GetPaymentMethodRequest();
-    $request->tokenId = 'doloribus';
+    $request->tokenId = 'Accountability Netherlands imprison';
 
     $response = $sdk->paymentMethods->getPaymentMethod($request);
 
@@ -344,25 +347,27 @@ $sdk = ExactPayments::builder()
     ->build();
 
 try {
-    $request = new AchSchema();
-    $request->ach = new AchSchemaAch();
-    $request->ach->accountNumber = 'eius';
-    $request->ach->bankAccountType = 'maxime';
-    $request->ach->plaidToken = 'deleniti';
-    $request->ach->routingNumber = 'facilis';
-    $request->billingDetails = new AchSchemaBillingDetails();
-    $request->billingDetails->address = new BillingDetailsAddress();
-    $request->billingDetails->address->city = 'Barbaraland';
-    $request->billingDetails->address->country = 'Turks and Caicos Islands';
-    $request->billingDetails->address->line1 = 'ullam';
-    $request->billingDetails->address->line2 = 'expedita';
-    $request->billingDetails->address->postalCode = '98198';
-    $request->billingDetails->address->state = 'accusantium';
-    $request->billingDetails->businessName = 'consequuntur';
-    $request->billingDetails->email = 'Levi77@yahoo.com';
-    $request->billingDetails->name = 'Ervin Schoen';
-    $request->billingDetails->phone = '1-500-963-4470';
-    $request->type = 'pariatur';
+    $request = new CardSchema();
+    $request->billingDetails = new CardSchemaBillingDetails();
+    $request->billingDetails->address = new CardSchemaBillingDetailsAddress();
+    $request->billingDetails->address->city = 'South Brandon';
+    $request->billingDetails->address->country = 'India';
+    $request->billingDetails->address->line1 = 'microchip Convertible';
+    $request->billingDetails->address->line2 = 'morph Pound cattle';
+    $request->billingDetails->address->postalCode = '31939-6047';
+    $request->billingDetails->address->state = 'orchid analyzer';
+    $request->billingDetails->email = 'Bonnie_Frami15@hotmail.com';
+    $request->billingDetails->name = 'besides Costa Porsche';
+    $request->billingDetails->phone = '526-295-7778 x9611';
+    $request->card = new CardSchemaCard();
+    $request->card->cvc = '24/365';
+    $request->card->cvcIndicator = CardSchemaCardCvcIndicator::Illegible;
+    $request->card->expiry = new CardSchemaCardExpiry();
+    $request->card->expiry->month = 902661;
+    $request->card->expiry->year = 854785;
+    $request->card->number = 'Hybrid panel IP';
+    $request->card->tokenType = 'Oval female Olathe';
+    $request->type = 'purple Horizontal turquoise';
 
     $response = $sdk->paymentMethods->postPaymentMethod($request);
 
@@ -413,9 +418,9 @@ $sdk = ExactPayments::builder()
 try {
     $request = new PostVerifyMicrodepositsRequest();
     $request->microDepositVerificationRequest = new MicroDepositVerificationRequest();
-    $request->microDepositVerificationRequest->amount1 = 365496;
-    $request->microDepositVerificationRequest->amount2 = 975522;
-    $request->paymentToken = 'perferendis';
+    $request->microDepositVerificationRequest->amount1 = 849170;
+    $request->microDepositVerificationRequest->amount2 = 669926;
+    $request->paymentToken = 'SSL Folk Account';
 
     $response = $sdk->paymentMethods->postVerifyMicrodeposits($request);
 

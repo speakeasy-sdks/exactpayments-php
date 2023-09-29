@@ -64,11 +64,11 @@ try {
 ## Available Resources and Operations
 
 
-### [APIHealthCheck](docs/sdks/apihealthcheck/README.md)
+### [apiHealthCheck](docs/sdks/apihealthcheck/README.md)
 
 * [getStatus](docs/sdks/apihealthcheck/README.md#getstatus) - Retrieve Status
 
-### [AccountManagement](docs/sdks/accountmanagement/README.md)
+### [accountManagement](docs/sdks/accountmanagement/README.md)
 
 * [accountRegisterApplePayDomains](docs/sdks/accountmanagement/README.md#accountregisterapplepaydomains) - Register Domain for Apple Pay
 * [getOrganizationOrganizationIdAccount](docs/sdks/accountmanagement/README.md#getorganizationorganizationidaccount) - List Accounts
@@ -77,7 +77,7 @@ try {
 * [listApplePayDomains](docs/sdks/accountmanagement/README.md#listapplepaydomains) - List Apple Pay Domains
 * [putOrganizationOrganizationIdAccountAccountId](docs/sdks/accountmanagement/README.md#putorganizationorganizationidaccountaccountid) - Update Account by ID
 
-### [AdminTools](docs/sdks/admintools/README.md)
+### [adminTools](docs/sdks/admintools/README.md)
 
 * [getListNotes](docs/sdks/admintools/README.md#getlistnotes) - List Notes
 * [postCreateNotes](docs/sdks/admintools/README.md#postcreatenotes) - Add Note
@@ -85,14 +85,14 @@ try {
 * [putOrganizationOrganizationIdOnboardingOnboardingIdRetryRule](docs/sdks/admintools/README.md#putorganizationorganizationidonboardingonboardingidretryrule) - Process Verification
 * [putOrganizationOrganizationIdOnboardingOnboardingIdStatus](docs/sdks/admintools/README.md#putorganizationorganizationidonboardingonboardingidstatus) - Update Onboarding Status
 
-### [Authentication](docs/sdks/authentication/README.md)
+### [authentication](docs/sdks/authentication/README.md)
 
 * [createApplicationToken](docs/sdks/authentication/README.md#createapplicationtoken) - Create Application Token
 * [createUserToken](docs/sdks/authentication/README.md#createusertoken) - Create User Token
 * [deleteApplicationToken](docs/sdks/authentication/README.md#deleteapplicationtoken) - Delete Application Token
 * [queryApplicationToken](docs/sdks/authentication/README.md#queryapplicationtoken) - Query Application Tokens
 
-### [Customers](docs/sdks/customers/README.md)
+### [customers](docs/sdks/customers/README.md)
 
 * [accountDeleteCustomerCustomerIdPaymentMethodToken](docs/sdks/customers/README.md#accountdeletecustomercustomeridpaymentmethodtoken) - Delete Payment Method Associated with Customer by Token for a given Account
 * [accountDeleteCustomerId](docs/sdks/customers/README.md#accountdeletecustomerid) - Delete Customer by ID for a given Account
@@ -118,7 +118,7 @@ try {
 * [postCustomerIdPaymentMethod](docs/sdks/customers/README.md#postcustomeridpaymentmethod) - Attach Payment Method for a Customer (Sub-merchant context)
 * [putCustomerId](docs/sdks/customers/README.md#putcustomerid) - Update Customer by ID
 
-### [DocumentManagement](docs/sdks/documentmanagement/README.md)
+### [documentManagement](docs/sdks/documentmanagement/README.md)
 
 * [createDocumentRequest](docs/sdks/documentmanagement/README.md#createdocumentrequest) - Request Document
 * [deleteDocumentById](docs/sdks/documentmanagement/README.md#deletedocumentbyid) - Delete Document
@@ -135,7 +135,7 @@ try {
 * [uploadDocument](docs/sdks/documentmanagement/README.md#uploaddocument) - Upload Document
 * [uploadDocumentByToken](docs/sdks/documentmanagement/README.md#uploaddocumentbytoken) - Upload Document using Token
 
-### [MerchantOnboarding](docs/sdks/merchantonboarding/README.md)
+### [merchantOnboarding](docs/sdks/merchantonboarding/README.md)
 
 * [createOnboarding](docs/sdks/merchantonboarding/README.md#createonboarding) - Create Onboarding Application
 * [deleteOnboardingById](docs/sdks/merchantonboarding/README.md#deleteonboardingbyid) - Delete Onboarding
@@ -147,7 +147,7 @@ try {
 * [searchOnboardingByBusinessName](docs/sdks/merchantonboarding/README.md#searchonboardingbybusinessname) - Search Onboarding by Business Name
 * [searchOnboardingByOrganizationIdAndBusinessName](docs/sdks/merchantonboarding/README.md#searchonboardingbyorganizationidandbusinessname) - Search Onboarding by Organization identifier and Business Name
 
-### [Orders](docs/sdks/orders/README.md)
+### [orders](docs/sdks/orders/README.md)
 
 * [getAccountAccountIdOrdersOrderId](docs/sdks/orders/README.md#getaccountaccountidordersorderid) - Get Order Details
 * [getOrders](docs/sdks/orders/README.md#getorders) - List Orders
@@ -158,7 +158,7 @@ try {
 * [putAccountAccountIdOrdersOrderId](docs/sdks/orders/README.md#putaccountaccountidordersorderid) - Update Order
 * [putOrdersOrderIdReset](docs/sdks/orders/README.md#putordersorderidreset) - Reset Payment Attempts
 
-### [PaymentMethods](docs/sdks/paymentmethods/README.md)
+### [paymentMethods](docs/sdks/paymentmethods/README.md)
 
 * [accountDeletePaymentMethod](docs/sdks/paymentmethods/README.md#accountdeletepaymentmethod) - Delete a Payment Method for a given Account
 * [accountGetPaymentMethod](docs/sdks/paymentmethods/README.md#accountgetpaymentmethod) - Retrieve a Payment Method for a given Account
@@ -169,7 +169,7 @@ try {
 * [postPaymentMethod](docs/sdks/paymentmethods/README.md#postpaymentmethod) - Create Payment Method
 * [postVerifyMicrodeposits](docs/sdks/paymentmethods/README.md#postverifymicrodeposits) - Verify micro-deposits on an ACH Payment Method
 
-### [Payments](docs/sdks/payments/README.md)
+### [payments](docs/sdks/payments/README.md)
 
 * [accountCapturePayment](docs/sdks/payments/README.md#accountcapturepayment) - Capture an existing authorization for a given Account
 * [accountGetPayment](docs/sdks/payments/README.md#accountgetpayment) - Get details of a specific Payment for a given Account
@@ -184,14 +184,14 @@ try {
 * [refundPayment](docs/sdks/payments/README.md#refundpayment) - Refund a specific payment
 * [voidPayment](docs/sdks/payments/README.md#voidpayment) - Void a specific Payment
 
-### [Reporting](docs/sdks/reporting/README.md)
+### [reporting](docs/sdks/reporting/README.md)
 
 * [deleteReport](docs/sdks/reporting/README.md#deletereport) - Delete Report
 * [getReport](docs/sdks/reporting/README.md#getreport) - Download Report
 * [getReportDetails](docs/sdks/reporting/README.md#getreportdetails) - Get Report Details
 * [getReports](docs/sdks/reporting/README.md#getreports) - List Reports
 
-### [UnderwritingWorkflow](docs/sdks/underwritingworkflow/README.md)
+### [underwritingWorkflow](docs/sdks/underwritingworkflow/README.md)
 
 * [deleteWorkflowById](docs/sdks/underwritingworkflow/README.md#deleteworkflowbyid) - Delete Workflow
 * [disableWorkflowById](docs/sdks/underwritingworkflow/README.md#disableworkflowbyid) - Disable Workflow
@@ -202,7 +202,7 @@ try {
 * [putOrganizationOrganizationIdOnboardingWorkflowWorkflowId](docs/sdks/underwritingworkflow/README.md#putorganizationorganizationidonboardingworkflowworkflowid) - Update Workflow
 * [setDefaultWorkflowById](docs/sdks/underwritingworkflow/README.md#setdefaultworkflowbyid) - Set Default Workflow
 
-### [Webhooks](docs/sdks/webhooks/README.md)
+### [webhooks](docs/sdks/webhooks/README.md)
 
 * [accountDeleteWebhook](docs/sdks/webhooks/README.md#accountdeletewebhook) - Delete Webhook
 * [accountDisableWebhook](docs/sdks/webhooks/README.md#accountdisablewebhook) - Disable Webhook
