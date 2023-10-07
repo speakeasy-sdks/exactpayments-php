@@ -49,10 +49,10 @@ class CapturePaymentResponse
      * When there are errors in the payload.
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\CapturePayment400ApplicationJSON $capturePayment400ApplicationJSONObject
+     * @var ?array<string, mixed> $capturePayment400ApplicationJSONObject
      */
 	
-    public ?CapturePayment400ApplicationJSON $capturePayment400ApplicationJSONObject = null;
+    public ?array $capturePayment400ApplicationJSONObject = null;
     
     /**
      * **Access Denied**\
@@ -60,10 +60,10 @@ class CapturePaymentResponse
      * Credentials supplied do not grant access to the requested resource.
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\CapturePayment403ApplicationJSON $capturePayment403ApplicationJSONObject
+     * @var ?array<string, mixed> $capturePayment403ApplicationJSONObject
      */
 	
-    public ?CapturePayment403ApplicationJSON $capturePayment403ApplicationJSONObject = null;
+    public ?array $capturePayment403ApplicationJSONObject = null;
     
     /**
      * **Not Found**\
@@ -73,30 +73,30 @@ class CapturePaymentResponse
      * - When there are no Accounts/Orders/Payment found.
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\CapturePayment404ApplicationJSON $capturePayment404ApplicationJSONObject
+     * @var ?array<string, mixed> $capturePayment404ApplicationJSONObject
      */
 	
-    public ?CapturePayment404ApplicationJSON $capturePayment404ApplicationJSONObject = null;
+    public ?array $capturePayment404ApplicationJSONObject = null;
     
     /**
      * **Internal Server Error**
      * 
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\CapturePayment500ApplicationJSON $capturePayment500ApplicationJSONObject
+     * @var ?array<string, mixed> $capturePayment500ApplicationJSONObject
      */
 	
-    public ?CapturePayment500ApplicationJSON $capturePayment500ApplicationJSONObject = null;
+    public ?array $capturePayment500ApplicationJSONObject = null;
     
     /**
      * **Service Unavailable**
      * 
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\CapturePayment503ApplicationJSON $capturePayment503ApplicationJSONObject
+     * @var ?array<string, mixed> $capturePayment503ApplicationJSONObject
      */
 	
-    public ?CapturePayment503ApplicationJSON $capturePayment503ApplicationJSONObject = null;
+    public ?array $capturePayment503ApplicationJSONObject = null;
     
 	public function __construct()
 	{

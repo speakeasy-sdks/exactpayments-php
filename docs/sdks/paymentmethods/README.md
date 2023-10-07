@@ -135,28 +135,8 @@ $sdk = ExactPayments::builder()
 
 try {
     $request = new AccountPostPaymentMethodRequest();
-    $request->requestBody = new CardSchema();
-    $request->requestBody->billingDetails = new CardSchemaBillingDetails();
-    $request->requestBody->billingDetails->address = new CardSchemaBillingDetailsAddress();
-    $request->requestBody->billingDetails->address->city = 'Fort Joshuahstead';
-    $request->requestBody->billingDetails->address->country = 'New Zealand';
-    $request->requestBody->billingDetails->address->line1 = 'Chief male stable';
-    $request->requestBody->billingDetails->address->line2 = 'Kong Corwin';
-    $request->requestBody->billingDetails->address->postalCode = '97537';
-    $request->requestBody->billingDetails->address->state = 'Keyboard Southaven inasmuch';
-    $request->requestBody->billingDetails->email = 'Aubree_Thompson@yahoo.com';
-    $request->requestBody->billingDetails->name = 'ipsa quantifying';
-    $request->requestBody->billingDetails->phone = '750-792-4772 x301';
-    $request->requestBody->card = new CardSchemaCard();
-    $request->requestBody->card->cvc = 'JBOD';
-    $request->requestBody->card->cvcIndicator = CardSchemaCardCvcIndicator::Present;
-    $request->requestBody->card->expiry = new CardSchemaCardExpiry();
-    $request->requestBody->card->expiry->month = 253435;
-    $request->requestBody->card->expiry->year = 459026;
-    $request->requestBody->card->number = 'female';
-    $request->requestBody->card->tokenType = 'reboot';
-    $request->requestBody->type = 'repeatedly Virginia iusto';
-    $request->accountId = 'Palladium Diesel';
+    $request->requestBody = 'Canada';
+    $request->accountId = 'generating Data Chief';
 
     $response = $sdk->paymentMethods->accountPostPaymentMethod($request);
 
@@ -347,27 +327,7 @@ $sdk = ExactPayments::builder()
     ->build();
 
 try {
-    $request = new CardSchema();
-    $request->billingDetails = new CardSchemaBillingDetails();
-    $request->billingDetails->address = new CardSchemaBillingDetailsAddress();
-    $request->billingDetails->address->city = 'South Brandon';
-    $request->billingDetails->address->country = 'India';
-    $request->billingDetails->address->line1 = 'microchip Convertible';
-    $request->billingDetails->address->line2 = 'morph Pound cattle';
-    $request->billingDetails->address->postalCode = '31939-6047';
-    $request->billingDetails->address->state = 'orchid analyzer';
-    $request->billingDetails->email = 'Bonnie_Frami15@hotmail.com';
-    $request->billingDetails->name = 'besides Costa Porsche';
-    $request->billingDetails->phone = '526-295-7778 x9611';
-    $request->card = new CardSchemaCard();
-    $request->card->cvc = '24/365';
-    $request->card->cvcIndicator = CardSchemaCardCvcIndicator::Illegible;
-    $request->card->expiry = new CardSchemaCardExpiry();
-    $request->card->expiry->month = 902661;
-    $request->card->expiry->year = 854785;
-    $request->card->number = 'Hybrid panel IP';
-    $request->card->tokenType = 'Oval female Olathe';
-    $request->type = 'purple Horizontal turquoise';
+'Edinburg'
 
     $response = $sdk->paymentMethods->postPaymentMethod($request);
 

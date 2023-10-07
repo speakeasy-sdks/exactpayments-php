@@ -57,10 +57,10 @@ class GetPaymentsResponse
      * Credentials supplied do not grant access to the requested resource.
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\GetPayments403ApplicationJSON $getPayments403ApplicationJSONObject
+     * @var ?array<string, mixed> $getPayments403ApplicationJSONObject
      */
 	
-    public ?GetPayments403ApplicationJSON $getPayments403ApplicationJSONObject = null;
+    public ?array $getPayments403ApplicationJSONObject = null;
     
     /**
      * **Not Found**\
@@ -70,30 +70,30 @@ class GetPaymentsResponse
      * - When there are no Accounts/Orders/Payment found.
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\GetPayments404ApplicationJSON $getPayments404ApplicationJSONObject
+     * @var ?array<string, mixed> $getPayments404ApplicationJSONObject
      */
 	
-    public ?GetPayments404ApplicationJSON $getPayments404ApplicationJSONObject = null;
+    public ?array $getPayments404ApplicationJSONObject = null;
     
     /**
      * **Internal Server Error**
      * 
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\GetPayments500ApplicationJSON $getPayments500ApplicationJSONObject
+     * @var ?array<string, mixed> $getPayments500ApplicationJSONObject
      */
 	
-    public ?GetPayments500ApplicationJSON $getPayments500ApplicationJSONObject = null;
+    public ?array $getPayments500ApplicationJSONObject = null;
     
     /**
      * **Service Unavailable**
      * 
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\GetPayments503ApplicationJSON $getPayments503ApplicationJSONObject
+     * @var ?array<string, mixed> $getPayments503ApplicationJSONObject
      */
 	
-    public ?GetPayments503ApplicationJSON $getPayments503ApplicationJSONObject = null;
+    public ?array $getPayments503ApplicationJSONObject = null;
     
 	public function __construct()
 	{

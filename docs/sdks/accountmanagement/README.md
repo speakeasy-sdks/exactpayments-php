@@ -27,18 +27,16 @@ require_once 'vendor/autoload.php';
 use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountRegisterApplePayDomainsRequest;
-use \TheLogicStudio\ExactPayments\Models\Shared\ApplePayDomains;
 
 $sdk = ExactPayments::builder()
     ->build();
 
 try {
     $request = new AccountRegisterApplePayDomainsRequest();
-    $request->applePayDomains = new ApplePayDomains();
-    $request->applePayDomains->domains = [
-        'Licensed',
+    $request->requestBody = [
+        'Licensed' => 'Northeast',
     ];
-    $request->accountId = 'bypass';
+    $request->accountId = 'arctic';
 
     $response = $sdk->accountManagement->accountRegisterApplePayDomains($request);
 

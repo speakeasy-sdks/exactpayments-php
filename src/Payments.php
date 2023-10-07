@@ -66,31 +66,31 @@ class Payments
         else if ($httpResponse->getStatusCode() === 400) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountCapturePayment400ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountCapturePayment400ApplicationJSON', 'json');
+                $response->accountCapturePayment400ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 403) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountCapturePayment403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountCapturePayment403ApplicationJSON', 'json');
+                $response->accountCapturePayment403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 404) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountCapturePayment404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountCapturePayment404ApplicationJSON', 'json');
+                $response->accountCapturePayment404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 500) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountCapturePayment500ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountCapturePayment500ApplicationJSON', 'json');
+                $response->accountCapturePayment500ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 503) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountCapturePayment503ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountCapturePayment503ApplicationJSON', 'json');
+                $response->accountCapturePayment503ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
 
@@ -136,25 +136,25 @@ class Payments
         else if ($httpResponse->getStatusCode() === 403) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountGetPayment403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountGetPayment403ApplicationJSON', 'json');
+                $response->accountGetPayment403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 404) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountGetPayment404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountGetPayment404ApplicationJSON', 'json');
+                $response->accountGetPayment404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 500) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountGetPayment500ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountGetPayment500ApplicationJSON', 'json');
+                $response->accountGetPayment500ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 503) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountGetPayment503ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountGetPayment503ApplicationJSON', 'json');
+                $response->accountGetPayment503ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
 
@@ -203,25 +203,25 @@ class Payments
         else if ($httpResponse->getStatusCode() === 403) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountGetPayments403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountGetPayments403ApplicationJSON', 'json');
+                $response->accountGetPayments403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 404) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountGetPayments404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountGetPayments404ApplicationJSON', 'json');
+                $response->accountGetPayments404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 500) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountGetPayments500ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountGetPayments500ApplicationJSON', 'json');
+                $response->accountGetPayments500ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 503) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountGetPayments503ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountGetPayments503ApplicationJSON', 'json');
+                $response->accountGetPayments503ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
 
@@ -271,31 +271,31 @@ class Payments
         else if ($httpResponse->getStatusCode() === 400) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountPostPayment400ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountPostPayment400ApplicationJSON', 'json');
+                $response->accountPostPayment400ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 403) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountPostPayment403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountPostPayment403ApplicationJSON', 'json');
+                $response->accountPostPayment403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 422) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountPostPayment422ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountPostPayment422ApplicationJSON', 'json');
+                $response->accountPostPayment422ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 500) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountPostPayment500ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountPostPayment500ApplicationJSON', 'json');
+                $response->accountPostPayment500ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 503) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountPostPayment503ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountPostPayment503ApplicationJSON', 'json');
+                $response->accountPostPayment503ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
 
@@ -347,31 +347,31 @@ class Payments
         else if ($httpResponse->getStatusCode() === 400) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountRefundPayment400ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountRefundPayment400ApplicationJSON', 'json');
+                $response->accountRefundPayment400ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 403) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountRefundPayment403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountRefundPayment403ApplicationJSON', 'json');
+                $response->accountRefundPayment403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 404) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountRefundPayment404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountRefundPayment404ApplicationJSON', 'json');
+                $response->accountRefundPayment404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 500) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountRefundPayment500ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountRefundPayment500ApplicationJSON', 'json');
+                $response->accountRefundPayment500ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 503) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountRefundPayment503ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountRefundPayment503ApplicationJSON', 'json');
+                $response->accountRefundPayment503ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
 
@@ -423,31 +423,31 @@ class Payments
         else if ($httpResponse->getStatusCode() === 400) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountVoidPayment400ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountVoidPayment400ApplicationJSON', 'json');
+                $response->accountVoidPayment400ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 403) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountVoidPayment403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountVoidPayment403ApplicationJSON', 'json');
+                $response->accountVoidPayment403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 404) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountVoidPayment404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountVoidPayment404ApplicationJSON', 'json');
+                $response->accountVoidPayment404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 500) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountVoidPayment500ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountVoidPayment500ApplicationJSON', 'json');
+                $response->accountVoidPayment500ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 503) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountVoidPayment503ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountVoidPayment503ApplicationJSON', 'json');
+                $response->accountVoidPayment503ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
 
@@ -497,31 +497,31 @@ class Payments
         else if ($httpResponse->getStatusCode() === 400) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->capturePayment400ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\CapturePayment400ApplicationJSON', 'json');
+                $response->capturePayment400ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 403) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->capturePayment403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\CapturePayment403ApplicationJSON', 'json');
+                $response->capturePayment403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 404) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->capturePayment404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\CapturePayment404ApplicationJSON', 'json');
+                $response->capturePayment404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 500) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->capturePayment500ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\CapturePayment500ApplicationJSON', 'json');
+                $response->capturePayment500ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 503) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->capturePayment503ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\CapturePayment503ApplicationJSON', 'json');
+                $response->capturePayment503ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
 
@@ -565,25 +565,25 @@ class Payments
         else if ($httpResponse->getStatusCode() === 403) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->getPayment403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\GetPayment403ApplicationJSON', 'json');
+                $response->getPayment403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 404) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->getPayment404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\GetPayment404ApplicationJSON', 'json');
+                $response->getPayment404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 500) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->getPayment500ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\GetPayment500ApplicationJSON', 'json');
+                $response->getPayment500ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 503) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->getPayment503ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\GetPayment503ApplicationJSON', 'json');
+                $response->getPayment503ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
 
@@ -630,25 +630,25 @@ class Payments
         else if ($httpResponse->getStatusCode() === 403) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->getPayments403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\GetPayments403ApplicationJSON', 'json');
+                $response->getPayments403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 404) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->getPayments404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\GetPayments404ApplicationJSON', 'json');
+                $response->getPayments404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 500) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->getPayments500ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\GetPayments500ApplicationJSON', 'json');
+                $response->getPayments500ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 503) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->getPayments503ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\GetPayments503ApplicationJSON', 'json');
+                $response->getPayments503ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
 
@@ -696,31 +696,31 @@ class Payments
         else if ($httpResponse->getStatusCode() === 400) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->postPayment400ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\PostPayment400ApplicationJSON', 'json');
+                $response->postPayment400ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 403) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->postPayment403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\PostPayment403ApplicationJSON', 'json');
+                $response->postPayment403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 422) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->postPayment422ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\PostPayment422ApplicationJSON', 'json');
+                $response->postPayment422ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 500) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->postPayment500ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\PostPayment500ApplicationJSON', 'json');
+                $response->postPayment500ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 503) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->postPayment503ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\PostPayment503ApplicationJSON', 'json');
+                $response->postPayment503ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
 
@@ -768,31 +768,31 @@ class Payments
         else if ($httpResponse->getStatusCode() === 400) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->refundPayment400ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\RefundPayment400ApplicationJSON', 'json');
+                $response->refundPayment400ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 403) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->refundPayment403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\RefundPayment403ApplicationJSON', 'json');
+                $response->refundPayment403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 404) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->refundPayment404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\RefundPayment404ApplicationJSON', 'json');
+                $response->refundPayment404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 500) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->refundPayment500ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\RefundPayment500ApplicationJSON', 'json');
+                $response->refundPayment500ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 503) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->refundPayment503ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\RefundPayment503ApplicationJSON', 'json');
+                $response->refundPayment503ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
 
@@ -840,31 +840,31 @@ class Payments
         else if ($httpResponse->getStatusCode() === 400) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->voidPayment400ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\VoidPayment400ApplicationJSON', 'json');
+                $response->voidPayment400ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 403) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->voidPayment403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\VoidPayment403ApplicationJSON', 'json');
+                $response->voidPayment403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 404) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->voidPayment404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\VoidPayment404ApplicationJSON', 'json');
+                $response->voidPayment404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 500) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->voidPayment500ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\VoidPayment500ApplicationJSON', 'json');
+                $response->voidPayment500ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 503) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->voidPayment503ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\VoidPayment503ApplicationJSON', 'json');
+                $response->voidPayment503ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
 

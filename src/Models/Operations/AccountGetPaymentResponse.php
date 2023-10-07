@@ -49,10 +49,10 @@ class AccountGetPaymentResponse
      * Credentials supplied do not grant access to the requested resource.
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPayment403ApplicationJSON $accountGetPayment403ApplicationJSONObject
+     * @var ?array<string, mixed> $accountGetPayment403ApplicationJSONObject
      */
 	
-    public ?AccountGetPayment403ApplicationJSON $accountGetPayment403ApplicationJSONObject = null;
+    public ?array $accountGetPayment403ApplicationJSONObject = null;
     
     /**
      * **Not Found**\
@@ -62,30 +62,30 @@ class AccountGetPaymentResponse
      * - When there are no Accounts/Orders/Payment found.
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPayment404ApplicationJSON $accountGetPayment404ApplicationJSONObject
+     * @var ?array<string, mixed> $accountGetPayment404ApplicationJSONObject
      */
 	
-    public ?AccountGetPayment404ApplicationJSON $accountGetPayment404ApplicationJSONObject = null;
+    public ?array $accountGetPayment404ApplicationJSONObject = null;
     
     /**
      * **Internal Server Error**
      * 
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPayment500ApplicationJSON $accountGetPayment500ApplicationJSONObject
+     * @var ?array<string, mixed> $accountGetPayment500ApplicationJSONObject
      */
 	
-    public ?AccountGetPayment500ApplicationJSON $accountGetPayment500ApplicationJSONObject = null;
+    public ?array $accountGetPayment500ApplicationJSONObject = null;
     
     /**
      * **Service Unavailable**
      * 
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPayment503ApplicationJSON $accountGetPayment503ApplicationJSONObject
+     * @var ?array<string, mixed> $accountGetPayment503ApplicationJSONObject
      */
 	
-    public ?AccountGetPayment503ApplicationJSON $accountGetPayment503ApplicationJSONObject = null;
+    public ?array $accountGetPayment503ApplicationJSONObject = null;
     
 	public function __construct()
 	{

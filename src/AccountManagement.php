@@ -39,7 +39,7 @@ class AccountManagement
         $url = Utils\Utils::generateUrl($baseUrl, '/account/{accountId}/apple-pay', \TheLogicStudio\ExactPayments\Models\Operations\AccountRegisterApplePayDomainsRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "applePayDomains", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -59,13 +59,13 @@ class AccountManagement
         if ($httpResponse->getStatusCode() === 201) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->applePayDomains = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Shared\ApplePayDomains', 'json');
+                $response->applePayDomains = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 400) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountRegisterApplePayDomains400ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountRegisterApplePayDomains400ApplicationJSON', 'json');
+                $response->accountRegisterApplePayDomains400ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 401) {
@@ -278,7 +278,7 @@ class AccountManagement
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->applePayDomains = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Shared\ApplePayDomains', 'json');
+                $response->applePayDomains = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 401) {

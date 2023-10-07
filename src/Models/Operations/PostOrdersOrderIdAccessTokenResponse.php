@@ -38,10 +38,10 @@ class PostOrdersOrderIdAccessTokenResponse
     /**
      * New order access token created.
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\OrderAccessToken $orderAccessToken
+     * @var ?array<string, mixed> $orderAccessToken
      */
 	
-    public ?\TheLogicStudio\ExactPayments\Models\Shared\OrderAccessToken $orderAccessToken = null;
+    public ?array $orderAccessToken = null;
     
     /**
      * **Access Denied**\
@@ -49,10 +49,10 @@ class PostOrdersOrderIdAccessTokenResponse
      * Credentials supplied do not grant access to the requested resource.
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostOrdersOrderIdAccessToken403ApplicationJSON $postOrdersOrderIdAccessToken403ApplicationJSONObject
+     * @var ?array<string, mixed> $postOrdersOrderIdAccessToken403ApplicationJSONObject
      */
 	
-    public ?PostOrdersOrderIdAccessToken403ApplicationJSON $postOrdersOrderIdAccessToken403ApplicationJSONObject = null;
+    public ?array $postOrdersOrderIdAccessToken403ApplicationJSONObject = null;
     
     /**
      * **Not found**\
@@ -60,30 +60,30 @@ class PostOrdersOrderIdAccessTokenResponse
      * When there are no accounts/orders/payment found
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostOrdersOrderIdAccessToken404ApplicationJSON $postOrdersOrderIdAccessToken404ApplicationJSONObject
+     * @var ?array<string, mixed> $postOrdersOrderIdAccessToken404ApplicationJSONObject
      */
 	
-    public ?PostOrdersOrderIdAccessToken404ApplicationJSON $postOrdersOrderIdAccessToken404ApplicationJSONObject = null;
+    public ?array $postOrdersOrderIdAccessToken404ApplicationJSONObject = null;
     
     /**
      * **Internal Server Error**
      * 
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostOrdersOrderIdAccessToken500ApplicationJSON $postOrdersOrderIdAccessToken500ApplicationJSONObject
+     * @var ?array<string, mixed> $postOrdersOrderIdAccessToken500ApplicationJSONObject
      */
 	
-    public ?PostOrdersOrderIdAccessToken500ApplicationJSON $postOrdersOrderIdAccessToken500ApplicationJSONObject = null;
+    public ?array $postOrdersOrderIdAccessToken500ApplicationJSONObject = null;
     
     /**
      * **Service Unavailable**
      * 
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostOrdersOrderIdAccessToken503ApplicationJSON $postOrdersOrderIdAccessToken503ApplicationJSONObject
+     * @var ?array<string, mixed> $postOrdersOrderIdAccessToken503ApplicationJSONObject
      */
 	
-    public ?PostOrdersOrderIdAccessToken503ApplicationJSON $postOrdersOrderIdAccessToken503ApplicationJSONObject = null;
+    public ?array $postOrdersOrderIdAccessToken503ApplicationJSONObject = null;
     
 	public function __construct()
 	{

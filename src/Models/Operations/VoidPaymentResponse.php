@@ -49,10 +49,10 @@ class VoidPaymentResponse
      * When there are errors in the payload.
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\VoidPayment400ApplicationJSON $voidPayment400ApplicationJSONObject
+     * @var ?array<string, mixed> $voidPayment400ApplicationJSONObject
      */
 	
-    public ?VoidPayment400ApplicationJSON $voidPayment400ApplicationJSONObject = null;
+    public ?array $voidPayment400ApplicationJSONObject = null;
     
     /**
      * **Access Denied**\
@@ -60,10 +60,10 @@ class VoidPaymentResponse
      * Credentials supplied do not grant access to the requested resource.
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\VoidPayment403ApplicationJSON $voidPayment403ApplicationJSONObject
+     * @var ?array<string, mixed> $voidPayment403ApplicationJSONObject
      */
 	
-    public ?VoidPayment403ApplicationJSON $voidPayment403ApplicationJSONObject = null;
+    public ?array $voidPayment403ApplicationJSONObject = null;
     
     /**
      * **Not Found**\
@@ -73,30 +73,30 @@ class VoidPaymentResponse
      * - When there are no Accounts/Orders/Payment found.
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\VoidPayment404ApplicationJSON $voidPayment404ApplicationJSONObject
+     * @var ?array<string, mixed> $voidPayment404ApplicationJSONObject
      */
 	
-    public ?VoidPayment404ApplicationJSON $voidPayment404ApplicationJSONObject = null;
+    public ?array $voidPayment404ApplicationJSONObject = null;
     
     /**
      * **Internal Server Error**
      * 
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\VoidPayment500ApplicationJSON $voidPayment500ApplicationJSONObject
+     * @var ?array<string, mixed> $voidPayment500ApplicationJSONObject
      */
 	
-    public ?VoidPayment500ApplicationJSON $voidPayment500ApplicationJSONObject = null;
+    public ?array $voidPayment500ApplicationJSONObject = null;
     
     /**
      * **Service Unavailable**
      * 
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\VoidPayment503ApplicationJSON $voidPayment503ApplicationJSONObject
+     * @var ?array<string, mixed> $voidPayment503ApplicationJSONObject
      */
 	
-    public ?VoidPayment503ApplicationJSON $voidPayment503ApplicationJSONObject = null;
+    public ?array $voidPayment503ApplicationJSONObject = null;
     
 	public function __construct()
 	{

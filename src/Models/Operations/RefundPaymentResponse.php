@@ -49,10 +49,10 @@ class RefundPaymentResponse
      * When there are errors in the payload.
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\RefundPayment400ApplicationJSON $refundPayment400ApplicationJSONObject
+     * @var ?array<string, mixed> $refundPayment400ApplicationJSONObject
      */
 	
-    public ?RefundPayment400ApplicationJSON $refundPayment400ApplicationJSONObject = null;
+    public ?array $refundPayment400ApplicationJSONObject = null;
     
     /**
      * **Access Denied**\
@@ -60,10 +60,10 @@ class RefundPaymentResponse
      * Credentials supplied do not grant access to the requested resource.
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\RefundPayment403ApplicationJSON $refundPayment403ApplicationJSONObject
+     * @var ?array<string, mixed> $refundPayment403ApplicationJSONObject
      */
 	
-    public ?RefundPayment403ApplicationJSON $refundPayment403ApplicationJSONObject = null;
+    public ?array $refundPayment403ApplicationJSONObject = null;
     
     /**
      * **Not Found**\
@@ -73,30 +73,30 @@ class RefundPaymentResponse
      * - When there are no Accounts/Orders/Payment found.
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\RefundPayment404ApplicationJSON $refundPayment404ApplicationJSONObject
+     * @var ?array<string, mixed> $refundPayment404ApplicationJSONObject
      */
 	
-    public ?RefundPayment404ApplicationJSON $refundPayment404ApplicationJSONObject = null;
+    public ?array $refundPayment404ApplicationJSONObject = null;
     
     /**
      * **Internal Server Error**
      * 
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\RefundPayment500ApplicationJSON $refundPayment500ApplicationJSONObject
+     * @var ?array<string, mixed> $refundPayment500ApplicationJSONObject
      */
 	
-    public ?RefundPayment500ApplicationJSON $refundPayment500ApplicationJSONObject = null;
+    public ?array $refundPayment500ApplicationJSONObject = null;
     
     /**
      * **Service Unavailable**
      * 
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\RefundPayment503ApplicationJSON $refundPayment503ApplicationJSONObject
+     * @var ?array<string, mixed> $refundPayment503ApplicationJSONObject
      */
 	
-    public ?RefundPayment503ApplicationJSON $refundPayment503ApplicationJSONObject = null;
+    public ?array $refundPayment503ApplicationJSONObject = null;
     
 	public function __construct()
 	{

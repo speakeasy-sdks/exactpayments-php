@@ -49,10 +49,10 @@ class PostAccountAccountIdOrdersResponse
      * When there are errors in the payload
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrders400ApplicationJSON $postAccountAccountIdOrders400ApplicationJSONObject
+     * @var ?array<string, mixed> $postAccountAccountIdOrders400ApplicationJSONObject
      */
 	
-    public ?PostAccountAccountIdOrders400ApplicationJSON $postAccountAccountIdOrders400ApplicationJSONObject = null;
+    public ?array $postAccountAccountIdOrders400ApplicationJSONObject = null;
     
     /**
      * **Access Denied**\
@@ -60,30 +60,30 @@ class PostAccountAccountIdOrdersResponse
      * Credentials supplied do not grant access to the requested resource.
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrders403ApplicationJSON $postAccountAccountIdOrders403ApplicationJSONObject
+     * @var ?array<string, mixed> $postAccountAccountIdOrders403ApplicationJSONObject
      */
 	
-    public ?PostAccountAccountIdOrders403ApplicationJSON $postAccountAccountIdOrders403ApplicationJSONObject = null;
+    public ?array $postAccountAccountIdOrders403ApplicationJSONObject = null;
     
     /**
      * **Internal Server Error**
      * 
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrders500ApplicationJSON $postAccountAccountIdOrders500ApplicationJSONObject
+     * @var ?array<string, mixed> $postAccountAccountIdOrders500ApplicationJSONObject
      */
 	
-    public ?PostAccountAccountIdOrders500ApplicationJSON $postAccountAccountIdOrders500ApplicationJSONObject = null;
+    public ?array $postAccountAccountIdOrders500ApplicationJSONObject = null;
     
     /**
      * **Service Unavailable**
      * 
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrders503ApplicationJSON $postAccountAccountIdOrders503ApplicationJSONObject
+     * @var ?array<string, mixed> $postAccountAccountIdOrders503ApplicationJSONObject
      */
 	
-    public ?PostAccountAccountIdOrders503ApplicationJSON $postAccountAccountIdOrders503ApplicationJSONObject = null;
+    public ?array $postAccountAccountIdOrders503ApplicationJSONObject = null;
     
 	public function __construct()
 	{

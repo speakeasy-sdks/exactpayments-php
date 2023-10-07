@@ -272,9 +272,9 @@ try {
     $request->underwritingWorkflowRequestCreateWorkflow->metadata = new UnderwritingWorkflowRequestCreateWorkflowMetadata();
     $request->underwritingWorkflowRequestCreateWorkflow->name = 'Main Workflow';
     $request->underwritingWorkflowRequestCreateWorkflow->rules = [
-        new PlaidBalanceRule(),
+        'Crew',
     ];
-    $request->organizationId = 'Recycled Keyboard';
+    $request->organizationId = 'Oriental North';
 
     $response = $sdk->underwritingWorkflow->postOrganizationOrganizationIdOnboardingWorkflow($request);
 
@@ -326,10 +326,10 @@ try {
     $request->underwritingWorkflowRequestUpdateWorkflow->metadata = new UnderwritingWorkflowRequestUpdateWorkflowMetadata();
     $request->underwritingWorkflowRequestUpdateWorkflow->name = 'Main Workflow';
     $request->underwritingWorkflowRequestUpdateWorkflow->rules = [
-        new OFACRule(),
+        'Handcrafted',
     ];
-    $request->organizationId = 'gold magenta Coordinator';
-    $request->workflowId = 'Sausages';
+    $request->organizationId = 'Coordinator teal boo';
+    $request->workflowId = 'Kroon Convertible';
 
     $response = $sdk->underwritingWorkflow->putOrganizationOrganizationIdOnboardingWorkflowWorkflowId($request);
 

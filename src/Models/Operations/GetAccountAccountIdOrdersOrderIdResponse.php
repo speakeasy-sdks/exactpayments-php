@@ -41,10 +41,10 @@ class GetAccountAccountIdOrdersOrderIdResponse
      * Credentials supplied do not grant access to the requested resource.
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\GetAccountAccountIdOrdersOrderId403ApplicationJSON $getAccountAccountIdOrdersOrderId403ApplicationJSONObject
+     * @var ?array<string, mixed> $getAccountAccountIdOrdersOrderId403ApplicationJSONObject
      */
 	
-    public ?GetAccountAccountIdOrdersOrderId403ApplicationJSON $getAccountAccountIdOrdersOrderId403ApplicationJSONObject = null;
+    public ?array $getAccountAccountIdOrdersOrderId403ApplicationJSONObject = null;
     
     /**
      * **Not found**\
@@ -52,30 +52,30 @@ class GetAccountAccountIdOrdersOrderIdResponse
      * When there are no accounts/orders/payment found
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\GetAccountAccountIdOrdersOrderId404ApplicationJSON $getAccountAccountIdOrdersOrderId404ApplicationJSONObject
+     * @var ?array<string, mixed> $getAccountAccountIdOrdersOrderId404ApplicationJSONObject
      */
 	
-    public ?GetAccountAccountIdOrdersOrderId404ApplicationJSON $getAccountAccountIdOrdersOrderId404ApplicationJSONObject = null;
+    public ?array $getAccountAccountIdOrdersOrderId404ApplicationJSONObject = null;
     
     /**
      * **Internal Server Error**
      * 
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\GetAccountAccountIdOrdersOrderId500ApplicationJSON $getAccountAccountIdOrdersOrderId500ApplicationJSONObject
+     * @var ?array<string, mixed> $getAccountAccountIdOrdersOrderId500ApplicationJSONObject
      */
 	
-    public ?GetAccountAccountIdOrdersOrderId500ApplicationJSON $getAccountAccountIdOrdersOrderId500ApplicationJSONObject = null;
+    public ?array $getAccountAccountIdOrdersOrderId500ApplicationJSONObject = null;
     
     /**
      * **Service Unavailable**
      * 
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\GetAccountAccountIdOrdersOrderId503ApplicationJSON $getAccountAccountIdOrdersOrderId503ApplicationJSONObject
+     * @var ?array<string, mixed> $getAccountAccountIdOrdersOrderId503ApplicationJSONObject
      */
 	
-    public ?GetAccountAccountIdOrdersOrderId503ApplicationJSON $getAccountAccountIdOrdersOrderId503ApplicationJSONObject = null;
+    public ?array $getAccountAccountIdOrdersOrderId503ApplicationJSONObject = null;
     
     /**
      * Order created.

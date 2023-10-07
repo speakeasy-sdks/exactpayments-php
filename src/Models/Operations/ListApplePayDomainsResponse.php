@@ -14,10 +14,10 @@ class ListApplePayDomainsResponse
     /**
      * **OK**
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\ApplePayDomains $applePayDomains
+     * @var ?array<string, mixed> $applePayDomains
      */
 	
-    public ?\TheLogicStudio\ExactPayments\Models\Shared\ApplePayDomains $applePayDomains = null;
+    public ?array $applePayDomains = null;
     
     /**
      * HTTP response content type for this operation

@@ -12,15 +12,20 @@ use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class PutAccountAccountIdOrdersOrderIdRequest
 {
     /**
+     * $requestBody
+     * 
+     * @var ?array<string, mixed> $requestBody
+     */
+	#[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?array $requestBody = null;
+    
+    /**
      * The Account identifier. Represents the Merchant that this operation is going to be executed for.
      * 
      * @var string $accountId
      */
 	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=accountId')]
     public string $accountId;
-    
-	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\TheLogicStudio\ExactPayments\Models\Shared\Order $order = null;
     
     /**
      * The Order identifier.
@@ -32,8 +37,8 @@ class PutAccountAccountIdOrdersOrderIdRequest
     
 	public function __construct()
 	{
+		$this->requestBody = null;
 		$this->accountId = "";
-		$this->order = null;
 		$this->orderId = "";
 	}
 }
