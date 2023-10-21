@@ -25,7 +25,11 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetListNotesRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -33,8 +37,8 @@ try {
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = 'createdAt:asc';
-    $request->onboardingId = 'pixel';
-    $request->organizationId = 'Southeast';
+    $request->onboardingId = 'string';
+    $request->organizationId = 'string';
 
     $response = $sdk->adminTools->getListNotes($request);
 
@@ -75,7 +79,11 @@ use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\PostCreateNotesRequest;
 use \TheLogicStudio\ExactPayments\Models\Operations\PostCreateNotesRequestBodyInput;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -83,8 +91,8 @@ try {
     $request->requestBody = new PostCreateNotesRequestBodyInput();
     $request->requestBody->note = 'Some more documents are needed to verify the account\'s eligibility. Jen Will contact the merchant to collect further details by 2nd Aug.';
     $request->requestBody->onboardingIsDeleted = false;
-    $request->onboardingId = 'fuchsia';
-    $request->organizationId = 'Toys hacking';
+    $request->onboardingId = 'string';
+    $request->organizationId = 'string';
 
     $response = $sdk->adminTools->postCreateNotes($request);
 
@@ -124,13 +132,17 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdRecheckRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new PutOrganizationOrganizationIdOnboardingOnboardingIdRecheckRequest();
-    $request->onboardingId = 'Organized matrices';
-    $request->organizationId = 'Bike synergize';
+    $request->onboardingId = 'string';
+    $request->organizationId = 'string';
 
     $response = $sdk->adminTools->putOrganizationOrganizationIdOnboardingOnboardingIdRecheck($request);
 
@@ -171,15 +183,19 @@ use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdRetryRuleRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\OnboardingRetryRuleRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new PutOrganizationOrganizationIdOnboardingOnboardingIdRetryRuleRequest();
     $request->onboardingRetryRuleRequest = new OnboardingRetryRuleRequest();
-    $request->onboardingRetryRuleRequest->ruleName = 'Latin';
-    $request->onboardingId = 'pfft';
-    $request->organizationId = 'empty';
+    $request->onboardingRetryRuleRequest->ruleName = 'string';
+    $request->onboardingId = 'string';
+    $request->organizationId = 'string';
 
     $response = $sdk->adminTools->putOrganizationOrganizationIdOnboardingOnboardingIdRetryRule($request);
 
@@ -222,18 +238,22 @@ use \TheLogicStudio\ExactPayments\Models\Shared\UpdateOnboardingStatusRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\UpdateOnboardingStatusRequestStatus;
 use \TheLogicStudio\ExactPayments\Models\Shared\UpdateOnboardingStatusRequestStatusChangeReason;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new PutOrganizationOrganizationIdOnboardingOnboardingIdStatusRequest();
     $request->updateOnboardingStatusRequest = new UpdateOnboardingStatusRequest();
-    $request->updateOnboardingStatusRequest->isDeleted = 'Optimization Web';
-    $request->updateOnboardingStatusRequest->status = UpdateOnboardingStatusRequestStatus::Withdrawn;
-    $request->updateOnboardingStatusRequest->statusChangeReason = UpdateOnboardingStatusRequestStatusChangeReason::FailedToVerifyIdentity;
-    $request->updateOnboardingStatusRequest->statusChangeReasonNote = 'South Bicycle';
-    $request->onboardingId = 'Card Electric';
-    $request->organizationId = 'functionalities Diesel close';
+    $request->updateOnboardingStatusRequest->isDeleted = 'string';
+    $request->updateOnboardingStatusRequest->status = UpdateOnboardingStatusRequestStatus::Approved;
+    $request->updateOnboardingStatusRequest->statusChangeReason = UpdateOnboardingStatusRequestStatusChangeReason::GeneralRiskConcern;
+    $request->updateOnboardingStatusRequest->statusChangeReasonNote = 'string';
+    $request->onboardingId = 'string';
+    $request->organizationId = 'string';
 
     $response = $sdk->adminTools->putOrganizationOrganizationIdOnboardingOnboardingIdStatus($request);
 

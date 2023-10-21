@@ -49,10 +49,10 @@ class PutOrdersOrderIdResetResponse
      * Credentials supplied do not grant access to the requested resource.
      * 
      * 
-     * @var ?array<string, mixed> $putOrdersOrderIdReset403ApplicationJSONObject
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PutOrdersOrderIdReset403ApplicationJSON $putOrdersOrderIdReset403ApplicationJSONObject
      */
 	
-    public ?array $putOrdersOrderIdReset403ApplicationJSONObject = null;
+    public ?PutOrdersOrderIdReset403ApplicationJSON $putOrdersOrderIdReset403ApplicationJSONObject = null;
     
     /**
      * **Not found**\
@@ -60,30 +60,30 @@ class PutOrdersOrderIdResetResponse
      * When there are no accounts/orders/payment found
      * 
      * 
-     * @var ?array<string, mixed> $putOrdersOrderIdReset404ApplicationJSONObject
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PutOrdersOrderIdReset404ApplicationJSON $putOrdersOrderIdReset404ApplicationJSONObject
      */
 	
-    public ?array $putOrdersOrderIdReset404ApplicationJSONObject = null;
+    public ?PutOrdersOrderIdReset404ApplicationJSON $putOrdersOrderIdReset404ApplicationJSONObject = null;
     
     /**
      * **Internal Server Error**
      * 
      * 
      * 
-     * @var ?array<string, mixed> $putOrdersOrderIdReset500ApplicationJSONObject
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PutOrdersOrderIdReset500ApplicationJSON $putOrdersOrderIdReset500ApplicationJSONObject
      */
 	
-    public ?array $putOrdersOrderIdReset500ApplicationJSONObject = null;
+    public ?PutOrdersOrderIdReset500ApplicationJSON $putOrdersOrderIdReset500ApplicationJSONObject = null;
     
     /**
      * **Service Unavailable**
      * 
      * 
      * 
-     * @var ?array<string, mixed> $putOrdersOrderIdReset503ApplicationJSONObject
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PutOrdersOrderIdReset503ApplicationJSON $putOrdersOrderIdReset503ApplicationJSONObject
      */
 	
-    public ?array $putOrdersOrderIdReset503ApplicationJSONObject = null;
+    public ?PutOrdersOrderIdReset503ApplicationJSON $putOrdersOrderIdReset503ApplicationJSONObject = null;
     
 	public function __construct()
 	{

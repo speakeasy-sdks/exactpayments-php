@@ -290,25 +290,25 @@ class Customers
         else if ($httpResponse->getStatusCode() === 403) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountGetCustomerDefaultPaymentMethod403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+                $response->accountGetCustomerDefaultPaymentMethod403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerDefaultPaymentMethod403ApplicationJSON', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 404) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->notFoundError = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+                $response->notFoundError = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Shared\NotFoundError', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 500) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountGetCustomerDefaultPaymentMethod500ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+                $response->accountGetCustomerDefaultPaymentMethod500ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerDefaultPaymentMethod500ApplicationJSON', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 503) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountGetCustomerDefaultPaymentMethod503ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+                $response->accountGetCustomerDefaultPaymentMethod503ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerDefaultPaymentMethod503ApplicationJSON', 'json');
             }
         }
 

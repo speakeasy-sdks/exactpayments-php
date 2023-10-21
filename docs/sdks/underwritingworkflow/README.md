@@ -28,13 +28,17 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\DeleteWorkflowByIdRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new DeleteWorkflowByIdRequest();
-    $request->organizationId = 'Chair';
-    $request->workflowId = 'reluctantly synthesize meanwhile';
+    $request->organizationId = 'string';
+    $request->workflowId = 'string';
 
     $response = $sdk->underwritingWorkflow->deleteWorkflowById($request);
 
@@ -74,13 +78,17 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\DisableWorkflowByIdRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new DisableWorkflowByIdRequest();
-    $request->organizationId = 'Principal Yttrium Ball';
-    $request->workflowId = 'generate';
+    $request->organizationId = 'string';
+    $request->workflowId = 'string';
 
     $response = $sdk->underwritingWorkflow->disableWorkflowById($request);
 
@@ -120,13 +128,17 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\EnableWorkflowByIdRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new EnableWorkflowByIdRequest();
-    $request->organizationId = 'online furthermore Southeast';
-    $request->workflowId = 'methodologies parse';
+    $request->organizationId = 'string';
+    $request->workflowId = 'string';
 
     $response = $sdk->underwritingWorkflow->enableWorkflowById($request);
 
@@ -166,7 +178,11 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdOnboardingWorkflowRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -174,7 +190,7 @@ try {
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = '-name';
-    $request->organizationId = 'architecto East black';
+    $request->organizationId = 'string';
 
     $response = $sdk->underwritingWorkflow->getOrganizationOrganizationIdOnboardingWorkflow($request);
 
@@ -214,13 +230,17 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdOnboardingWorkflowWorkflowIdRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new GetOrganizationOrganizationIdOnboardingWorkflowWorkflowIdRequest();
-    $request->organizationId = 'unsightly Emard Northeast';
-    $request->workflowId = 'standardization';
+    $request->organizationId = 'string';
+    $request->workflowId = 'string';
 
     $response = $sdk->underwritingWorkflow->getOrganizationOrganizationIdOnboardingWorkflowWorkflowId($request);
 
@@ -262,7 +282,11 @@ use \TheLogicStudio\ExactPayments\Models\Operations\PostOrganizationOrganization
 use \TheLogicStudio\ExactPayments\Models\Shared\UnderwritingWorkflowRequestCreateWorkflow;
 use \TheLogicStudio\ExactPayments\Models\Shared\UnderwritingWorkflowRequestCreateWorkflowMetadata;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -272,9 +296,9 @@ try {
     $request->underwritingWorkflowRequestCreateWorkflow->metadata = new UnderwritingWorkflowRequestCreateWorkflowMetadata();
     $request->underwritingWorkflowRequestCreateWorkflow->name = 'Main Workflow';
     $request->underwritingWorkflowRequestCreateWorkflow->rules = [
-        'Crew',
+        'string',
     ];
-    $request->organizationId = 'Oriental North';
+    $request->organizationId = 'string';
 
     $response = $sdk->underwritingWorkflow->postOrganizationOrganizationIdOnboardingWorkflow($request);
 
@@ -316,7 +340,11 @@ use \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationI
 use \TheLogicStudio\ExactPayments\Models\Shared\UnderwritingWorkflowRequestUpdateWorkflow;
 use \TheLogicStudio\ExactPayments\Models\Shared\UnderwritingWorkflowRequestUpdateWorkflowMetadata;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -326,10 +354,10 @@ try {
     $request->underwritingWorkflowRequestUpdateWorkflow->metadata = new UnderwritingWorkflowRequestUpdateWorkflowMetadata();
     $request->underwritingWorkflowRequestUpdateWorkflow->name = 'Main Workflow';
     $request->underwritingWorkflowRequestUpdateWorkflow->rules = [
-        'Handcrafted',
+        'string',
     ];
-    $request->organizationId = 'Coordinator teal boo';
-    $request->workflowId = 'Kroon Convertible';
+    $request->organizationId = 'string';
+    $request->workflowId = 'string';
 
     $response = $sdk->underwritingWorkflow->putOrganizationOrganizationIdOnboardingWorkflowWorkflowId($request);
 
@@ -369,13 +397,17 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\SetDefaultWorkflowByIdRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new SetDefaultWorkflowByIdRequest();
-    $request->organizationId = 'knavishly';
-    $request->workflowId = 'teal cyan bluetooth';
+    $request->organizationId = 'string';
+    $request->workflowId = 'string';
 
     $response = $sdk->underwritingWorkflow->setDefaultWorkflowById($request);
 

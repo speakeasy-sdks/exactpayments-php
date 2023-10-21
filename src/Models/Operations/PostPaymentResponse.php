@@ -49,10 +49,10 @@ class PostPaymentResponse
      * When there are errors in the payload
      * 
      * 
-     * @var ?array<string, mixed> $postPayment400ApplicationJSONObject
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostPayment400ApplicationJSON $postPayment400ApplicationJSONObject
      */
 	
-    public ?array $postPayment400ApplicationJSONObject = null;
+    public ?PostPayment400ApplicationJSON $postPayment400ApplicationJSONObject = null;
     
     /**
      * **Access Denied**\
@@ -60,40 +60,40 @@ class PostPaymentResponse
      * Credentials supplied do not grant access to the requested resource.
      * 
      * 
-     * @var ?array<string, mixed> $postPayment403ApplicationJSONObject
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostPayment403ApplicationJSON $postPayment403ApplicationJSONObject
      */
 	
-    public ?array $postPayment403ApplicationJSONObject = null;
+    public ?PostPayment403ApplicationJSON $postPayment403ApplicationJSONObject = null;
     
     /**
      * **Unprocessable Content**
      * 
      * 
      * 
-     * @var ?array<string, mixed> $postPayment422ApplicationJSONObject
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostPayment422ApplicationJSON $postPayment422ApplicationJSONObject
      */
 	
-    public ?array $postPayment422ApplicationJSONObject = null;
+    public ?PostPayment422ApplicationJSON $postPayment422ApplicationJSONObject = null;
     
     /**
      * **Internal Server Error**
      * 
      * 
      * 
-     * @var ?array<string, mixed> $postPayment500ApplicationJSONObject
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostPayment500ApplicationJSON $postPayment500ApplicationJSONObject
      */
 	
-    public ?array $postPayment500ApplicationJSONObject = null;
+    public ?PostPayment500ApplicationJSON $postPayment500ApplicationJSONObject = null;
     
     /**
      * **Service Unavailable**
      * 
      * 
      * 
-     * @var ?array<string, mixed> $postPayment503ApplicationJSONObject
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostPayment503ApplicationJSON $postPayment503ApplicationJSONObject
      */
 	
-    public ?array $postPayment503ApplicationJSONObject = null;
+    public ?PostPayment503ApplicationJSON $postPayment503ApplicationJSONObject = null;
     
 	public function __construct()
 	{

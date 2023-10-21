@@ -47,14 +47,18 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteCustomerCustomerIdPaymentMethodTokenRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new AccountDeleteCustomerCustomerIdPaymentMethodTokenRequest();
-    $request->accountId = 'Bike transmitter Northwest';
-    $request->customerId = 'West Bicycle female';
-    $request->tokenId = 'yoga aspernatur Sandy';
+    $request->accountId = 'string';
+    $request->customerId = 'string';
+    $request->tokenId = 'string';
 
     $response = $sdk->customers->accountDeleteCustomerCustomerIdPaymentMethodToken($request);
 
@@ -94,13 +98,17 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteCustomerIdRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new AccountDeleteCustomerIdRequest();
-    $request->accountId = 'Fitness hacking furthermore';
-    $request->customerId = 'Maserati Computers Rhodium';
+    $request->accountId = 'string';
+    $request->customerId = 'string';
 
     $response = $sdk->customers->accountDeleteCustomerId($request);
 
@@ -140,7 +148,11 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -148,7 +160,7 @@ try {
     $request->dollarLimit = 5056.72;
     $request->dollarSkip = 6564.29;
     $request->dollarSort = '-name';
-    $request->accountId = 'Chevrolet culpa';
+    $request->accountId = 'string';
 
     $response = $sdk->customers->accountGetCustomer($request);
 
@@ -188,13 +200,17 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerIdRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new AccountGetCustomerIdRequest();
-    $request->accountId = 'Car Oriental';
-    $request->customerId = 'Program Internal Aston';
+    $request->accountId = 'string';
+    $request->customerId = 'string';
 
     $response = $sdk->customers->accountGetCustomerId($request);
 
@@ -234,14 +250,18 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerCustomerIdPaymentMethodTokenRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new AccountGetCustomerCustomerIdPaymentMethodTokenRequest();
-    $request->accountId = 'grey';
-    $request->customerId = 'Hipolito';
-    $request->tokenId = 'South maximize';
+    $request->accountId = 'string';
+    $request->customerId = 'string';
+    $request->tokenId = 'string';
 
     $response = $sdk->customers->accountGetCustomerCustomerIdPaymentMethodToken($request);
 
@@ -281,7 +301,11 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerCustomerIdPaymentsRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -289,8 +313,8 @@ try {
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = '-name';
-    $request->accountId = 'bypass Global';
-    $request->customerId = 'connecting becquerel';
+    $request->accountId = 'string';
+    $request->customerId = 'string';
 
     $response = $sdk->customers->accountGetCustomerCustomerIdPayments($request);
 
@@ -330,13 +354,17 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerDefaultPaymentMethodRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new AccountGetCustomerDefaultPaymentMethodRequest();
-    $request->accountId = 'Mongolia Pharr';
-    $request->customerId = 'EXE Electric revolutionary';
+    $request->accountId = 'string';
+    $request->customerId = 'string';
 
     $response = $sdk->customers->accountGetCustomerDefaultPaymentMethod($request);
 
@@ -376,13 +404,17 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerIdPaymentMethodRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new AccountGetCustomerIdPaymentMethodRequest();
-    $request->accountId = 'Southwest Jazz Licensed';
-    $request->customerId = 'Senior deposit';
+    $request->accountId = 'string';
+    $request->customerId = 'string';
 
     $response = $sdk->customers->accountGetCustomerIdPaymentMethod($request);
 
@@ -422,13 +454,17 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerTokenPaymentMethodRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new AccountGetCustomerTokenPaymentMethodRequest();
-    $request->accountId = 'Ferrari';
-    $request->customerToken = 'East';
+    $request->accountId = 'string';
+    $request->customerToken = 'string';
 
     $response = $sdk->customers->accountGetCustomerTokenPaymentMethod($request);
 
@@ -470,7 +506,11 @@ use \TheLogicStudio\ExactPayments\Models\Operations\AccountPostCustomerRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\NewCustomer;
 use \TheLogicStudio\ExactPayments\Models\Shared\NewCustomerAddresses;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -480,9 +520,9 @@ try {
         new NewCustomerAddresses(),
     ];
     $request->newCustomer->email = 'Tobin56@hotmail.com';
-    $request->newCustomer->name = 'SMS';
-    $request->newCustomer->phone = '(455) 466-0283 x36427';
-    $request->accountId = 'succotash Electric';
+    $request->newCustomer->name = 'string';
+    $request->newCustomer->phone = '568-455-3660 x283';
+    $request->accountId = 'string';
 
     $response = $sdk->customers->accountPostCustomer($request);
 
@@ -523,17 +563,21 @@ use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountPostCustomerIdPaymentMethodRequest;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountPostCustomerIdPaymentMethodRequestBody;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new AccountPostCustomerIdPaymentMethodRequest();
     $request->requestBody = new AccountPostCustomerIdPaymentMethodRequestBody();
     $request->requestBody->isDefault = false;
-    $request->requestBody->label = 'Pop bandwidth Specialist';
-    $request->requestBody->token = 'excited Passenger';
-    $request->accountId = 'olive Coordinator Modern';
-    $request->customerId = 'mole';
+    $request->requestBody->label = 'string';
+    $request->requestBody->token = 'string';
+    $request->accountId = 'string';
+    $request->customerId = 'string';
 
     $response = $sdk->customers->accountPostCustomerIdPaymentMethod($request);
 
@@ -577,7 +621,11 @@ use \TheLogicStudio\ExactPayments\Models\Operations\AccountPutCustomerIdRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\NewCustomer;
 use \TheLogicStudio\ExactPayments\Models\Shared\NewCustomerAddresses;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -587,10 +635,10 @@ try {
         new NewCustomerAddresses(),
     ];
     $request->newCustomer->email = 'Rashad26@hotmail.com';
-    $request->newCustomer->name = 'Denar olive facilitate';
-    $request->newCustomer->phone = '(550) 816-8728';
-    $request->accountId = 'experiences';
-    $request->customerId = 'Antimony';
+    $request->newCustomer->name = 'string';
+    $request->newCustomer->phone = '1-551-733-0450 x71687';
+    $request->accountId = 'string';
+    $request->customerId = 'string';
 
     $response = $sdk->customers->accountPutCustomerId($request);
 
@@ -630,13 +678,17 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\DeleteCustomerCustomerIdPaymentMethodTokenRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new DeleteCustomerCustomerIdPaymentMethodTokenRequest();
-    $request->customerId = 'Southeast';
-    $request->tokenId = 'Regional';
+    $request->customerId = 'string';
+    $request->tokenId = 'string';
 
     $response = $sdk->customers->deleteCustomerCustomerIdPaymentMethodToken($request);
 
@@ -676,12 +728,16 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\DeleteCustomerIdRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new DeleteCustomerIdRequest();
-    $request->customerId = 'Colon Human East';
+    $request->customerId = 'string';
 
     $response = $sdk->customers->deleteCustomerId($request);
 
@@ -721,7 +777,11 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -768,12 +828,16 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerIdRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new GetCustomerIdRequest();
-    $request->customerId = 'magenta transmitter';
+    $request->customerId = 'string';
 
     $response = $sdk->customers->getCustomerId($request);
 
@@ -813,13 +877,17 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerCustomerIdPaymentMethodTokenRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new GetCustomerCustomerIdPaymentMethodTokenRequest();
-    $request->customerId = 'Bentonville';
-    $request->tokenId = 'Stage Mills Planner';
+    $request->customerId = 'string';
+    $request->tokenId = 'string';
 
     $response = $sdk->customers->getCustomerCustomerIdPaymentMethodToken($request);
 
@@ -859,7 +927,11 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerCustomerIdPaymentsRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -867,7 +939,7 @@ try {
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = '-name';
-    $request->customerId = 'little';
+    $request->customerId = 'string';
 
     $response = $sdk->customers->getCustomerCustomerIdPayments($request);
 
@@ -907,12 +979,16 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerIdPaymentMethodRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new GetCustomerIdPaymentMethodRequest();
-    $request->customerId = 'under Gadolinium';
+    $request->customerId = 'string';
 
     $response = $sdk->customers->getCustomerIdPaymentMethod($request);
 
@@ -952,14 +1028,18 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerTokenPaymentMethodRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new GetCustomerTokenPaymentMethodRequest();
-    $request->dollarLimit = 'Hybrid';
-    $request->dollarSkip = 'invoice';
-    $request->customerToken = 'Chair';
+    $request->dollarLimit = 'string';
+    $request->dollarSkip = 'string';
+    $request->customerToken = 'string';
 
     $response = $sdk->customers->getCustomerTokenPaymentMethod($request);
 
@@ -1000,7 +1080,11 @@ use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Shared\NewCustomer;
 use \TheLogicStudio\ExactPayments\Models\Shared\NewCustomerAddresses;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -1009,8 +1093,8 @@ try {
         new NewCustomerAddresses(),
     ];
     $request->email = 'Polly.Hamill94@gmail.com';
-    $request->name = 'female';
-    $request->phone = '889-563-3898 x145';
+    $request->name = 'string';
+    $request->phone = '712-889-4633';
 
     $response = $sdk->customers->postCustomer($request);
 
@@ -1051,16 +1135,20 @@ use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\PostCustomerIdPaymentMethodRequest;
 use \TheLogicStudio\ExactPayments\Models\Operations\PostCustomerIdPaymentMethodRequestBody;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new PostCustomerIdPaymentMethodRequest();
     $request->requestBody = new PostCustomerIdPaymentMethodRequestBody();
     $request->requestBody->isDefault = false;
-    $request->requestBody->label = 'synthesize platforms';
-    $request->requestBody->token = 'Intersex Elegant';
-    $request->customerId = 'Lavinia Communications vigorous';
+    $request->requestBody->label = 'string';
+    $request->requestBody->token = 'string';
+    $request->customerId = 'string';
 
     $response = $sdk->customers->postCustomerIdPaymentMethod($request);
 
@@ -1104,7 +1192,11 @@ use \TheLogicStudio\ExactPayments\Models\Operations\PutCustomerIdRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\NewCustomer;
 use \TheLogicStudio\ExactPayments\Models\Shared\NewCustomerAddresses;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -1114,9 +1206,9 @@ try {
         new NewCustomerAddresses(),
     ];
     $request->newCustomer->email = 'Major43@hotmail.com';
-    $request->newCustomer->name = 'flawless Electric';
-    $request->newCustomer->phone = '(738) 538-9785 x3771';
-    $request->customerId = 'Folk Country';
+    $request->newCustomer->name = 'string';
+    $request->newCustomer->phone = '(828) 567-3843 x897';
+    $request->customerId = 'string';
 
     $response = $sdk->customers->putCustomerId($request);
 

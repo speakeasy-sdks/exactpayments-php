@@ -45,7 +45,11 @@ use \TheLogicStudio\ExactPayments\Models\Shared\ReferencedPaymentOptionsEcommerc
 use \TheLogicStudio\ExactPayments\Models\Shared\ReferencedPaymentReference;
 use \TheLogicStudio\ExactPayments\Models\Shared\ReferencedPaymentSoftDescriptor;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -78,8 +82,8 @@ try {
     $request->referencedPayment->softDescriptor->street = 'Fairfield Ranch';
     $request->referencedPayment->softDescriptor->submerchantId = 'xyz123';
     $request->referencedPayment->softDescriptor->taxId = 'abc123';
-    $request->accountId = 'Unbranded';
-    $request->paymentId = 'integrated';
+    $request->accountId = 'string';
+    $request->paymentId = 'string';
 
     $response = $sdk->payments->accountCapturePayment($request);
 
@@ -121,13 +125,17 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new AccountGetPaymentRequest();
-    $request->accountId = 'Mendelevium base';
-    $request->paymentId = 'Savings remote Dalasi';
+    $request->accountId = 'string';
+    $request->paymentId = 'string';
 
     $response = $sdk->payments->accountGetPayment($request);
 
@@ -169,7 +177,11 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentsRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -177,7 +189,7 @@ try {
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = '-name';
-    $request->accountId = 'nasalise unabashedly grenade';
+    $request->accountId = 'string';
 
     $response = $sdk->payments->accountGetPayments($request);
 
@@ -236,7 +248,11 @@ use \TheLogicStudio\ExactPayments\Models\Shared\NewPaymentStoredCredentials;
 use \TheLogicStudio\ExactPayments\Models\Shared\NewPaymentThreeDSecure;
 use \TheLogicStudio\ExactPayments\Models\Shared\NewPaymentThreeDSecureProgramProtocol;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -288,7 +304,7 @@ try {
     $request->newPayment->options->generateReceipt = true;
     $request->newPayment->options->installmentNumber = '12';
     $request->newPayment->options->thirdPartyId = 'partyid123';
-    $request->newPayment->paymentMethod = 'Investor';
+    $request->newPayment->paymentMethod = 'string';
     $request->newPayment->reference = new NewPaymentReference();
     $request->newPayment->reference->correlationId = 'abc123';
     $request->newPayment->reference->customerRef = 'ref123';
@@ -322,7 +338,7 @@ try {
     $request->newPayment->threeDSecure->directoryServerTransactionId = 'trans123';
     $request->newPayment->threeDSecure->programProtocol = NewPaymentThreeDSecureProgramProtocol::Two;
     $request->newPayment->threeDSecure->xid = 'id123';
-    $request->accountId = 'Account Inverse Tricycle';
+    $request->accountId = 'string';
 
     $response = $sdk->payments->accountPostPayment($request);
 
@@ -371,7 +387,11 @@ use \TheLogicStudio\ExactPayments\Models\Shared\ReferencedPaymentOptionsEcommerc
 use \TheLogicStudio\ExactPayments\Models\Shared\ReferencedPaymentReference;
 use \TheLogicStudio\ExactPayments\Models\Shared\ReferencedPaymentSoftDescriptor;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -404,8 +424,8 @@ try {
     $request->referencedPayment->softDescriptor->street = 'Fairfield Ranch';
     $request->referencedPayment->softDescriptor->submerchantId = 'xyz123';
     $request->referencedPayment->softDescriptor->taxId = 'abc123';
-    $request->accountId = 'Factors';
-    $request->paymentId = 'piece whiteboard';
+    $request->accountId = 'string';
+    $request->paymentId = 'string';
 
     $response = $sdk->payments->accountRefundPayment($request);
 
@@ -454,7 +474,11 @@ use \TheLogicStudio\ExactPayments\Models\Shared\ReferencedPaymentOptionsEcommerc
 use \TheLogicStudio\ExactPayments\Models\Shared\ReferencedPaymentReference;
 use \TheLogicStudio\ExactPayments\Models\Shared\ReferencedPaymentSoftDescriptor;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -487,8 +511,8 @@ try {
     $request->referencedPayment->softDescriptor->street = 'Fairfield Ranch';
     $request->referencedPayment->softDescriptor->submerchantId = 'xyz123';
     $request->referencedPayment->softDescriptor->taxId = 'abc123';
-    $request->accountId = 'reboot migration shrivel';
-    $request->paymentId = 'Licensed';
+    $request->accountId = 'string';
+    $request->paymentId = 'string';
 
     $response = $sdk->payments->accountVoidPayment($request);
 
@@ -535,7 +559,11 @@ use \TheLogicStudio\ExactPayments\Models\Shared\ReferencedPaymentOptionsEcommerc
 use \TheLogicStudio\ExactPayments\Models\Shared\ReferencedPaymentReference;
 use \TheLogicStudio\ExactPayments\Models\Shared\ReferencedPaymentSoftDescriptor;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -568,7 +596,7 @@ try {
     $request->referencedPayment->softDescriptor->street = 'Fairfield Ranch';
     $request->referencedPayment->softDescriptor->submerchantId = 'xyz123';
     $request->referencedPayment->softDescriptor->taxId = 'abc123';
-    $request->paymentId = 'alarm';
+    $request->paymentId = 'string';
 
     $response = $sdk->payments->capturePayment($request);
 
@@ -608,12 +636,16 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetPaymentRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new GetPaymentRequest();
-    $request->paymentId = 'unleash';
+    $request->paymentId = 'string';
 
     $response = $sdk->payments->getPayment($request);
 
@@ -653,7 +685,11 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetPaymentsRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -716,7 +752,11 @@ use \TheLogicStudio\ExactPayments\Models\Shared\NewPaymentStoredCredentials;
 use \TheLogicStudio\ExactPayments\Models\Shared\NewPaymentThreeDSecure;
 use \TheLogicStudio\ExactPayments\Models\Shared\NewPaymentThreeDSecureProgramProtocol;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -767,7 +807,7 @@ try {
     $request->options->generateReceipt = true;
     $request->options->installmentNumber = '12';
     $request->options->thirdPartyId = 'partyid123';
-    $request->paymentMethod = 'Berkshire';
+    $request->paymentMethod = 'string';
     $request->reference = new NewPaymentReference();
     $request->reference->correlationId = 'abc123';
     $request->reference->customerRef = 'ref123';
@@ -799,7 +839,7 @@ try {
     $request->threeDSecure = new NewPaymentThreeDSecure();
     $request->threeDSecure->cavv = 'cavv123';
     $request->threeDSecure->directoryServerTransactionId = 'trans123';
-    $request->threeDSecure->programProtocol = NewPaymentThreeDSecureProgramProtocol::Two;
+    $request->threeDSecure->programProtocol = NewPaymentThreeDSecureProgramProtocol::One;
     $request->threeDSecure->xid = 'id123';
 
     $response = $sdk->payments->postPayment($request);
@@ -845,7 +885,11 @@ use \TheLogicStudio\ExactPayments\Models\Shared\ReferencedPaymentOptionsEcommerc
 use \TheLogicStudio\ExactPayments\Models\Shared\ReferencedPaymentReference;
 use \TheLogicStudio\ExactPayments\Models\Shared\ReferencedPaymentSoftDescriptor;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -878,7 +922,7 @@ try {
     $request->referencedPayment->softDescriptor->street = 'Fairfield Ranch';
     $request->referencedPayment->softDescriptor->submerchantId = 'xyz123';
     $request->referencedPayment->softDescriptor->taxId = 'abc123';
-    $request->paymentId = 'Director land SMS';
+    $request->paymentId = 'string';
 
     $response = $sdk->payments->refundPayment($request);
 
@@ -923,7 +967,11 @@ use \TheLogicStudio\ExactPayments\Models\Shared\ReferencedPaymentOptionsEcommerc
 use \TheLogicStudio\ExactPayments\Models\Shared\ReferencedPaymentReference;
 use \TheLogicStudio\ExactPayments\Models\Shared\ReferencedPaymentSoftDescriptor;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -956,7 +1004,7 @@ try {
     $request->referencedPayment->softDescriptor->street = 'Fairfield Ranch';
     $request->referencedPayment->softDescriptor->submerchantId = 'xyz123';
     $request->referencedPayment->softDescriptor->taxId = 'abc123';
-    $request->paymentId = 'DNS';
+    $request->paymentId = 'string';
 
     $response = $sdk->payments->voidPayment($request);
 

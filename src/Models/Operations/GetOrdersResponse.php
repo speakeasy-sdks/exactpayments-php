@@ -41,38 +41,38 @@ class GetOrdersResponse
      * Credentials supplied do not grant access to the requested resource.
      * 
      * 
-     * @var ?array<string, mixed> $getOrders403ApplicationJSONObject
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\GetOrders403ApplicationJSON $getOrders403ApplicationJSONObject
      */
 	
-    public ?array $getOrders403ApplicationJSONObject = null;
+    public ?GetOrders403ApplicationJSON $getOrders403ApplicationJSONObject = null;
     
     /**
      * **Internal Server Error**
      * 
      * 
      * 
-     * @var ?array<string, mixed> $getOrders500ApplicationJSONObject
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\GetOrders500ApplicationJSON $getOrders500ApplicationJSONObject
      */
 	
-    public ?array $getOrders500ApplicationJSONObject = null;
+    public ?GetOrders500ApplicationJSON $getOrders500ApplicationJSONObject = null;
     
     /**
      * **Service Unavailable**
      * 
      * 
      * 
-     * @var ?array<string, mixed> $getOrders503ApplicationJSONObject
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\GetOrders503ApplicationJSON $getOrders503ApplicationJSONObject
      */
 	
-    public ?array $getOrders503ApplicationJSONObject = null;
+    public ?GetOrders503ApplicationJSON $getOrders503ApplicationJSONObject = null;
     
     /**
      * Details of an existing orders.
      * 
-     * @var ?array<string, mixed> $orderSearch
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\OrderSearch $orderSearch
      */
 	
-    public ?array $orderSearch = null;
+    public ?\TheLogicStudio\ExactPayments\Models\Shared\OrderSearch $orderSearch = null;
     
 	public function __construct()
 	{

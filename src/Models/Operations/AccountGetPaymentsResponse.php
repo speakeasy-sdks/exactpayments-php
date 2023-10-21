@@ -57,10 +57,10 @@ class AccountGetPaymentsResponse
      * Credentials supplied do not grant access to the requested resource.
      * 
      * 
-     * @var ?array<string, mixed> $accountGetPayments403ApplicationJSONObject
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPayments403ApplicationJSON $accountGetPayments403ApplicationJSONObject
      */
 	
-    public ?array $accountGetPayments403ApplicationJSONObject = null;
+    public ?AccountGetPayments403ApplicationJSON $accountGetPayments403ApplicationJSONObject = null;
     
     /**
      * **Not Found**\
@@ -70,30 +70,30 @@ class AccountGetPaymentsResponse
      * - When there are no Accounts/Orders/Payment found.
      * 
      * 
-     * @var ?array<string, mixed> $accountGetPayments404ApplicationJSONObject
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPayments404ApplicationJSON $accountGetPayments404ApplicationJSONObject
      */
 	
-    public ?array $accountGetPayments404ApplicationJSONObject = null;
+    public ?AccountGetPayments404ApplicationJSON $accountGetPayments404ApplicationJSONObject = null;
     
     /**
      * **Internal Server Error**
      * 
      * 
      * 
-     * @var ?array<string, mixed> $accountGetPayments500ApplicationJSONObject
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPayments500ApplicationJSON $accountGetPayments500ApplicationJSONObject
      */
 	
-    public ?array $accountGetPayments500ApplicationJSONObject = null;
+    public ?AccountGetPayments500ApplicationJSON $accountGetPayments500ApplicationJSONObject = null;
     
     /**
      * **Service Unavailable**
      * 
      * 
      * 
-     * @var ?array<string, mixed> $accountGetPayments503ApplicationJSONObject
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPayments503ApplicationJSON $accountGetPayments503ApplicationJSONObject
      */
 	
-    public ?array $accountGetPayments503ApplicationJSONObject = null;
+    public ?AccountGetPayments503ApplicationJSON $accountGetPayments503ApplicationJSONObject = null;
     
 	public function __construct()
 	{

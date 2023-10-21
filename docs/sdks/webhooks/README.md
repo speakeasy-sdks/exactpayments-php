@@ -34,13 +34,17 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteWebhookRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new AccountDeleteWebhookRequest();
-    $request->accountId = 'Computer Volkswagen';
-    $request->webhookId = 'Engineer sticky gurgle';
+    $request->accountId = 'string';
+    $request->webhookId = 'string';
 
     $response = $sdk->webhooks->accountDeleteWebhook($request);
 
@@ -80,13 +84,17 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountDisableWebhookRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new AccountDisableWebhookRequest();
-    $request->accountId = 'program um';
-    $request->webhookId = 'encoding';
+    $request->accountId = 'string';
+    $request->webhookId = 'string';
 
     $response = $sdk->webhooks->accountDisableWebhook($request);
 
@@ -126,13 +134,17 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountEnableWebhookRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new AccountEnableWebhookRequest();
-    $request->accountId = 'geez Avon Recumbent';
-    $request->webhookId = 'Funk Chicken append';
+    $request->accountId = 'string';
+    $request->webhookId = 'string';
 
     $response = $sdk->webhooks->accountEnableWebhook($request);
 
@@ -172,7 +184,11 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountGetListWebhooksRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -180,7 +196,7 @@ try {
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = '-name';
-    $request->accountId = 'poll';
+    $request->accountId = 'string';
 
     $response = $sdk->webhooks->accountGetListWebhooks($request);
 
@@ -220,13 +236,17 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountGetRetrieveWebhookRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new AccountGetRetrieveWebhookRequest();
-    $request->accountId = 'siemens';
-    $request->webhookId = 'markets Hybrid Wooden';
+    $request->accountId = 'string';
+    $request->webhookId = 'string';
 
     $response = $sdk->webhooks->accountGetRetrieveWebhook($request);
 
@@ -268,7 +288,11 @@ use \TheLogicStudio\ExactPayments\Models\Operations\AccountPostCreateWebhookRequ
 use \TheLogicStudio\ExactPayments\Models\Shared\WebhookRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\WebhookEventField;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -279,7 +303,7 @@ try {
     $request->webhookRequest->urls = [
         '["https://736d1e71-c9ae-409b-81ff-c2c38c68ad4b.mock.pstmn.io/dev/hook/success","https://736d1e71-c9ae-409b-81ff-c2c38c68ad4b.mock.pstmn.io/dev/hook/finished"]',
     ];
-    $request->accountId = 'infrastructure';
+    $request->accountId = 'string';
 
     $response = $sdk->webhooks->accountPostCreateWebhook($request);
 
@@ -321,7 +345,11 @@ use \TheLogicStudio\ExactPayments\Models\Operations\AccountUpdateWebhookRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\UpdatableWebhookRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\WebhookEventField;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -332,8 +360,8 @@ try {
     $request->updatableWebhookRequest->urls = [
         '["https://736d1e71-c9ae-409b-81ff-c2c38c68ad4b.mock.pstmn.io/dev/hook/success","https://736d1e71-c9ae-409b-81ff-c2c38c68ad4b.mock.pstmn.io/dev/hook/finished"]',
     ];
-    $request->accountId = 'Account tan communities';
-    $request->webhookId = 'Gender Southeast';
+    $request->accountId = 'string';
+    $request->webhookId = 'string';
 
     $response = $sdk->webhooks->accountUpdateWebhook($request);
 
@@ -373,13 +401,17 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\DeleteOrganizationOrganizationIdWebhookWebhookIdRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new DeleteOrganizationOrganizationIdWebhookWebhookIdRequest();
-    $request->organizationId = 'Integration Bulgarian past';
-    $request->webhookId = 'Saint';
+    $request->organizationId = 'string';
+    $request->webhookId = 'string';
 
     $response = $sdk->webhooks->deleteOrganizationOrganizationIdWebhookWebhookId($request);
 
@@ -419,7 +451,11 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdWebhookRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -427,7 +463,7 @@ try {
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = '-name';
-    $request->organizationId = 'frenzy Small Dong';
+    $request->organizationId = 'string';
 
     $response = $sdk->webhooks->getOrganizationOrganizationIdWebhook($request);
 
@@ -467,13 +503,17 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdWebhookWebhookIdRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new GetOrganizationOrganizationIdWebhookWebhookIdRequest();
-    $request->organizationId = 'Mazda Cambridgeshire synthesize';
-    $request->webhookId = 'tan intuitive';
+    $request->organizationId = 'string';
+    $request->webhookId = 'string';
 
     $response = $sdk->webhooks->getOrganizationOrganizationIdWebhookWebhookId($request);
 
@@ -515,7 +555,11 @@ use \TheLogicStudio\ExactPayments\Models\Operations\PostOrganizationOrganization
 use \TheLogicStudio\ExactPayments\Models\Shared\WebhookRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\WebhookEventField;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -526,7 +570,7 @@ try {
     $request->webhookRequest->urls = [
         '["https://736d1e71-c9ae-409b-81ff-c2c38c68ad4b.mock.pstmn.io/dev/hook/success","https://736d1e71-c9ae-409b-81ff-c2c38c68ad4b.mock.pstmn.io/dev/hook/finished"]',
     ];
-    $request->organizationId = 'West set Account';
+    $request->organizationId = 'string';
 
     $response = $sdk->webhooks->postOrganizationOrganizationIdWebhook($request);
 
@@ -568,7 +612,11 @@ use \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationI
 use \TheLogicStudio\ExactPayments\Models\Shared\UpdatableWebhookRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\WebhookEventField;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -579,8 +627,8 @@ try {
     $request->updatableWebhookRequest->urls = [
         '["https://736d1e71-c9ae-409b-81ff-c2c38c68ad4b.mock.pstmn.io/dev/hook/success","https://736d1e71-c9ae-409b-81ff-c2c38c68ad4b.mock.pstmn.io/dev/hook/finished"]',
     ];
-    $request->organizationId = 'outside which';
-    $request->webhookId = 'Handmade';
+    $request->organizationId = 'string';
+    $request->webhookId = 'string';
 
     $response = $sdk->webhooks->putOrganizationOrganizationIdWebhookWebhookId($request);
 
@@ -620,13 +668,17 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdWebhookWebhookIdDisableRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new PutOrganizationOrganizationIdWebhookWebhookIdDisableRequest();
-    $request->organizationId = 'El doloremque hacking';
-    $request->webhookId = 'South Northeast';
+    $request->organizationId = 'string';
+    $request->webhookId = 'string';
 
     $response = $sdk->webhooks->putOrganizationOrganizationIdWebhookWebhookIdDisable($request);
 
@@ -666,13 +718,17 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdWebhookWebhookIdEnableRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new PutOrganizationOrganizationIdWebhookWebhookIdEnableRequest();
-    $request->organizationId = 'ouch';
-    $request->webhookId = 'Central';
+    $request->organizationId = 'string';
+    $request->webhookId = 'string';
 
     $response = $sdk->webhooks->putOrganizationOrganizationIdWebhookWebhookIdEnable($request);
 

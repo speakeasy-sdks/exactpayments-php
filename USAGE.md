@@ -7,10 +7,14 @@
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
+use TheLogicStudio\ExactPayments\ExactPayments;
+use TheLogicStudio\ExactPayments\Models\Shared\Security;
+
+$security = new Security();
+$security->apiKey = '';
 
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -22,5 +26,6 @@ try {
 } catch (Exception $e) {
     // handle exception
 }
+
 ```
 <!-- End SDK Example Usage -->

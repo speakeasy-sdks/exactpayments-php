@@ -32,13 +32,17 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountDeletePaymentMethodRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new AccountDeletePaymentMethodRequest();
-    $request->accountId = 'Shilling content Screen';
-    $request->tokenId = 'UTF8';
+    $request->accountId = 'string';
+    $request->tokenId = 'string';
 
     $response = $sdk->paymentMethods->accountDeletePaymentMethod($request);
 
@@ -80,13 +84,17 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentMethodRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new AccountGetPaymentMethodRequest();
-    $request->accountId = 'Saint';
-    $request->tokenId = 'around restring';
+    $request->accountId = 'string';
+    $request->tokenId = 'string';
 
     $response = $sdk->paymentMethods->accountGetPaymentMethod($request);
 
@@ -130,13 +138,17 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountPostPaymentMethodRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new AccountPostPaymentMethodRequest();
-    $request->requestBody = 'Canada';
-    $request->accountId = 'generating Data Chief';
+    $request->requestBody = 'string';
+    $request->accountId = 'string';
 
     $response = $sdk->paymentMethods->accountPostPaymentMethod($request);
 
@@ -181,7 +193,11 @@ use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountPostVerifyMicrodepositsRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\MicroDepositVerificationRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -189,8 +205,8 @@ try {
     $request->microDepositVerificationRequest = new MicroDepositVerificationRequest();
     $request->microDepositVerificationRequest->amount1 = 768582;
     $request->microDepositVerificationRequest->amount2 = 195872;
-    $request->accountId = 'olive zowie Global';
-    $request->paymentToken = 'Ouguiya Kwacha up';
+    $request->accountId = 'string';
+    $request->paymentToken = 'string';
 
     $response = $sdk->paymentMethods->accountPostVerifyMicrodeposits($request);
 
@@ -230,12 +246,16 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\DeletePaymentMethodRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new DeletePaymentMethodRequest();
-    $request->tokenId = 'Assurance Metal Money';
+    $request->tokenId = 'string';
 
     $response = $sdk->paymentMethods->deletePaymentMethod($request);
 
@@ -275,12 +295,16 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetPaymentMethodRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new GetPaymentMethodRequest();
-    $request->tokenId = 'Accountability Netherlands imprison';
+    $request->tokenId = 'string';
 
     $response = $sdk->paymentMethods->getPaymentMethod($request);
 
@@ -323,11 +347,15 @@ require_once 'vendor/autoload.php';
 use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
-'Edinburg'
+'string'
 
     $response = $sdk->paymentMethods->postPaymentMethod($request);
 
@@ -372,7 +400,11 @@ use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\PostVerifyMicrodepositsRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\MicroDepositVerificationRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -380,7 +412,7 @@ try {
     $request->microDepositVerificationRequest = new MicroDepositVerificationRequest();
     $request->microDepositVerificationRequest->amount1 = 849170;
     $request->microDepositVerificationRequest->amount2 = 669926;
-    $request->paymentToken = 'SSL Folk Account';
+    $request->paymentToken = 'string';
 
     $response = $sdk->paymentMethods->postVerifyMicrodeposits($request);
 

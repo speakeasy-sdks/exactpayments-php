@@ -14,10 +14,10 @@ class AccountRegisterApplePayDomainsResponse
     /**
      * **Created**
      * 
-     * @var ?array<string, mixed> $applePayDomains
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\ApplePayDomains $applePayDomains
      */
 	
-    public ?array $applePayDomains = null;
+    public ?\TheLogicStudio\ExactPayments\Models\Shared\ApplePayDomains $applePayDomains = null;
     
     /**
      * HTTP response content type for this operation
@@ -97,10 +97,10 @@ class AccountRegisterApplePayDomainsResponse
      * The request body contains a malformed request or is incomplete.
      * 
      * 
-     * @var ?array<string, mixed> $accountRegisterApplePayDomains400ApplicationJSONObject
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountRegisterApplePayDomains400ApplicationJSON $accountRegisterApplePayDomains400ApplicationJSONObject
      */
 	
-    public ?array $accountRegisterApplePayDomains400ApplicationJSONObject = null;
+    public ?AccountRegisterApplePayDomains400ApplicationJSON $accountRegisterApplePayDomains400ApplicationJSONObject = null;
     
 	public function __construct()
 	{

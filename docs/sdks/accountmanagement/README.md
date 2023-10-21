@@ -27,16 +27,22 @@ require_once 'vendor/autoload.php';
 use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\AccountRegisterApplePayDomainsRequest;
+use \TheLogicStudio\ExactPayments\Models\Shared\ApplePayDomains;
+
+$security = new Security();
+$security->apiKey = '';
 
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new AccountRegisterApplePayDomainsRequest();
-    $request->requestBody = [
-        'Licensed' => 'Northeast',
+    $request->applePayDomains = new ApplePayDomains();
+    $request->applePayDomains->domains = [
+        'string',
     ];
-    $request->accountId = 'arctic';
+    $request->accountId = 'string';
 
     $response = $sdk->accountManagement->accountRegisterApplePayDomains($request);
 
@@ -76,12 +82,16 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new GetOrganizationOrganizationIdAccountRequest();
-    $request->organizationId = 'male blue degree';
+    $request->organizationId = 'string';
 
     $response = $sdk->accountManagement->getOrganizationOrganizationIdAccount($request);
 
@@ -121,13 +131,17 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountSearchRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new GetOrganizationOrganizationIdAccountSearchRequest();
-    $request->organizationId = 'Assimilated South Hybrid';
-    $request->q = 'Northeast';
+    $request->organizationId = 'string';
+    $request->q = 'string';
 
     $response = $sdk->accountManagement->getOrganizationOrganizationIdAccountSearch($request);
 
@@ -167,13 +181,17 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountAccountIdRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new GetOrganizationOrganizationIdAccountAccountIdRequest();
-    $request->accountId = 'Wagon channels Bicycle';
-    $request->organizationId = 'Electronic Touring Non';
+    $request->accountId = 'string';
+    $request->organizationId = 'string';
 
     $response = $sdk->accountManagement->getOrganizationOrganizationIdAccountAccountId($request);
 
@@ -213,12 +231,16 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\ListApplePayDomainsRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new ListApplePayDomainsRequest();
-    $request->accountId = 'application';
+    $request->accountId = 'string';
 
     $response = $sdk->accountManagement->listApplePayDomains($request);
 
@@ -260,7 +282,11 @@ use \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationI
 use \TheLogicStudio\ExactPayments\Models\Shared\AccountRequest;
 use \TheLogicStudio\ExactPayments\Models\Shared\AccountRequestAddress;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -280,8 +306,8 @@ try {
     $request->accountRequest->onlinePresence = 'Online presence';
     $request->accountRequest->phone = '1111111111';
     $request->accountRequest->twitter = 'twitter';
-    $request->accountId = 'Lincoln distributed Automated';
-    $request->organizationId = 'male sledge willing';
+    $request->accountId = 'string';
+    $request->organizationId = 'string';
 
     $response = $sdk->accountManagement->putOrganizationOrganizationIdAccountAccountId($request);
 

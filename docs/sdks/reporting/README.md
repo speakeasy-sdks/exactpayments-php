@@ -24,12 +24,16 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\DeleteReportRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new DeleteReportRequest();
-    $request->reportId = 'a';
+    $request->reportId = 'string';
 
     $response = $sdk->reporting->deleteReport($request);
 
@@ -70,14 +74,18 @@ use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetReportRequest;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetReportFormat;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new GetReportRequest();
     $request->format = GetReportFormat::Csv;
-    $request->reportId = 'payment Indiana Strategist';
-    $request->select = 'Riel deposit';
+    $request->reportId = 'string';
+    $request->select = 'string';
 
     $response = $sdk->reporting->getReport($request);
 
@@ -117,7 +125,11 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetReportDetailsRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -125,7 +137,7 @@ try {
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = '-name';
-    $request->reportId = 'Fresh ack';
+    $request->reportId = 'string';
 
     $response = $sdk->reporting->getReportDetails($request);
 
@@ -165,7 +177,11 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\GetReportsRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

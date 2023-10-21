@@ -41,10 +41,10 @@ class GetAccountAccountIdOrdersOrderIdResponse
      * Credentials supplied do not grant access to the requested resource.
      * 
      * 
-     * @var ?array<string, mixed> $getAccountAccountIdOrdersOrderId403ApplicationJSONObject
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\GetAccountAccountIdOrdersOrderId403ApplicationJSON $getAccountAccountIdOrdersOrderId403ApplicationJSONObject
      */
 	
-    public ?array $getAccountAccountIdOrdersOrderId403ApplicationJSONObject = null;
+    public ?GetAccountAccountIdOrdersOrderId403ApplicationJSON $getAccountAccountIdOrdersOrderId403ApplicationJSONObject = null;
     
     /**
      * **Not found**\
@@ -52,30 +52,30 @@ class GetAccountAccountIdOrdersOrderIdResponse
      * When there are no accounts/orders/payment found
      * 
      * 
-     * @var ?array<string, mixed> $getAccountAccountIdOrdersOrderId404ApplicationJSONObject
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\GetAccountAccountIdOrdersOrderId404ApplicationJSON $getAccountAccountIdOrdersOrderId404ApplicationJSONObject
      */
 	
-    public ?array $getAccountAccountIdOrdersOrderId404ApplicationJSONObject = null;
+    public ?GetAccountAccountIdOrdersOrderId404ApplicationJSON $getAccountAccountIdOrdersOrderId404ApplicationJSONObject = null;
     
     /**
      * **Internal Server Error**
      * 
      * 
      * 
-     * @var ?array<string, mixed> $getAccountAccountIdOrdersOrderId500ApplicationJSONObject
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\GetAccountAccountIdOrdersOrderId500ApplicationJSON $getAccountAccountIdOrdersOrderId500ApplicationJSONObject
      */
 	
-    public ?array $getAccountAccountIdOrdersOrderId500ApplicationJSONObject = null;
+    public ?GetAccountAccountIdOrdersOrderId500ApplicationJSON $getAccountAccountIdOrdersOrderId500ApplicationJSONObject = null;
     
     /**
      * **Service Unavailable**
      * 
      * 
      * 
-     * @var ?array<string, mixed> $getAccountAccountIdOrdersOrderId503ApplicationJSONObject
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\GetAccountAccountIdOrdersOrderId503ApplicationJSON $getAccountAccountIdOrdersOrderId503ApplicationJSONObject
      */
 	
-    public ?array $getAccountAccountIdOrdersOrderId503ApplicationJSONObject = null;
+    public ?GetAccountAccountIdOrdersOrderId503ApplicationJSON $getAccountAccountIdOrdersOrderId503ApplicationJSONObject = null;
     
     /**
      * Order created.

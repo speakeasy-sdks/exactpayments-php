@@ -25,10 +25,10 @@ class AccountGetCustomerDefaultPaymentMethodResponse
      * The requested resource can not be found.
      * 
      * 
-     * @var ?array<string, mixed> $notFoundError
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\NotFoundError $notFoundError
      */
 	
-    public ?array $notFoundError = null;
+    public ?\TheLogicStudio\ExactPayments\Models\Shared\NotFoundError $notFoundError = null;
     
     /**
      * The response contains the details of the Payment Method that was marked as default for this Customer.
@@ -60,30 +60,30 @@ class AccountGetCustomerDefaultPaymentMethodResponse
      * Credentials supplied do not grant access to the requested resource.
      * 
      * 
-     * @var ?array<string, mixed> $accountGetCustomerDefaultPaymentMethod403ApplicationJSONObject
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerDefaultPaymentMethod403ApplicationJSON $accountGetCustomerDefaultPaymentMethod403ApplicationJSONObject
      */
 	
-    public ?array $accountGetCustomerDefaultPaymentMethod403ApplicationJSONObject = null;
+    public ?AccountGetCustomerDefaultPaymentMethod403ApplicationJSON $accountGetCustomerDefaultPaymentMethod403ApplicationJSONObject = null;
     
     /**
      * **Internal Server Error**
      * 
      * 
      * 
-     * @var ?array<string, mixed> $accountGetCustomerDefaultPaymentMethod500ApplicationJSONObject
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerDefaultPaymentMethod500ApplicationJSON $accountGetCustomerDefaultPaymentMethod500ApplicationJSONObject
      */
 	
-    public ?array $accountGetCustomerDefaultPaymentMethod500ApplicationJSONObject = null;
+    public ?AccountGetCustomerDefaultPaymentMethod500ApplicationJSON $accountGetCustomerDefaultPaymentMethod500ApplicationJSONObject = null;
     
     /**
      * **Service Unavailable**
      * 
      * 
      * 
-     * @var ?array<string, mixed> $accountGetCustomerDefaultPaymentMethod503ApplicationJSONObject
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerDefaultPaymentMethod503ApplicationJSON $accountGetCustomerDefaultPaymentMethod503ApplicationJSONObject
      */
 	
-    public ?array $accountGetCustomerDefaultPaymentMethod503ApplicationJSONObject = null;
+    public ?AccountGetCustomerDefaultPaymentMethod503ApplicationJSON $accountGetCustomerDefaultPaymentMethod503ApplicationJSONObject = null;
     
 	public function __construct()
 	{

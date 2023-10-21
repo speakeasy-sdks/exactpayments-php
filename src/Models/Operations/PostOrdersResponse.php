@@ -49,10 +49,10 @@ class PostOrdersResponse
      * When there are errors in the payload
      * 
      * 
-     * @var ?array<string, mixed> $postOrders400ApplicationJSONObject
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostOrders400ApplicationJSON $postOrders400ApplicationJSONObject
      */
 	
-    public ?array $postOrders400ApplicationJSONObject = null;
+    public ?PostOrders400ApplicationJSON $postOrders400ApplicationJSONObject = null;
     
     /**
      * **Access Denied**\
@@ -60,30 +60,30 @@ class PostOrdersResponse
      * Credentials supplied do not grant access to the requested resource.
      * 
      * 
-     * @var ?array<string, mixed> $postOrders403ApplicationJSONObject
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostOrders403ApplicationJSON $postOrders403ApplicationJSONObject
      */
 	
-    public ?array $postOrders403ApplicationJSONObject = null;
+    public ?PostOrders403ApplicationJSON $postOrders403ApplicationJSONObject = null;
     
     /**
      * **Internal Server Error**
      * 
      * 
      * 
-     * @var ?array<string, mixed> $postOrders500ApplicationJSONObject
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostOrders500ApplicationJSON $postOrders500ApplicationJSONObject
      */
 	
-    public ?array $postOrders500ApplicationJSONObject = null;
+    public ?PostOrders500ApplicationJSON $postOrders500ApplicationJSONObject = null;
     
     /**
      * **Service Unavailable**
      * 
      * 
      * 
-     * @var ?array<string, mixed> $postOrders503ApplicationJSONObject
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostOrders503ApplicationJSON $postOrders503ApplicationJSONObject
      */
 	
-    public ?array $postOrders503ApplicationJSONObject = null;
+    public ?PostOrders503ApplicationJSON $postOrders503ApplicationJSONObject = null;
     
 	public function __construct()
 	{

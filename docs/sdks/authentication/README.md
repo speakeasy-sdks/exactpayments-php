@@ -27,7 +27,11 @@ use \TheLogicStudio\ExactPayments\Models\Operations\CreateApplicationTokenReques
 use \TheLogicStudio\ExactPayments\Models\Operations\CreateApplicationTokenRequestBodyMode;
 use \TheLogicStudio\ExactPayments\Models\Shared\Permissions;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -38,7 +42,7 @@ try {
     $request->requestBody->permissions = [
         Permissions::ChargesCreate,
     ];
-    $request->applicationId = 'West';
+    $request->applicationId = 'string';
 
     $response = $sdk->authentication->createApplicationToken($request);
 
@@ -81,7 +85,11 @@ use \TheLogicStudio\ExactPayments\Models\Operations\CreateUserTokenRequestBodyIn
 use \TheLogicStudio\ExactPayments\Models\Operations\CreateUserTokenRequestBodyAccountType;
 use \TheLogicStudio\ExactPayments\Models\Shared\AccountMode;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -134,13 +142,17 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\DeleteApplicationTokenRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new DeleteApplicationTokenRequest();
-    $request->applicationId = 'strategic';
-    $request->tokenId = 'Assistant Pakistan Supervisor';
+    $request->applicationId = 'string';
+    $request->tokenId = 'string';
 
     $response = $sdk->authentication->deleteApplicationToken($request);
 
@@ -180,7 +192,11 @@ use \TheLogicStudio\ExactPayments\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared\Security;
 use \TheLogicStudio\ExactPayments\Models\Operations\QueryApplicationTokenRequest;
 
+$security = new Security();
+$security->apiKey = '';
+
 $sdk = ExactPayments::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -188,7 +204,7 @@ try {
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = 'createdAt:asc';
-    $request->applicationId = 'denim Cambridgeshire optimization';
+    $request->applicationId = 'string';
 
     $response = $sdk->authentication->queryApplicationToken($request);
 
