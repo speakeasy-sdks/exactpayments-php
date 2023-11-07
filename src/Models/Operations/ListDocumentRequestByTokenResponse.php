@@ -71,10 +71,10 @@ class ListDocumentRequestByTokenResponse
     /**
      * **OK**
      * 
-     * @var ?array<\TheLogicStudio\ExactPayments\Models\Operations\ListDocumentRequestByToken200ApplicationJSON> $listDocumentRequestByToken200ApplicationJSONObjects
+     * @var ?array<\TheLogicStudio\ExactPayments\Models\Operations\ResponseBody> $classes
      */
 	
-    public ?array $listDocumentRequestByToken200ApplicationJSONObjects = null;
+    public ?array $classes = null;
     
 	public function __construct()
 	{
@@ -84,6 +84,6 @@ class ListDocumentRequestByTokenResponse
 		$this->rawResponse = null;
 		$this->serviceUnavailable = null;
 		$this->unauthorized = null;
-		$this->listDocumentRequestByToken200ApplicationJSONObjects = null;
+		$this->classes = null;
 	}
 }

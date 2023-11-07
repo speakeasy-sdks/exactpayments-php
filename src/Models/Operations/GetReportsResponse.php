@@ -52,12 +52,14 @@ class GetReportsResponse
     public ?string $notFound = null;
     
     /**
-     * **OK**
+     * **Service Unavailable**
      * 
-     * @var ?array<\TheLogicStudio\ExactPayments\Models\Shared\ReportQueryResponse> $reportQueryResponses
+     * 
+     * 
+     * @var ?string $serviceUnavailable
      */
 	
-    public ?array $reportQueryResponses = null;
+    public ?string $serviceUnavailable = null;
     
     /**
      * HTTP response status code for this operation
@@ -76,14 +78,12 @@ class GetReportsResponse
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
     /**
-     * **Service Unavailable**
+     * **OK**
      * 
-     * 
-     * 
-     * @var ?string $serviceUnavailable
+     * @var ?array<\TheLogicStudio\ExactPayments\Models\Shared\ReportQueryResponse> $classes
      */
 	
-    public ?string $serviceUnavailable = null;
+    public ?array $classes = null;
     
 	public function __construct()
 	{
@@ -91,9 +91,9 @@ class GetReportsResponse
 		$this->headers = null;
 		$this->internalServerError = null;
 		$this->notFound = null;
-		$this->reportQueryResponses = null;
+		$this->serviceUnavailable = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->serviceUnavailable = null;
+		$this->classes = null;
 	}
 }

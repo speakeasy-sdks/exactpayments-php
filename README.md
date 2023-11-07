@@ -42,20 +42,26 @@ composer update
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use TheLogicStudio\ExactPayments\ExactPayments;
-use TheLogicStudio\ExactPayments\Models\Shared\Security;
+use TheLogicStudio\ExactPayments;
+use TheLogicStudio\ExactPayments\Models\Shared;
+use TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $response = $sdk->apiHealthCheck->getStatus();
+    $request = new Operations\AccountRegisterApplePayDomainsRequest();
+    $request->applePayDomains = new Shared\ApplePayDomains();
+    $request->applePayDomains->domains = ['string'];
+    $request->accountId = 'string';
 
-    if ($response->getStatus200ApplicationJSONObject !== null) {
+    $response = $sdk->accountManagement->accountRegisterApplePayDomains($request);
+
+    if ($response->applePayDomains !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -69,11 +75,7 @@ try {
 ## Available Resources and Operations
 
 
-### [apiHealthCheck](docs/sdks/apihealthcheck/README.md)
-
-* [getStatus](docs/sdks/apihealthcheck/README.md#getstatus) - Retrieve Status
-
-### [accountManagement](docs/sdks/accountmanagement/README.md)
+### [AccountManagement](docs/sdks/accountmanagement/README.md)
 
 * [accountRegisterApplePayDomains](docs/sdks/accountmanagement/README.md#accountregisterapplepaydomains) - Register Domain for Apple Pay
 * [getOrganizationOrganizationIdAccount](docs/sdks/accountmanagement/README.md#getorganizationorganizationidaccount) - List Accounts
@@ -82,22 +84,7 @@ try {
 * [listApplePayDomains](docs/sdks/accountmanagement/README.md#listapplepaydomains) - List Apple Pay Domains
 * [putOrganizationOrganizationIdAccountAccountId](docs/sdks/accountmanagement/README.md#putorganizationorganizationidaccountaccountid) - Update Account by ID
 
-### [adminTools](docs/sdks/admintools/README.md)
-
-* [getListNotes](docs/sdks/admintools/README.md#getlistnotes) - List Notes
-* [postCreateNotes](docs/sdks/admintools/README.md#postcreatenotes) - Add Note
-* [putOrganizationOrganizationIdOnboardingOnboardingIdRecheck](docs/sdks/admintools/README.md#putorganizationorganizationidonboardingonboardingidrecheck) - Process Workflow
-* [putOrganizationOrganizationIdOnboardingOnboardingIdRetryRule](docs/sdks/admintools/README.md#putorganizationorganizationidonboardingonboardingidretryrule) - Process Verification
-* [putOrganizationOrganizationIdOnboardingOnboardingIdStatus](docs/sdks/admintools/README.md#putorganizationorganizationidonboardingonboardingidstatus) - Update Onboarding Status
-
-### [authentication](docs/sdks/authentication/README.md)
-
-* [createApplicationToken](docs/sdks/authentication/README.md#createapplicationtoken) - Create Application Token
-* [createUserToken](docs/sdks/authentication/README.md#createusertoken) - Create User Token
-* [deleteApplicationToken](docs/sdks/authentication/README.md#deleteapplicationtoken) - Delete Application Token
-* [queryApplicationToken](docs/sdks/authentication/README.md#queryapplicationtoken) - Query Application Tokens
-
-### [customers](docs/sdks/customers/README.md)
+### [Customers](docs/sdks/customers/README.md)
 
 * [accountDeleteCustomerCustomerIdPaymentMethodToken](docs/sdks/customers/README.md#accountdeletecustomercustomeridpaymentmethodtoken) - Delete Payment Method Associated with Customer by Token for a given Account
 * [accountDeleteCustomerId](docs/sdks/customers/README.md#accountdeletecustomerid) - Delete Customer by ID for a given Account
@@ -123,7 +110,68 @@ try {
 * [postCustomerIdPaymentMethod](docs/sdks/customers/README.md#postcustomeridpaymentmethod) - Attach Payment Method for a Customer (Sub-merchant context)
 * [putCustomerId](docs/sdks/customers/README.md#putcustomerid) - Update Customer by ID
 
-### [documentManagement](docs/sdks/documentmanagement/README.md)
+### [Orders](docs/sdks/orders/README.md)
+
+* [getAccountAccountIdOrdersOrderId](docs/sdks/orders/README.md#getaccountaccountidordersorderid) - Get Order Details
+* [getOrders](docs/sdks/orders/README.md#getorders) - List Orders
+* [postAccountAccountIdOrdersOrderIdPay](docs/sdks/orders/README.md#postaccountaccountidordersorderidpay) - Pay for Order with Token
+* [postAccountAccountIdOrders](docs/sdks/orders/README.md#postaccountaccountidorders) - Create Order specifying an account
+* [postOrders](docs/sdks/orders/README.md#postorders) - Create Order
+* [postOrdersOrderIdAccessToken](docs/sdks/orders/README.md#postordersorderidaccesstoken) - Create New Access Token
+* [putAccountAccountIdOrdersOrderId](docs/sdks/orders/README.md#putaccountaccountidordersorderid) - Update Order
+* [putOrdersOrderIdReset](docs/sdks/orders/README.md#putordersorderidreset) - Reset Payment Attempts
+
+### [PaymentMethods](docs/sdks/paymentmethods/README.md)
+
+* [accountDeletePaymentMethod](docs/sdks/paymentmethods/README.md#accountdeletepaymentmethod) - Delete a Payment Method for a given Account
+* [accountGetPaymentMethod](docs/sdks/paymentmethods/README.md#accountgetpaymentmethod) - Retrieve a Payment Method for a given Account
+* [accountPostPaymentMethod](docs/sdks/paymentmethods/README.md#accountpostpaymentmethod) - Create Payment Method for a given Account
+* [accountPostVerifyMicrodeposits](docs/sdks/paymentmethods/README.md#accountpostverifymicrodeposits) - Verify micro-deposits on an ACH Payment Method for a given Account
+* [deletePaymentMethod](docs/sdks/paymentmethods/README.md#deletepaymentmethod) - Delete a Payment Method
+* [getPaymentMethod](docs/sdks/paymentmethods/README.md#getpaymentmethod) - Retrieve a Payment Method
+* [postPaymentMethod](docs/sdks/paymentmethods/README.md#postpaymentmethod) - Create Payment Method
+* [postVerifyMicrodeposits](docs/sdks/paymentmethods/README.md#postverifymicrodeposits) - Verify micro-deposits on an ACH Payment Method
+
+### [Payments](docs/sdks/payments/README.md)
+
+* [accountCapturePayment](docs/sdks/payments/README.md#accountcapturepayment) - Capture an existing authorization for a given Account
+* [accountGetPayment](docs/sdks/payments/README.md#accountgetpayment) - Get details of a specific Payment for a given Account
+* [accountGetPayments](docs/sdks/payments/README.md#accountgetpayments) - Get Payments for a given Account
+* [accountPostPayment](docs/sdks/payments/README.md#accountpostpayment) - Create Payment for a given Account
+* [accountRefundPayment](docs/sdks/payments/README.md#accountrefundpayment) - Refund a specific Payment for a given Account
+* [accountVoidPayment](docs/sdks/payments/README.md#accountvoidpayment) - Void a specific Payment for a given Account
+* [capturePayment](docs/sdks/payments/README.md#capturepayment) - Capture an existing authorization
+* [getPayment](docs/sdks/payments/README.md#getpayment) - Get details of a specific Payment
+* [getPayments](docs/sdks/payments/README.md#getpayments) - Get Payments
+* [postPayment](docs/sdks/payments/README.md#postpayment) - Create Payment
+* [refundPayment](docs/sdks/payments/README.md#refundpayment) - Refund a specific payment
+* [voidPayment](docs/sdks/payments/README.md#voidpayment) - Void a specific Payment
+
+### [Webhooks](docs/sdks/webhooks/README.md)
+
+* [accountDeleteWebhook](docs/sdks/webhooks/README.md#accountdeletewebhook) - Delete Webhook
+* [accountDisableWebhook](docs/sdks/webhooks/README.md#accountdisablewebhook) - Disable Webhook
+* [accountEnableWebhook](docs/sdks/webhooks/README.md#accountenablewebhook) - Enable Webhook
+* [accountGetListWebhooks](docs/sdks/webhooks/README.md#accountgetlistwebhooks) - List Webhooks
+* [accountGetRetrieveWebhook](docs/sdks/webhooks/README.md#accountgetretrievewebhook) - Retrieve Webhook
+* [accountPostCreateWebhook](docs/sdks/webhooks/README.md#accountpostcreatewebhook) - Create Webhook
+* [accountUpdateWebhook](docs/sdks/webhooks/README.md#accountupdatewebhook) - Update Webhook
+* [deleteOrganizationOrganizationIdWebhookWebhookId](docs/sdks/webhooks/README.md#deleteorganizationorganizationidwebhookwebhookid) - Delete Webhook
+* [getOrganizationOrganizationIdWebhook](docs/sdks/webhooks/README.md#getorganizationorganizationidwebhook) - List Webhooks
+* [getOrganizationOrganizationIdWebhookWebhookId](docs/sdks/webhooks/README.md#getorganizationorganizationidwebhookwebhookid) - Retrieve Webhook
+* [postOrganizationOrganizationIdWebhook](docs/sdks/webhooks/README.md#postorganizationorganizationidwebhook) - Create Webhook
+* [putOrganizationOrganizationIdWebhookWebhookId](docs/sdks/webhooks/README.md#putorganizationorganizationidwebhookwebhookid) - Update Webhook
+* [putOrganizationOrganizationIdWebhookWebhookIdDisable](docs/sdks/webhooks/README.md#putorganizationorganizationidwebhookwebhookiddisable) - Disable Webhook
+* [putOrganizationOrganizationIdWebhookWebhookIdEnable](docs/sdks/webhooks/README.md#putorganizationorganizationidwebhookwebhookidenable) - Enable Webhook
+
+### [Authentication](docs/sdks/authentication/README.md)
+
+* [createApplicationToken](docs/sdks/authentication/README.md#createapplicationtoken) - Create Application Token
+* [createUserToken](docs/sdks/authentication/README.md#createusertoken) - Create User Token
+* [deleteApplicationToken](docs/sdks/authentication/README.md#deleteapplicationtoken) - Delete Application Token
+* [queryApplicationToken](docs/sdks/authentication/README.md#queryapplicationtoken) - Query Application Tokens
+
+### [DocumentManagement](docs/sdks/documentmanagement/README.md)
 
 * [createDocumentRequest](docs/sdks/documentmanagement/README.md#createdocumentrequest) - Request Document
 * [deleteDocumentById](docs/sdks/documentmanagement/README.md#deletedocumentbyid) - Delete Document
@@ -140,7 +188,7 @@ try {
 * [uploadDocument](docs/sdks/documentmanagement/README.md#uploaddocument) - Upload Document
 * [uploadDocumentByToken](docs/sdks/documentmanagement/README.md#uploaddocumentbytoken) - Upload Document using Token
 
-### [merchantOnboarding](docs/sdks/merchantonboarding/README.md)
+### [MerchantOnboarding](docs/sdks/merchantonboarding/README.md)
 
 * [createOnboarding](docs/sdks/merchantonboarding/README.md#createonboarding) - Create Onboarding Application
 * [deleteOnboardingById](docs/sdks/merchantonboarding/README.md#deleteonboardingbyid) - Delete Onboarding
@@ -152,51 +200,7 @@ try {
 * [searchOnboardingByBusinessName](docs/sdks/merchantonboarding/README.md#searchonboardingbybusinessname) - Search Onboarding by Business Name
 * [searchOnboardingByOrganizationIdAndBusinessName](docs/sdks/merchantonboarding/README.md#searchonboardingbyorganizationidandbusinessname) - Search Onboarding by Organization identifier and Business Name
 
-### [orders](docs/sdks/orders/README.md)
-
-* [getAccountAccountIdOrdersOrderId](docs/sdks/orders/README.md#getaccountaccountidordersorderid) - Get Order Details
-* [getOrders](docs/sdks/orders/README.md#getorders) - List Orders
-* [postAccountAccountIdOrdersOrderIdPay](docs/sdks/orders/README.md#postaccountaccountidordersorderidpay) - Pay for Order with Token
-* [postAccountAccountIdOrders](docs/sdks/orders/README.md#postaccountaccountidorders) - Create Order specifying an account
-* [postOrders](docs/sdks/orders/README.md#postorders) - Create Order
-* [postOrdersOrderIdAccessToken](docs/sdks/orders/README.md#postordersorderidaccesstoken) - Create New Access Token
-* [putAccountAccountIdOrdersOrderId](docs/sdks/orders/README.md#putaccountaccountidordersorderid) - Update Order
-* [putOrdersOrderIdReset](docs/sdks/orders/README.md#putordersorderidreset) - Reset Payment Attempts
-
-### [paymentMethods](docs/sdks/paymentmethods/README.md)
-
-* [accountDeletePaymentMethod](docs/sdks/paymentmethods/README.md#accountdeletepaymentmethod) - Delete a Payment Method for a given Account
-* [accountGetPaymentMethod](docs/sdks/paymentmethods/README.md#accountgetpaymentmethod) - Retrieve a Payment Method for a given Account
-* [accountPostPaymentMethod](docs/sdks/paymentmethods/README.md#accountpostpaymentmethod) - Create Payment Method for a given Account
-* [accountPostVerifyMicrodeposits](docs/sdks/paymentmethods/README.md#accountpostverifymicrodeposits) - Verify micro-deposits on an ACH Payment Method for a given Account
-* [deletePaymentMethod](docs/sdks/paymentmethods/README.md#deletepaymentmethod) - Delete a Payment Method
-* [getPaymentMethod](docs/sdks/paymentmethods/README.md#getpaymentmethod) - Retrieve a Payment Method
-* [postPaymentMethod](docs/sdks/paymentmethods/README.md#postpaymentmethod) - Create Payment Method
-* [postVerifyMicrodeposits](docs/sdks/paymentmethods/README.md#postverifymicrodeposits) - Verify micro-deposits on an ACH Payment Method
-
-### [payments](docs/sdks/payments/README.md)
-
-* [accountCapturePayment](docs/sdks/payments/README.md#accountcapturepayment) - Capture an existing authorization for a given Account
-* [accountGetPayment](docs/sdks/payments/README.md#accountgetpayment) - Get details of a specific Payment for a given Account
-* [accountGetPayments](docs/sdks/payments/README.md#accountgetpayments) - Get Payments for a given Account
-* [accountPostPayment](docs/sdks/payments/README.md#accountpostpayment) - Create Payment for a given Account
-* [accountRefundPayment](docs/sdks/payments/README.md#accountrefundpayment) - Refund a specific Payment for a given Account
-* [accountVoidPayment](docs/sdks/payments/README.md#accountvoidpayment) - Void a specific Payment for a given Account
-* [capturePayment](docs/sdks/payments/README.md#capturepayment) - Capture an existing authorization
-* [getPayment](docs/sdks/payments/README.md#getpayment) - Get details of a specific Payment
-* [getPayments](docs/sdks/payments/README.md#getpayments) - Get Payments
-* [postPayment](docs/sdks/payments/README.md#postpayment) - Create Payment
-* [refundPayment](docs/sdks/payments/README.md#refundpayment) - Refund a specific payment
-* [voidPayment](docs/sdks/payments/README.md#voidpayment) - Void a specific Payment
-
-### [reporting](docs/sdks/reporting/README.md)
-
-* [deleteReport](docs/sdks/reporting/README.md#deletereport) - Delete Report
-* [getReport](docs/sdks/reporting/README.md#getreport) - Download Report
-* [getReportDetails](docs/sdks/reporting/README.md#getreportdetails) - Get Report Details
-* [getReports](docs/sdks/reporting/README.md#getreports) - List Reports
-
-### [underwritingWorkflow](docs/sdks/underwritingworkflow/README.md)
+### [UnderwritingWorkflow](docs/sdks/underwritingworkflow/README.md)
 
 * [deleteWorkflowById](docs/sdks/underwritingworkflow/README.md#deleteworkflowbyid) - Delete Workflow
 * [disableWorkflowById](docs/sdks/underwritingworkflow/README.md#disableworkflowbyid) - Disable Workflow
@@ -207,22 +211,24 @@ try {
 * [putOrganizationOrganizationIdOnboardingWorkflowWorkflowId](docs/sdks/underwritingworkflow/README.md#putorganizationorganizationidonboardingworkflowworkflowid) - Update Workflow
 * [setDefaultWorkflowById](docs/sdks/underwritingworkflow/README.md#setdefaultworkflowbyid) - Set Default Workflow
 
-### [webhooks](docs/sdks/webhooks/README.md)
+### [AdminTools](docs/sdks/admintools/README.md)
 
-* [accountDeleteWebhook](docs/sdks/webhooks/README.md#accountdeletewebhook) - Delete Webhook
-* [accountDisableWebhook](docs/sdks/webhooks/README.md#accountdisablewebhook) - Disable Webhook
-* [accountEnableWebhook](docs/sdks/webhooks/README.md#accountenablewebhook) - Enable Webhook
-* [accountGetListWebhooks](docs/sdks/webhooks/README.md#accountgetlistwebhooks) - List Webhooks
-* [accountGetRetrieveWebhook](docs/sdks/webhooks/README.md#accountgetretrievewebhook) - Retrieve Webhook
-* [accountPostCreateWebhook](docs/sdks/webhooks/README.md#accountpostcreatewebhook) - Create Webhook
-* [accountUpdateWebhook](docs/sdks/webhooks/README.md#accountupdatewebhook) - Update Webhook
-* [deleteOrganizationOrganizationIdWebhookWebhookId](docs/sdks/webhooks/README.md#deleteorganizationorganizationidwebhookwebhookid) - Delete Webhook
-* [getOrganizationOrganizationIdWebhook](docs/sdks/webhooks/README.md#getorganizationorganizationidwebhook) - List Webhooks
-* [getOrganizationOrganizationIdWebhookWebhookId](docs/sdks/webhooks/README.md#getorganizationorganizationidwebhookwebhookid) - Retrieve Webhook
-* [postOrganizationOrganizationIdWebhook](docs/sdks/webhooks/README.md#postorganizationorganizationidwebhook) - Create Webhook
-* [putOrganizationOrganizationIdWebhookWebhookId](docs/sdks/webhooks/README.md#putorganizationorganizationidwebhookwebhookid) - Update Webhook
-* [putOrganizationOrganizationIdWebhookWebhookIdDisable](docs/sdks/webhooks/README.md#putorganizationorganizationidwebhookwebhookiddisable) - Disable Webhook
-* [putOrganizationOrganizationIdWebhookWebhookIdEnable](docs/sdks/webhooks/README.md#putorganizationorganizationidwebhookwebhookidenable) - Enable Webhook
+* [getListNotes](docs/sdks/admintools/README.md#getlistnotes) - List Notes
+* [postCreateNotes](docs/sdks/admintools/README.md#postcreatenotes) - Add Note
+* [putOrganizationOrganizationIdOnboardingOnboardingIdRecheck](docs/sdks/admintools/README.md#putorganizationorganizationidonboardingonboardingidrecheck) - Process Workflow
+* [putOrganizationOrganizationIdOnboardingOnboardingIdRetryRule](docs/sdks/admintools/README.md#putorganizationorganizationidonboardingonboardingidretryrule) - Process Verification
+* [putOrganizationOrganizationIdOnboardingOnboardingIdStatus](docs/sdks/admintools/README.md#putorganizationorganizationidonboardingonboardingidstatus) - Update Onboarding Status
+
+### [Reporting](docs/sdks/reporting/README.md)
+
+* [deleteReport](docs/sdks/reporting/README.md#deletereport) - Delete Report
+* [getReport](docs/sdks/reporting/README.md#getreport) - Download Report
+* [getReportDetails](docs/sdks/reporting/README.md#getreportdetails) - Get Report Details
+* [getReports](docs/sdks/reporting/README.md#getreports) - List Reports
+
+### [APIHealthCheck](docs/sdks/apihealthcheck/README.md)
+
+* [getStatus](docs/sdks/apihealthcheck/README.md#getstatus) - Retrieve Status
 <!-- End SDK Available Operations -->
 
 

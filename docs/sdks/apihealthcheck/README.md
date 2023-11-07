@@ -1,5 +1,5 @@
 # APIHealthCheck
-(*apiHealthCheck*)
+
 
 ### Available Operations
 
@@ -17,20 +17,20 @@ A method in which you can check wether or not the Exact Payments service is oper
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
     $response = $sdk->apiHealthCheck->getStatus();
 
-    if ($response->getStatus200ApplicationJSONObject !== null) {
+    if ($response->object !== null) {
         // handle response
     }
 } catch (Exception $e) {

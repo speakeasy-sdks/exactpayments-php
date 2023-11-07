@@ -1,5 +1,5 @@
 # AccountManagement
-(*accountManagement*)
+
 
 ### Available Operations
 
@@ -24,21 +24,20 @@ Please [read our guide](./docs/ExactJS-ApplePay) on the setup steps required bef
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\AccountRegisterApplePayDomainsRequest;
-use \TheLogicStudio\ExactPayments\Models\Shared\ApplePayDomains;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new AccountRegisterApplePayDomainsRequest();
-    $request->applePayDomains = new ApplePayDomains();
+    $request = new Operations\AccountRegisterApplePayDomainsRequest();
+    $request->applePayDomains = new Shared\ApplePayDomains();
     $request->applePayDomains->domains = [
         'string',
     ];
@@ -78,24 +77,24 @@ Retrieve a list of accounts underneath an organization.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetOrganizationOrganizationIdAccountRequest();
+    $request = new Operations\GetOrganizationOrganizationIdAccountRequest();
     $request->organizationId = 'string';
 
     $response = $sdk->accountManagement->getOrganizationOrganizationIdAccount($request);
 
-    if ($response->accountResponses !== null) {
+    if ($response->classes !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -127,25 +126,25 @@ Retrieve a segmented list of merchant accounts under a parent organization that 
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountSearchRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetOrganizationOrganizationIdAccountSearchRequest();
+    $request = new Operations\GetOrganizationOrganizationIdAccountSearchRequest();
     $request->organizationId = 'string';
     $request->q = 'string';
 
     $response = $sdk->accountManagement->getOrganizationOrganizationIdAccountSearch($request);
 
-    if ($response->accountResponses !== null) {
+    if ($response->classes !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -177,19 +176,19 @@ Retrieve a list of properties associated with a specific merchant account by ID.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdAccountAccountIdRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetOrganizationOrganizationIdAccountAccountIdRequest();
+    $request = new Operations\GetOrganizationOrganizationIdAccountAccountIdRequest();
     $request->accountId = 'string';
     $request->organizationId = 'string';
 
@@ -227,19 +226,19 @@ This endpoint allows you to retrieve a list of your domains which are registered
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\ListApplePayDomainsRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListApplePayDomainsRequest();
+    $request = new Operations\ListApplePayDomainsRequest();
     $request->accountId = 'string';
 
     $response = $sdk->accountManagement->listApplePayDomains($request);
@@ -276,23 +275,21 @@ Update a specific merchant account by ID.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdAccountAccountIdRequest;
-use \TheLogicStudio\ExactPayments\Models\Shared\AccountRequest;
-use \TheLogicStudio\ExactPayments\Models\Shared\AccountRequestAddress;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PutOrganizationOrganizationIdAccountAccountIdRequest();
-    $request->accountRequest = new AccountRequest();
-    $request->accountRequest->address = new AccountRequestAddress();
+    $request = new Operations\PutOrganizationOrganizationIdAccountAccountIdRequest();
+    $request->accountRequest = new Shared\AccountRequest();
+    $request->accountRequest->address = new Shared\Address();
     $request->accountRequest->address->city = 'Ottawa';
     $request->accountRequest->address->country = 'Canada';
     $request->accountRequest->address->line1 = '1st street';

@@ -97,10 +97,10 @@ class AccountRegisterApplePayDomainsResponse
      * The request body contains a malformed request or is incomplete.
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountRegisterApplePayDomains400ApplicationJSON $accountRegisterApplePayDomains400ApplicationJSONObject
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountRegisterApplePayDomainsResponseBody $object
      */
 	
-    public ?AccountRegisterApplePayDomains400ApplicationJSON $accountRegisterApplePayDomains400ApplicationJSONObject = null;
+    public ?AccountRegisterApplePayDomainsResponseBody $object = null;
     
 	public function __construct()
 	{
@@ -112,6 +112,6 @@ class AccountRegisterApplePayDomainsResponse
 		$this->statusCode = 0;
 		$this->rawResponse = null;
 		$this->unauthorized = null;
-		$this->accountRegisterApplePayDomains400ApplicationJSONObject = null;
+		$this->object = null;
 	}
 }

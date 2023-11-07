@@ -1,5 +1,5 @@
 # PaymentMethods
-(*paymentMethods*)
+
 
 ## Overview
 
@@ -28,19 +28,19 @@ API to allow an Organization to delete a Payment Method for a merchant (accountI
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\AccountDeletePaymentMethodRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new AccountDeletePaymentMethodRequest();
+    $request = new Operations\AccountDeletePaymentMethodRequest();
     $request->accountId = 'string';
     $request->tokenId = 'string';
 
@@ -80,19 +80,19 @@ Please note that the Organization(partner) needs to authenticate using the partn
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentMethodRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new AccountGetPaymentMethodRequest();
+    $request = new Operations\AccountGetPaymentMethodRequest();
     $request->accountId = 'string';
     $request->tokenId = 'string';
 
@@ -134,19 +134,19 @@ If you are storing ACH related account information, then the data will only be s
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\AccountPostPaymentMethodRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new AccountPostPaymentMethodRequest();
+    $request = new Operations\AccountPostPaymentMethodRequest();
     $request->requestBody = 'string';
     $request->accountId = 'string';
 
@@ -188,21 +188,20 @@ The amounts can then be submitted through this endpoint to complete account veri
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\AccountPostVerifyMicrodepositsRequest;
-use \TheLogicStudio\ExactPayments\Models\Shared\MicroDepositVerificationRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new AccountPostVerifyMicrodepositsRequest();
-    $request->microDepositVerificationRequest = new MicroDepositVerificationRequest();
+    $request = new Operations\AccountPostVerifyMicrodepositsRequest();
+    $request->microDepositVerificationRequest = new Shared\MicroDepositVerificationRequest();
     $request->microDepositVerificationRequest->amount1 = 768582;
     $request->microDepositVerificationRequest->amount2 = 195872;
     $request->accountId = 'string';
@@ -242,19 +241,19 @@ API to allow a merchant to delete a Payment Method.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\DeletePaymentMethodRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new DeletePaymentMethodRequest();
+    $request = new Operations\DeletePaymentMethodRequest();
     $request->tokenId = 'string';
 
     $response = $sdk->paymentMethods->deletePaymentMethod($request);
@@ -291,19 +290,19 @@ API to allow a merchant to retrieve a specific Payment Method.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetPaymentMethodRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetPaymentMethodRequest();
+    $request = new Operations\GetPaymentMethodRequest();
     $request->tokenId = 'string';
 
     $response = $sdk->paymentMethods->getPaymentMethod($request);
@@ -344,13 +343,13 @@ If you are storing ACH related account information, then the data will only be s
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
@@ -395,21 +394,20 @@ The amounts can then be submitted through this endpoint to complete account veri
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\PostVerifyMicrodepositsRequest;
-use \TheLogicStudio\ExactPayments\Models\Shared\MicroDepositVerificationRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PostVerifyMicrodepositsRequest();
-    $request->microDepositVerificationRequest = new MicroDepositVerificationRequest();
+    $request = new Operations\PostVerifyMicrodepositsRequest();
+    $request->microDepositVerificationRequest = new Shared\MicroDepositVerificationRequest();
     $request->microDepositVerificationRequest->amount1 = 849170;
     $request->microDepositVerificationRequest->amount2 = 669926;
     $request->paymentToken = 'string';

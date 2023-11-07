@@ -12,7 +12,7 @@ use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class PostCreateNotesRequest
 {
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?PostCreateNotesRequestBodyInput $requestBody = null;
+    public ?PostCreateNotesRequestBody $requestBody = null;
     
     /**
      * The Onboarding Application identifier.

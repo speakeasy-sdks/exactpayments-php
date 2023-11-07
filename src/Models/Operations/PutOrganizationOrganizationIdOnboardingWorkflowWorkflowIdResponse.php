@@ -90,10 +90,10 @@ class PutOrganizationOrganizationIdOnboardingWorkflowWorkflowIdResponse
      * The request body contains a malformed request or is incomplete.
      * 
      * 
-     * @var mixed $putOrganizationOrganizationIdOnboardingWorkflowWorkflowId400ApplicationJSONOneOf
+     * @var mixed $oneOf
      */
 	
-    public mixed $putOrganizationOrganizationIdOnboardingWorkflowWorkflowId400ApplicationJSONOneOf = null;
+    public mixed $oneOf = null;
     
 	public function __construct()
 	{
@@ -104,6 +104,6 @@ class PutOrganizationOrganizationIdOnboardingWorkflowWorkflowIdResponse
 		$this->statusCode = 0;
 		$this->rawResponse = null;
 		$this->unauthorized = null;
-		$this->putOrganizationOrganizationIdOnboardingWorkflowWorkflowId400ApplicationJSONOneOf = null;
+		$this->oneOf = null;
 	}
 }

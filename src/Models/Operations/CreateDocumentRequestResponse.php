@@ -61,10 +61,10 @@ class CreateDocumentRequestResponse
     /**
      * **Created**
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\OnboardingDocumentRequestCreateOutput $onboardingDocumentRequestCreate
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\OnboardingDocumentRequestCreate $onboardingDocumentRequestCreate
      */
 	
-    public ?\TheLogicStudio\ExactPayments\Models\Shared\OnboardingDocumentRequestCreateOutput $onboardingDocumentRequestCreate = null;
+    public ?\TheLogicStudio\ExactPayments\Models\Shared\OnboardingDocumentRequestCreate $onboardingDocumentRequestCreate = null;
     
     /**
      * HTTP response status code for this operation

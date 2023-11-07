@@ -129,10 +129,10 @@ class CreateUserTokenResponse
      * 
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\UserTokenOutput $userToken
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\UserToken $userToken
      */
 	
-    public ?\TheLogicStudio\ExactPayments\Models\Shared\UserTokenOutput $userToken = null;
+    public ?\TheLogicStudio\ExactPayments\Models\Shared\UserToken $userToken = null;
     
 	public function __construct()
 	{

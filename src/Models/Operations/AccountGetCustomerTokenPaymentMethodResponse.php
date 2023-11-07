@@ -20,14 +20,6 @@ class AccountGetCustomerTokenPaymentMethodResponse
     public string $contentType;
     
     /**
-     * OK
-     * 
-     * @var ?array<mixed> $paymentMethods
-     */
-	
-    public ?array $paymentMethods = null;
-    
-    /**
      * HTTP response status code for this operation
      * 
      * @var int $statusCode
@@ -43,11 +35,19 @@ class AccountGetCustomerTokenPaymentMethodResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
+    /**
+     * OK
+     * 
+     * @var ?array<mixed> $anies
+     */
+	
+    public ?array $anies = null;
+    
 	public function __construct()
 	{
 		$this->contentType = "";
-		$this->paymentMethods = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
+		$this->anies = null;
 	}
 }

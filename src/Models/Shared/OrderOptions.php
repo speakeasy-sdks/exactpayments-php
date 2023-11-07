@@ -24,12 +24,12 @@ class OrderOptions
     /**
      * Used to classify the style of transaction being performed. 2 = Recurring, 3 = Installment.
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\OrderOptionsEcommerceFlag $ecommerceFlag
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\EcommerceFlag $ecommerceFlag
      */
 	#[\JMS\Serializer\Annotation\SerializedName('ecommerceFlag')]
-    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\OrderOptionsEcommerceFlag>')]
+    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\EcommerceFlag>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?OrderOptionsEcommerceFlag $ecommerceFlag = null;
+    public ?EcommerceFlag $ecommerceFlag = null;
     
     /**
      * Tracking number for the Order.

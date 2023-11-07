@@ -12,20 +12,75 @@ namespace TheLogicStudio\ExactPayments\Models\Operations;
 class AccountRefundPaymentResponse
 {
     /**
+     * Payment Created
+     * 
+     * @var mixed $twoHundredAndOneApplicationJsonPayment
+     */
+	
+    public mixed $twoHundredAndOneApplicationJsonPayment = null;
+    
+    /**
+     * **Bad Request**\
+     * 
+     * When there are errors in the payload.
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountRefundPaymentResponseBody $fourHundredApplicationJsonObject
+     */
+	
+    public ?AccountRefundPaymentResponseBody $fourHundredApplicationJsonObject = null;
+    
+    /**
+     * **Access Denied**\
+     * 
+     * Credentials supplied do not grant access to the requested resource.
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountRefundPaymentPaymentsResponseBody $fourHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?AccountRefundPaymentPaymentsResponseBody $fourHundredAndThreeApplicationJsonObject = null;
+    
+    /**
+     * **Not Found**\
+     * 
+     * \
+     * When you'll get `401 Unauthorized` response:
+     * - When there are no Accounts/Orders/Payment found.
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountRefundPaymentPaymentsResponseResponseBody $fourHundredAndFourApplicationJsonObject
+     */
+	
+    public ?AccountRefundPaymentPaymentsResponseResponseBody $fourHundredAndFourApplicationJsonObject = null;
+    
+    /**
+     * **Internal Server Error**
+     * 
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountRefundPaymentPaymentsResponse500ResponseBody $fiveHundredApplicationJsonObject
+     */
+	
+    public ?AccountRefundPaymentPaymentsResponse500ResponseBody $fiveHundredApplicationJsonObject = null;
+    
+    /**
+     * **Service Unavailable**
+     * 
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountRefundPaymentPaymentsResponse503ResponseBody $fiveHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?AccountRefundPaymentPaymentsResponse503ResponseBody $fiveHundredAndThreeApplicationJsonObject = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
      */
 	
     public string $contentType;
-    
-    /**
-     * Payment Created
-     * 
-     * @var mixed $payment
-     */
-	
-    public mixed $payment = null;
     
     /**
      * HTTP response status code for this operation
@@ -43,71 +98,16 @@ class AccountRefundPaymentResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
-    /**
-     * **Bad Request**\
-     * 
-     * When there are errors in the payload.
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountRefundPayment400ApplicationJSON $accountRefundPayment400ApplicationJSONObject
-     */
-	
-    public ?AccountRefundPayment400ApplicationJSON $accountRefundPayment400ApplicationJSONObject = null;
-    
-    /**
-     * **Access Denied**\
-     * 
-     * Credentials supplied do not grant access to the requested resource.
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountRefundPayment403ApplicationJSON $accountRefundPayment403ApplicationJSONObject
-     */
-	
-    public ?AccountRefundPayment403ApplicationJSON $accountRefundPayment403ApplicationJSONObject = null;
-    
-    /**
-     * **Not Found**\
-     * 
-     * \
-     * When you'll get `401 Unauthorized` response:
-     * - When there are no Accounts/Orders/Payment found.
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountRefundPayment404ApplicationJSON $accountRefundPayment404ApplicationJSONObject
-     */
-	
-    public ?AccountRefundPayment404ApplicationJSON $accountRefundPayment404ApplicationJSONObject = null;
-    
-    /**
-     * **Internal Server Error**
-     * 
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountRefundPayment500ApplicationJSON $accountRefundPayment500ApplicationJSONObject
-     */
-	
-    public ?AccountRefundPayment500ApplicationJSON $accountRefundPayment500ApplicationJSONObject = null;
-    
-    /**
-     * **Service Unavailable**
-     * 
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountRefundPayment503ApplicationJSON $accountRefundPayment503ApplicationJSONObject
-     */
-	
-    public ?AccountRefundPayment503ApplicationJSON $accountRefundPayment503ApplicationJSONObject = null;
-    
 	public function __construct()
 	{
+		$this->twoHundredAndOneApplicationJsonPayment = null;
+		$this->fourHundredApplicationJsonObject = null;
+		$this->fourHundredAndThreeApplicationJsonObject = null;
+		$this->fourHundredAndFourApplicationJsonObject = null;
+		$this->fiveHundredApplicationJsonObject = null;
+		$this->fiveHundredAndThreeApplicationJsonObject = null;
 		$this->contentType = "";
-		$this->payment = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->accountRefundPayment400ApplicationJSONObject = null;
-		$this->accountRefundPayment403ApplicationJSONObject = null;
-		$this->accountRefundPayment404ApplicationJSONObject = null;
-		$this->accountRefundPayment500ApplicationJSONObject = null;
-		$this->accountRefundPayment503ApplicationJSONObject = null;
 	}
 }

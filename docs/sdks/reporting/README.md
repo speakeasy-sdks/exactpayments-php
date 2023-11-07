@@ -1,5 +1,5 @@
 # Reporting
-(*reporting*)
+
 
 ### Available Operations
 
@@ -20,19 +20,19 @@ Deletes an specific Report for the given Report identifier.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\DeleteReportRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new DeleteReportRequest();
+    $request = new Operations\DeleteReportRequest();
     $request->reportId = 'string';
 
     $response = $sdk->reporting->deleteReport($request);
@@ -69,27 +69,26 @@ Download report query results in JSON or CSV format.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetReportRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetReportFormat;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetReportRequest();
-    $request->format = GetReportFormat::Csv;
+    $request = new Operations\GetReportRequest();
+    $request->format = Operations\Format::Csv;
     $request->reportId = 'string';
     $request->select = 'string';
 
     $response = $sdk->reporting->getReport($request);
 
-    if ($response->reportDetailsResponses !== null) {
+    if ($response->anies !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -121,19 +120,19 @@ Retrieves the details of a report query that a user has previously created.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetReportDetailsRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetReportDetailsRequest();
+    $request = new Operations\GetReportDetailsRequest();
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = '-name';
@@ -141,7 +140,7 @@ try {
 
     $response = $sdk->reporting->getReportDetails($request);
 
-    if ($response->reportDetailsResponses !== null) {
+    if ($response->anies !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -173,26 +172,26 @@ Retrieves a list of report queries that a user has previously created.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetReportsRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetReportsRequest();
+    $request = new Operations\GetReportsRequest();
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = '-name';
 
     $response = $sdk->reporting->getReports($request);
 
-    if ($response->reportQueryResponses !== null) {
+    if ($response->classes !== null) {
         // handle response
     }
 } catch (Exception $e) {

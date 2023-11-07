@@ -17,9 +17,9 @@ class PaymentAchSchema
     public ?PaymentAchSchemaAch $ach = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('billingDetails')]
-    #[\JMS\Serializer\Annotation\Type('TheLogicStudio\ExactPayments\Models\Shared\PaymentAchSchemaBillingDetails')]
+    #[\JMS\Serializer\Annotation\Type('TheLogicStudio\ExactPayments\Models\Shared\BillingDetails')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?PaymentAchSchemaBillingDetails $billingDetails = null;
+    public ?BillingDetails $billingDetails = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('createdAt')]
     #[\JMS\Serializer\Annotation\Type('string')]

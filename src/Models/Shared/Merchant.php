@@ -69,12 +69,12 @@ class Merchant
     /**
      * Entity type of the Business.
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\MerchantEntityType $entityType
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\EntityType $entityType
      */
 	#[\JMS\Serializer\Annotation\SerializedName('entityType')]
-    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\MerchantEntityType>')]
+    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\EntityType>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?MerchantEntityType $entityType = null;
+    public ?EntityType $entityType = null;
     
     /**
      * Business Established Date.
@@ -169,12 +169,12 @@ class Merchant
     /**
      * Whether the Organization or Account has agreed to the Terms and Conditions. This field will be available in response only when the termsNConditions were sent to exact payments when the Onboarding Application was created.
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\MerchantTermsNConditions $termsNConditions
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\TermsNConditions $termsNConditions
      */
 	#[\JMS\Serializer\Annotation\SerializedName('termsNConditions')]
-    #[\JMS\Serializer\Annotation\Type('TheLogicStudio\ExactPayments\Models\Shared\MerchantTermsNConditions')]
+    #[\JMS\Serializer\Annotation\Type('TheLogicStudio\ExactPayments\Models\Shared\TermsNConditions')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?MerchantTermsNConditions $termsNConditions = null;
+    public ?TermsNConditions $termsNConditions = null;
     
     /**
      * Twitter link of the Business.

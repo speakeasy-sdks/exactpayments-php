@@ -56,10 +56,10 @@ class GetOrganizationOrganizationIdWebhookResponse
     /**
      * The webhooks list.
      * 
-     * @var ?array<\TheLogicStudio\ExactPayments\Models\Shared\WebhookResponse> $webhookResponses
+     * @var ?array<\TheLogicStudio\ExactPayments\Models\Shared\WebhookResponse> $classes
      */
 	
-    public ?array $webhookResponses = null;
+    public ?array $classes = null;
     
 	public function __construct()
 	{
@@ -68,6 +68,6 @@ class GetOrganizationOrganizationIdWebhookResponse
 		$this->internalServerError = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->webhookResponses = null;
+		$this->classes = null;
 	}
 }

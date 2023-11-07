@@ -48,15 +48,17 @@ class DocumentManagement
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
+        $statusCode = $httpResponse->getStatusCode();
+
         $response = new \TheLogicStudio\ExactPayments\Models\Operations\CreateDocumentRequestResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
+        $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
         if ($httpResponse->getStatusCode() === 201) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->onboardingDocumentRequestCreate = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Shared\OnboardingDocumentRequestCreateOutput', 'json');
+                $response->onboardingDocumentRequestCreate = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Shared\OnboardingDocumentRequestCreate', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 400) {
@@ -112,8 +114,10 @@ class DocumentManagement
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
+        $statusCode = $httpResponse->getStatusCode();
+
         $response = new \TheLogicStudio\ExactPayments\Models\Operations\DeleteDocumentByIdResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
+        $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
@@ -156,8 +160,10 @@ class DocumentManagement
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
+        $statusCode = $httpResponse->getStatusCode();
+
         $response = new \TheLogicStudio\ExactPayments\Models\Operations\DeleteDocumentRequestByIdResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
+        $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
@@ -211,14 +217,16 @@ class DocumentManagement
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
+        $statusCode = $httpResponse->getStatusCode();
+
         $response = new \TheLogicStudio\ExactPayments\Models\Operations\GetDocumentByIdResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
+        $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/zip')) {
-                $response->getDocumentById200ApplicationZipBinaryString = $httpResponse->getBody()->getContents();
+                $response->bytes = $httpResponse->getBody()->getContents();
             }
         }
         else if ($httpResponse->getStatusCode() === 401) {
@@ -273,8 +281,10 @@ class DocumentManagement
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
+        $statusCode = $httpResponse->getStatusCode();
+
         $response = new \TheLogicStudio\ExactPayments\Models\Operations\GetDocumentsResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
+        $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
@@ -338,14 +348,16 @@ class DocumentManagement
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
+        $statusCode = $httpResponse->getStatusCode();
+
         $response = new \TheLogicStudio\ExactPayments\Models\Operations\GetDownloadAllDocumentsResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
+        $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/zip')) {
-                $response->getDownloadAllDocuments200ApplicationZipBinaryString = $httpResponse->getBody()->getContents();
+                $response->bytes = $httpResponse->getBody()->getContents();
             }
         }
         else if ($httpResponse->getStatusCode() === 401) {
@@ -400,8 +412,10 @@ class DocumentManagement
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
+        $statusCode = $httpResponse->getStatusCode();
+
         $response = new \TheLogicStudio\ExactPayments\Models\Operations\GetListDocumentRequestsResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
+        $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
@@ -464,8 +478,10 @@ class DocumentManagement
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
+        $statusCode = $httpResponse->getStatusCode();
+
         $response = new \TheLogicStudio\ExactPayments\Models\Operations\GetRetrieveDocumentResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
+        $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
@@ -522,8 +538,10 @@ class DocumentManagement
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
+        $statusCode = $httpResponse->getStatusCode();
+
         $response = new \TheLogicStudio\ExactPayments\Models\Operations\GetRetrieveDocumentRequestResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
+        $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
@@ -584,15 +602,17 @@ class DocumentManagement
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
+        $statusCode = $httpResponse->getStatusCode();
+
         $response = new \TheLogicStudio\ExactPayments\Models\Operations\ListDocumentRequestByTokenResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
+        $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->listDocumentRequestByToken200ApplicationJSONObjects = $serializer->deserialize((string)$httpResponse->getBody(), 'array<TheLogicStudio\ExactPayments\Models\Operations\ListDocumentRequestByToken200ApplicationJSON>', 'json');
+                $response->classes = $serializer->deserialize((string)$httpResponse->getBody(), 'array<TheLogicStudio\ExactPayments\Models\Operations\ResponseBody>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 401) {
@@ -641,8 +661,10 @@ class DocumentManagement
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
+        $statusCode = $httpResponse->getStatusCode();
+
         $response = new \TheLogicStudio\ExactPayments\Models\Operations\PutUpdateDocumentTypeByIdResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
+        $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
@@ -708,8 +730,10 @@ class DocumentManagement
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
+        $statusCode = $httpResponse->getStatusCode();
+
         $response = new \TheLogicStudio\ExactPayments\Models\Operations\UpdateDocumentRequestResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
+        $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
@@ -772,8 +796,10 @@ class DocumentManagement
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
+        $statusCode = $httpResponse->getStatusCode();
+
         $response = new \TheLogicStudio\ExactPayments\Models\Operations\UploadDocumentResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
+        $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
@@ -861,8 +887,10 @@ class DocumentManagement
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
+        $statusCode = $httpResponse->getStatusCode();
+
         $response = new \TheLogicStudio\ExactPayments\Models\Operations\UploadDocumentByTokenResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
+        $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         

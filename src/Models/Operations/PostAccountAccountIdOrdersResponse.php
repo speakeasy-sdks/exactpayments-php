@@ -12,6 +12,48 @@ namespace TheLogicStudio\ExactPayments\Models\Operations;
 class PostAccountAccountIdOrdersResponse
 {
     /**
+     * **Bad Request**\
+     * 
+     * When there are errors in the payload
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersResponseBody $fourHundredApplicationJsonObject
+     */
+	
+    public ?PostAccountAccountIdOrdersResponseBody $fourHundredApplicationJsonObject = null;
+    
+    /**
+     * **Access Denied**\
+     * 
+     * Credentials supplied do not grant access to the requested resource.
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrdersResponseBody $fourHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?PostAccountAccountIdOrdersOrdersResponseBody $fourHundredAndThreeApplicationJsonObject = null;
+    
+    /**
+     * **Internal Server Error**
+     * 
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrdersResponseResponseBody $fiveHundredApplicationJsonObject
+     */
+	
+    public ?PostAccountAccountIdOrdersOrdersResponseResponseBody $fiveHundredApplicationJsonObject = null;
+    
+    /**
+     * **Service Unavailable**
+     * 
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrdersResponse503ResponseBody $fiveHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?PostAccountAccountIdOrdersOrdersResponse503ResponseBody $fiveHundredAndThreeApplicationJsonObject = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -43,57 +85,15 @@ class PostAccountAccountIdOrdersResponse
 	
     public ?\TheLogicStudio\ExactPayments\Models\Shared\OrderResponse $orderResponse = null;
     
-    /**
-     * **Bad Request**\
-     * 
-     * When there are errors in the payload
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrders400ApplicationJSON $postAccountAccountIdOrders400ApplicationJSONObject
-     */
-	
-    public ?PostAccountAccountIdOrders400ApplicationJSON $postAccountAccountIdOrders400ApplicationJSONObject = null;
-    
-    /**
-     * **Access Denied**\
-     * 
-     * Credentials supplied do not grant access to the requested resource.
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrders403ApplicationJSON $postAccountAccountIdOrders403ApplicationJSONObject
-     */
-	
-    public ?PostAccountAccountIdOrders403ApplicationJSON $postAccountAccountIdOrders403ApplicationJSONObject = null;
-    
-    /**
-     * **Internal Server Error**
-     * 
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrders500ApplicationJSON $postAccountAccountIdOrders500ApplicationJSONObject
-     */
-	
-    public ?PostAccountAccountIdOrders500ApplicationJSON $postAccountAccountIdOrders500ApplicationJSONObject = null;
-    
-    /**
-     * **Service Unavailable**
-     * 
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrders503ApplicationJSON $postAccountAccountIdOrders503ApplicationJSONObject
-     */
-	
-    public ?PostAccountAccountIdOrders503ApplicationJSON $postAccountAccountIdOrders503ApplicationJSONObject = null;
-    
 	public function __construct()
 	{
+		$this->fourHundredApplicationJsonObject = null;
+		$this->fourHundredAndThreeApplicationJsonObject = null;
+		$this->fiveHundredApplicationJsonObject = null;
+		$this->fiveHundredAndThreeApplicationJsonObject = null;
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
 		$this->orderResponse = null;
-		$this->postAccountAccountIdOrders400ApplicationJSONObject = null;
-		$this->postAccountAccountIdOrders403ApplicationJSONObject = null;
-		$this->postAccountAccountIdOrders500ApplicationJSONObject = null;
-		$this->postAccountAccountIdOrders503ApplicationJSONObject = null;
 	}
 }

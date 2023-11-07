@@ -20,12 +20,12 @@ class Dwolla
     /**
      * The certification status of the Beneficial Owner (Principal) with Dwolla. This field will be populated when the Beneficial Owner's certification status is set or updated in Dwolla's system.
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\DwollaBeneficialOwnershipCertifyStatus $beneficialOwnershipCertifyStatus
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\BeneficialOwnershipCertifyStatus $beneficialOwnershipCertifyStatus
      */
 	#[\JMS\Serializer\Annotation\SerializedName('beneficialOwnershipCertifyStatus')]
-    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\DwollaBeneficialOwnershipCertifyStatus>')]
+    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\BeneficialOwnershipCertifyStatus>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?DwollaBeneficialOwnershipCertifyStatus $beneficialOwnershipCertifyStatus = null;
+    public ?BeneficialOwnershipCertifyStatus $beneficialOwnershipCertifyStatus = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('businessClassification')]
     #[\JMS\Serializer\Annotation\Type('TheLogicStudio\ExactPayments\Models\Shared\BusinessClassification')]
@@ -65,12 +65,12 @@ class Dwolla
     /**
      * Status of Onboarding with Dwolla when ACH Payment is enabled for the onboarded Account. When ACH Payment enablement is not needed for the Account or the onboarded entity is an Organization then the status will be updated as `na` (Not Applicable).
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\DwollaStatus $status
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\Status $status
      */
 	#[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\DwollaStatus>')]
+    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\Status>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?DwollaStatus $status = null;
+    public ?Status $status = null;
     
     /**
      * The customer type as provisioned by Dwolla for the Account when the merchant is Onboarded with Dwolla.

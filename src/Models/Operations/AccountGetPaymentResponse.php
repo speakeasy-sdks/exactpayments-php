@@ -12,20 +12,64 @@ namespace TheLogicStudio\ExactPayments\Models\Operations;
 class AccountGetPaymentResponse
 {
     /**
+     * Payment Created
+     * 
+     * @var mixed $twoHundredApplicationJsonPayment
+     */
+	
+    public mixed $twoHundredApplicationJsonPayment = null;
+    
+    /**
+     * **Access Denied**\
+     * 
+     * Credentials supplied do not grant access to the requested resource.
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentResponseBody $fourHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?AccountGetPaymentResponseBody $fourHundredAndThreeApplicationJsonObject = null;
+    
+    /**
+     * **Not Found**\
+     * 
+     * \
+     * When you'll get `401 Unauthorized` response:
+     * - When there are no Accounts/Orders/Payment found.
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentPaymentsResponseBody $fourHundredAndFourApplicationJsonObject
+     */
+	
+    public ?AccountGetPaymentPaymentsResponseBody $fourHundredAndFourApplicationJsonObject = null;
+    
+    /**
+     * **Internal Server Error**
+     * 
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentPaymentsResponseResponseBody $fiveHundredApplicationJsonObject
+     */
+	
+    public ?AccountGetPaymentPaymentsResponseResponseBody $fiveHundredApplicationJsonObject = null;
+    
+    /**
+     * **Service Unavailable**
+     * 
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentPaymentsResponse503ResponseBody $fiveHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?AccountGetPaymentPaymentsResponse503ResponseBody $fiveHundredAndThreeApplicationJsonObject = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
      */
 	
     public string $contentType;
-    
-    /**
-     * Payment Created
-     * 
-     * @var mixed $payment
-     */
-	
-    public mixed $payment = null;
     
     /**
      * HTTP response status code for this operation
@@ -43,59 +87,15 @@ class AccountGetPaymentResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
-    /**
-     * **Access Denied**\
-     * 
-     * Credentials supplied do not grant access to the requested resource.
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPayment403ApplicationJSON $accountGetPayment403ApplicationJSONObject
-     */
-	
-    public ?AccountGetPayment403ApplicationJSON $accountGetPayment403ApplicationJSONObject = null;
-    
-    /**
-     * **Not Found**\
-     * 
-     * \
-     * When you'll get `401 Unauthorized` response:
-     * - When there are no Accounts/Orders/Payment found.
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPayment404ApplicationJSON $accountGetPayment404ApplicationJSONObject
-     */
-	
-    public ?AccountGetPayment404ApplicationJSON $accountGetPayment404ApplicationJSONObject = null;
-    
-    /**
-     * **Internal Server Error**
-     * 
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPayment500ApplicationJSON $accountGetPayment500ApplicationJSONObject
-     */
-	
-    public ?AccountGetPayment500ApplicationJSON $accountGetPayment500ApplicationJSONObject = null;
-    
-    /**
-     * **Service Unavailable**
-     * 
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPayment503ApplicationJSON $accountGetPayment503ApplicationJSONObject
-     */
-	
-    public ?AccountGetPayment503ApplicationJSON $accountGetPayment503ApplicationJSONObject = null;
-    
 	public function __construct()
 	{
+		$this->twoHundredApplicationJsonPayment = null;
+		$this->fourHundredAndThreeApplicationJsonObject = null;
+		$this->fourHundredAndFourApplicationJsonObject = null;
+		$this->fiveHundredApplicationJsonObject = null;
+		$this->fiveHundredAndThreeApplicationJsonObject = null;
 		$this->contentType = "";
-		$this->payment = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->accountGetPayment403ApplicationJSONObject = null;
-		$this->accountGetPayment404ApplicationJSONObject = null;
-		$this->accountGetPayment500ApplicationJSONObject = null;
-		$this->accountGetPayment503ApplicationJSONObject = null;
 	}
 }

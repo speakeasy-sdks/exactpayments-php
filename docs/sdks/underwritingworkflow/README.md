@@ -1,5 +1,5 @@
 # UnderwritingWorkflow
-(*underwritingWorkflow*)
+
 
 ### Available Operations
 
@@ -24,19 +24,19 @@ Delete a specific Workflow by Organization and Workflow identifiers.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\DeleteWorkflowByIdRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new DeleteWorkflowByIdRequest();
+    $request = new Operations\DeleteWorkflowByIdRequest();
     $request->organizationId = 'string';
     $request->workflowId = 'string';
 
@@ -74,19 +74,19 @@ Disable a specific Workflow by Organization and Workflow identifiers.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\DisableWorkflowByIdRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new DisableWorkflowByIdRequest();
+    $request = new Operations\DisableWorkflowByIdRequest();
     $request->organizationId = 'string';
     $request->workflowId = 'string';
 
@@ -124,19 +124,19 @@ Enable a specific Workflow by Organization and Workflow identifiers.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\EnableWorkflowByIdRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new EnableWorkflowByIdRequest();
+    $request = new Operations\EnableWorkflowByIdRequest();
     $request->organizationId = 'string';
     $request->workflowId = 'string';
 
@@ -174,19 +174,19 @@ Retrieve a list of active underwriting workflows associated with your organizati
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdOnboardingWorkflowRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetOrganizationOrganizationIdOnboardingWorkflowRequest();
+    $request = new Operations\GetOrganizationOrganizationIdOnboardingWorkflowRequest();
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = '-name';
@@ -194,7 +194,7 @@ try {
 
     $response = $sdk->underwritingWorkflow->getOrganizationOrganizationIdOnboardingWorkflow($request);
 
-    if ($response->underwritingWorkflowResponses !== null) {
+    if ($response->classes !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -226,19 +226,19 @@ Retrieve a list of properties associated with a specific workflow ID.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetOrganizationOrganizationIdOnboardingWorkflowWorkflowIdRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetOrganizationOrganizationIdOnboardingWorkflowWorkflowIdRequest();
+    $request = new Operations\GetOrganizationOrganizationIdOnboardingWorkflowWorkflowIdRequest();
     $request->organizationId = 'string';
     $request->workflowId = 'string';
 
@@ -276,24 +276,22 @@ Create a new Underwriting Workflow for the Organization to evaluate Onboarding A
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\PostOrganizationOrganizationIdOnboardingWorkflowRequest;
-use \TheLogicStudio\ExactPayments\Models\Shared\UnderwritingWorkflowRequestCreateWorkflow;
-use \TheLogicStudio\ExactPayments\Models\Shared\UnderwritingWorkflowRequestCreateWorkflowMetadata;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PostOrganizationOrganizationIdOnboardingWorkflowRequest();
-    $request->underwritingWorkflowRequestCreateWorkflow = new UnderwritingWorkflowRequestCreateWorkflow();
+    $request = new Operations\PostOrganizationOrganizationIdOnboardingWorkflowRequest();
+    $request->underwritingWorkflowRequestCreateWorkflow = new Shared\UnderwritingWorkflowRequestCreateWorkflow();
     $request->underwritingWorkflowRequestCreateWorkflow->entryRule = 'Know Your Customer Check';
-    $request->underwritingWorkflowRequestCreateWorkflow->metadata = new UnderwritingWorkflowRequestCreateWorkflowMetadata();
+    $request->underwritingWorkflowRequestCreateWorkflow->metadata = new Shared\Metadata();
     $request->underwritingWorkflowRequestCreateWorkflow->name = 'Main Workflow';
     $request->underwritingWorkflowRequestCreateWorkflow->rules = [
         'string',
@@ -302,7 +300,7 @@ try {
 
     $response = $sdk->underwritingWorkflow->postOrganizationOrganizationIdOnboardingWorkflow($request);
 
-    if ($response->postOrganizationOrganizationIdOnboardingWorkflow201ApplicationJSONObject !== null) {
+    if ($response->object !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -334,24 +332,22 @@ Update Underwriting Workflow properties for the given Organization and Workflow 
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingWorkflowWorkflowIdRequest;
-use \TheLogicStudio\ExactPayments\Models\Shared\UnderwritingWorkflowRequestUpdateWorkflow;
-use \TheLogicStudio\ExactPayments\Models\Shared\UnderwritingWorkflowRequestUpdateWorkflowMetadata;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PutOrganizationOrganizationIdOnboardingWorkflowWorkflowIdRequest();
-    $request->underwritingWorkflowRequestUpdateWorkflow = new UnderwritingWorkflowRequestUpdateWorkflow();
+    $request = new Operations\PutOrganizationOrganizationIdOnboardingWorkflowWorkflowIdRequest();
+    $request->underwritingWorkflowRequestUpdateWorkflow = new Shared\UnderwritingWorkflowRequestUpdateWorkflow();
     $request->underwritingWorkflowRequestUpdateWorkflow->entryRule = 'Know Your Customer Check';
-    $request->underwritingWorkflowRequestUpdateWorkflow->metadata = new UnderwritingWorkflowRequestUpdateWorkflowMetadata();
+    $request->underwritingWorkflowRequestUpdateWorkflow->metadata = new Shared\UnderwritingWorkflowRequestUpdateWorkflowMetadata();
     $request->underwritingWorkflowRequestUpdateWorkflow->name = 'Main Workflow';
     $request->underwritingWorkflowRequestUpdateWorkflow->rules = [
         'string',
@@ -393,19 +389,19 @@ Set a specific Workflow as the default to process the new Onboarding for the giv
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\SetDefaultWorkflowByIdRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new SetDefaultWorkflowByIdRequest();
+    $request = new Operations\SetDefaultWorkflowByIdRequest();
     $request->organizationId = 'string';
     $request->workflowId = 'string';
 

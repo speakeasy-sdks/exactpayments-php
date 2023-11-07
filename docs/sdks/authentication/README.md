@@ -1,5 +1,5 @@
 # Authentication
-(*authentication*)
+
 
 ### Available Operations
 
@@ -20,27 +20,24 @@ Create a new Application Token for non-human users, like external APIs or User I
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\CreateApplicationTokenRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\CreateApplicationTokenRequestBodyInput;
-use \TheLogicStudio\ExactPayments\Models\Operations\CreateApplicationTokenRequestBodyMode;
-use \TheLogicStudio\ExactPayments\Models\Shared\Permissions;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateApplicationTokenRequest();
-    $request->requestBody = new CreateApplicationTokenRequestBodyInput();
+    $request = new Operations\CreateApplicationTokenRequest();
+    $request->requestBody = new Operations\CreateApplicationTokenRequestBody();
     $request->requestBody->label = 'Transactions Application Token';
-    $request->requestBody->mode = CreateApplicationTokenRequestBodyMode::Live;
+    $request->requestBody->mode = Operations\Mode::Live;
     $request->requestBody->permissions = [
-        Permissions::ChargesCreate,
+        Shared\Permissions::ChargesCreate,
     ];
     $request->applicationId = 'string';
 
@@ -78,28 +75,25 @@ Creates a User Token that can be used to authorize calls to other API endpoints 
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\CreateUserTokenRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\CreateUserTokenRequestBodyInput;
-use \TheLogicStudio\ExactPayments\Models\Operations\CreateUserTokenRequestBodyAccountType;
-use \TheLogicStudio\ExactPayments\Models\Shared\AccountMode;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateUserTokenRequest();
-    $request->requestBody = new CreateUserTokenRequestBodyInput();
+    $request = new Operations\CreateUserTokenRequest();
+    $request->requestBody = new Operations\CreateUserTokenRequestBody();
     $request->requestBody->account = '64b04d6d198ce11d0d64ca2a';
-    $request->requestBody->accountType = CreateUserTokenRequestBodyAccountType::Account;
+    $request->requestBody->accountType = Operations\AccountType::Account;
     $request->requestBody->application = 'admin-pwa';
     $request->requestBody->email = 'jon.doe@acmecorp.com';
-    $request->requestBody->mode = AccountMode::Live;
+    $request->requestBody->mode = Shared\AccountMode::Live;
     $request->requestBody->password = 'E*3q&87uBHc5xiIsiLK0';
     $request->requestBody->user = '64b04d6d198ce11d0d64ca2a';
     $request->xApplicationId = 'admin-pwa';
@@ -138,19 +132,19 @@ Delete a specific Application Token by the given Application Identifier under th
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\DeleteApplicationTokenRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new DeleteApplicationTokenRequest();
+    $request = new Operations\DeleteApplicationTokenRequest();
     $request->applicationId = 'string';
     $request->tokenId = 'string';
 
@@ -188,19 +182,19 @@ Query Application Tokens for non-human users, like external APIs or User Interfa
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\QueryApplicationTokenRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new QueryApplicationTokenRequest();
+    $request = new Operations\QueryApplicationTokenRequest();
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = 'createdAt:asc';
@@ -208,7 +202,7 @@ try {
 
     $response = $sdk->authentication->queryApplicationToken($request);
 
-    if ($response->applicationTokenResponses !== null) {
+    if ($response->classes !== null) {
         // handle response
     }
 } catch (Exception $e) {

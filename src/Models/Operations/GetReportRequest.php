@@ -14,10 +14,10 @@ class GetReportRequest
     /**
      * The format of the file that will be downloaded.
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\GetReportFormat $format
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\Format $format
      */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=format')]
-    public ?GetReportFormat $format = null;
+    public ?Format $format = null;
     
     /**
      * The ID of the report query

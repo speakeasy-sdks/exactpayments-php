@@ -66,10 +66,10 @@ class GetOrganizationOrganizationIdOnboardingWorkflowResponse
     /**
      * List of the active underwriting workflows of the PayFac.
      * 
-     * @var ?array<\TheLogicStudio\ExactPayments\Models\Shared\UnderwritingWorkflowResponse> $underwritingWorkflowResponses
+     * @var ?array<\TheLogicStudio\ExactPayments\Models\Shared\UnderwritingWorkflowResponse> $classes
      */
 	
-    public ?array $underwritingWorkflowResponses = null;
+    public ?array $classes = null;
     
 	public function __construct()
 	{
@@ -79,6 +79,6 @@ class GetOrganizationOrganizationIdOnboardingWorkflowResponse
 		$this->serviceUnavailable = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->underwritingWorkflowResponses = null;
+		$this->classes = null;
 	}
 }

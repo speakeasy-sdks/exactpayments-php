@@ -38,16 +38,16 @@ class AccountGetCustomerResponse
     /**
      * Created
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomer201ApplicationJSON $accountGetCustomer201ApplicationJSONObject
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerResponseBody $object
      */
 	
-    public ?AccountGetCustomer201ApplicationJSON $accountGetCustomer201ApplicationJSONObject = null;
+    public ?AccountGetCustomerResponseBody $object = null;
     
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->accountGetCustomer201ApplicationJSONObject = null;
+		$this->object = null;
 	}
 }

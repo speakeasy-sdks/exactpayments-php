@@ -12,6 +12,37 @@ namespace TheLogicStudio\ExactPayments\Models\Operations;
 class GetOrdersResponse
 {
     /**
+     * **Access Denied**\
+     * 
+     * Credentials supplied do not grant access to the requested resource.
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\GetOrdersResponseBody $fourHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?GetOrdersResponseBody $fourHundredAndThreeApplicationJsonObject = null;
+    
+    /**
+     * **Internal Server Error**
+     * 
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\GetOrdersOrdersResponseBody $fiveHundredApplicationJsonObject
+     */
+	
+    public ?GetOrdersOrdersResponseBody $fiveHundredApplicationJsonObject = null;
+    
+    /**
+     * **Service Unavailable**
+     * 
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\GetOrdersOrdersResponseResponseBody $fiveHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?GetOrdersOrdersResponseResponseBody $fiveHundredAndThreeApplicationJsonObject = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -36,37 +67,6 @@ class GetOrdersResponse
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
     /**
-     * **Access Denied**\
-     * 
-     * Credentials supplied do not grant access to the requested resource.
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\GetOrders403ApplicationJSON $getOrders403ApplicationJSONObject
-     */
-	
-    public ?GetOrders403ApplicationJSON $getOrders403ApplicationJSONObject = null;
-    
-    /**
-     * **Internal Server Error**
-     * 
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\GetOrders500ApplicationJSON $getOrders500ApplicationJSONObject
-     */
-	
-    public ?GetOrders500ApplicationJSON $getOrders500ApplicationJSONObject = null;
-    
-    /**
-     * **Service Unavailable**
-     * 
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\GetOrders503ApplicationJSON $getOrders503ApplicationJSONObject
-     */
-	
-    public ?GetOrders503ApplicationJSON $getOrders503ApplicationJSONObject = null;
-    
-    /**
      * Details of an existing orders.
      * 
      * @var ?\TheLogicStudio\ExactPayments\Models\Shared\OrderSearch $orderSearch
@@ -76,12 +76,12 @@ class GetOrdersResponse
     
 	public function __construct()
 	{
+		$this->fourHundredAndThreeApplicationJsonObject = null;
+		$this->fiveHundredApplicationJsonObject = null;
+		$this->fiveHundredAndThreeApplicationJsonObject = null;
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->getOrders403ApplicationJSONObject = null;
-		$this->getOrders500ApplicationJSONObject = null;
-		$this->getOrders503ApplicationJSONObject = null;
 		$this->orderSearch = null;
 	}
 }

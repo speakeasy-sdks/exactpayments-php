@@ -12,6 +12,48 @@ namespace TheLogicStudio\ExactPayments\Models\Operations;
 class PostOrdersOrderIdAccessTokenResponse
 {
     /**
+     * **Access Denied**\
+     * 
+     * Credentials supplied do not grant access to the requested resource.
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostOrdersOrderIdAccessTokenResponseBody $fourHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?PostOrdersOrderIdAccessTokenResponseBody $fourHundredAndThreeApplicationJsonObject = null;
+    
+    /**
+     * **Not found**\
+     * 
+     * When there are no accounts/orders/payment found
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostOrdersOrderIdAccessTokenOrdersResponseBody $fourHundredAndFourApplicationJsonObject
+     */
+	
+    public ?PostOrdersOrderIdAccessTokenOrdersResponseBody $fourHundredAndFourApplicationJsonObject = null;
+    
+    /**
+     * **Internal Server Error**
+     * 
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostOrdersOrderIdAccessTokenOrdersResponseResponseBody $fiveHundredApplicationJsonObject
+     */
+	
+    public ?PostOrdersOrderIdAccessTokenOrdersResponseResponseBody $fiveHundredApplicationJsonObject = null;
+    
+    /**
+     * **Service Unavailable**
+     * 
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostOrdersOrderIdAccessTokenOrdersResponse503ResponseBody $fiveHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?PostOrdersOrderIdAccessTokenOrdersResponse503ResponseBody $fiveHundredAndThreeApplicationJsonObject = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -43,57 +85,15 @@ class PostOrdersOrderIdAccessTokenResponse
 	
     public ?\TheLogicStudio\ExactPayments\Models\Shared\OrderAccessToken $orderAccessToken = null;
     
-    /**
-     * **Access Denied**\
-     * 
-     * Credentials supplied do not grant access to the requested resource.
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostOrdersOrderIdAccessToken403ApplicationJSON $postOrdersOrderIdAccessToken403ApplicationJSONObject
-     */
-	
-    public ?PostOrdersOrderIdAccessToken403ApplicationJSON $postOrdersOrderIdAccessToken403ApplicationJSONObject = null;
-    
-    /**
-     * **Not found**\
-     * 
-     * When there are no accounts/orders/payment found
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostOrdersOrderIdAccessToken404ApplicationJSON $postOrdersOrderIdAccessToken404ApplicationJSONObject
-     */
-	
-    public ?PostOrdersOrderIdAccessToken404ApplicationJSON $postOrdersOrderIdAccessToken404ApplicationJSONObject = null;
-    
-    /**
-     * **Internal Server Error**
-     * 
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostOrdersOrderIdAccessToken500ApplicationJSON $postOrdersOrderIdAccessToken500ApplicationJSONObject
-     */
-	
-    public ?PostOrdersOrderIdAccessToken500ApplicationJSON $postOrdersOrderIdAccessToken500ApplicationJSONObject = null;
-    
-    /**
-     * **Service Unavailable**
-     * 
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostOrdersOrderIdAccessToken503ApplicationJSON $postOrdersOrderIdAccessToken503ApplicationJSONObject
-     */
-	
-    public ?PostOrdersOrderIdAccessToken503ApplicationJSON $postOrdersOrderIdAccessToken503ApplicationJSONObject = null;
-    
 	public function __construct()
 	{
+		$this->fourHundredAndThreeApplicationJsonObject = null;
+		$this->fourHundredAndFourApplicationJsonObject = null;
+		$this->fiveHundredApplicationJsonObject = null;
+		$this->fiveHundredAndThreeApplicationJsonObject = null;
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
 		$this->orderAccessToken = null;
-		$this->postOrdersOrderIdAccessToken403ApplicationJSONObject = null;
-		$this->postOrdersOrderIdAccessToken404ApplicationJSONObject = null;
-		$this->postOrdersOrderIdAccessToken500ApplicationJSONObject = null;
-		$this->postOrdersOrderIdAccessToken503ApplicationJSONObject = null;
 	}
 }

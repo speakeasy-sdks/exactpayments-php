@@ -59,10 +59,10 @@ class OrderResponseLevel3
     /**
      * $lineItems
      * 
-     * @var ?array<\TheLogicStudio\ExactPayments\Models\Shared\OrderResponseLevel3LineItems> $lineItems
+     * @var ?array<\TheLogicStudio\ExactPayments\Models\Shared\OrderResponseLineItems> $lineItems
      */
 	#[\JMS\Serializer\Annotation\SerializedName('lineItems')]
-    #[\JMS\Serializer\Annotation\Type('array<TheLogicStudio\ExactPayments\Models\Shared\OrderResponseLevel3LineItems>')]
+    #[\JMS\Serializer\Annotation\Type('array<TheLogicStudio\ExactPayments\Models\Shared\OrderResponseLineItems>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $lineItems = null;
     
@@ -77,9 +77,9 @@ class OrderResponseLevel3
     public ?string $shipFromZip = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('shipTo')]
-    #[\JMS\Serializer\Annotation\Type('TheLogicStudio\ExactPayments\Models\Shared\OrderResponseLevel3ShipTo')]
+    #[\JMS\Serializer\Annotation\Type('TheLogicStudio\ExactPayments\Models\Shared\OrderResponseShipTo')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?OrderResponseLevel3ShipTo $shipTo = null;
+    public ?OrderResponseShipTo $shipTo = null;
     
     /**
      * The smallest currency units, for example, cents in USD.

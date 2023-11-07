@@ -88,6 +88,14 @@ class GetDownloadAllDocumentsResponse
     public ?string $unauthorized = null;
     
     /**
+     * **OK**
+     * 
+     * @var ?string $bytes
+     */
+	
+    public ?string $bytes = null;
+    
+    /**
      * **Internal Server Error**\
      * 
      * \
@@ -101,14 +109,6 @@ class GetDownloadAllDocumentsResponse
 	
     public ?\TheLogicStudio\ExactPayments\Models\Shared\ContextErrorResponseSystemError $contextErrorResponseSystemError = null;
     
-    /**
-     * **OK**
-     * 
-     * @var ?string $getDownloadAllDocuments200ApplicationZipBinaryString
-     */
-	
-    public ?string $getDownloadAllDocuments200ApplicationZipBinaryString = null;
-    
 	public function __construct()
 	{
 		$this->contentType = "";
@@ -118,7 +118,7 @@ class GetDownloadAllDocumentsResponse
 		$this->rawResponse = null;
 		$this->serviceUnavailable = null;
 		$this->unauthorized = null;
+		$this->bytes = null;
 		$this->contextErrorResponseSystemError = null;
-		$this->getDownloadAllDocuments200ApplicationZipBinaryString = null;
 	}
 }

@@ -85,10 +85,10 @@ class PostOrganizationOrganizationIdOnboardingWorkflowResponse
     /**
      * **Created**
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostOrganizationOrganizationIdOnboardingWorkflow201ApplicationJSON $postOrganizationOrganizationIdOnboardingWorkflow201ApplicationJSONObject
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostOrganizationOrganizationIdOnboardingWorkflowResponseBody $object
      */
 	
-    public ?PostOrganizationOrganizationIdOnboardingWorkflow201ApplicationJSON $postOrganizationOrganizationIdOnboardingWorkflow201ApplicationJSONObject = null;
+    public ?PostOrganizationOrganizationIdOnboardingWorkflowResponseBody $object = null;
     
     /**
      * **Bad Request**\
@@ -97,10 +97,10 @@ class PostOrganizationOrganizationIdOnboardingWorkflowResponse
      * The request body contains a malformed request or is incomplete.
      * 
      * 
-     * @var mixed $postOrganizationOrganizationIdOnboardingWorkflow400ApplicationJSONOneOf
+     * @var mixed $oneOf
      */
 	
-    public mixed $postOrganizationOrganizationIdOnboardingWorkflow400ApplicationJSONOneOf = null;
+    public mixed $oneOf = null;
     
 	public function __construct()
 	{
@@ -111,7 +111,7 @@ class PostOrganizationOrganizationIdOnboardingWorkflowResponse
 		$this->rawResponse = null;
 		$this->serviceUnavailable = null;
 		$this->unauthorized = null;
-		$this->postOrganizationOrganizationIdOnboardingWorkflow201ApplicationJSONObject = null;
-		$this->postOrganizationOrganizationIdOnboardingWorkflow400ApplicationJSONOneOf = null;
+		$this->object = null;
+		$this->oneOf = null;
 	}
 }

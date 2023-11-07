@@ -24,12 +24,12 @@ class ReferencedPaymentOptions
     /**
      * Used to classify the style of transaction being performed. 2 = Recurring, 3 = Installment.
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\ReferencedPaymentOptionsEcommerceFlag $ecommerceFlag
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\ReferencedPaymentEcommerceFlag $ecommerceFlag
      */
 	#[\JMS\Serializer\Annotation\SerializedName('ecommerceFlag')]
-    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\ReferencedPaymentOptionsEcommerceFlag>')]
+    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\ReferencedPaymentEcommerceFlag>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?ReferencedPaymentOptionsEcommerceFlag $ecommerceFlag = null;
+    public ?ReferencedPaymentEcommerceFlag $ecommerceFlag = null;
     
     /**
      * Receipt generated or not will be shown in `true` or `false`.

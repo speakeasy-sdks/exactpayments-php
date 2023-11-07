@@ -23,11 +23,11 @@ class MerchantAddress
     /**
      * The three-digit country code where the business is located. Refer to the three-digit country code defined in ISO 3166-1 alpha-3.
      * 
-     * @var \TheLogicStudio\ExactPayments\Models\Shared\MerchantAddressCountry $country
+     * @var \TheLogicStudio\ExactPayments\Models\Shared\Country $country
      */
 	#[\JMS\Serializer\Annotation\SerializedName('country')]
-    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\MerchantAddressCountry>')]
-    public MerchantAddressCountry $country;
+    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\Country>')]
+    public Country $country;
     
     /**
      * The two-digit country subdivision code where the business is located. Refer to the two-digit country subdivision code defined in  ISO 3166-2 for the countries listed in ISO 3166-1.
@@ -69,7 +69,7 @@ class MerchantAddress
 	public function __construct()
 	{
 		$this->city = "";
-		$this->country = \TheLogicStudio\ExactPayments\Models\Shared\MerchantAddressCountry::Usa;
+		$this->country = \TheLogicStudio\ExactPayments\Models\Shared\Country::Usa;
 		$this->countrySubdivision = "";
 		$this->line1 = "";
 		$this->line2 = null;

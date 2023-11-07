@@ -1,5 +1,5 @@
 # AdminTools
-(*adminTools*)
+
 
 ### Available Operations
 
@@ -21,19 +21,19 @@ Retrieve a list of Notes for the given Organization and Onboarding identifier.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetListNotesRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetListNotesRequest();
+    $request = new Operations\GetListNotesRequest();
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = 'createdAt:asc';
@@ -42,7 +42,7 @@ try {
 
     $response = $sdk->adminTools->getListNotes($request);
 
-    if ($response->onboardingNotes !== null) {
+    if ($response->classes !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -74,21 +74,20 @@ Create a Note for a specific Onboarding Application for the given Organization a
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\PostCreateNotesRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\PostCreateNotesRequestBodyInput;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PostCreateNotesRequest();
-    $request->requestBody = new PostCreateNotesRequestBodyInput();
+    $request = new Operations\PostCreateNotesRequest();
+    $request->requestBody = new Operations\PostCreateNotesRequestBody();
     $request->requestBody->note = 'Some more documents are needed to verify the account\'s eligibility. Jen Will contact the merchant to collect further details by 2nd Aug.';
     $request->requestBody->onboardingIsDeleted = false;
     $request->onboardingId = 'string';
@@ -128,19 +127,19 @@ Manually request all verifications in an underwriting workflow to be performed o
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdRecheckRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PutOrganizationOrganizationIdOnboardingOnboardingIdRecheckRequest();
+    $request = new Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdRecheckRequest();
     $request->onboardingId = 'string';
     $request->organizationId = 'string';
 
@@ -178,21 +177,20 @@ Manually request an underwriting workflow verification to be performed outside o
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdRetryRuleRequest;
-use \TheLogicStudio\ExactPayments\Models\Shared\OnboardingRetryRuleRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PutOrganizationOrganizationIdOnboardingOnboardingIdRetryRuleRequest();
-    $request->onboardingRetryRuleRequest = new OnboardingRetryRuleRequest();
+    $request = new Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdRetryRuleRequest();
+    $request->onboardingRetryRuleRequest = new Shared\OnboardingRetryRuleRequest();
     $request->onboardingRetryRuleRequest->ruleName = 'string';
     $request->onboardingId = 'string';
     $request->organizationId = 'string';
@@ -231,26 +229,23 @@ Manually update the merchant onboarding application status after being automatic
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdStatusRequest;
-use \TheLogicStudio\ExactPayments\Models\Shared\UpdateOnboardingStatusRequest;
-use \TheLogicStudio\ExactPayments\Models\Shared\UpdateOnboardingStatusRequestStatus;
-use \TheLogicStudio\ExactPayments\Models\Shared\UpdateOnboardingStatusRequestStatusChangeReason;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PutOrganizationOrganizationIdOnboardingOnboardingIdStatusRequest();
-    $request->updateOnboardingStatusRequest = new UpdateOnboardingStatusRequest();
+    $request = new Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdStatusRequest();
+    $request->updateOnboardingStatusRequest = new Shared\UpdateOnboardingStatusRequest();
     $request->updateOnboardingStatusRequest->isDeleted = 'string';
-    $request->updateOnboardingStatusRequest->status = UpdateOnboardingStatusRequestStatus::Approved;
-    $request->updateOnboardingStatusRequest->statusChangeReason = UpdateOnboardingStatusRequestStatusChangeReason::GeneralRiskConcern;
+    $request->updateOnboardingStatusRequest->status = Shared\UpdateOnboardingStatusRequestStatus::Approved;
+    $request->updateOnboardingStatusRequest->statusChangeReason = Shared\UpdateOnboardingStatusRequestStatusChangeReason::GeneralRiskConcern;
     $request->updateOnboardingStatusRequest->statusChangeReasonNote = 'string';
     $request->onboardingId = 'string';
     $request->organizationId = 'string';

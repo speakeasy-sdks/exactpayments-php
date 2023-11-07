@@ -14,12 +14,12 @@ class NewPaymentCustomer
     /**
      * The customer's billing address. Will be used for AVS checks so postal/zip code is the minimum data required.
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\NewPaymentCustomerAddress $address
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\NewPaymentAddress $address
      */
 	#[\JMS\Serializer\Annotation\SerializedName('address')]
-    #[\JMS\Serializer\Annotation\Type('TheLogicStudio\ExactPayments\Models\Shared\NewPaymentCustomerAddress')]
+    #[\JMS\Serializer\Annotation\Type('TheLogicStudio\ExactPayments\Models\Shared\NewPaymentAddress')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?NewPaymentCustomerAddress $address = null;
+    public ?NewPaymentAddress $address = null;
     
     /**
      * Email of the customer.
@@ -54,12 +54,12 @@ class NewPaymentCustomer
     /**
      * `H` = Home, `W` = Work, `D` = Day, `N` = Night. Phone type is required when a phone number is supplied.
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\NewPaymentCustomerPhoneType $phoneType
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\NewPaymentPhoneType $phoneType
      */
 	#[\JMS\Serializer\Annotation\SerializedName('phoneType')]
-    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\NewPaymentCustomerPhoneType>')]
+    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\NewPaymentPhoneType>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?NewPaymentCustomerPhoneType $phoneType = null;
+    public ?NewPaymentPhoneType $phoneType = null;
     
 	public function __construct()
 	{

@@ -12,7 +12,7 @@ use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class CreateDocumentRequestRequest
 {
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?CreateDocumentRequestRequestBodyInput $requestBody = null;
+    public ?CreateDocumentRequestRequestBody $requestBody = null;
     
     /**
      * The Onboarding Application identifier.

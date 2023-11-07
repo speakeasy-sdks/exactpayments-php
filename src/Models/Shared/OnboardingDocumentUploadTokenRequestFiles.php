@@ -15,11 +15,11 @@ class OnboardingDocumentUploadTokenRequestFiles
     public string $content;
     
 	#[SpeakeasyMetadata('multipartForm:name=files')]
-    public string $files;
+    public string $fileName;
     
 	public function __construct()
 	{
 		$this->content = "";
-		$this->files = "";
+		$this->fileName = "";
 	}
 }

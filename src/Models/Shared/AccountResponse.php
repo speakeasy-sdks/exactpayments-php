@@ -12,9 +12,9 @@ namespace TheLogicStudio\ExactPayments\Models\Shared;
 class AccountResponse
 {
 	#[\JMS\Serializer\Annotation\SerializedName('ach')]
-    #[\JMS\Serializer\Annotation\Type('TheLogicStudio\ExactPayments\Models\Shared\AccountResponseAch')]
+    #[\JMS\Serializer\Annotation\Type('TheLogicStudio\ExactPayments\Models\Shared\Ach')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?AccountResponseAch $ach = null;
+    public ?Ach $ach = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('address')]
     #[\JMS\Serializer\Annotation\Type('TheLogicStudio\ExactPayments\Models\Shared\MerchantAddress')]

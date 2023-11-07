@@ -12,14 +12,6 @@ namespace TheLogicStudio\ExactPayments\Models\Operations;
 class GetOrganizationOrganizationIdAccountResponse
 {
     /**
-     * The accounts.
-     * 
-     * @var ?array<\TheLogicStudio\ExactPayments\Models\Shared\AccountResponse> $accountResponses
-     */
-	
-    public ?array $accountResponses = null;
-    
-    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -46,6 +38,16 @@ class GetOrganizationOrganizationIdAccountResponse
     public ?string $internalServerError = null;
     
     /**
+     * **Service Unavailable**
+     * 
+     * 
+     * 
+     * @var ?string $serviceUnavailable
+     */
+	
+    public ?string $serviceUnavailable = null;
+    
+    /**
      * HTTP response status code for this operation
      * 
      * @var int $statusCode
@@ -62,23 +64,21 @@ class GetOrganizationOrganizationIdAccountResponse
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
     /**
-     * **Service Unavailable**
+     * The accounts.
      * 
-     * 
-     * 
-     * @var ?string $serviceUnavailable
+     * @var ?array<\TheLogicStudio\ExactPayments\Models\Shared\AccountResponse> $classes
      */
 	
-    public ?string $serviceUnavailable = null;
+    public ?array $classes = null;
     
 	public function __construct()
 	{
-		$this->accountResponses = null;
 		$this->contentType = "";
 		$this->headers = null;
 		$this->internalServerError = null;
+		$this->serviceUnavailable = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->serviceUnavailable = null;
+		$this->classes = null;
 	}
 }

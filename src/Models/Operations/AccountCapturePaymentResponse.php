@@ -12,20 +12,75 @@ namespace TheLogicStudio\ExactPayments\Models\Operations;
 class AccountCapturePaymentResponse
 {
     /**
+     * Payment Created
+     * 
+     * @var mixed $twoHundredAndOneApplicationJsonPayment
+     */
+	
+    public mixed $twoHundredAndOneApplicationJsonPayment = null;
+    
+    /**
+     * **Bad Request**\
+     * 
+     * When there are errors in the payload.
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountCapturePaymentResponseBody $fourHundredApplicationJsonObject
+     */
+	
+    public ?AccountCapturePaymentResponseBody $fourHundredApplicationJsonObject = null;
+    
+    /**
+     * **Access Denied**\
+     * 
+     * Credentials supplied do not grant access to the requested resource.
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountCapturePaymentPaymentsResponseBody $fourHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?AccountCapturePaymentPaymentsResponseBody $fourHundredAndThreeApplicationJsonObject = null;
+    
+    /**
+     * **Not Found**\
+     * 
+     * \
+     * When you'll get `401 Unauthorized` response:
+     * - When there are no Accounts/Orders/Payment found.
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountCapturePaymentPaymentsResponseResponseBody $fourHundredAndFourApplicationJsonObject
+     */
+	
+    public ?AccountCapturePaymentPaymentsResponseResponseBody $fourHundredAndFourApplicationJsonObject = null;
+    
+    /**
+     * **Internal Server Error**
+     * 
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountCapturePaymentPaymentsResponse500ResponseBody $fiveHundredApplicationJsonObject
+     */
+	
+    public ?AccountCapturePaymentPaymentsResponse500ResponseBody $fiveHundredApplicationJsonObject = null;
+    
+    /**
+     * **Service Unavailable**
+     * 
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountCapturePaymentPaymentsResponse503ResponseBody $fiveHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?AccountCapturePaymentPaymentsResponse503ResponseBody $fiveHundredAndThreeApplicationJsonObject = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
      */
 	
     public string $contentType;
-    
-    /**
-     * Payment Created
-     * 
-     * @var mixed $payment
-     */
-	
-    public mixed $payment = null;
     
     /**
      * HTTP response status code for this operation
@@ -43,71 +98,16 @@ class AccountCapturePaymentResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
-    /**
-     * **Bad Request**\
-     * 
-     * When there are errors in the payload.
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountCapturePayment400ApplicationJSON $accountCapturePayment400ApplicationJSONObject
-     */
-	
-    public ?AccountCapturePayment400ApplicationJSON $accountCapturePayment400ApplicationJSONObject = null;
-    
-    /**
-     * **Access Denied**\
-     * 
-     * Credentials supplied do not grant access to the requested resource.
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountCapturePayment403ApplicationJSON $accountCapturePayment403ApplicationJSONObject
-     */
-	
-    public ?AccountCapturePayment403ApplicationJSON $accountCapturePayment403ApplicationJSONObject = null;
-    
-    /**
-     * **Not Found**\
-     * 
-     * \
-     * When you'll get `401 Unauthorized` response:
-     * - When there are no Accounts/Orders/Payment found.
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountCapturePayment404ApplicationJSON $accountCapturePayment404ApplicationJSONObject
-     */
-	
-    public ?AccountCapturePayment404ApplicationJSON $accountCapturePayment404ApplicationJSONObject = null;
-    
-    /**
-     * **Internal Server Error**
-     * 
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountCapturePayment500ApplicationJSON $accountCapturePayment500ApplicationJSONObject
-     */
-	
-    public ?AccountCapturePayment500ApplicationJSON $accountCapturePayment500ApplicationJSONObject = null;
-    
-    /**
-     * **Service Unavailable**
-     * 
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountCapturePayment503ApplicationJSON $accountCapturePayment503ApplicationJSONObject
-     */
-	
-    public ?AccountCapturePayment503ApplicationJSON $accountCapturePayment503ApplicationJSONObject = null;
-    
 	public function __construct()
 	{
+		$this->twoHundredAndOneApplicationJsonPayment = null;
+		$this->fourHundredApplicationJsonObject = null;
+		$this->fourHundredAndThreeApplicationJsonObject = null;
+		$this->fourHundredAndFourApplicationJsonObject = null;
+		$this->fiveHundredApplicationJsonObject = null;
+		$this->fiveHundredAndThreeApplicationJsonObject = null;
 		$this->contentType = "";
-		$this->payment = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->accountCapturePayment400ApplicationJSONObject = null;
-		$this->accountCapturePayment403ApplicationJSONObject = null;
-		$this->accountCapturePayment404ApplicationJSONObject = null;
-		$this->accountCapturePayment500ApplicationJSONObject = null;
-		$this->accountCapturePayment503ApplicationJSONObject = null;
 	}
 }

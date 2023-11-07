@@ -23,13 +23,7 @@ class ExactPayments
 		'https://api-p2.exactpay.com',
 	];
   	
-	public APIHealthCheck $apiHealthCheck;
-	
 	public AccountManagement $accountManagement;
-	
-	public AdminTools $adminTools;
-	
-	public Authentication $authentication;
 	
     /**
      * Store customer details.
@@ -37,10 +31,6 @@ class ExactPayments
      * @var Customers $$customers
      */
 	public Customers $customers;
-	
-	public DocumentManagement $documentManagement;
-	
-	public MerchantOnboarding $merchantOnboarding;
 	
     /**
      * Handle payments from your payment form with Exact.JS
@@ -63,11 +53,21 @@ class ExactPayments
      */
 	public Payments $payments;
 	
-	public Reporting $reporting;
+	public Webhooks $webhooks;
+	
+	public Authentication $authentication;
+	
+	public DocumentManagement $documentManagement;
+	
+	public MerchantOnboarding $merchantOnboarding;
 	
 	public UnderwritingWorkflow $underwritingWorkflow;
 	
-	public Webhooks $webhooks;
+	public AdminTools $adminTools;
+	
+	public Reporting $reporting;
+	
+	public APIHealthCheck $apiHealthCheck;
 		
 	private SDKConfiguration $sdkConfiguration;
 
@@ -88,19 +88,9 @@ class ExactPayments
 	{
 		$this->sdkConfiguration = $sdkConfiguration;
 		
-		$this->apiHealthCheck = new APIHealthCheck($this->sdkConfiguration);
-		
 		$this->accountManagement = new AccountManagement($this->sdkConfiguration);
 		
-		$this->adminTools = new AdminTools($this->sdkConfiguration);
-		
-		$this->authentication = new Authentication($this->sdkConfiguration);
-		
 		$this->customers = new Customers($this->sdkConfiguration);
-		
-		$this->documentManagement = new DocumentManagement($this->sdkConfiguration);
-		
-		$this->merchantOnboarding = new MerchantOnboarding($this->sdkConfiguration);
 		
 		$this->orders = new Orders($this->sdkConfiguration);
 		
@@ -108,10 +98,20 @@ class ExactPayments
 		
 		$this->payments = new Payments($this->sdkConfiguration);
 		
-		$this->reporting = new Reporting($this->sdkConfiguration);
+		$this->webhooks = new Webhooks($this->sdkConfiguration);
+		
+		$this->authentication = new Authentication($this->sdkConfiguration);
+		
+		$this->documentManagement = new DocumentManagement($this->sdkConfiguration);
+		
+		$this->merchantOnboarding = new MerchantOnboarding($this->sdkConfiguration);
 		
 		$this->underwritingWorkflow = new UnderwritingWorkflow($this->sdkConfiguration);
 		
-		$this->webhooks = new Webhooks($this->sdkConfiguration);
+		$this->adminTools = new AdminTools($this->sdkConfiguration);
+		
+		$this->reporting = new Reporting($this->sdkConfiguration);
+		
+		$this->apiHealthCheck = new APIHealthCheck($this->sdkConfiguration);
 	}
 }

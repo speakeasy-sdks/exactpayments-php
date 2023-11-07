@@ -56,12 +56,12 @@ class Principal
     /**
      * The three-digit country code where the Principal's driving license was issued. Refer to the three-digit country code defined in ISO 3166-1 alpha-3.
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\PrincipalDriversLicenseCountry $driversLicenseCountry
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\DriversLicenseCountry $driversLicenseCountry
      */
 	#[\JMS\Serializer\Annotation\SerializedName('driversLicenseCountry')]
-    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\PrincipalDriversLicenseCountry>')]
+    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\DriversLicenseCountry>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?PrincipalDriversLicenseCountry $driversLicenseCountry = null;
+    public ?DriversLicenseCountry $driversLicenseCountry = null;
     
     /**
      * The two-digit country subdivision where the Principal's driving license was issued. Refer to the two-digit country subdivision code defined in ISO 3166-2 for the countries listed in ISO 3166-1.
@@ -102,12 +102,12 @@ class Principal
     /**
      * The nationality of the Principal.
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\PrincipalNationality $nationality
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\Nationality $nationality
      */
 	#[\JMS\Serializer\Annotation\SerializedName('nationality')]
-    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\PrincipalNationality>')]
+    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\Nationality>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?PrincipalNationality $nationality = null;
+    public ?Nationality $nationality = null;
     
     /**
      * The percentage of ownership held by the Principal in the business. The value must be a non-negative number. At most, The total ownership rate for all Principals can be 100 percent.
@@ -130,12 +130,12 @@ class Principal
     /**
      * The three-digit country code where the Principal's SSN / SIN was issued. Choose `USA` for SSN or `CAN` for SIN. Refer to the three-digit country code defined in ISO 3166-1 alpha-3.
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\PrincipalSsnCountry $ssnCountry
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\SsnCountry $ssnCountry
      */
 	#[\JMS\Serializer\Annotation\SerializedName('ssnCountry')]
-    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\PrincipalSsnCountry>')]
+    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\SsnCountry>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?PrincipalSsnCountry $ssnCountry = null;
+    public ?SsnCountry $ssnCountry = null;
     
     /**
      * The two-digit country subdivision where the Principal's SSN / SIN was issued. Refer to the two-digit country subdivision code defined in  ISO 3166-2 for the countries listed in ISO 3166-1.

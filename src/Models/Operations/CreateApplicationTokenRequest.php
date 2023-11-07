@@ -12,7 +12,7 @@ use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class CreateApplicationTokenRequest
 {
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public CreateApplicationTokenRequestBodyInput $requestBody;
+    public CreateApplicationTokenRequestBody $requestBody;
     
     /**
      * Application ID calling the API. Specify your assigned Application ID, otherwise, use the default value if you are not assigned any Application ID. If you're building your own application, refer to our [guide](https://developer.exactpay.com/docs/authentication) on how to get an Application ID.
@@ -24,7 +24,7 @@ class CreateApplicationTokenRequest
     
 	public function __construct()
 	{
-		$this->requestBody = new \TheLogicStudio\ExactPayments\Models\Operations\CreateApplicationTokenRequestBodyInput();
+		$this->requestBody = new \TheLogicStudio\ExactPayments\Models\Operations\CreateApplicationTokenRequestBody();
 		$this->applicationId = "";
 	}
 }

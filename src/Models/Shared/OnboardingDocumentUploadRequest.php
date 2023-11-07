@@ -22,10 +22,10 @@ class OnboardingDocumentUploadRequest
     /**
      * The binary data of the Document being uploaded. The following file types are supported `bmp`,`csv`,`doc`,`docx`,`jpg`,`pdf`,`png`,`rtf`,`txt`,`xls` and `xlsx`. An HTTP `500 Internal Server Error` code with a JSON response will be returned when the Document is not uploaded.
      * 
-     * @var \TheLogicStudio\ExactPayments\Models\Shared\OnboardingDocumentUploadRequestFiles $files
+     * @var \TheLogicStudio\ExactPayments\Models\Shared\Files $files
      */
 	#[SpeakeasyMetadata('multipartForm:file=true')]
-    public OnboardingDocumentUploadRequestFiles $files;
+    public Files $files;
     
     /**
      * The Name of the Document being uploaded.
@@ -62,7 +62,7 @@ class OnboardingDocumentUploadRequest
 	public function __construct()
 	{
 		$this->documentRequest = null;
-		$this->files = new \TheLogicStudio\ExactPayments\Models\Shared\OnboardingDocumentUploadRequestFiles();
+		$this->files = new \TheLogicStudio\ExactPayments\Models\Shared\Files();
 		$this->name = "";
 		$this->onboardingIsDeleted = null;
 		$this->principal = null;

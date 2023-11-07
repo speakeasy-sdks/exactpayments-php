@@ -12,9 +12,9 @@ namespace TheLogicStudio\ExactPayments\Models\Shared;
 class AccountRequest
 {
 	#[\JMS\Serializer\Annotation\SerializedName('address')]
-    #[\JMS\Serializer\Annotation\Type('TheLogicStudio\ExactPayments\Models\Shared\AccountRequestAddress')]
+    #[\JMS\Serializer\Annotation\Type('TheLogicStudio\ExactPayments\Models\Shared\Address')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?AccountRequestAddress $address = null;
+    public ?Address $address = null;
     
     /**
      * The account's email

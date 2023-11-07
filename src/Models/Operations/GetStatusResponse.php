@@ -58,10 +58,10 @@ class GetStatusResponse
     /**
      * The status of the API.
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\GetStatus200ApplicationJSON $getStatus200ApplicationJSONObject
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\GetStatusResponseBody $object
      */
 	
-    public ?GetStatus200ApplicationJSON $getStatus200ApplicationJSONObject = null;
+    public ?GetStatusResponseBody $object = null;
     
 	public function __construct()
 	{
@@ -70,6 +70,6 @@ class GetStatusResponse
 		$this->serviceUnavailable = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->getStatus200ApplicationJSONObject = null;
+		$this->object = null;
 	}
 }

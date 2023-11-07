@@ -1,5 +1,5 @@
 # Orders
-(*orders*)
+
 
 ## Overview
 
@@ -28,19 +28,19 @@ Retrieve a specific Order for the given Account and Order identifiers.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetAccountAccountIdOrdersOrderIdRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetAccountAccountIdOrdersOrderIdRequest();
+    $request = new Operations\GetAccountAccountIdOrdersOrderIdRequest();
     $request->accountId = 'string';
     $request->orderId = 'string';
 
@@ -78,19 +78,19 @@ List all Orders for API key's account, paginated and optionally restricted to a 
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetOrdersRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetOrdersRequest();
+    $request = new Operations\GetOrdersRequest();
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->from = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-01T00:00:00.000Z');
@@ -130,30 +130,28 @@ Pay for Order with Token
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrderIdPayRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrderIdPayRequestBody;
-use \TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrderIdPayRequestBodyPaymentMethod;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PostAccountAccountIdOrdersOrderIdPayRequest();
-    $request->requestBody = new PostAccountAccountIdOrdersOrderIdPayRequestBody();
-    $request->requestBody->paymentMethod = new PostAccountAccountIdOrdersOrderIdPayRequestBodyPaymentMethod();
+    $request = new Operations\PostAccountAccountIdOrdersOrderIdPayRequest();
+    $request->requestBody = new Operations\PostAccountAccountIdOrdersOrderIdPayRequestBody();
+    $request->requestBody->paymentMethod = new Operations\PaymentMethod();
     $request->requestBody->paymentMethod->token = 'f0db7065-be66-4501-b49b-5eb56e265cb1';
     $request->accountId = 'string';
     $request->orderId = 'string';
 
     $response = $sdk->orders->postAccountAccountIdOrdersOrderIdPay($request);
 
-    if ($response->postAccountAccountIdOrdersOrderIdPay200ApplicationJSONObject !== null) {
+    if ($response->twoHundredApplicationJsonObject !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -185,36 +183,24 @@ Create an Order, needs to specify which account the Order will belong to.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersRequest;
-use \TheLogicStudio\ExactPayments\Models\Shared\Order;
-use \TheLogicStudio\ExactPayments\Models\Shared\CustomerDetails;
-use \TheLogicStudio\ExactPayments\Models\Shared\BillingAddress;
-use \TheLogicStudio\ExactPayments\Models\Shared\CustomerDetailsPhoneType;
-use \TheLogicStudio\ExactPayments\Models\Shared\Level3;
-use \TheLogicStudio\ExactPayments\Models\Shared\LineItem;
-use \TheLogicStudio\ExactPayments\Models\Shared\ShipTo;
-use \TheLogicStudio\ExactPayments\Models\Shared\ShipToPhoneType;
-use \TheLogicStudio\ExactPayments\Models\Shared\OrderOptions;
-use \TheLogicStudio\ExactPayments\Models\Shared\OrderOptionsEcommerceFlag;
-use \TheLogicStudio\ExactPayments\Models\Shared\Reference;
-use \TheLogicStudio\ExactPayments\Models\Shared\SoftDescriptor;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PostAccountAccountIdOrdersRequest();
+    $request = new Operations\PostAccountAccountIdOrdersRequest();
     $request->accountId = 'string';
-    $request->order = new Order();
+    $request->order = new Shared\Order();
     $request->order->amount = 123;
-    $request->order->billing = new CustomerDetails();
-    $request->order->billing->address = new BillingAddress();
+    $request->order->billing = new Shared\CustomerDetails();
+    $request->order->billing->address = new Shared\BillingAddress();
     $request->order->billing->address->city = 'Ontario';
     $request->order->billing->address->countryCode = 'USA';
     $request->order->billing->address->line1 = 'Fairfield Ranch';
@@ -224,21 +210,21 @@ try {
     $request->order->billing->email = 'john@acmecorp.com';
     $request->order->billing->name = 'John Doe';
     $request->order->billing->phone = '5551234567';
-    $request->order->billing->phoneType = CustomerDetailsPhoneType::H;
+    $request->order->billing->phoneType = Shared\PhoneType::H;
     $request->order->capture = true;
     $request->order->description = 'Order description';
-    $request->order->level3 = new Level3();
+    $request->order->level3 = new Shared\Level3();
     $request->order->level3->altTaxAmount = 5;
     $request->order->level3->altTaxId = 'a1b2c3';
     $request->order->level3->discountAmount = 5;
     $request->order->level3->dutyAmount = 5;
     $request->order->level3->freightAmount = 5;
     $request->order->level3->lineItems = [
-        new LineItem(),
+        new Shared\LineItem(),
     ];
     $request->order->level3->shipFromZip = '91710';
-    $request->order->level3->shipTo = new ShipTo();
-    $request->order->level3->shipTo->address = new BillingAddress();
+    $request->order->level3->shipTo = new Shared\ShipTo();
+    $request->order->level3->shipTo->address = new Shared\BillingAddress();
     $request->order->level3->shipTo->address->city = 'Ontario';
     $request->order->level3->shipTo->address->countryCode = 'USA';
     $request->order->level3->shipTo->address->line1 = 'Fairfield Ranch';
@@ -249,19 +235,19 @@ try {
     $request->order->level3->shipTo->email = 'john@acmecorp.com';
     $request->order->level3->shipTo->name = 'John Doe';
     $request->order->level3->shipTo->phone = '5551234567';
-    $request->order->level3->shipTo->phoneType = ShipToPhoneType::N;
+    $request->order->level3->shipTo->phoneType = Shared\ShipToPhoneType::N;
     $request->order->level3->taxAmount = 5;
     $request->order->level3->taxRate = 0.5;
-    $request->order->options = new OrderOptions();
+    $request->order->options = new Shared\OrderOptions();
     $request->order->options->customerIp = '198.51.100.42';
-    $request->order->options->ecommerceFlag = OrderOptionsEcommerceFlag::One;
+    $request->order->options->ecommerceFlag = Shared\EcommerceFlag::One;
     $request->order->options->orderTrackingNumber = 'trackid123';
-    $request->order->reference = new Reference();
+    $request->order->reference = new Shared\Reference();
     $request->order->reference->correlationId = 'abc123';
     $request->order->reference->customerRef = 'ref123';
     $request->order->reference->reference3 = 'ref12345';
     $request->order->reference->referenceNo = 'ref1234';
-    $request->order->softDescriptor = new SoftDescriptor();
+    $request->order->softDescriptor = new Shared\SoftDescriptor();
     $request->order->softDescriptor->authTypeIndicator = 'F';
     $request->order->softDescriptor->city = 'Ontario';
     $request->order->softDescriptor->countryCode = 'USA';
@@ -313,33 +299,21 @@ Create an Order.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Shared\Order;
-use \TheLogicStudio\ExactPayments\Models\Shared\CustomerDetails;
-use \TheLogicStudio\ExactPayments\Models\Shared\BillingAddress;
-use \TheLogicStudio\ExactPayments\Models\Shared\CustomerDetailsPhoneType;
-use \TheLogicStudio\ExactPayments\Models\Shared\Level3;
-use \TheLogicStudio\ExactPayments\Models\Shared\LineItem;
-use \TheLogicStudio\ExactPayments\Models\Shared\ShipTo;
-use \TheLogicStudio\ExactPayments\Models\Shared\ShipToPhoneType;
-use \TheLogicStudio\ExactPayments\Models\Shared\OrderOptions;
-use \TheLogicStudio\ExactPayments\Models\Shared\OrderOptionsEcommerceFlag;
-use \TheLogicStudio\ExactPayments\Models\Shared\Reference;
-use \TheLogicStudio\ExactPayments\Models\Shared\SoftDescriptor;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new Order();
+    $request = new Shared\Order();
     $request->amount = 123;
-    $request->billing = new CustomerDetails();
-    $request->billing->address = new BillingAddress();
+    $request->billing = new Shared\CustomerDetails();
+    $request->billing->address = new Shared\BillingAddress();
     $request->billing->address->city = 'Ontario';
     $request->billing->address->countryCode = 'USA';
     $request->billing->address->line1 = 'Fairfield Ranch';
@@ -349,21 +323,21 @@ try {
     $request->billing->email = 'john@acmecorp.com';
     $request->billing->name = 'John Doe';
     $request->billing->phone = '5551234567';
-    $request->billing->phoneType = CustomerDetailsPhoneType::N;
+    $request->billing->phoneType = Shared\PhoneType::N;
     $request->capture = true;
     $request->description = 'Order description';
-    $request->level3 = new Level3();
+    $request->level3 = new Shared\Level3();
     $request->level3->altTaxAmount = 5;
     $request->level3->altTaxId = 'a1b2c3';
     $request->level3->discountAmount = 5;
     $request->level3->dutyAmount = 5;
     $request->level3->freightAmount = 5;
     $request->level3->lineItems = [
-        new LineItem(),
+        new Shared\LineItem(),
     ];
     $request->level3->shipFromZip = '91710';
-    $request->level3->shipTo = new ShipTo();
-    $request->level3->shipTo->address = new BillingAddress();
+    $request->level3->shipTo = new Shared\ShipTo();
+    $request->level3->shipTo->address = new Shared\BillingAddress();
     $request->level3->shipTo->address->city = 'Ontario';
     $request->level3->shipTo->address->countryCode = 'USA';
     $request->level3->shipTo->address->line1 = 'Fairfield Ranch';
@@ -374,19 +348,19 @@ try {
     $request->level3->shipTo->email = 'john@acmecorp.com';
     $request->level3->shipTo->name = 'John Doe';
     $request->level3->shipTo->phone = '5551234567';
-    $request->level3->shipTo->phoneType = ShipToPhoneType::W;
+    $request->level3->shipTo->phoneType = Shared\ShipToPhoneType::W;
     $request->level3->taxAmount = 5;
     $request->level3->taxRate = 0.5;
-    $request->options = new OrderOptions();
+    $request->options = new Shared\OrderOptions();
     $request->options->customerIp = '198.51.100.42';
-    $request->options->ecommerceFlag = OrderOptionsEcommerceFlag::Eight;
+    $request->options->ecommerceFlag = Shared\EcommerceFlag::Eight;
     $request->options->orderTrackingNumber = 'trackid123';
-    $request->reference = new Reference();
+    $request->reference = new Shared\Reference();
     $request->reference->correlationId = 'abc123';
     $request->reference->customerRef = 'ref123';
     $request->reference->reference3 = 'ref12345';
     $request->reference->referenceNo = 'ref1234';
-    $request->softDescriptor = new SoftDescriptor();
+    $request->softDescriptor = new Shared\SoftDescriptor();
     $request->softDescriptor->authTypeIndicator = 'F';
     $request->softDescriptor->city = 'Ontario';
     $request->softDescriptor->countryCode = 'USA';
@@ -438,19 +412,19 @@ Create a new access token for this Order. This will invalidate any existing acce
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\PostOrdersOrderIdAccessTokenRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PostOrdersOrderIdAccessTokenRequest();
+    $request = new Operations\PostOrdersOrderIdAccessTokenRequest();
     $request->orderId = 'string';
 
     $response = $sdk->orders->postOrdersOrderIdAccessToken($request);
@@ -487,36 +461,24 @@ Update details of an existing Order.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\PutAccountAccountIdOrdersOrderIdRequest;
-use \TheLogicStudio\ExactPayments\Models\Shared\Order;
-use \TheLogicStudio\ExactPayments\Models\Shared\CustomerDetails;
-use \TheLogicStudio\ExactPayments\Models\Shared\BillingAddress;
-use \TheLogicStudio\ExactPayments\Models\Shared\CustomerDetailsPhoneType;
-use \TheLogicStudio\ExactPayments\Models\Shared\Level3;
-use \TheLogicStudio\ExactPayments\Models\Shared\LineItem;
-use \TheLogicStudio\ExactPayments\Models\Shared\ShipTo;
-use \TheLogicStudio\ExactPayments\Models\Shared\ShipToPhoneType;
-use \TheLogicStudio\ExactPayments\Models\Shared\OrderOptions;
-use \TheLogicStudio\ExactPayments\Models\Shared\OrderOptionsEcommerceFlag;
-use \TheLogicStudio\ExactPayments\Models\Shared\Reference;
-use \TheLogicStudio\ExactPayments\Models\Shared\SoftDescriptor;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PutAccountAccountIdOrdersOrderIdRequest();
+    $request = new Operations\PutAccountAccountIdOrdersOrderIdRequest();
     $request->accountId = 'string';
-    $request->order = new Order();
+    $request->order = new Shared\Order();
     $request->order->amount = 123;
-    $request->order->billing = new CustomerDetails();
-    $request->order->billing->address = new BillingAddress();
+    $request->order->billing = new Shared\CustomerDetails();
+    $request->order->billing->address = new Shared\BillingAddress();
     $request->order->billing->address->city = 'Ontario';
     $request->order->billing->address->countryCode = 'USA';
     $request->order->billing->address->line1 = 'Fairfield Ranch';
@@ -526,21 +488,21 @@ try {
     $request->order->billing->email = 'john@acmecorp.com';
     $request->order->billing->name = 'John Doe';
     $request->order->billing->phone = '5551234567';
-    $request->order->billing->phoneType = CustomerDetailsPhoneType::D;
+    $request->order->billing->phoneType = Shared\PhoneType::D;
     $request->order->capture = true;
     $request->order->description = 'Order description';
-    $request->order->level3 = new Level3();
+    $request->order->level3 = new Shared\Level3();
     $request->order->level3->altTaxAmount = 5;
     $request->order->level3->altTaxId = 'a1b2c3';
     $request->order->level3->discountAmount = 5;
     $request->order->level3->dutyAmount = 5;
     $request->order->level3->freightAmount = 5;
     $request->order->level3->lineItems = [
-        new LineItem(),
+        new Shared\LineItem(),
     ];
     $request->order->level3->shipFromZip = '91710';
-    $request->order->level3->shipTo = new ShipTo();
-    $request->order->level3->shipTo->address = new BillingAddress();
+    $request->order->level3->shipTo = new Shared\ShipTo();
+    $request->order->level3->shipTo->address = new Shared\BillingAddress();
     $request->order->level3->shipTo->address->city = 'Ontario';
     $request->order->level3->shipTo->address->countryCode = 'USA';
     $request->order->level3->shipTo->address->line1 = 'Fairfield Ranch';
@@ -551,19 +513,19 @@ try {
     $request->order->level3->shipTo->email = 'john@acmecorp.com';
     $request->order->level3->shipTo->name = 'John Doe';
     $request->order->level3->shipTo->phone = '5551234567';
-    $request->order->level3->shipTo->phoneType = ShipToPhoneType::N;
+    $request->order->level3->shipTo->phoneType = Shared\ShipToPhoneType::N;
     $request->order->level3->taxAmount = 5;
     $request->order->level3->taxRate = 0.5;
-    $request->order->options = new OrderOptions();
+    $request->order->options = new Shared\OrderOptions();
     $request->order->options->customerIp = '198.51.100.42';
-    $request->order->options->ecommerceFlag = OrderOptionsEcommerceFlag::Four;
+    $request->order->options->ecommerceFlag = Shared\EcommerceFlag::Four;
     $request->order->options->orderTrackingNumber = 'trackid123';
-    $request->order->reference = new Reference();
+    $request->order->reference = new Shared\Reference();
     $request->order->reference->correlationId = 'abc123';
     $request->order->reference->customerRef = 'ref123';
     $request->order->reference->reference3 = 'ref12345';
     $request->order->reference->referenceNo = 'ref1234';
-    $request->order->softDescriptor = new SoftDescriptor();
+    $request->order->softDescriptor = new Shared\SoftDescriptor();
     $request->order->softDescriptor->authTypeIndicator = 'F';
     $request->order->softDescriptor->city = 'Ontario';
     $request->order->softDescriptor->countryCode = 'USA';
@@ -616,19 +578,19 @@ Reset failed payment attempts count to zero for this Order.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\PutOrdersOrderIdResetRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PutOrdersOrderIdResetRequest();
+    $request = new Operations\PutOrdersOrderIdResetRequest();
     $request->orderId = 'string';
 
     $response = $sdk->orders->putOrdersOrderIdReset($request);

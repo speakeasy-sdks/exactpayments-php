@@ -64,10 +64,10 @@ class NewPaymentLevel3
     /**
      * Optional and can be included in a Payment request when there are calculated charges such as taxes and shipping charges added on to a purchase.
      * 
-     * @var ?array<\TheLogicStudio\ExactPayments\Models\Shared\NewPaymentLevel3LineItems> $lineItems
+     * @var ?array<\TheLogicStudio\ExactPayments\Models\Shared\LineItems> $lineItems
      */
 	#[\JMS\Serializer\Annotation\SerializedName('lineItems')]
-    #[\JMS\Serializer\Annotation\Type('array<TheLogicStudio\ExactPayments\Models\Shared\NewPaymentLevel3LineItems>')]
+    #[\JMS\Serializer\Annotation\Type('array<TheLogicStudio\ExactPayments\Models\Shared\LineItems>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $lineItems = null;
     
@@ -82,9 +82,9 @@ class NewPaymentLevel3
     public ?string $shipFromZip = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('shipTo')]
-    #[\JMS\Serializer\Annotation\Type('TheLogicStudio\ExactPayments\Models\Shared\NewPaymentLevel3ShipTo')]
+    #[\JMS\Serializer\Annotation\Type('TheLogicStudio\ExactPayments\Models\Shared\NewPaymentShipTo')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?NewPaymentLevel3ShipTo $shipTo = null;
+    public ?NewPaymentShipTo $shipTo = null;
     
     /**
      * In smallest currency units, eg: cents in USD.

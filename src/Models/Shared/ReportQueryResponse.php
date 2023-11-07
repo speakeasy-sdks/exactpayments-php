@@ -47,9 +47,9 @@ class ReportQueryResponse
     public ?string $organization = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('parameters')]
-    #[\JMS\Serializer\Annotation\Type('TheLogicStudio\ExactPayments\Models\Shared\ReportQueryResponseParameters')]
+    #[\JMS\Serializer\Annotation\Type('TheLogicStudio\ExactPayments\Models\Shared\Parameters')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?ReportQueryResponseParameters $parameters = null;
+    public ?Parameters $parameters = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('runAt')]
     #[\JMS\Serializer\Annotation\Type('string')]

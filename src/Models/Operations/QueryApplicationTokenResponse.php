@@ -12,14 +12,6 @@ namespace TheLogicStudio\ExactPayments\Models\Operations;
 class QueryApplicationTokenResponse
 {
     /**
-     * **OK**
-     * 
-     * @var ?array<\TheLogicStudio\ExactPayments\Models\Shared\ApplicationTokenResponse> $applicationTokenResponses
-     */
-	
-    public ?array $applicationTokenResponses = null;
-    
-    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -46,6 +38,16 @@ class QueryApplicationTokenResponse
     public ?string $internalServerError = null;
     
     /**
+     * **Service Unavailable**
+     * 
+     * 
+     * 
+     * @var ?string $serviceUnavailable
+     */
+	
+    public ?string $serviceUnavailable = null;
+    
+    /**
      * HTTP response status code for this operation
      * 
      * @var int $statusCode
@@ -62,23 +64,21 @@ class QueryApplicationTokenResponse
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
     /**
-     * **Service Unavailable**
+     * **OK**
      * 
-     * 
-     * 
-     * @var ?string $serviceUnavailable
+     * @var ?array<\TheLogicStudio\ExactPayments\Models\Shared\ApplicationTokenResponse> $classes
      */
 	
-    public ?string $serviceUnavailable = null;
+    public ?array $classes = null;
     
 	public function __construct()
 	{
-		$this->applicationTokenResponses = null;
 		$this->contentType = "";
 		$this->headers = null;
 		$this->internalServerError = null;
+		$this->serviceUnavailable = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->serviceUnavailable = null;
+		$this->classes = null;
 	}
 }

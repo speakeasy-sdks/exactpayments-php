@@ -61,10 +61,10 @@ class PostCreateNotesResponse
     /**
      * **Created**
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\OnboardingNoteOutput $onboardingNote
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\OnboardingNote $onboardingNote
      */
 	
-    public ?\TheLogicStudio\ExactPayments\Models\Shared\OnboardingNoteOutput $onboardingNote = null;
+    public ?\TheLogicStudio\ExactPayments\Models\Shared\OnboardingNote $onboardingNote = null;
     
     /**
      * HTTP response status code for this operation

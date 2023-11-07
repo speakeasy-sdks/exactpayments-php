@@ -14,12 +14,12 @@ class PostAccountAccountIdOrdersOrderIdPayRequestBody
     /**
      * Payment Method of the Order.
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrderIdPayRequestBodyPaymentMethod $paymentMethod
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PaymentMethod $paymentMethod
      */
 	#[\JMS\Serializer\Annotation\SerializedName('paymentMethod')]
-    #[\JMS\Serializer\Annotation\Type('TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrderIdPayRequestBodyPaymentMethod')]
+    #[\JMS\Serializer\Annotation\Type('TheLogicStudio\ExactPayments\Models\Operations\PaymentMethod')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?PostAccountAccountIdOrdersOrderIdPayRequestBodyPaymentMethod $paymentMethod = null;
+    public ?PaymentMethod $paymentMethod = null;
     
 	public function __construct()
 	{

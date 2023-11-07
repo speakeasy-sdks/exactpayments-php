@@ -12,9 +12,9 @@ namespace TheLogicStudio\ExactPayments\Models\Shared;
 class OrderResponse
 {
 	#[\JMS\Serializer\Annotation\SerializedName('accessToken')]
-    #[\JMS\Serializer\Annotation\Type('TheLogicStudio\ExactPayments\Models\Shared\OrderResponseAccessToken')]
+    #[\JMS\Serializer\Annotation\Type('TheLogicStudio\ExactPayments\Models\Shared\AccessToken')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?OrderResponseAccessToken $accessToken = null;
+    public ?AccessToken $accessToken = null;
     
     /**
      * Amount in smallest currency unit, eg: cents, including all surcharges, taxes etc.
@@ -29,12 +29,12 @@ class OrderResponse
     /**
      * Optional billing details for the customer.
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\OrderResponseBilling $billing
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\Billing $billing
      */
 	#[\JMS\Serializer\Annotation\SerializedName('billing')]
-    #[\JMS\Serializer\Annotation\Type('TheLogicStudio\ExactPayments\Models\Shared\OrderResponseBilling')]
+    #[\JMS\Serializer\Annotation\Type('TheLogicStudio\ExactPayments\Models\Shared\Billing')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?OrderResponseBilling $billing = null;
+    public ?Billing $billing = null;
     
     /**
      * Set this to false if you only want to authorize for the amount. Defaults to true.

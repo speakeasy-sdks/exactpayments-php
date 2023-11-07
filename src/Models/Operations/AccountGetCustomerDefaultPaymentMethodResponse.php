@@ -12,6 +12,45 @@ namespace TheLogicStudio\ExactPayments\Models\Operations;
 class AccountGetCustomerDefaultPaymentMethodResponse
 {
     /**
+     * The response contains the details of the Payment Method that was marked as default for this Customer.
+     * 
+     * @var ?array<mixed> $twoHundredApplicationJsonAnies
+     */
+	
+    public ?array $twoHundredApplicationJsonAnies = null;
+    
+    /**
+     * **Access Denied**\
+     * 
+     * Credentials supplied do not grant access to the requested resource.
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerDefaultPaymentMethodResponseBody $fourHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?AccountGetCustomerDefaultPaymentMethodResponseBody $fourHundredAndThreeApplicationJsonObject = null;
+    
+    /**
+     * **Internal Server Error**
+     * 
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerDefaultPaymentMethodCustomersResponseBody $fiveHundredApplicationJsonObject
+     */
+	
+    public ?AccountGetCustomerDefaultPaymentMethodCustomersResponseBody $fiveHundredApplicationJsonObject = null;
+    
+    /**
+     * **Service Unavailable**
+     * 
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerDefaultPaymentMethodCustomersResponseResponseBody $fiveHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?AccountGetCustomerDefaultPaymentMethodCustomersResponseResponseBody $fiveHundredAndThreeApplicationJsonObject = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -31,14 +70,6 @@ class AccountGetCustomerDefaultPaymentMethodResponse
     public ?\TheLogicStudio\ExactPayments\Models\Shared\NotFoundError $notFoundError = null;
     
     /**
-     * The response contains the details of the Payment Method that was marked as default for this Customer.
-     * 
-     * @var ?array<mixed> $paymentMethods
-     */
-	
-    public ?array $paymentMethods = null;
-    
-    /**
      * HTTP response status code for this operation
      * 
      * @var int $statusCode
@@ -54,46 +85,15 @@ class AccountGetCustomerDefaultPaymentMethodResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
-    /**
-     * **Access Denied**\
-     * 
-     * Credentials supplied do not grant access to the requested resource.
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerDefaultPaymentMethod403ApplicationJSON $accountGetCustomerDefaultPaymentMethod403ApplicationJSONObject
-     */
-	
-    public ?AccountGetCustomerDefaultPaymentMethod403ApplicationJSON $accountGetCustomerDefaultPaymentMethod403ApplicationJSONObject = null;
-    
-    /**
-     * **Internal Server Error**
-     * 
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerDefaultPaymentMethod500ApplicationJSON $accountGetCustomerDefaultPaymentMethod500ApplicationJSONObject
-     */
-	
-    public ?AccountGetCustomerDefaultPaymentMethod500ApplicationJSON $accountGetCustomerDefaultPaymentMethod500ApplicationJSONObject = null;
-    
-    /**
-     * **Service Unavailable**
-     * 
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerDefaultPaymentMethod503ApplicationJSON $accountGetCustomerDefaultPaymentMethod503ApplicationJSONObject
-     */
-	
-    public ?AccountGetCustomerDefaultPaymentMethod503ApplicationJSON $accountGetCustomerDefaultPaymentMethod503ApplicationJSONObject = null;
-    
 	public function __construct()
 	{
+		$this->twoHundredApplicationJsonAnies = null;
+		$this->fourHundredAndThreeApplicationJsonObject = null;
+		$this->fiveHundredApplicationJsonObject = null;
+		$this->fiveHundredAndThreeApplicationJsonObject = null;
 		$this->contentType = "";
 		$this->notFoundError = null;
-		$this->paymentMethods = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->accountGetCustomerDefaultPaymentMethod403ApplicationJSONObject = null;
-		$this->accountGetCustomerDefaultPaymentMethod500ApplicationJSONObject = null;
-		$this->accountGetCustomerDefaultPaymentMethod503ApplicationJSONObject = null;
 	}
 }

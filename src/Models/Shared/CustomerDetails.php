@@ -60,12 +60,12 @@ class CustomerDetails
     /**
      * H = Home, W = Work, D = Day, N = Night. Phone type is required when a phone number is supplied.
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\CustomerDetailsPhoneType $phoneType
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\PhoneType $phoneType
      */
 	#[\JMS\Serializer\Annotation\SerializedName('phoneType')]
-    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\CustomerDetailsPhoneType>')]
+    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\PhoneType>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?CustomerDetailsPhoneType $phoneType = null;
+    public ?PhoneType $phoneType = null;
     
 	public function __construct()
 	{

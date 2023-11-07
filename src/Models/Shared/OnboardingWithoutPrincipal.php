@@ -129,12 +129,12 @@ class OnboardingWithoutPrincipal
     /**
      * Reason for the status change. The reason may be needed when the Onboarding status changes to `accountClosed`, `autoDeclined`, `declined`, `pended`, and `terminated`. This field will be available only when the status change reason is entered in the system.
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\OnboardingWithoutPrincipalStatusChangeReason $statusChangeReason
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\StatusChangeReason $statusChangeReason
      */
 	#[\JMS\Serializer\Annotation\SerializedName('statusChangeReason')]
-    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\OnboardingWithoutPrincipalStatusChangeReason>')]
+    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\StatusChangeReason>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?OnboardingWithoutPrincipalStatusChangeReason $statusChangeReason = null;
+    public ?StatusChangeReason $statusChangeReason = null;
     
     /**
      * Notes related to the status change.  This field will be available only when the status change reason note is entered in the system.

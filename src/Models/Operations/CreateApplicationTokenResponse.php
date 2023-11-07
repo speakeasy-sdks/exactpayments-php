@@ -14,10 +14,10 @@ class CreateApplicationTokenResponse
     /**
      * **Created**
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\ApplicationTokenOutput $applicationToken
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\ApplicationToken $applicationToken
      */
 	
-    public ?\TheLogicStudio\ExactPayments\Models\Shared\ApplicationTokenOutput $applicationToken = null;
+    public ?\TheLogicStudio\ExactPayments\Models\Shared\ApplicationToken $applicationToken = null;
     
     /**
      * **Bad Request**\

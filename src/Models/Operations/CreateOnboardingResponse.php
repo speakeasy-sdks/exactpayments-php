@@ -64,18 +64,6 @@ class CreateOnboardingResponse
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
     /**
-     * **Bad Request**\
-     * 
-     * \
-     * The request body contains a malformed request or is incomplete.
-     * 
-     * 
-     * @var mixed $createOnboarding400ApplicationJSONOneOf
-     */
-	
-    public mixed $createOnboarding400ApplicationJSONOneOf = null;
-    
-    /**
      * **Not Found**\
      * 
      * \
@@ -85,10 +73,22 @@ class CreateOnboardingResponse
      * - The Organization doesn't exist.
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\CreateOnboarding404ApplicationJSON $createOnboarding404ApplicationJSONObject
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\CreateOnboardingResponseBody $object
      */
 	
-    public ?CreateOnboarding404ApplicationJSON $createOnboarding404ApplicationJSONObject = null;
+    public ?CreateOnboardingResponseBody $object = null;
+    
+    /**
+     * **Bad Request**\
+     * 
+     * \
+     * The request body contains a malformed request or is incomplete.
+     * 
+     * 
+     * @var mixed $oneOf
+     */
+	
+    public mixed $oneOf = null;
     
 	public function __construct()
 	{
@@ -98,7 +98,7 @@ class CreateOnboardingResponse
 		$this->serviceUnavailable = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->createOnboarding400ApplicationJSONOneOf = null;
-		$this->createOnboarding404ApplicationJSONObject = null;
+		$this->object = null;
+		$this->oneOf = null;
 	}
 }

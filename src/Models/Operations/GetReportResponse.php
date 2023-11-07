@@ -43,12 +43,14 @@ class GetReportResponse
     public ?string $notFound = null;
     
     /**
-     * If the report was generated, a stream of JSON file with the report result data, otherwise the JSON report query will be retrieved. The examples shown are for the JSON format.
+     * **Service Unavailable**
      * 
-     * @var ?array<mixed> $reportDetailsResponses
+     * 
+     * 
+     * @var ?string $serviceUnavailable
      */
 	
-    public ?array $reportDetailsResponses = null;
+    public ?string $serviceUnavailable = null;
     
     /**
      * HTTP response status code for this operation
@@ -67,16 +69,6 @@ class GetReportResponse
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
     /**
-     * **Service Unavailable**
-     * 
-     * 
-     * 
-     * @var ?string $serviceUnavailable
-     */
-	
-    public ?string $serviceUnavailable = null;
-    
-    /**
      * **Unauthorized**\
      * 
      * \
@@ -90,15 +82,23 @@ class GetReportResponse
 	
     public ?string $unauthorized = null;
     
+    /**
+     * If the report was generated, a stream of JSON file with the report result data, otherwise the JSON report query will be retrieved. The examples shown are for the JSON format.
+     * 
+     * @var ?array<mixed> $anies
+     */
+	
+    public ?array $anies = null;
+    
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->internalServerError = null;
 		$this->notFound = null;
-		$this->reportDetailsResponses = null;
+		$this->serviceUnavailable = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->serviceUnavailable = null;
 		$this->unauthorized = null;
+		$this->anies = null;
 	}
 }

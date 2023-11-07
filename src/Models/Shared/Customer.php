@@ -20,10 +20,10 @@ class Customer
     /**
      * $addresses
      * 
-     * @var ?array<\TheLogicStudio\ExactPayments\Models\Shared\CustomerAddresses> $addresses
+     * @var ?array<\TheLogicStudio\ExactPayments\Models\Shared\Addresses> $addresses
      */
 	#[\JMS\Serializer\Annotation\SerializedName('addresses')]
-    #[\JMS\Serializer\Annotation\Type('array<TheLogicStudio\ExactPayments\Models\Shared\CustomerAddresses>')]
+    #[\JMS\Serializer\Annotation\Type('array<TheLogicStudio\ExactPayments\Models\Shared\Addresses>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $addresses = null;
     

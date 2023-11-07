@@ -1,5 +1,5 @@
 # Customers
-(*customers*)
+
 
 ## Overview
 
@@ -43,19 +43,19 @@ In order to unlink a payment method from a customer, the following call can be m
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteCustomerCustomerIdPaymentMethodTokenRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new AccountDeleteCustomerCustomerIdPaymentMethodTokenRequest();
+    $request = new Operations\AccountDeleteCustomerCustomerIdPaymentMethodTokenRequest();
     $request->accountId = 'string';
     $request->customerId = 'string';
     $request->tokenId = 'string';
@@ -94,19 +94,19 @@ On occasion it is necessary for an API consumer to delete customers. The followi
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteCustomerIdRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new AccountDeleteCustomerIdRequest();
+    $request = new Operations\AccountDeleteCustomerIdRequest();
     $request->accountId = 'string';
     $request->customerId = 'string';
 
@@ -144,19 +144,19 @@ This API returns the list of customers under a given merchant. It is meant to be
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new AccountGetCustomerRequest();
+    $request = new Operations\AccountGetCustomerRequest();
     $request->dollarLimit = 5056.72;
     $request->dollarSkip = 6564.29;
     $request->dollarSort = '-name';
@@ -164,7 +164,7 @@ try {
 
     $response = $sdk->customers->accountGetCustomer($request);
 
-    if ($response->accountGetCustomer201ApplicationJSONObject !== null) {
+    if ($response->object !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -196,19 +196,19 @@ For fetching singular customer objects API consumers can issue a call to the fol
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerIdRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new AccountGetCustomerIdRequest();
+    $request = new Operations\AccountGetCustomerIdRequest();
     $request->accountId = 'string';
     $request->customerId = 'string';
 
@@ -246,19 +246,19 @@ To retrieve a payment method as well as ensure it is associated with a customer.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerCustomerIdPaymentMethodTokenRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new AccountGetCustomerCustomerIdPaymentMethodTokenRequest();
+    $request = new Operations\AccountGetCustomerCustomerIdPaymentMethodTokenRequest();
     $request->accountId = 'string';
     $request->customerId = 'string';
     $request->tokenId = 'string';
@@ -297,19 +297,19 @@ In order to fetch payments performed by a customer, the following endpoint can b
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerCustomerIdPaymentsRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new AccountGetCustomerCustomerIdPaymentsRequest();
+    $request = new Operations\AccountGetCustomerCustomerIdPaymentsRequest();
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = '-name';
@@ -318,7 +318,7 @@ try {
 
     $response = $sdk->customers->accountGetCustomerCustomerIdPayments($request);
 
-    if ($response->payments !== null) {
+    if ($response->anies !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -350,25 +350,25 @@ You can associate multiple Payment Methods to a single Customer; however, only o
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerDefaultPaymentMethodRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new AccountGetCustomerDefaultPaymentMethodRequest();
+    $request = new Operations\AccountGetCustomerDefaultPaymentMethodRequest();
     $request->accountId = 'string';
     $request->customerId = 'string';
 
     $response = $sdk->customers->accountGetCustomerDefaultPaymentMethod($request);
 
-    if ($response->paymentMethods !== null) {
+    if ($response->twoHundredApplicationJsonAnies !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -400,25 +400,25 @@ To query payment methods associated with a customer the following call can be us
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerIdPaymentMethodRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new AccountGetCustomerIdPaymentMethodRequest();
+    $request = new Operations\AccountGetCustomerIdPaymentMethodRequest();
     $request->accountId = 'string';
     $request->customerId = 'string';
 
     $response = $sdk->customers->accountGetCustomerIdPaymentMethod($request);
 
-    if ($response->paymentMethods !== null) {
+    if ($response->anies !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -450,25 +450,25 @@ This route takes the customer token instead of an id to enable users to list  pa
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerTokenPaymentMethodRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new AccountGetCustomerTokenPaymentMethodRequest();
+    $request = new Operations\AccountGetCustomerTokenPaymentMethodRequest();
     $request->accountId = 'string';
     $request->customerToken = 'string';
 
     $response = $sdk->customers->accountGetCustomerTokenPaymentMethod($request);
 
-    if ($response->paymentMethods !== null) {
+    if ($response->anies !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -500,24 +500,22 @@ In order to create a customer API consumers can issue a call to the following en
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\AccountPostCustomerRequest;
-use \TheLogicStudio\ExactPayments\Models\Shared\NewCustomer;
-use \TheLogicStudio\ExactPayments\Models\Shared\NewCustomerAddresses;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new AccountPostCustomerRequest();
-    $request->newCustomer = new NewCustomer();
+    $request = new Operations\AccountPostCustomerRequest();
+    $request->newCustomer = new Shared\NewCustomer();
     $request->newCustomer->addresses = [
-        new NewCustomerAddresses(),
+        new Shared\NewCustomerAddresses(),
     ];
     $request->newCustomer->email = 'Tobin56@hotmail.com';
     $request->newCustomer->name = 'string';
@@ -526,7 +524,7 @@ try {
 
     $response = $sdk->customers->accountPostCustomer($request);
 
-    if ($response->accountPostCustomer200ApplicationJSONObject !== null) {
+    if ($response->object !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -558,21 +556,20 @@ This API associates a payment method with a customer. It is meant to be invoked 
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\AccountPostCustomerIdPaymentMethodRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\AccountPostCustomerIdPaymentMethodRequestBody;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new AccountPostCustomerIdPaymentMethodRequest();
-    $request->requestBody = new AccountPostCustomerIdPaymentMethodRequestBody();
+    $request = new Operations\AccountPostCustomerIdPaymentMethodRequest();
+    $request->requestBody = new Operations\AccountPostCustomerIdPaymentMethodRequestBody();
     $request->requestBody->isDefault = false;
     $request->requestBody->label = 'string';
     $request->requestBody->token = 'string';
@@ -615,24 +612,22 @@ Note that the body can contain a subset of MongoDB update operators for more fin
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\AccountPutCustomerIdRequest;
-use \TheLogicStudio\ExactPayments\Models\Shared\NewCustomer;
-use \TheLogicStudio\ExactPayments\Models\Shared\NewCustomerAddresses;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new AccountPutCustomerIdRequest();
-    $request->newCustomer = new NewCustomer();
+    $request = new Operations\AccountPutCustomerIdRequest();
+    $request->newCustomer = new Shared\NewCustomer();
     $request->newCustomer->addresses = [
-        new NewCustomerAddresses(),
+        new Shared\NewCustomerAddresses(),
     ];
     $request->newCustomer->email = 'Rashad26@hotmail.com';
     $request->newCustomer->name = 'string';
@@ -674,19 +669,19 @@ In order to unlink a payment method from a customer, the following call can be m
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\DeleteCustomerCustomerIdPaymentMethodTokenRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new DeleteCustomerCustomerIdPaymentMethodTokenRequest();
+    $request = new Operations\DeleteCustomerCustomerIdPaymentMethodTokenRequest();
     $request->customerId = 'string';
     $request->tokenId = 'string';
 
@@ -724,19 +719,19 @@ On occasion it is necessary for an API consumer to delete customers. The followi
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\DeleteCustomerIdRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new DeleteCustomerIdRequest();
+    $request = new Operations\DeleteCustomerIdRequest();
     $request->customerId = 'string';
 
     $response = $sdk->customers->deleteCustomerId($request);
@@ -773,26 +768,26 @@ This API returns the list of customers for a given merchant. It is meant to be i
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetCustomerRequest();
+    $request = new Operations\GetCustomerRequest();
     $request->dollarLimit = 1259.75;
     $request->dollarSkip = 6289.72;
     $request->dollarSort = '-name';
 
     $response = $sdk->customers->getCustomer($request);
 
-    if ($response->getCustomer200ApplicationJSONObject !== null) {
+    if ($response->object !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -824,19 +819,19 @@ For fetching singular customer objects API consumers can issue a call to the fol
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerIdRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetCustomerIdRequest();
+    $request = new Operations\GetCustomerIdRequest();
     $request->customerId = 'string';
 
     $response = $sdk->customers->getCustomerId($request);
@@ -873,19 +868,19 @@ To retrieve a payment method as well as ensure it is associated with a customer.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerCustomerIdPaymentMethodTokenRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetCustomerCustomerIdPaymentMethodTokenRequest();
+    $request = new Operations\GetCustomerCustomerIdPaymentMethodTokenRequest();
     $request->customerId = 'string';
     $request->tokenId = 'string';
 
@@ -923,19 +918,19 @@ In order to fetch payments performed by a customer, the following endpoint can b
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerCustomerIdPaymentsRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetCustomerCustomerIdPaymentsRequest();
+    $request = new Operations\GetCustomerCustomerIdPaymentsRequest();
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = '-name';
@@ -943,7 +938,7 @@ try {
 
     $response = $sdk->customers->getCustomerCustomerIdPayments($request);
 
-    if ($response->payments !== null) {
+    if ($response->anies !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -975,24 +970,24 @@ To query payment methods associated with a customer the following call can be us
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerIdPaymentMethodRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetCustomerIdPaymentMethodRequest();
+    $request = new Operations\GetCustomerIdPaymentMethodRequest();
     $request->customerId = 'string';
 
     $response = $sdk->customers->getCustomerIdPaymentMethod($request);
 
-    if ($response->paymentMethods !== null) {
+    if ($response->anies !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -1024,26 +1019,26 @@ This route takes the customer token instead of an id to enable users to list  pa
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetCustomerTokenPaymentMethodRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetCustomerTokenPaymentMethodRequest();
+    $request = new Operations\GetCustomerTokenPaymentMethodRequest();
     $request->dollarLimit = 'string';
     $request->dollarSkip = 'string';
     $request->customerToken = 'string';
 
     $response = $sdk->customers->getCustomerTokenPaymentMethod($request);
 
-    if ($response->paymentMethods !== null) {
+    if ($response->anies !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -1075,22 +1070,20 @@ In order to create a customer API consumers can issue a call to the following en
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Shared\NewCustomer;
-use \TheLogicStudio\ExactPayments\Models\Shared\NewCustomerAddresses;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new NewCustomer();
+    $request = new Shared\NewCustomer();
     $request->addresses = [
-        new NewCustomerAddresses(),
+        new Shared\NewCustomerAddresses(),
     ];
     $request->email = 'Polly.Hamill94@gmail.com';
     $request->name = 'string';
@@ -1130,21 +1123,20 @@ This API associates a payment method with a customer. It is meant to be invoked 
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\PostCustomerIdPaymentMethodRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\PostCustomerIdPaymentMethodRequestBody;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PostCustomerIdPaymentMethodRequest();
-    $request->requestBody = new PostCustomerIdPaymentMethodRequestBody();
+    $request = new Operations\PostCustomerIdPaymentMethodRequest();
+    $request->requestBody = new Operations\PostCustomerIdPaymentMethodRequestBody();
     $request->requestBody->isDefault = false;
     $request->requestBody->label = 'string';
     $request->requestBody->token = 'string';
@@ -1186,24 +1178,22 @@ Note that the body can contain a subset of MongoDB update operators for more fin
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\PutCustomerIdRequest;
-use \TheLogicStudio\ExactPayments\Models\Shared\NewCustomer;
-use \TheLogicStudio\ExactPayments\Models\Shared\NewCustomerAddresses;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PutCustomerIdRequest();
-    $request->newCustomer = new NewCustomer();
+    $request = new Operations\PutCustomerIdRequest();
+    $request->newCustomer = new Shared\NewCustomer();
     $request->newCustomer->addresses = [
-        new NewCustomerAddresses(),
+        new Shared\NewCustomerAddresses(),
     ];
     $request->newCustomer->email = 'Major43@hotmail.com';
     $request->newCustomer->name = 'string';

@@ -51,12 +51,14 @@ class SearchOnboardingByBusinessNameResponse
     public ?string $notFound = null;
     
     /**
-     * **OK**
+     * **Service Unavailable**
      * 
-     * @var ?array<\TheLogicStudio\ExactPayments\Models\Shared\OnboardingWithoutPrincipal> $onboardingWithoutPrincipals
+     * 
+     * 
+     * @var ?string $serviceUnavailable
      */
 	
-    public ?array $onboardingWithoutPrincipals = null;
+    public ?string $serviceUnavailable = null;
     
     /**
      * HTTP response status code for this operation
@@ -75,16 +77,6 @@ class SearchOnboardingByBusinessNameResponse
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
     /**
-     * **Service Unavailable**
-     * 
-     * 
-     * 
-     * @var ?string $serviceUnavailable
-     */
-	
-    public ?string $serviceUnavailable = null;
-    
-    /**
      * **Unauthorized**\
      * 
      * \
@@ -98,16 +90,24 @@ class SearchOnboardingByBusinessNameResponse
 	
     public ?string $unauthorized = null;
     
+    /**
+     * **OK**
+     * 
+     * @var ?array<\TheLogicStudio\ExactPayments\Models\Shared\OnboardingWithoutPrincipal> $classes
+     */
+	
+    public ?array $classes = null;
+    
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->headers = null;
 		$this->internalServerError = null;
 		$this->notFound = null;
-		$this->onboardingWithoutPrincipals = null;
+		$this->serviceUnavailable = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->serviceUnavailable = null;
 		$this->unauthorized = null;
+		$this->classes = null;
 	}
 }

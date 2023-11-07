@@ -55,24 +55,6 @@ class GetListNotesResponse
     public ?string $notFound = null;
     
     /**
-     * **OK**
-     * 
-     * @var ?array<\TheLogicStudio\ExactPayments\Models\Shared\OnboardingNoteOutput> $onboardingNotes
-     */
-	
-    public ?array $onboardingNotes = null;
-    
-    /**
-     * **Service Unavailable**
-     * 
-     * 
-     * 
-     * @var ?string $serviceUnavailable
-     */
-	
-    public ?string $serviceUnavailable = null;
-    
-    /**
      * HTTP response status code for this operation
      * 
      * @var int $statusCode
@@ -89,6 +71,16 @@ class GetListNotesResponse
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
     /**
+     * **Service Unavailable**
+     * 
+     * 
+     * 
+     * @var ?string $serviceUnavailable
+     */
+	
+    public ?string $serviceUnavailable = null;
+    
+    /**
      * **Unauthorized**\
      * 
      * \
@@ -101,6 +93,14 @@ class GetListNotesResponse
      */
 	
     public ?string $unauthorized = null;
+    
+    /**
+     * **OK**
+     * 
+     * @var ?array<\TheLogicStudio\ExactPayments\Models\Shared\OnboardingNote> $classes
+     */
+	
+    public ?array $classes = null;
     
     /**
      * **Internal Server Error**\
@@ -122,11 +122,11 @@ class GetListNotesResponse
 		$this->headers = null;
 		$this->internalServerError = null;
 		$this->notFound = null;
-		$this->onboardingNotes = null;
-		$this->serviceUnavailable = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
+		$this->serviceUnavailable = null;
 		$this->unauthorized = null;
+		$this->classes = null;
 		$this->contextErrorResponseSystemError = null;
 	}
 }

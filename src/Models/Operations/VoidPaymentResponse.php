@@ -12,20 +12,75 @@ namespace TheLogicStudio\ExactPayments\Models\Operations;
 class VoidPaymentResponse
 {
     /**
+     * Payment Created
+     * 
+     * @var mixed $twoHundredAndOneApplicationJsonPayment
+     */
+	
+    public mixed $twoHundredAndOneApplicationJsonPayment = null;
+    
+    /**
+     * **Bad Request**\
+     * 
+     * When there are errors in the payload.
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\VoidPaymentResponseBody $fourHundredApplicationJsonObject
+     */
+	
+    public ?VoidPaymentResponseBody $fourHundredApplicationJsonObject = null;
+    
+    /**
+     * **Access Denied**\
+     * 
+     * Credentials supplied do not grant access to the requested resource.
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\VoidPaymentPaymentsResponseBody $fourHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?VoidPaymentPaymentsResponseBody $fourHundredAndThreeApplicationJsonObject = null;
+    
+    /**
+     * **Not Found**\
+     * 
+     * \
+     * When you'll get `401 Unauthorized` response:
+     * - When there are no Accounts/Orders/Payment found.
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\VoidPaymentPaymentsResponseResponseBody $fourHundredAndFourApplicationJsonObject
+     */
+	
+    public ?VoidPaymentPaymentsResponseResponseBody $fourHundredAndFourApplicationJsonObject = null;
+    
+    /**
+     * **Internal Server Error**
+     * 
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\VoidPaymentPaymentsResponse500ResponseBody $fiveHundredApplicationJsonObject
+     */
+	
+    public ?VoidPaymentPaymentsResponse500ResponseBody $fiveHundredApplicationJsonObject = null;
+    
+    /**
+     * **Service Unavailable**
+     * 
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\VoidPaymentPaymentsResponse503ResponseBody $fiveHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?VoidPaymentPaymentsResponse503ResponseBody $fiveHundredAndThreeApplicationJsonObject = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
      */
 	
     public string $contentType;
-    
-    /**
-     * Payment Created
-     * 
-     * @var mixed $payment
-     */
-	
-    public mixed $payment = null;
     
     /**
      * HTTP response status code for this operation
@@ -43,71 +98,16 @@ class VoidPaymentResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
-    /**
-     * **Bad Request**\
-     * 
-     * When there are errors in the payload.
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\VoidPayment400ApplicationJSON $voidPayment400ApplicationJSONObject
-     */
-	
-    public ?VoidPayment400ApplicationJSON $voidPayment400ApplicationJSONObject = null;
-    
-    /**
-     * **Access Denied**\
-     * 
-     * Credentials supplied do not grant access to the requested resource.
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\VoidPayment403ApplicationJSON $voidPayment403ApplicationJSONObject
-     */
-	
-    public ?VoidPayment403ApplicationJSON $voidPayment403ApplicationJSONObject = null;
-    
-    /**
-     * **Not Found**\
-     * 
-     * \
-     * When you'll get `401 Unauthorized` response:
-     * - When there are no Accounts/Orders/Payment found.
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\VoidPayment404ApplicationJSON $voidPayment404ApplicationJSONObject
-     */
-	
-    public ?VoidPayment404ApplicationJSON $voidPayment404ApplicationJSONObject = null;
-    
-    /**
-     * **Internal Server Error**
-     * 
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\VoidPayment500ApplicationJSON $voidPayment500ApplicationJSONObject
-     */
-	
-    public ?VoidPayment500ApplicationJSON $voidPayment500ApplicationJSONObject = null;
-    
-    /**
-     * **Service Unavailable**
-     * 
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\VoidPayment503ApplicationJSON $voidPayment503ApplicationJSONObject
-     */
-	
-    public ?VoidPayment503ApplicationJSON $voidPayment503ApplicationJSONObject = null;
-    
 	public function __construct()
 	{
+		$this->twoHundredAndOneApplicationJsonPayment = null;
+		$this->fourHundredApplicationJsonObject = null;
+		$this->fourHundredAndThreeApplicationJsonObject = null;
+		$this->fourHundredAndFourApplicationJsonObject = null;
+		$this->fiveHundredApplicationJsonObject = null;
+		$this->fiveHundredAndThreeApplicationJsonObject = null;
 		$this->contentType = "";
-		$this->payment = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->voidPayment400ApplicationJSONObject = null;
-		$this->voidPayment403ApplicationJSONObject = null;
-		$this->voidPayment404ApplicationJSONObject = null;
-		$this->voidPayment500ApplicationJSONObject = null;
-		$this->voidPayment503ApplicationJSONObject = null;
 	}
 }

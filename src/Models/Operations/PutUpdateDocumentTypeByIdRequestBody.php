@@ -12,11 +12,11 @@ namespace TheLogicStudio\ExactPayments\Models\Operations;
 class PutUpdateDocumentTypeByIdRequestBody
 {
 	#[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Operations\PutUpdateDocumentTypeByIdRequestBodyType>')]
-    public PutUpdateDocumentTypeByIdRequestBodyType $type;
+    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Operations\PutUpdateDocumentTypeByIdType>')]
+    public PutUpdateDocumentTypeByIdType $type;
     
 	public function __construct()
 	{
-		$this->type = \TheLogicStudio\ExactPayments\Models\Operations\PutUpdateDocumentTypeByIdRequestBodyType::ArticlesOfIncorporation;
+		$this->type = \TheLogicStudio\ExactPayments\Models\Operations\PutUpdateDocumentTypeByIdType::ArticlesOfIncorporation;
 	}
 }

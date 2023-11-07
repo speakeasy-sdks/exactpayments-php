@@ -30,12 +30,14 @@ class ListMerchantCategoryCodesResponse
     public ?string $internalServerError = null;
     
     /**
-     * **OK**
+     * **Service Unavailable**
      * 
-     * @var ?array<\TheLogicStudio\ExactPayments\Models\Shared\Mcc> $mccs
+     * 
+     * 
+     * @var ?string $serviceUnavailable
      */
 	
-    public ?array $mccs = null;
+    public ?string $serviceUnavailable = null;
     
     /**
      * HTTP response status code for this operation
@@ -54,22 +56,20 @@ class ListMerchantCategoryCodesResponse
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
     /**
-     * **Service Unavailable**
+     * **OK**
      * 
-     * 
-     * 
-     * @var ?string $serviceUnavailable
+     * @var ?array<\TheLogicStudio\ExactPayments\Models\Shared\Mcc> $classes
      */
 	
-    public ?string $serviceUnavailable = null;
+    public ?array $classes = null;
     
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->internalServerError = null;
-		$this->mccs = null;
+		$this->serviceUnavailable = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->serviceUnavailable = null;
+		$this->classes = null;
 	}
 }

@@ -12,20 +12,72 @@ namespace TheLogicStudio\ExactPayments\Models\Operations;
 class AccountPostPaymentResponse
 {
     /**
+     * Payment Created
+     * 
+     * @var mixed $twoHundredAndOneApplicationJsonPayment
+     */
+	
+    public mixed $twoHundredAndOneApplicationJsonPayment = null;
+    
+    /**
+     * **Bad Request**\
+     * 
+     * When there are errors in the payload
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountPostPaymentResponseBody $fourHundredApplicationJsonObject
+     */
+	
+    public ?AccountPostPaymentResponseBody $fourHundredApplicationJsonObject = null;
+    
+    /**
+     * **Access Denied**\
+     * 
+     * Credentials supplied do not grant access to the requested resource.
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountPostPaymentPaymentsResponseBody $fourHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?AccountPostPaymentPaymentsResponseBody $fourHundredAndThreeApplicationJsonObject = null;
+    
+    /**
+     * **Unprocessable Content**
+     * 
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountPostPaymentPaymentsResponseResponseBody $fourHundredAndTwentyTwoApplicationJsonObject
+     */
+	
+    public ?AccountPostPaymentPaymentsResponseResponseBody $fourHundredAndTwentyTwoApplicationJsonObject = null;
+    
+    /**
+     * **Internal Server Error**
+     * 
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountPostPaymentPaymentsResponse500ResponseBody $fiveHundredApplicationJsonObject
+     */
+	
+    public ?AccountPostPaymentPaymentsResponse500ResponseBody $fiveHundredApplicationJsonObject = null;
+    
+    /**
+     * **Service Unavailable**
+     * 
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountPostPaymentPaymentsResponse503ResponseBody $fiveHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?AccountPostPaymentPaymentsResponse503ResponseBody $fiveHundredAndThreeApplicationJsonObject = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
      */
 	
     public string $contentType;
-    
-    /**
-     * Payment Created
-     * 
-     * @var mixed $payment
-     */
-	
-    public mixed $payment = null;
     
     /**
      * HTTP response status code for this operation
@@ -43,68 +95,16 @@ class AccountPostPaymentResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
-    /**
-     * **Bad Request**\
-     * 
-     * When there are errors in the payload
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountPostPayment400ApplicationJSON $accountPostPayment400ApplicationJSONObject
-     */
-	
-    public ?AccountPostPayment400ApplicationJSON $accountPostPayment400ApplicationJSONObject = null;
-    
-    /**
-     * **Access Denied**\
-     * 
-     * Credentials supplied do not grant access to the requested resource.
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountPostPayment403ApplicationJSON $accountPostPayment403ApplicationJSONObject
-     */
-	
-    public ?AccountPostPayment403ApplicationJSON $accountPostPayment403ApplicationJSONObject = null;
-    
-    /**
-     * **Unprocessable Content**
-     * 
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountPostPayment422ApplicationJSON $accountPostPayment422ApplicationJSONObject
-     */
-	
-    public ?AccountPostPayment422ApplicationJSON $accountPostPayment422ApplicationJSONObject = null;
-    
-    /**
-     * **Internal Server Error**
-     * 
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountPostPayment500ApplicationJSON $accountPostPayment500ApplicationJSONObject
-     */
-	
-    public ?AccountPostPayment500ApplicationJSON $accountPostPayment500ApplicationJSONObject = null;
-    
-    /**
-     * **Service Unavailable**
-     * 
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountPostPayment503ApplicationJSON $accountPostPayment503ApplicationJSONObject
-     */
-	
-    public ?AccountPostPayment503ApplicationJSON $accountPostPayment503ApplicationJSONObject = null;
-    
 	public function __construct()
 	{
+		$this->twoHundredAndOneApplicationJsonPayment = null;
+		$this->fourHundredApplicationJsonObject = null;
+		$this->fourHundredAndThreeApplicationJsonObject = null;
+		$this->fourHundredAndTwentyTwoApplicationJsonObject = null;
+		$this->fiveHundredApplicationJsonObject = null;
+		$this->fiveHundredAndThreeApplicationJsonObject = null;
 		$this->contentType = "";
-		$this->payment = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->accountPostPayment400ApplicationJSONObject = null;
-		$this->accountPostPayment403ApplicationJSONObject = null;
-		$this->accountPostPayment422ApplicationJSONObject = null;
-		$this->accountPostPayment500ApplicationJSONObject = null;
-		$this->accountPostPayment503ApplicationJSONObject = null;
 	}
 }

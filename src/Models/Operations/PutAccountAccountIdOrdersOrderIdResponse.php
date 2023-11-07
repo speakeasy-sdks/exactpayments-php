@@ -12,6 +12,59 @@ namespace TheLogicStudio\ExactPayments\Models\Operations;
 class PutAccountAccountIdOrdersOrderIdResponse
 {
     /**
+     * **Bad Request**\
+     * 
+     * When there are errors in the payload
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PutAccountAccountIdOrdersOrderIdResponseBody $fourHundredApplicationJsonObject
+     */
+	
+    public ?PutAccountAccountIdOrdersOrderIdResponseBody $fourHundredApplicationJsonObject = null;
+    
+    /**
+     * **Access Denied**\
+     * 
+     * Credentials supplied do not grant access to the requested resource.
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PutAccountAccountIdOrdersOrderIdOrdersResponseBody $fourHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?PutAccountAccountIdOrdersOrderIdOrdersResponseBody $fourHundredAndThreeApplicationJsonObject = null;
+    
+    /**
+     * **Not found**\
+     * 
+     * When there are no accounts/orders/payment found
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PutAccountAccountIdOrdersOrderIdOrdersResponseResponseBody $fourHundredAndFourApplicationJsonObject
+     */
+	
+    public ?PutAccountAccountIdOrdersOrderIdOrdersResponseResponseBody $fourHundredAndFourApplicationJsonObject = null;
+    
+    /**
+     * **Internal Server Error**
+     * 
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PutAccountAccountIdOrdersOrderIdOrdersResponse500ResponseBody $fiveHundredApplicationJsonObject
+     */
+	
+    public ?PutAccountAccountIdOrdersOrderIdOrdersResponse500ResponseBody $fiveHundredApplicationJsonObject = null;
+    
+    /**
+     * **Service Unavailable**
+     * 
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PutAccountAccountIdOrdersOrderIdOrdersResponse503ResponseBody $fiveHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?PutAccountAccountIdOrdersOrderIdOrdersResponse503ResponseBody $fiveHundredAndThreeApplicationJsonObject = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -43,69 +96,16 @@ class PutAccountAccountIdOrdersOrderIdResponse
 	
     public ?\TheLogicStudio\ExactPayments\Models\Shared\OrderResponse $orderResponse = null;
     
-    /**
-     * **Bad Request**\
-     * 
-     * When there are errors in the payload
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PutAccountAccountIdOrdersOrderId400ApplicationJSON $putAccountAccountIdOrdersOrderId400ApplicationJSONObject
-     */
-	
-    public ?PutAccountAccountIdOrdersOrderId400ApplicationJSON $putAccountAccountIdOrdersOrderId400ApplicationJSONObject = null;
-    
-    /**
-     * **Access Denied**\
-     * 
-     * Credentials supplied do not grant access to the requested resource.
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PutAccountAccountIdOrdersOrderId403ApplicationJSON $putAccountAccountIdOrdersOrderId403ApplicationJSONObject
-     */
-	
-    public ?PutAccountAccountIdOrdersOrderId403ApplicationJSON $putAccountAccountIdOrdersOrderId403ApplicationJSONObject = null;
-    
-    /**
-     * **Not found**\
-     * 
-     * When there are no accounts/orders/payment found
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PutAccountAccountIdOrdersOrderId404ApplicationJSON $putAccountAccountIdOrdersOrderId404ApplicationJSONObject
-     */
-	
-    public ?PutAccountAccountIdOrdersOrderId404ApplicationJSON $putAccountAccountIdOrdersOrderId404ApplicationJSONObject = null;
-    
-    /**
-     * **Internal Server Error**
-     * 
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PutAccountAccountIdOrdersOrderId500ApplicationJSON $putAccountAccountIdOrdersOrderId500ApplicationJSONObject
-     */
-	
-    public ?PutAccountAccountIdOrdersOrderId500ApplicationJSON $putAccountAccountIdOrdersOrderId500ApplicationJSONObject = null;
-    
-    /**
-     * **Service Unavailable**
-     * 
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PutAccountAccountIdOrdersOrderId503ApplicationJSON $putAccountAccountIdOrdersOrderId503ApplicationJSONObject
-     */
-	
-    public ?PutAccountAccountIdOrdersOrderId503ApplicationJSON $putAccountAccountIdOrdersOrderId503ApplicationJSONObject = null;
-    
 	public function __construct()
 	{
+		$this->fourHundredApplicationJsonObject = null;
+		$this->fourHundredAndThreeApplicationJsonObject = null;
+		$this->fourHundredAndFourApplicationJsonObject = null;
+		$this->fiveHundredApplicationJsonObject = null;
+		$this->fiveHundredAndThreeApplicationJsonObject = null;
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
 		$this->orderResponse = null;
-		$this->putAccountAccountIdOrdersOrderId400ApplicationJSONObject = null;
-		$this->putAccountAccountIdOrdersOrderId403ApplicationJSONObject = null;
-		$this->putAccountAccountIdOrdersOrderId404ApplicationJSONObject = null;
-		$this->putAccountAccountIdOrdersOrderId500ApplicationJSONObject = null;
-		$this->putAccountAccountIdOrdersOrderId503ApplicationJSONObject = null;
 	}
 }

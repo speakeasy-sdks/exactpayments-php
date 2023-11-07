@@ -20,22 +20,22 @@ class ZodError
     /**
      * Validation error code. The retrieved value will drive which extra fields will be shown.
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\ZodErrorCode $code
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\Code $code
      */
 	#[\JMS\Serializer\Annotation\SerializedName('code')]
-    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\ZodErrorCode>')]
+    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\Code>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?ZodErrorCode $code = null;
+    public ?Code $code = null;
     
     /**
      * Expected field type. It is only retrieved when `code = invalid_type`.
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\ZodErrorExpected $expected
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\Expected $expected
      */
 	#[\JMS\Serializer\Annotation\SerializedName('expected')]
-    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\ZodErrorExpected>')]
+    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\Expected>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?ZodErrorExpected $expected = null;
+    public ?Expected $expected = null;
     
     /**
      * Whether the minimum or maximum is included in the range of acceptable values. It is only retrieved when `code = too_small` or `code = too_big`.
@@ -110,12 +110,12 @@ class ZodError
     /**
      * Field type received. It is only retrieved when `code = invalid_type`.
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\ZodErrorReceived $received
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\Received $received
      */
 	#[\JMS\Serializer\Annotation\SerializedName('received')]
-    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\ZodErrorReceived>')]
+    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\Received>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?ZodErrorReceived $received = null;
+    public ?Received $received = null;
     
     /**
      * The type of the data failing validation. It is only retrieved when `code = too_small` or `code = too_big`.
@@ -130,22 +130,22 @@ class ZodError
     /**
      * A field supporting more than one possible value type or string value will retrieve this array property of objects with the same shape as this definition. It is only retrieved when `code = invalid_union`.
      * 
-     * @var ?array<\TheLogicStudio\ExactPayments\Models\Shared\ZodErrorUnionErrors> $unionErrors
+     * @var ?array<\TheLogicStudio\ExactPayments\Models\Shared\UnionErrors> $unionErrors
      */
 	#[\JMS\Serializer\Annotation\SerializedName('unionErrors')]
-    #[\JMS\Serializer\Annotation\Type('array<TheLogicStudio\ExactPayments\Models\Shared\ZodErrorUnionErrors>')]
+    #[\JMS\Serializer\Annotation\Type('array<TheLogicStudio\ExactPayments\Models\Shared\UnionErrors>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $unionErrors = null;
     
     /**
      * String-specific format validator failed. It is only retrieved when `code = invalid_string`.
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\ZodErrorValidation $validation
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\Validation $validation
      */
 	#[\JMS\Serializer\Annotation\SerializedName('validation')]
-    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\ZodErrorValidation>')]
+    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\Validation>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?ZodErrorValidation $validation = null;
+    public ?Validation $validation = null;
     
 	public function __construct()
 	{

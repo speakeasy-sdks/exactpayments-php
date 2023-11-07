@@ -12,6 +12,67 @@ namespace TheLogicStudio\ExactPayments\Models\Operations;
 class PostAccountAccountIdOrdersOrderIdPayResponse
 {
     /**
+     * OK
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrderIdPayResponseBody $twoHundredApplicationJsonObject
+     */
+	
+    public ?PostAccountAccountIdOrdersOrderIdPayResponseBody $twoHundredApplicationJsonObject = null;
+    
+    /**
+     * **Bad Request**\
+     * 
+     * When there are errors in the payload
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrderIdPayOrdersResponseBody $fourHundredApplicationJsonObject
+     */
+	
+    public ?PostAccountAccountIdOrdersOrderIdPayOrdersResponseBody $fourHundredApplicationJsonObject = null;
+    
+    /**
+     * **Access Denied**\
+     * 
+     * Credentials supplied do not grant access to the requested resource.
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrderIdPayOrdersResponseResponseBody $fourHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?PostAccountAccountIdOrdersOrderIdPayOrdersResponseResponseBody $fourHundredAndThreeApplicationJsonObject = null;
+    
+    /**
+     * **Not found**\
+     * 
+     * When there are no accounts/orders/payment found
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrderIdPayOrdersResponse404ResponseBody $fourHundredAndFourApplicationJsonObject
+     */
+	
+    public ?PostAccountAccountIdOrdersOrderIdPayOrdersResponse404ResponseBody $fourHundredAndFourApplicationJsonObject = null;
+    
+    /**
+     * **Internal Server Error**
+     * 
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrderIdPayOrdersResponse500ResponseBody $fiveHundredApplicationJsonObject
+     */
+	
+    public ?PostAccountAccountIdOrdersOrderIdPayOrdersResponse500ResponseBody $fiveHundredApplicationJsonObject = null;
+    
+    /**
+     * **Service Unavailable**
+     * 
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrderIdPayOrdersResponse503ResponseBody $fiveHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?PostAccountAccountIdOrdersOrderIdPayOrdersResponse503ResponseBody $fiveHundredAndThreeApplicationJsonObject = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -35,77 +96,16 @@ class PostAccountAccountIdOrdersOrderIdPayResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
-    /**
-     * OK
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrderIdPay200ApplicationJSON $postAccountAccountIdOrdersOrderIdPay200ApplicationJSONObject
-     */
-	
-    public ?PostAccountAccountIdOrdersOrderIdPay200ApplicationJSON $postAccountAccountIdOrdersOrderIdPay200ApplicationJSONObject = null;
-    
-    /**
-     * **Bad Request**\
-     * 
-     * When there are errors in the payload
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrderIdPay400ApplicationJSON $postAccountAccountIdOrdersOrderIdPay400ApplicationJSONObject
-     */
-	
-    public ?PostAccountAccountIdOrdersOrderIdPay400ApplicationJSON $postAccountAccountIdOrdersOrderIdPay400ApplicationJSONObject = null;
-    
-    /**
-     * **Access Denied**\
-     * 
-     * Credentials supplied do not grant access to the requested resource.
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrderIdPay403ApplicationJSON $postAccountAccountIdOrdersOrderIdPay403ApplicationJSONObject
-     */
-	
-    public ?PostAccountAccountIdOrdersOrderIdPay403ApplicationJSON $postAccountAccountIdOrdersOrderIdPay403ApplicationJSONObject = null;
-    
-    /**
-     * **Not found**\
-     * 
-     * When there are no accounts/orders/payment found
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrderIdPay404ApplicationJSON $postAccountAccountIdOrdersOrderIdPay404ApplicationJSONObject
-     */
-	
-    public ?PostAccountAccountIdOrdersOrderIdPay404ApplicationJSON $postAccountAccountIdOrdersOrderIdPay404ApplicationJSONObject = null;
-    
-    /**
-     * **Internal Server Error**
-     * 
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrderIdPay500ApplicationJSON $postAccountAccountIdOrdersOrderIdPay500ApplicationJSONObject
-     */
-	
-    public ?PostAccountAccountIdOrdersOrderIdPay500ApplicationJSON $postAccountAccountIdOrdersOrderIdPay500ApplicationJSONObject = null;
-    
-    /**
-     * **Service Unavailable**
-     * 
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrderIdPay503ApplicationJSON $postAccountAccountIdOrdersOrderIdPay503ApplicationJSONObject
-     */
-	
-    public ?PostAccountAccountIdOrdersOrderIdPay503ApplicationJSON $postAccountAccountIdOrdersOrderIdPay503ApplicationJSONObject = null;
-    
 	public function __construct()
 	{
+		$this->twoHundredApplicationJsonObject = null;
+		$this->fourHundredApplicationJsonObject = null;
+		$this->fourHundredAndThreeApplicationJsonObject = null;
+		$this->fourHundredAndFourApplicationJsonObject = null;
+		$this->fiveHundredApplicationJsonObject = null;
+		$this->fiveHundredAndThreeApplicationJsonObject = null;
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->postAccountAccountIdOrdersOrderIdPay200ApplicationJSONObject = null;
-		$this->postAccountAccountIdOrdersOrderIdPay400ApplicationJSONObject = null;
-		$this->postAccountAccountIdOrdersOrderIdPay403ApplicationJSONObject = null;
-		$this->postAccountAccountIdOrdersOrderIdPay404ApplicationJSONObject = null;
-		$this->postAccountAccountIdOrdersOrderIdPay500ApplicationJSONObject = null;
-		$this->postAccountAccountIdOrdersOrderIdPay503ApplicationJSONObject = null;
 	}
 }

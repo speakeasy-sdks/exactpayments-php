@@ -12,6 +12,48 @@ namespace TheLogicStudio\ExactPayments\Models\Operations;
 class PostOrdersResponse
 {
     /**
+     * **Bad Request**\
+     * 
+     * When there are errors in the payload
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostOrdersResponseBody $fourHundredApplicationJsonObject
+     */
+	
+    public ?PostOrdersResponseBody $fourHundredApplicationJsonObject = null;
+    
+    /**
+     * **Access Denied**\
+     * 
+     * Credentials supplied do not grant access to the requested resource.
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostOrdersOrdersResponseBody $fourHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?PostOrdersOrdersResponseBody $fourHundredAndThreeApplicationJsonObject = null;
+    
+    /**
+     * **Internal Server Error**
+     * 
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostOrdersOrdersResponseResponseBody $fiveHundredApplicationJsonObject
+     */
+	
+    public ?PostOrdersOrdersResponseResponseBody $fiveHundredApplicationJsonObject = null;
+    
+    /**
+     * **Service Unavailable**
+     * 
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostOrdersOrdersResponse503ResponseBody $fiveHundredAndThreeApplicationJsonObject
+     */
+	
+    public ?PostOrdersOrdersResponse503ResponseBody $fiveHundredAndThreeApplicationJsonObject = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -43,57 +85,15 @@ class PostOrdersResponse
 	
     public ?\TheLogicStudio\ExactPayments\Models\Shared\OrderResponse $orderResponse = null;
     
-    /**
-     * **Bad Request**\
-     * 
-     * When there are errors in the payload
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostOrders400ApplicationJSON $postOrders400ApplicationJSONObject
-     */
-	
-    public ?PostOrders400ApplicationJSON $postOrders400ApplicationJSONObject = null;
-    
-    /**
-     * **Access Denied**\
-     * 
-     * Credentials supplied do not grant access to the requested resource.
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostOrders403ApplicationJSON $postOrders403ApplicationJSONObject
-     */
-	
-    public ?PostOrders403ApplicationJSON $postOrders403ApplicationJSONObject = null;
-    
-    /**
-     * **Internal Server Error**
-     * 
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostOrders500ApplicationJSON $postOrders500ApplicationJSONObject
-     */
-	
-    public ?PostOrders500ApplicationJSON $postOrders500ApplicationJSONObject = null;
-    
-    /**
-     * **Service Unavailable**
-     * 
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\PostOrders503ApplicationJSON $postOrders503ApplicationJSONObject
-     */
-	
-    public ?PostOrders503ApplicationJSON $postOrders503ApplicationJSONObject = null;
-    
 	public function __construct()
 	{
+		$this->fourHundredApplicationJsonObject = null;
+		$this->fourHundredAndThreeApplicationJsonObject = null;
+		$this->fiveHundredApplicationJsonObject = null;
+		$this->fiveHundredAndThreeApplicationJsonObject = null;
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
 		$this->orderResponse = null;
-		$this->postOrders400ApplicationJSONObject = null;
-		$this->postOrders403ApplicationJSONObject = null;
-		$this->postOrders500ApplicationJSONObject = null;
-		$this->postOrders503ApplicationJSONObject = null;
 	}
 }

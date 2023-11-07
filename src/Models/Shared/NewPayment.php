@@ -38,12 +38,12 @@ class NewPayment
     /**
      * The language for this Payment.
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\NewPaymentLanguage $language
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\Language $language
      */
 	#[\JMS\Serializer\Annotation\SerializedName('language')]
-    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\NewPaymentLanguage>')]
+    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\Language>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?NewPaymentLanguage $language = null;
+    public ?Language $language = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('level3')]
     #[\JMS\Serializer\Annotation\Type('TheLogicStudio\ExactPayments\Models\Shared\NewPaymentLevel3')]
@@ -51,9 +51,9 @@ class NewPayment
     public ?NewPaymentLevel3 $level3 = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('options')]
-    #[\JMS\Serializer\Annotation\Type('TheLogicStudio\ExactPayments\Models\Shared\NewPaymentOptions')]
+    #[\JMS\Serializer\Annotation\Type('TheLogicStudio\ExactPayments\Models\Shared\Options')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?NewPaymentOptions $options = null;
+    public ?Options $options = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('paymentMethod')]
     #[\JMS\Serializer\Annotation\Type('mixed')]
@@ -80,9 +80,9 @@ class NewPayment
     public ?NewPaymentSoftDescriptor $softDescriptor = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('storedCredentials')]
-    #[\JMS\Serializer\Annotation\Type('TheLogicStudio\ExactPayments\Models\Shared\NewPaymentStoredCredentials')]
+    #[\JMS\Serializer\Annotation\Type('TheLogicStudio\ExactPayments\Models\Shared\StoredCredentials')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?NewPaymentStoredCredentials $storedCredentials = null;
+    public ?StoredCredentials $storedCredentials = null;
     
     /**
      * The surcharge amount for the new Payment.
@@ -107,12 +107,12 @@ class NewPayment
     /**
      * Merchants/Customers to complete an additional verification step with the card issuer when paying.
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\NewPaymentThreeDSecure $threeDSecure
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\ThreeDSecure $threeDSecure
      */
 	#[\JMS\Serializer\Annotation\SerializedName('threeDSecure')]
-    #[\JMS\Serializer\Annotation\Type('TheLogicStudio\ExactPayments\Models\Shared\NewPaymentThreeDSecure')]
+    #[\JMS\Serializer\Annotation\Type('TheLogicStudio\ExactPayments\Models\Shared\ThreeDSecure')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?NewPaymentThreeDSecure $threeDSecure = null;
+    public ?ThreeDSecure $threeDSecure = null;
     
 	public function __construct()
 	{

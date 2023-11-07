@@ -52,22 +52,22 @@ class BusinessProfile
     /**
      * Delivery time frame that the business has for its products.
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\BusinessProfileDeliveryTimeframe $deliveryTimeframe
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\DeliveryTimeframe $deliveryTimeframe
      */
 	#[\JMS\Serializer\Annotation\SerializedName('deliveryTimeframe')]
-    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\BusinessProfileDeliveryTimeframe>')]
+    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\DeliveryTimeframe>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?BusinessProfileDeliveryTimeframe $deliveryTimeframe = null;
+    public ?DeliveryTimeframe $deliveryTimeframe = null;
     
     /**
      * The time at which the customer makes the payment to the business.
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\BusinessProfilePaymentTime $paymentTime
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\PaymentTime $paymentTime
      */
 	#[\JMS\Serializer\Annotation\SerializedName('paymentTime')]
-    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\BusinessProfilePaymentTime>')]
+    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\PaymentTime>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?BusinessProfilePaymentTime $paymentTime = null;
+    public ?PaymentTime $paymentTime = null;
     
     /**
      * Reason for leaving current processor/gateway. This field value is required only when `currentlyAcceptingPayments` field value is `true`.

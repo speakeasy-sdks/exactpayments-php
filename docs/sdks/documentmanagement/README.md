@@ -1,5 +1,5 @@
 # DocumentManagement
-(*documentManagement*)
+
 
 ### Available Operations
 
@@ -30,22 +30,20 @@ Create a Document Request asking the Organization or Account for additional veri
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\CreateDocumentRequestRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\CreateDocumentRequestRequestBodyInput;
-use \TheLogicStudio\ExactPayments\Models\Operations\CreateDocumentRequestRequestBodyType;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateDocumentRequestRequest();
-    $request->requestBody = new CreateDocumentRequestRequestBodyInput();
+    $request = new Operations\CreateDocumentRequestRequest();
+    $request->requestBody = new Operations\CreateDocumentRequestRequestBody();
     $request->requestBody->body = 'Company: ACME Corp
     Hi Jon Doe
     Your application status has been updated to the following: Pended. Our Underwriting team has requested additional documentation to process your approval.
@@ -55,7 +53,7 @@ try {
     Stay-tuned for the next update!';
     $request->requestBody->onboardingIsDeleted = false;
     $request->requestBody->subject = 'Application Status Update Pending Documentation';
-    $request->requestBody->type = CreateDocumentRequestRequestBodyType::OnboardingDocumentRequest;
+    $request->requestBody->type = Operations\Type::OnboardingDocumentRequest;
     $request->onboardingId = 'string';
     $request->organizationId = 'string';
 
@@ -93,19 +91,19 @@ Delete an uploaded document associated with a specific document ID.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\DeleteDocumentByIdRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new DeleteDocumentByIdRequest();
+    $request = new Operations\DeleteDocumentByIdRequest();
     $request->documentId = 'string';
     $request->onboardingId = 'string';
     $request->organizationId = 'string';
@@ -144,19 +142,19 @@ Delete a Document Request for an Onboarding Application for the given Organizati
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\DeleteDocumentRequestByIdRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new DeleteDocumentRequestByIdRequest();
+    $request = new Operations\DeleteDocumentRequestByIdRequest();
     $request->documentRequestId = 'string';
     $request->onboardingId = 'string';
     $request->organizationId = 'string';
@@ -195,19 +193,19 @@ Download a specific Document for the given Organization, Onboarding Application,
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetDocumentByIdRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetDocumentByIdRequest();
+    $request = new Operations\GetDocumentByIdRequest();
     $request->documentId = 'string';
     $request->isDeleted = false;
     $request->onboardingId = 'string';
@@ -215,7 +213,7 @@ try {
 
     $response = $sdk->documentManagement->getDocumentById($request);
 
-    if ($response->getDocumentById200ApplicationZipBinaryString !== null) {
+    if ($response->bytes !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -247,19 +245,19 @@ Retrieve a list of Documents for the given Organization and Onboarding Applicati
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetDocumentsRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetDocumentsRequest();
+    $request = new Operations\GetDocumentsRequest();
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = 'createdAt:asc';
@@ -300,26 +298,26 @@ Download all Documents for the given Organization and Onboarding Application ide
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetDownloadAllDocumentsRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetDownloadAllDocumentsRequest();
+    $request = new Operations\GetDownloadAllDocumentsRequest();
     $request->isDeleted = false;
     $request->onboardingId = 'string';
     $request->organizationId = 'string';
 
     $response = $sdk->documentManagement->getDownloadAllDocuments($request);
 
-    if ($response->getDownloadAllDocuments200ApplicationZipBinaryString !== null) {
+    if ($response->bytes !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -351,19 +349,19 @@ Retrieve a list of Document Requests for the given Organization and Onboarding A
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetListDocumentRequestsRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetListDocumentRequestsRequest();
+    $request = new Operations\GetListDocumentRequestsRequest();
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = 'createdAt:asc';
@@ -404,19 +402,19 @@ Retrieve a specific uploaded Document for the given Organization and Onboarding 
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetRetrieveDocumentRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetRetrieveDocumentRequest();
+    $request = new Operations\GetRetrieveDocumentRequest();
     $request->documentId = 'string';
     $request->onboardingId = 'string';
     $request->organizationId = 'string';
@@ -455,19 +453,19 @@ Retrieve a specific Document Request for the given Organization and Onboarding A
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\GetRetrieveDocumentRequestRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetRetrieveDocumentRequestRequest();
+    $request = new Operations\GetRetrieveDocumentRequestRequest();
     $request->documentRequestId = 'string';
     $request->onboardingId = 'string';
     $request->organizationId = 'string';
@@ -506,24 +504,24 @@ List the Document Requests associated with the Token found in the Upload Documen
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\ListDocumentRequestByTokenRequest;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListDocumentRequestByTokenRequest();
+    $request = new Operations\ListDocumentRequestByTokenRequest();
     $request->documentRequestToken = 'string';
 
     $response = $sdk->documentManagement->listDocumentRequestByToken($request);
 
-    if ($response->listDocumentRequestByToken200ApplicationJSONObjects !== null) {
+    if ($response->classes !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -555,23 +553,21 @@ Update the `type` of a specific Document for the given Organization, Onboarding 
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\PutUpdateDocumentTypeByIdRequest;
-use \TheLogicStudio\ExactPayments\Models\Operations\PutUpdateDocumentTypeByIdRequestBody;
-use \TheLogicStudio\ExactPayments\Models\Operations\PutUpdateDocumentTypeByIdRequestBodyType;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PutUpdateDocumentTypeByIdRequest();
-    $request->requestBody = new PutUpdateDocumentTypeByIdRequestBody();
-    $request->requestBody->type = PutUpdateDocumentTypeByIdRequestBodyType::DriversLicense;
+    $request = new Operations\PutUpdateDocumentTypeByIdRequest();
+    $request->requestBody = new Operations\PutUpdateDocumentTypeByIdRequestBody();
+    $request->requestBody->type = Operations\PutUpdateDocumentTypeByIdType::DriversLicense;
     $request->documentId = 'string';
     $request->onboardingId = 'string';
     $request->organizationId = 'string';
@@ -610,22 +606,20 @@ Update a Document Request for an Onboarding Application for the given Organizati
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\UpdateDocumentRequestRequest;
-use \TheLogicStudio\ExactPayments\Models\Shared\OnboardingDocumentRequestUpdate;
-use \TheLogicStudio\ExactPayments\Models\Shared\OnboardingDocumentRequestUpdateType;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateDocumentRequestRequest();
-    $request->onboardingDocumentRequestUpdate = new OnboardingDocumentRequestUpdate();
+    $request = new Operations\UpdateDocumentRequestRequest();
+    $request->onboardingDocumentRequestUpdate = new Shared\OnboardingDocumentRequestUpdate();
     $request->onboardingDocumentRequestUpdate->body = 'Company: ACME Corp
     Hi Jon Doe
     Your application status has been updated to the following: Pended. Our Underwriting team has requested additional documentation to process your approval.
@@ -634,7 +628,7 @@ try {
     Once we received & review the additional documentation, we will have you up and processing your electronic payment in no time.
     Stay-tuned for the next update!';
     $request->onboardingDocumentRequestUpdate->subject = 'Application Status Update Pending Documentation';
-    $request->onboardingDocumentRequestUpdate->type = OnboardingDocumentRequestUpdateType::OnboardingDocumentRequest;
+    $request->onboardingDocumentRequestUpdate->type = Shared\OnboardingDocumentRequestUpdateType::OnboardingDocumentRequest;
     $request->documentRequestId = 'string';
     $request->onboardingId = 'string';
     $request->organizationId = 'string';
@@ -673,31 +667,28 @@ Upload a Document for an Onboarding Application for the given Organization and O
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\UploadDocumentRequest;
-use \TheLogicStudio\ExactPayments\Models\Shared\OnboardingDocumentUploadRequest;
-use \TheLogicStudio\ExactPayments\Models\Shared\OnboardingDocumentUploadRequestFiles;
-use \TheLogicStudio\ExactPayments\Models\Shared\DocumentUploadType;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UploadDocumentRequest();
-    $request->onboardingDocumentUploadRequest = new OnboardingDocumentUploadRequest();
+    $request = new Operations\UploadDocumentRequest();
+    $request->onboardingDocumentUploadRequest = new Shared\OnboardingDocumentUploadRequest();
     $request->onboardingDocumentUploadRequest->documentRequest = '64c446af29cef96ce25bc519';
-    $request->onboardingDocumentUploadRequest->files = new OnboardingDocumentUploadRequestFiles();
-    $request->onboardingDocumentUploadRequest->files->content = 'LgyO<[DSt8';
-    $request->onboardingDocumentUploadRequest->files->files = 'string';
+    $request->onboardingDocumentUploadRequest->files = new Shared\Files();
+    $request->onboardingDocumentUploadRequest->files->content = '0xaAFa6d8bD5';
+    $request->onboardingDocumentUploadRequest->files->fileName = 'electronic_hempstead_fresh.mpga';
     $request->onboardingDocumentUploadRequest->name = 'Business document';
     $request->onboardingDocumentUploadRequest->onboardingIsDeleted = 'true';
     $request->onboardingDocumentUploadRequest->principal = '64ca7b2e4ab69839f78db609';
-    $request->onboardingDocumentUploadRequest->type = DocumentUploadType::DriversLicense;
+    $request->onboardingDocumentUploadRequest->type = Shared\DocumentUploadType::DriversLicense;
     $request->onboardingId = 'string';
     $request->organizationId = 'string';
 
@@ -735,29 +726,26 @@ Upload a Document for an Onboarding Application using the Token value returned i
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \TheLogicStudio\ExactPayments\ExactPayments;
-use \TheLogicStudio\ExactPayments\Models\Shared\Security;
-use \TheLogicStudio\ExactPayments\Models\Operations\UploadDocumentByTokenRequest;
-use \TheLogicStudio\ExactPayments\Models\Shared\OnboardingDocumentUploadTokenRequest;
-use \TheLogicStudio\ExactPayments\Models\Shared\OnboardingDocumentUploadTokenRequestFiles;
-use \TheLogicStudio\ExactPayments\Models\Shared\DocumentUploadType;
+use \TheLogicStudio\ExactPayments;
+use \TheLogicStudio\ExactPayments\Models\Shared;
+use \TheLogicStudio\ExactPayments\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->apiKey = '';
 
-$sdk = ExactPayments::builder()
+$sdk = ExactPayments\ExactPayments::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UploadDocumentByTokenRequest();
-    $request->onboardingDocumentUploadTokenRequest = new OnboardingDocumentUploadTokenRequest();
-    $request->onboardingDocumentUploadTokenRequest->files = new OnboardingDocumentUploadTokenRequestFiles();
-    $request->onboardingDocumentUploadTokenRequest->files->content = 'a3T7I}0L7W';
-    $request->onboardingDocumentUploadTokenRequest->files->files = 'string';
+    $request = new Operations\UploadDocumentByTokenRequest();
+    $request->onboardingDocumentUploadTokenRequest = new Shared\OnboardingDocumentUploadTokenRequest();
+    $request->onboardingDocumentUploadTokenRequest->files = new Shared\OnboardingDocumentUploadTokenRequestFiles();
+    $request->onboardingDocumentUploadTokenRequest->files->content = '0xf4c59F3a5c';
+    $request->onboardingDocumentUploadTokenRequest->files->fileName = 'while_rss.wav';
     $request->onboardingDocumentUploadTokenRequest->name = 'Business document';
     $request->onboardingDocumentUploadTokenRequest->principal = '64ca7b2e4ab69839f78db609';
-    $request->onboardingDocumentUploadTokenRequest->type = DocumentUploadType::DriversLicense;
+    $request->onboardingDocumentUploadTokenRequest->type = Shared\DocumentUploadType::DriversLicense;
     $request->token = 'string';
 
     $response = $sdk->documentManagement->uploadDocumentByToken($request);

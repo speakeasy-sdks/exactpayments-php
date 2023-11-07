@@ -44,24 +44,6 @@ class GetReportDetailsResponse
     public ?string $notFound = null;
     
     /**
-     * **OK**
-     * 
-     * @var ?array<mixed> $reportDetailsResponses
-     */
-	
-    public ?array $reportDetailsResponses = null;
-    
-    /**
-     * **Service Unavailable**
-     * 
-     * 
-     * 
-     * @var ?string $serviceUnavailable
-     */
-	
-    public ?string $serviceUnavailable = null;
-    
-    /**
      * HTTP response status code for this operation
      * 
      * @var int $statusCode
@@ -78,6 +60,16 @@ class GetReportDetailsResponse
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
     /**
+     * **Service Unavailable**
+     * 
+     * 
+     * 
+     * @var ?string $serviceUnavailable
+     */
+	
+    public ?string $serviceUnavailable = null;
+    
+    /**
      * **Unauthorized**\
      * 
      * \
@@ -92,26 +84,34 @@ class GetReportDetailsResponse
     public ?string $unauthorized = null;
     
     /**
+     * **OK**
+     * 
+     * @var ?array<mixed> $anies
+     */
+	
+    public ?array $anies = null;
+    
+    /**
      * **Bad Request**
      * 
      * - When the Report status isn't `completed`.
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\GetReportDetails400ApplicationJSON $getReportDetails400ApplicationJSONObject
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\GetReportDetailsResponseBody $object
      */
 	
-    public ?GetReportDetails400ApplicationJSON $getReportDetails400ApplicationJSONObject = null;
+    public ?GetReportDetailsResponseBody $object = null;
     
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->internalServerError = null;
 		$this->notFound = null;
-		$this->reportDetailsResponses = null;
-		$this->serviceUnavailable = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
+		$this->serviceUnavailable = null;
 		$this->unauthorized = null;
-		$this->getReportDetails400ApplicationJSONObject = null;
+		$this->anies = null;
+		$this->object = null;
 	}
 }
