@@ -58,12 +58,12 @@ try {
 
 | Parameter                                                                                                                                                     | Type                                                                                                                                                          | Required                                                                                                                                                      | Description                                                                                                                                                   |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                    | [\TheLogicStudio\ExactPayments\Models\Operations\GetAccountAccountIdOrdersOrderIdRequest](../../models/operations/GetAccountAccountIdOrdersOrderIdRequest.md) | :heavy_check_mark:                                                                                                                                            | The request object to use for the request.                                                                                                                    |
+| `$request`                                                                                                                                                    | [\TheLogicStudio\ExactPayments\Models\Operations\GetAccountAccountIdOrdersOrderIdRequest](../../Models/Operations/GetAccountAccountIdOrdersOrderIdRequest.md) | :heavy_check_mark:                                                                                                                                            | The request object to use for the request.                                                                                                                    |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\GetAccountAccountIdOrdersOrderIdResponse](../../models/operations/GetAccountAccountIdOrdersOrderIdResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\GetAccountAccountIdOrdersOrderIdResponse](../../Models/Operations/GetAccountAccountIdOrdersOrderIdResponse.md)**
 
 
 ## getOrders
@@ -110,12 +110,12 @@ try {
 
 | Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
 | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\GetOrdersRequest](../../models/operations/GetOrdersRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| `$request`                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\GetOrdersRequest](../../Models/Operations/GetOrdersRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\GetOrdersResponse](../../models/operations/GetOrdersResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\GetOrdersResponse](../../Models/Operations/GetOrdersResponse.md)**
 
 
 ## postAccountAccountIdOrdersOrderIdPay
@@ -163,12 +163,12 @@ try {
 
 | Parameter                                                                                                                                                             | Type                                                                                                                                                                  | Required                                                                                                                                                              | Description                                                                                                                                                           |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrderIdPayRequest](../../models/operations/PostAccountAccountIdOrdersOrderIdPayRequest.md) | :heavy_check_mark:                                                                                                                                                    | The request object to use for the request.                                                                                                                            |
+| `$request`                                                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrderIdPayRequest](../../Models/Operations/PostAccountAccountIdOrdersOrderIdPayRequest.md) | :heavy_check_mark:                                                                                                                                                    | The request object to use for the request.                                                                                                                            |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrderIdPayResponse](../../models/operations/PostAccountAccountIdOrdersOrderIdPayResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersOrderIdPayResponse](../../Models/Operations/PostAccountAccountIdOrdersOrderIdPayResponse.md)**
 
 
 ## postAccountAccountIdOrders
@@ -279,12 +279,12 @@ try {
 
 | Parameter                                                                                                                                         | Type                                                                                                                                              | Required                                                                                                                                          | Description                                                                                                                                       |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersRequest](../../models/operations/PostAccountAccountIdOrdersRequest.md) | :heavy_check_mark:                                                                                                                                | The request object to use for the request.                                                                                                        |
+| `$request`                                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersRequest](../../Models/Operations/PostAccountAccountIdOrdersRequest.md) | :heavy_check_mark:                                                                                                                                | The request object to use for the request.                                                                                                        |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersResponse](../../models/operations/PostAccountAccountIdOrdersResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\PostAccountAccountIdOrdersResponse](../../Models/Operations/PostAccountAccountIdOrdersResponse.md)**
 
 
 ## postOrders
@@ -392,12 +392,12 @@ try {
 
 | Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
 | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `$request`                                                                        | [\TheLogicStudio\ExactPayments\Models\Shared\Order](../../models/shared/Order.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| `$request`                                                                        | [\TheLogicStudio\ExactPayments\Models\Shared\Order](../../Models/Shared/Order.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\PostOrdersResponse](../../models/operations/PostOrdersResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\PostOrdersResponse](../../Models/Operations/PostOrdersResponse.md)**
 
 
 ## postOrdersOrderIdAccessToken
@@ -441,12 +441,12 @@ try {
 
 | Parameter                                                                                                                                             | Type                                                                                                                                                  | Required                                                                                                                                              | Description                                                                                                                                           |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\PostOrdersOrderIdAccessTokenRequest](../../models/operations/PostOrdersOrderIdAccessTokenRequest.md) | :heavy_check_mark:                                                                                                                                    | The request object to use for the request.                                                                                                            |
+| `$request`                                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\PostOrdersOrderIdAccessTokenRequest](../../Models/Operations/PostOrdersOrderIdAccessTokenRequest.md) | :heavy_check_mark:                                                                                                                                    | The request object to use for the request.                                                                                                            |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\PostOrdersOrderIdAccessTokenResponse](../../models/operations/PostOrdersOrderIdAccessTokenResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\PostOrdersOrderIdAccessTokenResponse](../../Models/Operations/PostOrdersOrderIdAccessTokenResponse.md)**
 
 
 ## putAccountAccountIdOrdersOrderId
@@ -558,12 +558,12 @@ try {
 
 | Parameter                                                                                                                                                     | Type                                                                                                                                                          | Required                                                                                                                                                      | Description                                                                                                                                                   |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                    | [\TheLogicStudio\ExactPayments\Models\Operations\PutAccountAccountIdOrdersOrderIdRequest](../../models/operations/PutAccountAccountIdOrdersOrderIdRequest.md) | :heavy_check_mark:                                                                                                                                            | The request object to use for the request.                                                                                                                    |
+| `$request`                                                                                                                                                    | [\TheLogicStudio\ExactPayments\Models\Operations\PutAccountAccountIdOrdersOrderIdRequest](../../Models/Operations/PutAccountAccountIdOrdersOrderIdRequest.md) | :heavy_check_mark:                                                                                                                                            | The request object to use for the request.                                                                                                                    |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\PutAccountAccountIdOrdersOrderIdResponse](../../models/operations/PutAccountAccountIdOrdersOrderIdResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\PutAccountAccountIdOrdersOrderIdResponse](../../Models/Operations/PutAccountAccountIdOrdersOrderIdResponse.md)**
 
 
 ## putOrdersOrderIdReset
@@ -607,10 +607,10 @@ try {
 
 | Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
 | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\PutOrdersOrderIdResetRequest](../../models/operations/PutOrdersOrderIdResetRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
+| `$request`                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\PutOrdersOrderIdResetRequest](../../Models/Operations/PutOrdersOrderIdResetRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\PutOrdersOrderIdResetResponse](../../models/operations/PutOrdersOrderIdResetResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\PutOrdersOrderIdResetResponse](../../Models/Operations/PutOrdersOrderIdResetResponse.md)**
 

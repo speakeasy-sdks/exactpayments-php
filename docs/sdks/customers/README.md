@@ -74,12 +74,12 @@ try {
 
 | Parameter                                                                                                                                                                                       | Type                                                                                                                                                                                            | Required                                                                                                                                                                                        | Description                                                                                                                                                                                     |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteCustomerCustomerIdPaymentMethodTokenRequest](../../models/operations/AccountDeleteCustomerCustomerIdPaymentMethodTokenRequest.md) | :heavy_check_mark:                                                                                                                                                                              | The request object to use for the request.                                                                                                                                                      |
+| `$request`                                                                                                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteCustomerCustomerIdPaymentMethodTokenRequest](../../Models/Operations/AccountDeleteCustomerCustomerIdPaymentMethodTokenRequest.md) | :heavy_check_mark:                                                                                                                                                                              | The request object to use for the request.                                                                                                                                                      |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteCustomerCustomerIdPaymentMethodTokenResponse](../../models/operations/AccountDeleteCustomerCustomerIdPaymentMethodTokenResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteCustomerCustomerIdPaymentMethodTokenResponse](../../Models/Operations/AccountDeleteCustomerCustomerIdPaymentMethodTokenResponse.md)**
 
 
 ## accountDeleteCustomerId
@@ -124,12 +124,12 @@ try {
 
 | Parameter                                                                                                                                   | Type                                                                                                                                        | Required                                                                                                                                    | Description                                                                                                                                 |
 | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteCustomerIdRequest](../../models/operations/AccountDeleteCustomerIdRequest.md) | :heavy_check_mark:                                                                                                                          | The request object to use for the request.                                                                                                  |
+| `$request`                                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteCustomerIdRequest](../../Models/Operations/AccountDeleteCustomerIdRequest.md) | :heavy_check_mark:                                                                                                                          | The request object to use for the request.                                                                                                  |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteCustomerIdResponse](../../models/operations/AccountDeleteCustomerIdResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountDeleteCustomerIdResponse](../../Models/Operations/AccountDeleteCustomerIdResponse.md)**
 
 
 ## accountGetCustomer
@@ -176,12 +176,12 @@ try {
 
 | Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
 | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerRequest](../../models/operations/AccountGetCustomerRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
+| `$request`                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerRequest](../../Models/Operations/AccountGetCustomerRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerResponse](../../models/operations/AccountGetCustomerResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerResponse](../../Models/Operations/AccountGetCustomerResponse.md)**
 
 
 ## accountGetCustomerId
@@ -226,12 +226,12 @@ try {
 
 | Parameter                                                                                                                             | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
 | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerIdRequest](../../models/operations/AccountGetCustomerIdRequest.md) | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
+| `$request`                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerIdRequest](../../Models/Operations/AccountGetCustomerIdRequest.md) | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerIdResponse](../../models/operations/AccountGetCustomerIdResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerIdResponse](../../Models/Operations/AccountGetCustomerIdResponse.md)**
 
 
 ## accountGetCustomerCustomerIdPaymentMethodToken
@@ -277,12 +277,12 @@ try {
 
 | Parameter                                                                                                                                                                                 | Type                                                                                                                                                                                      | Required                                                                                                                                                                                  | Description                                                                                                                                                                               |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerCustomerIdPaymentMethodTokenRequest](../../models/operations/AccountGetCustomerCustomerIdPaymentMethodTokenRequest.md) | :heavy_check_mark:                                                                                                                                                                        | The request object to use for the request.                                                                                                                                                |
+| `$request`                                                                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerCustomerIdPaymentMethodTokenRequest](../../Models/Operations/AccountGetCustomerCustomerIdPaymentMethodTokenRequest.md) | :heavy_check_mark:                                                                                                                                                                        | The request object to use for the request.                                                                                                                                                |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerCustomerIdPaymentMethodTokenResponse](../../models/operations/AccountGetCustomerCustomerIdPaymentMethodTokenResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerCustomerIdPaymentMethodTokenResponse](../../Models/Operations/AccountGetCustomerCustomerIdPaymentMethodTokenResponse.md)**
 
 
 ## accountGetCustomerCustomerIdPayments
@@ -330,12 +330,12 @@ try {
 
 | Parameter                                                                                                                                                             | Type                                                                                                                                                                  | Required                                                                                                                                                              | Description                                                                                                                                                           |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerCustomerIdPaymentsRequest](../../models/operations/AccountGetCustomerCustomerIdPaymentsRequest.md) | :heavy_check_mark:                                                                                                                                                    | The request object to use for the request.                                                                                                                            |
+| `$request`                                                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerCustomerIdPaymentsRequest](../../Models/Operations/AccountGetCustomerCustomerIdPaymentsRequest.md) | :heavy_check_mark:                                                                                                                                                    | The request object to use for the request.                                                                                                                            |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerCustomerIdPaymentsResponse](../../models/operations/AccountGetCustomerCustomerIdPaymentsResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerCustomerIdPaymentsResponse](../../Models/Operations/AccountGetCustomerCustomerIdPaymentsResponse.md)**
 
 
 ## accountGetCustomerDefaultPaymentMethod
@@ -380,12 +380,12 @@ try {
 
 | Parameter                                                                                                                                                                 | Type                                                                                                                                                                      | Required                                                                                                                                                                  | Description                                                                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerDefaultPaymentMethodRequest](../../models/operations/AccountGetCustomerDefaultPaymentMethodRequest.md) | :heavy_check_mark:                                                                                                                                                        | The request object to use for the request.                                                                                                                                |
+| `$request`                                                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerDefaultPaymentMethodRequest](../../Models/Operations/AccountGetCustomerDefaultPaymentMethodRequest.md) | :heavy_check_mark:                                                                                                                                                        | The request object to use for the request.                                                                                                                                |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerDefaultPaymentMethodResponse](../../models/operations/AccountGetCustomerDefaultPaymentMethodResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerDefaultPaymentMethodResponse](../../Models/Operations/AccountGetCustomerDefaultPaymentMethodResponse.md)**
 
 
 ## accountGetCustomerIdPaymentMethod
@@ -430,12 +430,12 @@ try {
 
 | Parameter                                                                                                                                                       | Type                                                                                                                                                            | Required                                                                                                                                                        | Description                                                                                                                                                     |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerIdPaymentMethodRequest](../../models/operations/AccountGetCustomerIdPaymentMethodRequest.md) | :heavy_check_mark:                                                                                                                                              | The request object to use for the request.                                                                                                                      |
+| `$request`                                                                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerIdPaymentMethodRequest](../../Models/Operations/AccountGetCustomerIdPaymentMethodRequest.md) | :heavy_check_mark:                                                                                                                                              | The request object to use for the request.                                                                                                                      |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerIdPaymentMethodResponse](../../models/operations/AccountGetCustomerIdPaymentMethodResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerIdPaymentMethodResponse](../../Models/Operations/AccountGetCustomerIdPaymentMethodResponse.md)**
 
 
 ## accountGetCustomerTokenPaymentMethod
@@ -480,12 +480,12 @@ try {
 
 | Parameter                                                                                                                                                             | Type                                                                                                                                                                  | Required                                                                                                                                                              | Description                                                                                                                                                           |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerTokenPaymentMethodRequest](../../models/operations/AccountGetCustomerTokenPaymentMethodRequest.md) | :heavy_check_mark:                                                                                                                                                    | The request object to use for the request.                                                                                                                            |
+| `$request`                                                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerTokenPaymentMethodRequest](../../Models/Operations/AccountGetCustomerTokenPaymentMethodRequest.md) | :heavy_check_mark:                                                                                                                                                    | The request object to use for the request.                                                                                                                            |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerTokenPaymentMethodResponse](../../models/operations/AccountGetCustomerTokenPaymentMethodResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerTokenPaymentMethodResponse](../../Models/Operations/AccountGetCustomerTokenPaymentMethodResponse.md)**
 
 
 ## accountPostCustomer
@@ -536,12 +536,12 @@ try {
 
 | Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
 | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                          | [\TheLogicStudio\ExactPayments\Models\Operations\AccountPostCustomerRequest](../../models/operations/AccountPostCustomerRequest.md) | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
+| `$request`                                                                                                                          | [\TheLogicStudio\ExactPayments\Models\Operations\AccountPostCustomerRequest](../../Models/Operations/AccountPostCustomerRequest.md) | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountPostCustomerResponse](../../models/operations/AccountPostCustomerResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountPostCustomerResponse](../../Models/Operations/AccountPostCustomerResponse.md)**
 
 
 ## accountPostCustomerIdPaymentMethod
@@ -590,12 +590,12 @@ try {
 
 | Parameter                                                                                                                                                         | Type                                                                                                                                                              | Required                                                                                                                                                          | Description                                                                                                                                                       |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\AccountPostCustomerIdPaymentMethodRequest](../../models/operations/AccountPostCustomerIdPaymentMethodRequest.md) | :heavy_check_mark:                                                                                                                                                | The request object to use for the request.                                                                                                                        |
+| `$request`                                                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\AccountPostCustomerIdPaymentMethodRequest](../../Models/Operations/AccountPostCustomerIdPaymentMethodRequest.md) | :heavy_check_mark:                                                                                                                                                | The request object to use for the request.                                                                                                                        |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountPostCustomerIdPaymentMethodResponse](../../models/operations/AccountPostCustomerIdPaymentMethodResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountPostCustomerIdPaymentMethodResponse](../../Models/Operations/AccountPostCustomerIdPaymentMethodResponse.md)**
 
 
 ## accountPutCustomerId
@@ -649,12 +649,12 @@ try {
 
 | Parameter                                                                                                                             | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
 | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\AccountPutCustomerIdRequest](../../models/operations/AccountPutCustomerIdRequest.md) | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
+| `$request`                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\AccountPutCustomerIdRequest](../../Models/Operations/AccountPutCustomerIdRequest.md) | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountPutCustomerIdResponse](../../models/operations/AccountPutCustomerIdResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountPutCustomerIdResponse](../../Models/Operations/AccountPutCustomerIdResponse.md)**
 
 
 ## deleteCustomerCustomerIdPaymentMethodToken
@@ -699,12 +699,12 @@ try {
 
 | Parameter                                                                                                                                                                         | Type                                                                                                                                                                              | Required                                                                                                                                                                          | Description                                                                                                                                                                       |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\DeleteCustomerCustomerIdPaymentMethodTokenRequest](../../models/operations/DeleteCustomerCustomerIdPaymentMethodTokenRequest.md) | :heavy_check_mark:                                                                                                                                                                | The request object to use for the request.                                                                                                                                        |
+| `$request`                                                                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\DeleteCustomerCustomerIdPaymentMethodTokenRequest](../../Models/Operations/DeleteCustomerCustomerIdPaymentMethodTokenRequest.md) | :heavy_check_mark:                                                                                                                                                                | The request object to use for the request.                                                                                                                                        |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\DeleteCustomerCustomerIdPaymentMethodTokenResponse](../../models/operations/DeleteCustomerCustomerIdPaymentMethodTokenResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\DeleteCustomerCustomerIdPaymentMethodTokenResponse](../../Models/Operations/DeleteCustomerCustomerIdPaymentMethodTokenResponse.md)**
 
 
 ## deleteCustomerId
@@ -748,12 +748,12 @@ try {
 
 | Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
 | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                    | [\TheLogicStudio\ExactPayments\Models\Operations\DeleteCustomerIdRequest](../../models/operations/DeleteCustomerIdRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
+| `$request`                                                                                                                    | [\TheLogicStudio\ExactPayments\Models\Operations\DeleteCustomerIdRequest](../../Models/Operations/DeleteCustomerIdRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\DeleteCustomerIdResponse](../../models/operations/DeleteCustomerIdResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\DeleteCustomerIdResponse](../../Models/Operations/DeleteCustomerIdResponse.md)**
 
 
 ## getCustomer
@@ -799,12 +799,12 @@ try {
 
 | Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
 | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                          | [\TheLogicStudio\ExactPayments\Models\Operations\GetCustomerRequest](../../models/operations/GetCustomerRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+| `$request`                                                                                                          | [\TheLogicStudio\ExactPayments\Models\Operations\GetCustomerRequest](../../Models/Operations/GetCustomerRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\GetCustomerResponse](../../models/operations/GetCustomerResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\GetCustomerResponse](../../Models/Operations/GetCustomerResponse.md)**
 
 
 ## getCustomerId
@@ -848,12 +848,12 @@ try {
 
 | Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
 | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\GetCustomerIdRequest](../../models/operations/GetCustomerIdRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| `$request`                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\GetCustomerIdRequest](../../Models/Operations/GetCustomerIdRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\GetCustomerIdResponse](../../models/operations/GetCustomerIdResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\GetCustomerIdResponse](../../Models/Operations/GetCustomerIdResponse.md)**
 
 
 ## getCustomerCustomerIdPaymentMethodToken
@@ -898,12 +898,12 @@ try {
 
 | Parameter                                                                                                                                                                   | Type                                                                                                                                                                        | Required                                                                                                                                                                    | Description                                                                                                                                                                 |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\GetCustomerCustomerIdPaymentMethodTokenRequest](../../models/operations/GetCustomerCustomerIdPaymentMethodTokenRequest.md) | :heavy_check_mark:                                                                                                                                                          | The request object to use for the request.                                                                                                                                  |
+| `$request`                                                                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\GetCustomerCustomerIdPaymentMethodTokenRequest](../../Models/Operations/GetCustomerCustomerIdPaymentMethodTokenRequest.md) | :heavy_check_mark:                                                                                                                                                          | The request object to use for the request.                                                                                                                                  |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\GetCustomerCustomerIdPaymentMethodTokenResponse](../../models/operations/GetCustomerCustomerIdPaymentMethodTokenResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\GetCustomerCustomerIdPaymentMethodTokenResponse](../../Models/Operations/GetCustomerCustomerIdPaymentMethodTokenResponse.md)**
 
 
 ## getCustomerCustomerIdPayments
@@ -950,12 +950,12 @@ try {
 
 | Parameter                                                                                                                                               | Type                                                                                                                                                    | Required                                                                                                                                                | Description                                                                                                                                             |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\GetCustomerCustomerIdPaymentsRequest](../../models/operations/GetCustomerCustomerIdPaymentsRequest.md) | :heavy_check_mark:                                                                                                                                      | The request object to use for the request.                                                                                                              |
+| `$request`                                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\GetCustomerCustomerIdPaymentsRequest](../../Models/Operations/GetCustomerCustomerIdPaymentsRequest.md) | :heavy_check_mark:                                                                                                                                      | The request object to use for the request.                                                                                                              |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\GetCustomerCustomerIdPaymentsResponse](../../models/operations/GetCustomerCustomerIdPaymentsResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\GetCustomerCustomerIdPaymentsResponse](../../Models/Operations/GetCustomerCustomerIdPaymentsResponse.md)**
 
 
 ## getCustomerIdPaymentMethod
@@ -999,12 +999,12 @@ try {
 
 | Parameter                                                                                                                                         | Type                                                                                                                                              | Required                                                                                                                                          | Description                                                                                                                                       |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\GetCustomerIdPaymentMethodRequest](../../models/operations/GetCustomerIdPaymentMethodRequest.md) | :heavy_check_mark:                                                                                                                                | The request object to use for the request.                                                                                                        |
+| `$request`                                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\GetCustomerIdPaymentMethodRequest](../../Models/Operations/GetCustomerIdPaymentMethodRequest.md) | :heavy_check_mark:                                                                                                                                | The request object to use for the request.                                                                                                        |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\GetCustomerIdPaymentMethodResponse](../../models/operations/GetCustomerIdPaymentMethodResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\GetCustomerIdPaymentMethodResponse](../../Models/Operations/GetCustomerIdPaymentMethodResponse.md)**
 
 
 ## getCustomerTokenPaymentMethod
@@ -1050,12 +1050,12 @@ try {
 
 | Parameter                                                                                                                                               | Type                                                                                                                                                    | Required                                                                                                                                                | Description                                                                                                                                             |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\GetCustomerTokenPaymentMethodRequest](../../models/operations/GetCustomerTokenPaymentMethodRequest.md) | :heavy_check_mark:                                                                                                                                      | The request object to use for the request.                                                                                                              |
+| `$request`                                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\GetCustomerTokenPaymentMethodRequest](../../Models/Operations/GetCustomerTokenPaymentMethodRequest.md) | :heavy_check_mark:                                                                                                                                      | The request object to use for the request.                                                                                                              |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\GetCustomerTokenPaymentMethodResponse](../../models/operations/GetCustomerTokenPaymentMethodResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\GetCustomerTokenPaymentMethodResponse](../../Models/Operations/GetCustomerTokenPaymentMethodResponse.md)**
 
 
 ## postCustomer
@@ -1103,12 +1103,12 @@ try {
 
 | Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
 | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `$request`                                                                                    | [\TheLogicStudio\ExactPayments\Models\Shared\NewCustomer](../../models/shared/NewCustomer.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+| `$request`                                                                                    | [\TheLogicStudio\ExactPayments\Models\Shared\NewCustomer](../../Models/Shared/NewCustomer.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\PostCustomerResponse](../../models/operations/PostCustomerResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\PostCustomerResponse](../../Models/Operations/PostCustomerResponse.md)**
 
 
 ## postCustomerIdPaymentMethod
@@ -1156,12 +1156,12 @@ try {
 
 | Parameter                                                                                                                                           | Type                                                                                                                                                | Required                                                                                                                                            | Description                                                                                                                                         |
 | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                          | [\TheLogicStudio\ExactPayments\Models\Operations\PostCustomerIdPaymentMethodRequest](../../models/operations/PostCustomerIdPaymentMethodRequest.md) | :heavy_check_mark:                                                                                                                                  | The request object to use for the request.                                                                                                          |
+| `$request`                                                                                                                                          | [\TheLogicStudio\ExactPayments\Models\Operations\PostCustomerIdPaymentMethodRequest](../../Models/Operations/PostCustomerIdPaymentMethodRequest.md) | :heavy_check_mark:                                                                                                                                  | The request object to use for the request.                                                                                                          |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\PostCustomerIdPaymentMethodResponse](../../models/operations/PostCustomerIdPaymentMethodResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\PostCustomerIdPaymentMethodResponse](../../Models/Operations/PostCustomerIdPaymentMethodResponse.md)**
 
 
 ## putCustomerId
@@ -1214,10 +1214,10 @@ try {
 
 | Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
 | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\PutCustomerIdRequest](../../models/operations/PutCustomerIdRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| `$request`                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\PutCustomerIdRequest](../../Models/Operations/PutCustomerIdRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\PutCustomerIdResponse](../../models/operations/PutCustomerIdResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\PutCustomerIdResponse](../../Models/Operations/PutCustomerIdResponse.md)**
 

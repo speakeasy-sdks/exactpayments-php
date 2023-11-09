@@ -1,9 +1,0 @@
-# PostOrganizationOrganizationIdWebhookRequest
-
-
-## Fields
-
-| Field                                                                                               | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `webhookRequest`                                                                                    | [\TheLogicStudio\ExactPayments\Models\Shared\WebhookRequest](../../models/shared/WebhookRequest.md) | :heavy_check_mark:                                                                                  | Fields that compose a webhook definition inside Exact Payments ecosystem.                           |
-| `organizationId`                                                                                    | *string*                                                                                            | :heavy_check_mark:                                                                                  | The Organization identifier.                                                                        |

@@ -1,0 +1,9 @@
+# PutCustomerIdRequest
+
+
+## Fields
+
+| Field                                                                                             | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `newCustomer`                                                                                     | [?\TheLogicStudio\ExactPayments\Models\Shared\NewCustomer](../../Models/Shared/NewCustomer.md)    | :heavy_minus_sign:                                                                                | N/A                                                                                               |
+| `customerId`                                                                                      | *string*                                                                                          | :heavy_check_mark:                                                                                | The Customer identifier. Represents the Customer that this operation is going to be executed for. |

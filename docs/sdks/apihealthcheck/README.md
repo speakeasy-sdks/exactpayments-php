@@ -41,5 +41,5 @@ try {
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\GetStatusResponse](../../models/operations/GetStatusResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\GetStatusResponse](../../Models/Operations/GetStatusResponse.md)**
 

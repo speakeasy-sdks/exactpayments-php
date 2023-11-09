@@ -71,12 +71,12 @@ try {
 
 | Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
 | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\CreateDocumentRequestRequest](../../models/operations/CreateDocumentRequestRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
+| `$request`                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\CreateDocumentRequestRequest](../../Models/Operations/CreateDocumentRequestRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\CreateDocumentRequestResponse](../../models/operations/CreateDocumentRequestResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\CreateDocumentRequestResponse](../../Models/Operations/CreateDocumentRequestResponse.md)**
 
 
 ## deleteDocumentById
@@ -122,12 +122,12 @@ try {
 
 | Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
 | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\DeleteDocumentByIdRequest](../../models/operations/DeleteDocumentByIdRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
+| `$request`                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\DeleteDocumentByIdRequest](../../Models/Operations/DeleteDocumentByIdRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\DeleteDocumentByIdResponse](../../models/operations/DeleteDocumentByIdResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\DeleteDocumentByIdResponse](../../Models/Operations/DeleteDocumentByIdResponse.md)**
 
 
 ## deleteDocumentRequestById
@@ -173,12 +173,12 @@ try {
 
 | Parameter                                                                                                                                       | Type                                                                                                                                            | Required                                                                                                                                        | Description                                                                                                                                     |
 | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\DeleteDocumentRequestByIdRequest](../../models/operations/DeleteDocumentRequestByIdRequest.md) | :heavy_check_mark:                                                                                                                              | The request object to use for the request.                                                                                                      |
+| `$request`                                                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\DeleteDocumentRequestByIdRequest](../../Models/Operations/DeleteDocumentRequestByIdRequest.md) | :heavy_check_mark:                                                                                                                              | The request object to use for the request.                                                                                                      |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\DeleteDocumentRequestByIdResponse](../../models/operations/DeleteDocumentRequestByIdResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\DeleteDocumentRequestByIdResponse](../../Models/Operations/DeleteDocumentRequestByIdResponse.md)**
 
 
 ## getDocumentById
@@ -225,12 +225,12 @@ try {
 
 | Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
 | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\GetDocumentByIdRequest](../../models/operations/GetDocumentByIdRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
+| `$request`                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\GetDocumentByIdRequest](../../Models/Operations/GetDocumentByIdRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\GetDocumentByIdResponse](../../models/operations/GetDocumentByIdResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\GetDocumentByIdResponse](../../Models/Operations/GetDocumentByIdResponse.md)**
 
 
 ## getDocuments
@@ -278,12 +278,12 @@ try {
 
 | Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
 | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\GetDocumentsRequest](../../models/operations/GetDocumentsRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| `$request`                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\GetDocumentsRequest](../../Models/Operations/GetDocumentsRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\GetDocumentsResponse](../../models/operations/GetDocumentsResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\GetDocumentsResponse](../../Models/Operations/GetDocumentsResponse.md)**
 
 
 ## getDownloadAllDocuments
@@ -329,12 +329,12 @@ try {
 
 | Parameter                                                                                                                                   | Type                                                                                                                                        | Required                                                                                                                                    | Description                                                                                                                                 |
 | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\GetDownloadAllDocumentsRequest](../../models/operations/GetDownloadAllDocumentsRequest.md) | :heavy_check_mark:                                                                                                                          | The request object to use for the request.                                                                                                  |
+| `$request`                                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\GetDownloadAllDocumentsRequest](../../Models/Operations/GetDownloadAllDocumentsRequest.md) | :heavy_check_mark:                                                                                                                          | The request object to use for the request.                                                                                                  |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\GetDownloadAllDocumentsResponse](../../models/operations/GetDownloadAllDocumentsResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\GetDownloadAllDocumentsResponse](../../Models/Operations/GetDownloadAllDocumentsResponse.md)**
 
 
 ## getListDocumentRequests
@@ -382,12 +382,12 @@ try {
 
 | Parameter                                                                                                                                   | Type                                                                                                                                        | Required                                                                                                                                    | Description                                                                                                                                 |
 | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\GetListDocumentRequestsRequest](../../models/operations/GetListDocumentRequestsRequest.md) | :heavy_check_mark:                                                                                                                          | The request object to use for the request.                                                                                                  |
+| `$request`                                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\GetListDocumentRequestsRequest](../../Models/Operations/GetListDocumentRequestsRequest.md) | :heavy_check_mark:                                                                                                                          | The request object to use for the request.                                                                                                  |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\GetListDocumentRequestsResponse](../../models/operations/GetListDocumentRequestsResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\GetListDocumentRequestsResponse](../../Models/Operations/GetListDocumentRequestsResponse.md)**
 
 
 ## getRetrieveDocument
@@ -433,12 +433,12 @@ try {
 
 | Parameter                                                                                                                           | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
 | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                          | [\TheLogicStudio\ExactPayments\Models\Operations\GetRetrieveDocumentRequest](../../models/operations/GetRetrieveDocumentRequest.md) | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
+| `$request`                                                                                                                          | [\TheLogicStudio\ExactPayments\Models\Operations\GetRetrieveDocumentRequest](../../Models/Operations/GetRetrieveDocumentRequest.md) | :heavy_check_mark:                                                                                                                  | The request object to use for the request.                                                                                          |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\GetRetrieveDocumentResponse](../../models/operations/GetRetrieveDocumentResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\GetRetrieveDocumentResponse](../../Models/Operations/GetRetrieveDocumentResponse.md)**
 
 
 ## getRetrieveDocumentRequest
@@ -484,12 +484,12 @@ try {
 
 | Parameter                                                                                                                                         | Type                                                                                                                                              | Required                                                                                                                                          | Description                                                                                                                                       |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\GetRetrieveDocumentRequestRequest](../../models/operations/GetRetrieveDocumentRequestRequest.md) | :heavy_check_mark:                                                                                                                                | The request object to use for the request.                                                                                                        |
+| `$request`                                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\GetRetrieveDocumentRequestRequest](../../Models/Operations/GetRetrieveDocumentRequestRequest.md) | :heavy_check_mark:                                                                                                                                | The request object to use for the request.                                                                                                        |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\GetRetrieveDocumentRequestResponse](../../models/operations/GetRetrieveDocumentRequestResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\GetRetrieveDocumentRequestResponse](../../Models/Operations/GetRetrieveDocumentRequestResponse.md)**
 
 
 ## listDocumentRequestByToken
@@ -533,12 +533,12 @@ try {
 
 | Parameter                                                                                                                                         | Type                                                                                                                                              | Required                                                                                                                                          | Description                                                                                                                                       |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\ListDocumentRequestByTokenRequest](../../models/operations/ListDocumentRequestByTokenRequest.md) | :heavy_check_mark:                                                                                                                                | The request object to use for the request.                                                                                                        |
+| `$request`                                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\ListDocumentRequestByTokenRequest](../../Models/Operations/ListDocumentRequestByTokenRequest.md) | :heavy_check_mark:                                                                                                                                | The request object to use for the request.                                                                                                        |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\ListDocumentRequestByTokenResponse](../../models/operations/ListDocumentRequestByTokenResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\ListDocumentRequestByTokenResponse](../../Models/Operations/ListDocumentRequestByTokenResponse.md)**
 
 
 ## putUpdateDocumentTypeById
@@ -586,12 +586,12 @@ try {
 
 | Parameter                                                                                                                                       | Type                                                                                                                                            | Required                                                                                                                                        | Description                                                                                                                                     |
 | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\PutUpdateDocumentTypeByIdRequest](../../models/operations/PutUpdateDocumentTypeByIdRequest.md) | :heavy_check_mark:                                                                                                                              | The request object to use for the request.                                                                                                      |
+| `$request`                                                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\PutUpdateDocumentTypeByIdRequest](../../Models/Operations/PutUpdateDocumentTypeByIdRequest.md) | :heavy_check_mark:                                                                                                                              | The request object to use for the request.                                                                                                      |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\PutUpdateDocumentTypeByIdResponse](../../models/operations/PutUpdateDocumentTypeByIdResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\PutUpdateDocumentTypeByIdResponse](../../Models/Operations/PutUpdateDocumentTypeByIdResponse.md)**
 
 
 ## updateDocumentRequest
@@ -647,12 +647,12 @@ try {
 
 | Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
 | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\UpdateDocumentRequestRequest](../../models/operations/UpdateDocumentRequestRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
+| `$request`                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\UpdateDocumentRequestRequest](../../Models/Operations/UpdateDocumentRequestRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\UpdateDocumentRequestResponse](../../models/operations/UpdateDocumentRequestResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\UpdateDocumentRequestResponse](../../Models/Operations/UpdateDocumentRequestResponse.md)**
 
 
 ## uploadDocument
@@ -706,12 +706,12 @@ try {
 
 | Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\UploadDocumentRequest](../../models/operations/UploadDocumentRequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
+| `$request`                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\UploadDocumentRequest](../../Models/Operations/UploadDocumentRequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\UploadDocumentResponse](../../models/operations/UploadDocumentResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\UploadDocumentResponse](../../Models/Operations/UploadDocumentResponse.md)**
 
 
 ## uploadDocumentByToken
@@ -762,10 +762,10 @@ try {
 
 | Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
 | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\UploadDocumentByTokenRequest](../../models/operations/UploadDocumentByTokenRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
+| `$request`                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\UploadDocumentByTokenRequest](../../Models/Operations/UploadDocumentByTokenRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\UploadDocumentByTokenResponse](../../models/operations/UploadDocumentByTokenResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\UploadDocumentByTokenResponse](../../Models/Operations/UploadDocumentByTokenResponse.md)**
 

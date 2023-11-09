@@ -112,12 +112,12 @@ try {
 
 | Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
 | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                    | [\TheLogicStudio\ExactPayments\Models\Operations\CreateOnboardingRequest](../../models/operations/CreateOnboardingRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
+| `$request`                                                                                                                    | [\TheLogicStudio\ExactPayments\Models\Operations\CreateOnboardingRequest](../../Models/Operations/CreateOnboardingRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\CreateOnboardingResponse](../../models/operations/CreateOnboardingResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\CreateOnboardingResponse](../../Models/Operations/CreateOnboardingResponse.md)**
 
 
 ## deleteOnboardingById
@@ -162,12 +162,12 @@ try {
 
 | Parameter                                                                                                                             | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
 | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\DeleteOnboardingByIdRequest](../../models/operations/DeleteOnboardingByIdRequest.md) | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
+| `$request`                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\DeleteOnboardingByIdRequest](../../Models/Operations/DeleteOnboardingByIdRequest.md) | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\DeleteOnboardingByIdResponse](../../models/operations/DeleteOnboardingByIdResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\DeleteOnboardingByIdResponse](../../Models/Operations/DeleteOnboardingByIdResponse.md)**
 
 
 ## listFilterOptions
@@ -212,12 +212,12 @@ try {
 
 | Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\ListFilterOptionsRequest](../../models/operations/ListFilterOptionsRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
+| `$request`                                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\ListFilterOptionsRequest](../../Models/Operations/ListFilterOptionsRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\ListFilterOptionsResponse](../../models/operations/ListFilterOptionsResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\ListFilterOptionsResponse](../../Models/Operations/ListFilterOptionsResponse.md)**
 
 
 ## listMerchantCategoryCodes
@@ -256,7 +256,7 @@ try {
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\ListMerchantCategoryCodesResponse](../../models/operations/ListMerchantCategoryCodesResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\ListMerchantCategoryCodesResponse](../../Models/Operations/ListMerchantCategoryCodesResponse.md)**
 
 
 ## listOnboardingByOrganization
@@ -304,12 +304,12 @@ try {
 
 | Parameter                                                                                                                                             | Type                                                                                                                                                  | Required                                                                                                                                              | Description                                                                                                                                           |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\ListOnboardingByOrganizationRequest](../../models/operations/ListOnboardingByOrganizationRequest.md) | :heavy_check_mark:                                                                                                                                    | The request object to use for the request.                                                                                                            |
+| `$request`                                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\ListOnboardingByOrganizationRequest](../../Models/Operations/ListOnboardingByOrganizationRequest.md) | :heavy_check_mark:                                                                                                                                    | The request object to use for the request.                                                                                                            |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\ListOnboardingByOrganizationResponse](../../models/operations/ListOnboardingByOrganizationResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\ListOnboardingByOrganizationResponse](../../Models/Operations/ListOnboardingByOrganizationResponse.md)**
 
 
 ## listOnboardings
@@ -356,12 +356,12 @@ try {
 
 | Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
 | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\ListOnboardingsRequest](../../models/operations/ListOnboardingsRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
+| `$request`                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\ListOnboardingsRequest](../../Models/Operations/ListOnboardingsRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\ListOnboardingsResponse](../../models/operations/ListOnboardingsResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\ListOnboardingsResponse](../../Models/Operations/ListOnboardingsResponse.md)**
 
 
 ## retrieveOnboardingById
@@ -406,12 +406,12 @@ try {
 
 | Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
 | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\RetrieveOnboardingByIdRequest](../../models/operations/RetrieveOnboardingByIdRequest.md) | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
+| `$request`                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\RetrieveOnboardingByIdRequest](../../Models/Operations/RetrieveOnboardingByIdRequest.md) | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\RetrieveOnboardingByIdResponse](../../models/operations/RetrieveOnboardingByIdResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\RetrieveOnboardingByIdResponse](../../Models/Operations/RetrieveOnboardingByIdResponse.md)**
 
 
 ## searchOnboardingByBusinessName
@@ -458,12 +458,12 @@ try {
 
 | Parameter                                                                                                                                                 | Type                                                                                                                                                      | Required                                                                                                                                                  | Description                                                                                                                                               |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\SearchOnboardingByBusinessNameRequest](../../models/operations/SearchOnboardingByBusinessNameRequest.md) | :heavy_check_mark:                                                                                                                                        | The request object to use for the request.                                                                                                                |
+| `$request`                                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\SearchOnboardingByBusinessNameRequest](../../Models/Operations/SearchOnboardingByBusinessNameRequest.md) | :heavy_check_mark:                                                                                                                                        | The request object to use for the request.                                                                                                                |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\SearchOnboardingByBusinessNameResponse](../../models/operations/SearchOnboardingByBusinessNameResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\SearchOnboardingByBusinessNameResponse](../../Models/Operations/SearchOnboardingByBusinessNameResponse.md)**
 
 
 ## searchOnboardingByOrganizationIdAndBusinessName
@@ -511,10 +511,10 @@ try {
 
 | Parameter                                                                                                                                                                                   | Type                                                                                                                                                                                        | Required                                                                                                                                                                                    | Description                                                                                                                                                                                 |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\SearchOnboardingByOrganizationIdAndBusinessNameRequest](../../models/operations/SearchOnboardingByOrganizationIdAndBusinessNameRequest.md) | :heavy_check_mark:                                                                                                                                                                          | The request object to use for the request.                                                                                                                                                  |
+| `$request`                                                                                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\SearchOnboardingByOrganizationIdAndBusinessNameRequest](../../Models/Operations/SearchOnboardingByOrganizationIdAndBusinessNameRequest.md) | :heavy_check_mark:                                                                                                                                                                          | The request object to use for the request.                                                                                                                                                  |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\SearchOnboardingByOrganizationIdAndBusinessNameResponse](../../models/operations/SearchOnboardingByOrganizationIdAndBusinessNameResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\SearchOnboardingByOrganizationIdAndBusinessNameResponse](../../Models/Operations/SearchOnboardingByOrganizationIdAndBusinessNameResponse.md)**
 

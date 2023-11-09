@@ -49,12 +49,12 @@ try {
 
 | Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
 | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\DeleteReportRequest](../../models/operations/DeleteReportRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| `$request`                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\DeleteReportRequest](../../Models/Operations/DeleteReportRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\DeleteReportResponse](../../models/operations/DeleteReportResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\DeleteReportResponse](../../Models/Operations/DeleteReportResponse.md)**
 
 
 ## getReport
@@ -100,12 +100,12 @@ try {
 
 | Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
 | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\GetReportRequest](../../models/operations/GetReportRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| `$request`                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\GetReportRequest](../../Models/Operations/GetReportRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\GetReportResponse](../../models/operations/GetReportResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\GetReportResponse](../../Models/Operations/GetReportResponse.md)**
 
 
 ## getReportDetails
@@ -152,12 +152,12 @@ try {
 
 | Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
 | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                    | [\TheLogicStudio\ExactPayments\Models\Operations\GetReportDetailsRequest](../../models/operations/GetReportDetailsRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
+| `$request`                                                                                                                    | [\TheLogicStudio\ExactPayments\Models\Operations\GetReportDetailsRequest](../../Models/Operations/GetReportDetailsRequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\GetReportDetailsResponse](../../models/operations/GetReportDetailsResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\GetReportDetailsResponse](../../Models/Operations/GetReportDetailsResponse.md)**
 
 
 ## getReports
@@ -203,10 +203,10 @@ try {
 
 | Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
 | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\GetReportsRequest](../../models/operations/GetReportsRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| `$request`                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\GetReportsRequest](../../Models/Operations/GetReportsRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\GetReportsResponse](../../models/operations/GetReportsResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\GetReportsResponse](../../Models/Operations/GetReportsResponse.md)**
 

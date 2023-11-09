@@ -1,9 +1,0 @@
-# CreateOnboardingRequest
-
-
-## Fields
-
-| Field                                                                                                     | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
-| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `onboardingRequest`                                                                                       | [\TheLogicStudio\ExactPayments\Models\Shared\OnboardingRequest](../../models/shared/OnboardingRequest.md) | :heavy_check_mark:                                                                                        | N/A                                                                                                       |
-| `organizationId`                                                                                          | *string*                                                                                                  | :heavy_check_mark:                                                                                        | The Organization identifier.                                                                              |

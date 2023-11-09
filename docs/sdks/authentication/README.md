@@ -55,12 +55,12 @@ try {
 
 | Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
 | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\CreateApplicationTokenRequest](../../models/operations/CreateApplicationTokenRequest.md) | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
+| `$request`                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\CreateApplicationTokenRequest](../../Models/Operations/CreateApplicationTokenRequest.md) | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\CreateApplicationTokenResponse](../../models/operations/CreateApplicationTokenResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\CreateApplicationTokenResponse](../../Models/Operations/CreateApplicationTokenResponse.md)**
 
 
 ## createUserToken
@@ -112,12 +112,12 @@ try {
 
 | Parameter                                                                                                                   | Type                                                                                                                        | Required                                                                                                                    | Description                                                                                                                 |
 | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\CreateUserTokenRequest](../../models/operations/CreateUserTokenRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
+| `$request`                                                                                                                  | [\TheLogicStudio\ExactPayments\Models\Operations\CreateUserTokenRequest](../../Models/Operations/CreateUserTokenRequest.md) | :heavy_check_mark:                                                                                                          | The request object to use for the request.                                                                                  |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\CreateUserTokenResponse](../../models/operations/CreateUserTokenResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\CreateUserTokenResponse](../../Models/Operations/CreateUserTokenResponse.md)**
 
 
 ## deleteApplicationToken
@@ -162,12 +162,12 @@ try {
 
 | Parameter                                                                                                                                 | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
 | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\DeleteApplicationTokenRequest](../../models/operations/DeleteApplicationTokenRequest.md) | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
+| `$request`                                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\DeleteApplicationTokenRequest](../../Models/Operations/DeleteApplicationTokenRequest.md) | :heavy_check_mark:                                                                                                                        | The request object to use for the request.                                                                                                |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\DeleteApplicationTokenResponse](../../models/operations/DeleteApplicationTokenResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\DeleteApplicationTokenResponse](../../Models/Operations/DeleteApplicationTokenResponse.md)**
 
 
 ## queryApplicationToken
@@ -214,10 +214,10 @@ try {
 
 | Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
 | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\QueryApplicationTokenRequest](../../models/operations/QueryApplicationTokenRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
+| `$request`                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\QueryApplicationTokenRequest](../../Models/Operations/QueryApplicationTokenRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\QueryApplicationTokenResponse](../../models/operations/QueryApplicationTokenResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\QueryApplicationTokenResponse](../../Models/Operations/QueryApplicationTokenResponse.md)**
 

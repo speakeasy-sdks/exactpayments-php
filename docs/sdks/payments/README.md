@@ -94,12 +94,12 @@ try {
 
 | Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
 | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\AccountCapturePaymentRequest](../../models/operations/AccountCapturePaymentRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
+| `$request`                                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\AccountCapturePaymentRequest](../../Models/Operations/AccountCapturePaymentRequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountCapturePaymentResponse](../../models/operations/AccountCapturePaymentResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountCapturePaymentResponse](../../Models/Operations/AccountCapturePaymentResponse.md)**
 
 
 ## accountGetPayment
@@ -146,12 +146,12 @@ try {
 
 | Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentRequest](../../models/operations/AccountGetPaymentRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
+| `$request`                                                                                                                      | [\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentRequest](../../Models/Operations/AccountGetPaymentRequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentResponse](../../models/operations/AccountGetPaymentResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentResponse](../../Models/Operations/AccountGetPaymentResponse.md)**
 
 
 ## accountGetPayments
@@ -200,12 +200,12 @@ try {
 
 | Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
 | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentsRequest](../../models/operations/AccountGetPaymentsRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
+| `$request`                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentsRequest](../../Models/Operations/AccountGetPaymentsRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentsResponse](../../models/operations/AccountGetPaymentsResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentsResponse](../../Models/Operations/AccountGetPaymentsResponse.md)**
 
 
 ## accountPostPayment
@@ -332,12 +332,12 @@ try {
 
 | Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
 | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\AccountPostPaymentRequest](../../models/operations/AccountPostPaymentRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
+| `$request`                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\AccountPostPaymentRequest](../../Models/Operations/AccountPostPaymentRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountPostPaymentResponse](../../models/operations/AccountPostPaymentResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountPostPaymentResponse](../../Models/Operations/AccountPostPaymentResponse.md)**
 
 
 ## accountRefundPayment
@@ -414,12 +414,12 @@ try {
 
 | Parameter                                                                                                                             | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
 | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\AccountRefundPaymentRequest](../../models/operations/AccountRefundPaymentRequest.md) | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
+| `$request`                                                                                                                            | [\TheLogicStudio\ExactPayments\Models\Operations\AccountRefundPaymentRequest](../../Models/Operations/AccountRefundPaymentRequest.md) | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountRefundPaymentResponse](../../models/operations/AccountRefundPaymentResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountRefundPaymentResponse](../../Models/Operations/AccountRefundPaymentResponse.md)**
 
 
 ## accountVoidPayment
@@ -496,12 +496,12 @@ try {
 
 | Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
 | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\AccountVoidPaymentRequest](../../models/operations/AccountVoidPaymentRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
+| `$request`                                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\AccountVoidPaymentRequest](../../Models/Operations/AccountVoidPaymentRequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountVoidPaymentResponse](../../models/operations/AccountVoidPaymentResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\AccountVoidPaymentResponse](../../Models/Operations/AccountVoidPaymentResponse.md)**
 
 
 ## capturePayment
@@ -575,12 +575,12 @@ try {
 
 | Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\CapturePaymentRequest](../../models/operations/CapturePaymentRequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
+| `$request`                                                                                                                | [\TheLogicStudio\ExactPayments\Models\Operations\CapturePaymentRequest](../../Models/Operations/CapturePaymentRequest.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\CapturePaymentResponse](../../models/operations/CapturePaymentResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\CapturePaymentResponse](../../Models/Operations/CapturePaymentResponse.md)**
 
 
 ## getPayment
@@ -624,12 +624,12 @@ try {
 
 | Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
 | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\GetPaymentRequest](../../models/operations/GetPaymentRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| `$request`                                                                                                        | [\TheLogicStudio\ExactPayments\Models\Operations\GetPaymentRequest](../../Models/Operations/GetPaymentRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\GetPaymentResponse](../../models/operations/GetPaymentResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\GetPaymentResponse](../../Models/Operations/GetPaymentResponse.md)**
 
 
 ## getPayments
@@ -675,12 +675,12 @@ try {
 
 | Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
 | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                          | [\TheLogicStudio\ExactPayments\Models\Operations\GetPaymentsRequest](../../models/operations/GetPaymentsRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+| `$request`                                                                                                          | [\TheLogicStudio\ExactPayments\Models\Operations\GetPaymentsRequest](../../Models/Operations/GetPaymentsRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\GetPaymentsResponse](../../models/operations/GetPaymentsResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\GetPaymentsResponse](../../Models/Operations/GetPaymentsResponse.md)**
 
 
 ## postPayment
@@ -802,12 +802,12 @@ try {
 
 | Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
 | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `$request`                                                                                  | [\TheLogicStudio\ExactPayments\Models\Shared\NewPayment](../../models/shared/NewPayment.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| `$request`                                                                                  | [\TheLogicStudio\ExactPayments\Models\Shared\NewPayment](../../Models/Shared/NewPayment.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\PostPaymentResponse](../../models/operations/PostPaymentResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\PostPaymentResponse](../../Models/Operations/PostPaymentResponse.md)**
 
 
 ## refundPayment
@@ -879,12 +879,12 @@ try {
 
 | Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
 | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\RefundPaymentRequest](../../models/operations/RefundPaymentRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| `$request`                                                                                                              | [\TheLogicStudio\ExactPayments\Models\Operations\RefundPaymentRequest](../../Models/Operations/RefundPaymentRequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\RefundPaymentResponse](../../models/operations/RefundPaymentResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\RefundPaymentResponse](../../Models/Operations/RefundPaymentResponse.md)**
 
 
 ## voidPayment
@@ -956,10 +956,10 @@ try {
 
 | Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
 | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                          | [\TheLogicStudio\ExactPayments\Models\Operations\VoidPaymentRequest](../../models/operations/VoidPaymentRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+| `$request`                                                                                                          | [\TheLogicStudio\ExactPayments\Models\Operations\VoidPaymentRequest](../../Models/Operations/VoidPaymentRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
 
 
 ### Response
 
-**[?\TheLogicStudio\ExactPayments\Models\Operations\VoidPaymentResponse](../../models/operations/VoidPaymentResponse.md)**
+**[?\TheLogicStudio\ExactPayments\Models\Operations\VoidPaymentResponse](../../Models/Operations/VoidPaymentResponse.md)**
 

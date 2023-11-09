@@ -1,9 +1,0 @@
-# AccountPostPaymentRequest
-
-
-## Fields
-
-| Field                                                                                            | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `newPayment`                                                                                     | [?\TheLogicStudio\ExactPayments\Models\Shared\NewPayment](../../models/shared/NewPayment.md)     | :heavy_minus_sign:                                                                               | N/A                                                                                              |
-| `accountId`                                                                                      | *string*                                                                                         | :heavy_check_mark:                                                                               | The Account identifier. Represents the Merchant that this operation is going to be executed for. |
