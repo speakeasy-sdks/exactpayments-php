@@ -22,10 +22,10 @@ class GetReportsResponse
     /**
      * $headers
      * 
-     * @var ?array<string, array<string>> $headers
+     * @var array<string, array<string>> $headers
      */
 	
-    public ?array $headers = null;
+    public array $headers;
     
     /**
      * **Internal Server Error**
@@ -75,7 +75,7 @@ class GetReportsResponse
      * @var ?\Psr\Http\Message\ResponseInterface $rawResponse
      */
 	
-    public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
+    public ?\Psr\Http\Message\ResponseInterface $rawResponse;
     
     /**
      * **OK**
@@ -88,7 +88,7 @@ class GetReportsResponse
 	public function __construct()
 	{
 		$this->contentType = "";
-		$this->headers = null;
+		$this->headers = [];
 		$this->internalServerError = null;
 		$this->notFound = null;
 		$this->serviceUnavailable = null;

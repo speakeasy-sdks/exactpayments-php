@@ -22,10 +22,10 @@ class GetListDocumentRequestsResponse
     /**
      * $headers
      * 
-     * @var ?array<string, array<string>> $headers
+     * @var array<string, array<string>> $headers
      */
 	
-    public ?array $headers = null;
+    public array $headers;
     
     /**
      * **Internal Server Error**
@@ -80,7 +80,7 @@ class GetListDocumentRequestsResponse
      * @var ?\Psr\Http\Message\ResponseInterface $rawResponse
      */
 	
-    public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
+    public ?\Psr\Http\Message\ResponseInterface $rawResponse;
     
     /**
      * **Unauthorized**\
@@ -107,7 +107,7 @@ class GetListDocumentRequestsResponse
 	public function __construct()
 	{
 		$this->contentType = "";
-		$this->headers = null;
+		$this->headers = [];
 		$this->internalServerError = null;
 		$this->notFound = null;
 		$this->onboardingDocumentRequestsResponse = null;

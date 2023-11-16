@@ -53,7 +53,7 @@ class PostOrganizationOrganizationIdWebhookResponse
      * @var ?\Psr\Http\Message\ResponseInterface $rawResponse
      */
 	
-    public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
+    public ?\Psr\Http\Message\ResponseInterface $rawResponse;
     
     /**
      * The response object that indicates the ID of the webhook created in the system.

@@ -22,10 +22,10 @@ class AccountGetListWebhooksResponse
     /**
      * $headers
      * 
-     * @var ?array<string, array<string>> $headers
+     * @var array<string, array<string>> $headers
      */
 	
-    public ?array $headers = null;
+    public array $headers;
     
     /**
      * **Internal Server Error**
@@ -51,7 +51,7 @@ class AccountGetListWebhooksResponse
      * @var ?\Psr\Http\Message\ResponseInterface $rawResponse
      */
 	
-    public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
+    public ?\Psr\Http\Message\ResponseInterface $rawResponse;
     
     /**
      * The webhooks list.
@@ -64,7 +64,7 @@ class AccountGetListWebhooksResponse
 	public function __construct()
 	{
 		$this->contentType = "";
-		$this->headers = null;
+		$this->headers = [];
 		$this->internalServerError = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;

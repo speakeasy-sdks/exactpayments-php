@@ -22,10 +22,10 @@ class QueryApplicationTokenResponse
     /**
      * $headers
      * 
-     * @var ?array<string, array<string>> $headers
+     * @var array<string, array<string>> $headers
      */
 	
-    public ?array $headers = null;
+    public array $headers;
     
     /**
      * **Internal Server Error**
@@ -61,7 +61,7 @@ class QueryApplicationTokenResponse
      * @var ?\Psr\Http\Message\ResponseInterface $rawResponse
      */
 	
-    public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
+    public ?\Psr\Http\Message\ResponseInterface $rawResponse;
     
     /**
      * **OK**
@@ -74,7 +74,7 @@ class QueryApplicationTokenResponse
 	public function __construct()
 	{
 		$this->contentType = "";
-		$this->headers = null;
+		$this->headers = [];
 		$this->internalServerError = null;
 		$this->serviceUnavailable = null;
 		$this->statusCode = 0;

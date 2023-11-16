@@ -30,10 +30,10 @@ class GetDocumentsResponse
     /**
      * $headers
      * 
-     * @var ?array<string, array<string>> $headers
+     * @var array<string, array<string>> $headers
      */
 	
-    public ?array $headers = null;
+    public array $headers;
     
     /**
      * **Internal Server Error**\
@@ -86,7 +86,7 @@ class GetDocumentsResponse
      * @var ?\Psr\Http\Message\ResponseInterface $rawResponse
      */
 	
-    public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
+    public ?\Psr\Http\Message\ResponseInterface $rawResponse;
     
     /**
      * **Unauthorized**\
@@ -120,7 +120,7 @@ class GetDocumentsResponse
 	{
 		$this->contentType = "";
 		$this->documents = null;
-		$this->headers = null;
+		$this->headers = [];
 		$this->internalServerError = null;
 		$this->notFound = null;
 		$this->serviceUnavailable = null;
