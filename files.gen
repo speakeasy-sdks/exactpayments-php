@@ -675,7 +675,6 @@ src/Models/Shared/UpdateOnboardingStatusRequest.php
 src/Models/Shared/Parameters.php
 src/Models/Shared/ReportQueryResponse.php
 src/Models/Shared/Security.php
-USAGE.md
 docs/Models/Operations/AccountRegisterApplePayDomainsRequest.md
 docs/Models/Operations/AccountRegisterApplePayDomainsCode.md
 docs/Models/Operations/Expected.md
@@ -1333,4 +1332,5 @@ docs/sdks/underwritingworkflow/README.md
 docs/sdks/admintools/README.md
 docs/sdks/reporting/README.md
 docs/sdks/apihealthcheck/README.md
+USAGE.md
 .gitattributes
