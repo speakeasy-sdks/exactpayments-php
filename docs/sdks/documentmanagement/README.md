@@ -35,14 +35,12 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateDocumentRequestRequest();
+        $request = new Operations\CreateDocumentRequestRequest();
     $request->requestBody = new Operations\CreateDocumentRequestRequestBody();
     $request->requestBody->body = 'Company: ACME Corp
     Hi Jon Doe
@@ -55,7 +53,7 @@ try {
     $request->requestBody->subject = 'Application Status Update Pending Documentation';
     $request->requestBody->type = Operations\Type::OnboardingDocumentRequest;
     $request->onboardingId = 'string';
-    $request->organizationId = 'string';
+    $request->organizationId = 'string';;
 
     $response = $sdk->documentManagement->createDocumentRequest($request);
 
@@ -96,17 +94,15 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\DeleteDocumentByIdRequest();
+        $request = new Operations\DeleteDocumentByIdRequest();
     $request->documentId = 'string';
     $request->onboardingId = 'string';
-    $request->organizationId = 'string';
+    $request->organizationId = 'string';;
 
     $response = $sdk->documentManagement->deleteDocumentById($request);
 
@@ -147,17 +143,15 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\DeleteDocumentRequestByIdRequest();
+        $request = new Operations\DeleteDocumentRequestByIdRequest();
     $request->documentRequestId = 'string';
     $request->onboardingId = 'string';
-    $request->organizationId = 'string';
+    $request->organizationId = 'string';;
 
     $response = $sdk->documentManagement->deleteDocumentRequestById($request);
 
@@ -198,18 +192,16 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetDocumentByIdRequest();
+        $request = new Operations\GetDocumentByIdRequest();
     $request->documentId = 'string';
     $request->isDeleted = false;
     $request->onboardingId = 'string';
-    $request->organizationId = 'string';
+    $request->organizationId = 'string';;
 
     $response = $sdk->documentManagement->getDocumentById($request);
 
@@ -250,19 +242,17 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetDocumentsRequest();
+        $request = new Operations\GetDocumentsRequest();
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = 'createdAt:asc';
     $request->onboardingId = 'string';
-    $request->organizationId = 'string';
+    $request->organizationId = 'string';;
 
     $response = $sdk->documentManagement->getDocuments($request);
 
@@ -303,17 +293,15 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetDownloadAllDocumentsRequest();
+        $request = new Operations\GetDownloadAllDocumentsRequest();
     $request->isDeleted = false;
     $request->onboardingId = 'string';
-    $request->organizationId = 'string';
+    $request->organizationId = 'string';;
 
     $response = $sdk->documentManagement->getDownloadAllDocuments($request);
 
@@ -354,19 +342,17 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetListDocumentRequestsRequest();
+        $request = new Operations\GetListDocumentRequestsRequest();
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = 'createdAt:asc';
     $request->onboardingId = 'string';
-    $request->organizationId = 'string';
+    $request->organizationId = 'string';;
 
     $response = $sdk->documentManagement->getListDocumentRequests($request);
 
@@ -407,17 +393,15 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetRetrieveDocumentRequest();
+        $request = new Operations\GetRetrieveDocumentRequest();
     $request->documentId = 'string';
     $request->onboardingId = 'string';
-    $request->organizationId = 'string';
+    $request->organizationId = 'string';;
 
     $response = $sdk->documentManagement->getRetrieveDocument($request);
 
@@ -458,17 +442,15 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetRetrieveDocumentRequestRequest();
+        $request = new Operations\GetRetrieveDocumentRequestRequest();
     $request->documentRequestId = 'string';
     $request->onboardingId = 'string';
-    $request->organizationId = 'string';
+    $request->organizationId = 'string';;
 
     $response = $sdk->documentManagement->getRetrieveDocumentRequest($request);
 
@@ -509,15 +491,13 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListDocumentRequestByTokenRequest();
-    $request->documentRequestToken = 'string';
+        $request = new Operations\ListDocumentRequestByTokenRequest();
+    $request->documentRequestToken = 'string';;
 
     $response = $sdk->documentManagement->listDocumentRequestByToken($request);
 
@@ -558,19 +538,17 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PutUpdateDocumentTypeByIdRequest();
+        $request = new Operations\PutUpdateDocumentTypeByIdRequest();
     $request->requestBody = new Operations\PutUpdateDocumentTypeByIdRequestBody();
     $request->requestBody->type = Operations\PutUpdateDocumentTypeByIdType::DriversLicense;
     $request->documentId = 'string';
     $request->onboardingId = 'string';
-    $request->organizationId = 'string';
+    $request->organizationId = 'string';;
 
     $response = $sdk->documentManagement->putUpdateDocumentTypeById($request);
 
@@ -611,14 +589,12 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateDocumentRequestRequest();
+        $request = new Operations\UpdateDocumentRequestRequest();
     $request->onboardingDocumentRequestUpdate = new Shared\OnboardingDocumentRequestUpdate();
     $request->onboardingDocumentRequestUpdate->body = 'Company: ACME Corp
     Hi Jon Doe
@@ -631,7 +607,7 @@ try {
     $request->onboardingDocumentRequestUpdate->type = Shared\OnboardingDocumentRequestUpdateType::OnboardingDocumentRequest;
     $request->documentRequestId = 'string';
     $request->onboardingId = 'string';
-    $request->organizationId = 'string';
+    $request->organizationId = 'string';;
 
     $response = $sdk->documentManagement->updateDocumentRequest($request);
 
@@ -672,14 +648,12 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UploadDocumentRequest();
+        $request = new Operations\UploadDocumentRequest();
     $request->onboardingDocumentUploadRequest = new Shared\OnboardingDocumentUploadRequest();
     $request->onboardingDocumentUploadRequest->documentRequest = '64c446af29cef96ce25bc519';
     $request->onboardingDocumentUploadRequest->files = new Shared\Files();
@@ -690,7 +664,7 @@ try {
     $request->onboardingDocumentUploadRequest->principal = '64ca7b2e4ab69839f78db609';
     $request->onboardingDocumentUploadRequest->type = Shared\DocumentUploadType::DriversLicense;
     $request->onboardingId = 'string';
-    $request->organizationId = 'string';
+    $request->organizationId = 'string';;
 
     $response = $sdk->documentManagement->uploadDocument($request);
 
@@ -731,14 +705,12 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UploadDocumentByTokenRequest();
+        $request = new Operations\UploadDocumentByTokenRequest();
     $request->onboardingDocumentUploadTokenRequest = new Shared\OnboardingDocumentUploadTokenRequest();
     $request->onboardingDocumentUploadTokenRequest->files = new Shared\OnboardingDocumentUploadTokenRequestFiles();
     $request->onboardingDocumentUploadTokenRequest->files->content = '0xf4c59F3a5c';
@@ -746,7 +718,7 @@ try {
     $request->onboardingDocumentUploadTokenRequest->name = 'Business document';
     $request->onboardingDocumentUploadTokenRequest->principal = '64ca7b2e4ab69839f78db609';
     $request->onboardingDocumentUploadTokenRequest->type = Shared\DocumentUploadType::DriversLicense;
-    $request->token = 'string';
+    $request->token = 'string';;
 
     $response = $sdk->documentManagement->uploadDocumentByToken($request);
 

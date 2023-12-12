@@ -29,16 +29,14 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\DeleteWorkflowByIdRequest();
+        $request = new Operations\DeleteWorkflowByIdRequest();
     $request->organizationId = 'string';
-    $request->workflowId = 'string';
+    $request->workflowId = 'string';;
 
     $response = $sdk->underwritingWorkflow->deleteWorkflowById($request);
 
@@ -79,16 +77,14 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\DisableWorkflowByIdRequest();
+        $request = new Operations\DisableWorkflowByIdRequest();
     $request->organizationId = 'string';
-    $request->workflowId = 'string';
+    $request->workflowId = 'string';;
 
     $response = $sdk->underwritingWorkflow->disableWorkflowById($request);
 
@@ -129,16 +125,14 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\EnableWorkflowByIdRequest();
+        $request = new Operations\EnableWorkflowByIdRequest();
     $request->organizationId = 'string';
-    $request->workflowId = 'string';
+    $request->workflowId = 'string';;
 
     $response = $sdk->underwritingWorkflow->enableWorkflowById($request);
 
@@ -179,18 +173,16 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetOrganizationOrganizationIdOnboardingWorkflowRequest();
+        $request = new Operations\GetOrganizationOrganizationIdOnboardingWorkflowRequest();
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = '-name';
-    $request->organizationId = 'string';
+    $request->organizationId = 'string';;
 
     $response = $sdk->underwritingWorkflow->getOrganizationOrganizationIdOnboardingWorkflow($request);
 
@@ -231,16 +223,14 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetOrganizationOrganizationIdOnboardingWorkflowWorkflowIdRequest();
+        $request = new Operations\GetOrganizationOrganizationIdOnboardingWorkflowWorkflowIdRequest();
     $request->organizationId = 'string';
-    $request->workflowId = 'string';
+    $request->workflowId = 'string';;
 
     $response = $sdk->underwritingWorkflow->getOrganizationOrganizationIdOnboardingWorkflowWorkflowId($request);
 
@@ -281,14 +271,12 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PostOrganizationOrganizationIdOnboardingWorkflowRequest();
+        $request = new Operations\PostOrganizationOrganizationIdOnboardingWorkflowRequest();
     $request->underwritingWorkflowRequestCreateWorkflow = new Shared\UnderwritingWorkflowRequestCreateWorkflow();
     $request->underwritingWorkflowRequestCreateWorkflow->entryRule = 'Know Your Customer Check';
     $request->underwritingWorkflowRequestCreateWorkflow->metadata = new Shared\Metadata();
@@ -296,7 +284,7 @@ try {
     $request->underwritingWorkflowRequestCreateWorkflow->rules = [
         'string',
     ];
-    $request->organizationId = 'string';
+    $request->organizationId = 'string';;
 
     $response = $sdk->underwritingWorkflow->postOrganizationOrganizationIdOnboardingWorkflow($request);
 
@@ -337,14 +325,12 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PutOrganizationOrganizationIdOnboardingWorkflowWorkflowIdRequest();
+        $request = new Operations\PutOrganizationOrganizationIdOnboardingWorkflowWorkflowIdRequest();
     $request->underwritingWorkflowRequestUpdateWorkflow = new Shared\UnderwritingWorkflowRequestUpdateWorkflow();
     $request->underwritingWorkflowRequestUpdateWorkflow->entryRule = 'Know Your Customer Check';
     $request->underwritingWorkflowRequestUpdateWorkflow->metadata = new Shared\UnderwritingWorkflowRequestUpdateWorkflowMetadata();
@@ -353,7 +339,7 @@ try {
         'string',
     ];
     $request->organizationId = 'string';
-    $request->workflowId = 'string';
+    $request->workflowId = 'string';;
 
     $response = $sdk->underwritingWorkflow->putOrganizationOrganizationIdOnboardingWorkflowWorkflowId($request);
 
@@ -394,16 +380,14 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\SetDefaultWorkflowByIdRequest();
+        $request = new Operations\SetDefaultWorkflowByIdRequest();
     $request->organizationId = 'string';
-    $request->workflowId = 'string';
+    $request->workflowId = 'string';;
 
     $response = $sdk->underwritingWorkflow->setDefaultWorkflowById($request);
 

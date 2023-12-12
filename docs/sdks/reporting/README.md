@@ -25,15 +25,13 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\DeleteReportRequest();
-    $request->reportId = 'string';
+        $request = new Operations\DeleteReportRequest();
+    $request->reportId = 'string';;
 
     $response = $sdk->reporting->deleteReport($request);
 
@@ -74,17 +72,15 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetReportRequest();
+        $request = new Operations\GetReportRequest();
     $request->format = Operations\Format::Csv;
     $request->reportId = 'string';
-    $request->select = 'string';
+    $request->select = 'string';;
 
     $response = $sdk->reporting->getReport($request);
 
@@ -125,18 +121,16 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetReportDetailsRequest();
+        $request = new Operations\GetReportDetailsRequest();
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = '-name';
-    $request->reportId = 'string';
+    $request->reportId = 'string';;
 
     $response = $sdk->reporting->getReportDetails($request);
 
@@ -177,17 +171,15 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetReportsRequest();
+        $request = new Operations\GetReportsRequest();
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
-    $request->dollarSort = '-name';
+    $request->dollarSort = '-name';;
 
     $response = $sdk->reporting->getReports($request);
 

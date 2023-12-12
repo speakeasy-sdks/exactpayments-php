@@ -33,16 +33,14 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetAccountAccountIdOrdersOrderIdRequest();
+        $request = new Operations\GetAccountAccountIdOrdersOrderIdRequest();
     $request->accountId = 'string';
-    $request->orderId = 'string';
+    $request->orderId = 'string';;
 
     $response = $sdk->orders->getAccountAccountIdOrdersOrderId($request);
 
@@ -83,18 +81,16 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetOrdersRequest();
+        $request = new Operations\GetOrdersRequest();
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->from = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-01T00:00:00.000Z');
-    $request->to = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-31T00:00:00.000Z');
+    $request->to = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-31T00:00:00.000Z');;
 
     $response = $sdk->orders->getOrders($request);
 
@@ -135,19 +131,17 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PostAccountAccountIdOrdersOrderIdPayRequest();
+        $request = new Operations\PostAccountAccountIdOrdersOrderIdPayRequest();
     $request->requestBody = new Operations\PostAccountAccountIdOrdersOrderIdPayRequestBody();
     $request->requestBody->paymentMethod = new Operations\PaymentMethod();
     $request->requestBody->paymentMethod->token = 'f0db7065-be66-4501-b49b-5eb56e265cb1';
     $request->accountId = 'string';
-    $request->orderId = 'string';
+    $request->orderId = 'string';;
 
     $response = $sdk->orders->postAccountAccountIdOrdersOrderIdPay($request);
 
@@ -188,14 +182,12 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PostAccountAccountIdOrdersRequest();
+        $request = new Operations\PostAccountAccountIdOrdersRequest();
     $request->accountId = 'string';
     $request->order = new Shared\Order();
     $request->order->amount = 123;
@@ -263,7 +255,7 @@ try {
     $request->order->softDescriptor->submerchantId = 'xyz123';
     $request->order->softDescriptor->taxId = 'abc123';
     $request->order->surchargeAmount = 123;
-    $request->order->taxAmount = 123;
+    $request->order->taxAmount = 123;;
 
     $response = $sdk->orders->postAccountAccountIdOrders($request);
 
@@ -303,14 +295,12 @@ use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Shared\Order();
+        $request = new Shared\Order();
     $request->amount = 123;
     $request->billing = new Shared\CustomerDetails();
     $request->billing->address = new Shared\BillingAddress();
@@ -376,7 +366,7 @@ try {
     $request->softDescriptor->submerchantId = 'xyz123';
     $request->softDescriptor->taxId = 'abc123';
     $request->surchargeAmount = 123;
-    $request->taxAmount = 123;
+    $request->taxAmount = 123;;
 
     $response = $sdk->orders->postOrders($request);
 
@@ -417,15 +407,13 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PostOrdersOrderIdAccessTokenRequest();
-    $request->orderId = 'string';
+        $request = new Operations\PostOrdersOrderIdAccessTokenRequest();
+    $request->orderId = 'string';;
 
     $response = $sdk->orders->postOrdersOrderIdAccessToken($request);
 
@@ -466,14 +454,12 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PutAccountAccountIdOrdersOrderIdRequest();
+        $request = new Operations\PutAccountAccountIdOrdersOrderIdRequest();
     $request->accountId = 'string';
     $request->order = new Shared\Order();
     $request->order->amount = 123;
@@ -542,7 +528,7 @@ try {
     $request->order->softDescriptor->taxId = 'abc123';
     $request->order->surchargeAmount = 123;
     $request->order->taxAmount = 123;
-    $request->orderId = 'string';
+    $request->orderId = 'string';;
 
     $response = $sdk->orders->putAccountAccountIdOrdersOrderId($request);
 
@@ -583,15 +569,13 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PutOrdersOrderIdResetRequest();
-    $request->orderId = 'string';
+        $request = new Operations\PutOrdersOrderIdResetRequest();
+    $request->orderId = 'string';;
 
     $response = $sdk->orders->putOrdersOrderIdReset($request);
 

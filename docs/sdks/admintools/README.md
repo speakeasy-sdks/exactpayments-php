@@ -26,19 +26,17 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetListNotesRequest();
+        $request = new Operations\GetListNotesRequest();
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = 'createdAt:asc';
     $request->onboardingId = 'string';
-    $request->organizationId = 'string';
+    $request->organizationId = 'string';;
 
     $response = $sdk->adminTools->getListNotes($request);
 
@@ -79,19 +77,17 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PostCreateNotesRequest();
+        $request = new Operations\PostCreateNotesRequest();
     $request->requestBody = new Operations\PostCreateNotesRequestBody();
     $request->requestBody->note = 'Some more documents are needed to verify the account\'s eligibility. Jen Will contact the merchant to collect further details by 2nd Aug.';
     $request->requestBody->onboardingIsDeleted = false;
     $request->onboardingId = 'string';
-    $request->organizationId = 'string';
+    $request->organizationId = 'string';;
 
     $response = $sdk->adminTools->postCreateNotes($request);
 
@@ -132,16 +128,14 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdRecheckRequest();
+        $request = new Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdRecheckRequest();
     $request->onboardingId = 'string';
-    $request->organizationId = 'string';
+    $request->organizationId = 'string';;
 
     $response = $sdk->adminTools->putOrganizationOrganizationIdOnboardingOnboardingIdRecheck($request);
 
@@ -182,18 +176,16 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdRetryRuleRequest();
+        $request = new Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdRetryRuleRequest();
     $request->onboardingRetryRuleRequest = new Shared\OnboardingRetryRuleRequest();
     $request->onboardingRetryRuleRequest->ruleName = 'string';
     $request->onboardingId = 'string';
-    $request->organizationId = 'string';
+    $request->organizationId = 'string';;
 
     $response = $sdk->adminTools->putOrganizationOrganizationIdOnboardingOnboardingIdRetryRule($request);
 
@@ -234,21 +226,19 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdStatusRequest();
+        $request = new Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdStatusRequest();
     $request->updateOnboardingStatusRequest = new Shared\UpdateOnboardingStatusRequest();
     $request->updateOnboardingStatusRequest->isDeleted = 'string';
     $request->updateOnboardingStatusRequest->status = Shared\UpdateOnboardingStatusRequestStatus::Approved;
     $request->updateOnboardingStatusRequest->statusChangeReason = Shared\UpdateOnboardingStatusRequestStatusChangeReason::GeneralRiskConcern;
     $request->updateOnboardingStatusRequest->statusChangeReasonNote = 'string';
     $request->onboardingId = 'string';
-    $request->organizationId = 'string';
+    $request->organizationId = 'string';;
 
     $response = $sdk->adminTools->putOrganizationOrganizationIdOnboardingOnboardingIdStatus($request);
 

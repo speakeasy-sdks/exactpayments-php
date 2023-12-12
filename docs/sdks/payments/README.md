@@ -41,14 +41,12 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\AccountCapturePaymentRequest();
+        $request = new Operations\AccountCapturePaymentRequest();
     $request->referencedPayment = new Shared\ReferencedPayment();
     $request->referencedPayment->amount = 100;
     $request->referencedPayment->authorization = 'ET3516';
@@ -78,7 +76,7 @@ try {
     $request->referencedPayment->softDescriptor->submerchantId = 'xyz123';
     $request->referencedPayment->softDescriptor->taxId = 'abc123';
     $request->accountId = 'string';
-    $request->paymentId = 'string';
+    $request->paymentId = 'string';;
 
     $response = $sdk->payments->accountCapturePayment($request);
 
@@ -121,16 +119,14 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\AccountGetPaymentRequest();
+        $request = new Operations\AccountGetPaymentRequest();
     $request->accountId = 'string';
-    $request->paymentId = 'string';
+    $request->paymentId = 'string';;
 
     $response = $sdk->payments->accountGetPayment($request);
 
@@ -173,18 +169,16 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\AccountGetPaymentsRequest();
+        $request = new Operations\AccountGetPaymentsRequest();
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = '-name';
-    $request->accountId = 'string';
+    $request->accountId = 'string';;
 
     $response = $sdk->payments->accountGetPayments($request);
 
@@ -227,14 +221,12 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\AccountPostPaymentRequest();
+        $request = new Operations\AccountPostPaymentRequest();
     $request->newPayment = new Shared\NewPayment();
     $request->newPayment->amount = 10;
     $request->newPayment->capture = true;
@@ -316,7 +308,7 @@ try {
     $request->newPayment->threeDSecure->directoryServerTransactionId = 'trans123';
     $request->newPayment->threeDSecure->programProtocol = Shared\ProgramProtocol::Two;
     $request->newPayment->threeDSecure->xid = 'id123';
-    $request->accountId = 'string';
+    $request->accountId = 'string';;
 
     $response = $sdk->payments->accountPostPayment($request);
 
@@ -361,14 +353,12 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\AccountRefundPaymentRequest();
+        $request = new Operations\AccountRefundPaymentRequest();
     $request->referencedPayment = new Shared\ReferencedPayment();
     $request->referencedPayment->amount = 100;
     $request->referencedPayment->authorization = 'ET3516';
@@ -398,7 +388,7 @@ try {
     $request->referencedPayment->softDescriptor->submerchantId = 'xyz123';
     $request->referencedPayment->softDescriptor->taxId = 'abc123';
     $request->accountId = 'string';
-    $request->paymentId = 'string';
+    $request->paymentId = 'string';;
 
     $response = $sdk->payments->accountRefundPayment($request);
 
@@ -443,14 +433,12 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\AccountVoidPaymentRequest();
+        $request = new Operations\AccountVoidPaymentRequest();
     $request->referencedPayment = new Shared\ReferencedPayment();
     $request->referencedPayment->amount = 100;
     $request->referencedPayment->authorization = 'ET3516';
@@ -480,7 +468,7 @@ try {
     $request->referencedPayment->softDescriptor->submerchantId = 'xyz123';
     $request->referencedPayment->softDescriptor->taxId = 'abc123';
     $request->accountId = 'string';
-    $request->paymentId = 'string';
+    $request->paymentId = 'string';;
 
     $response = $sdk->payments->accountVoidPayment($request);
 
@@ -523,14 +511,12 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CapturePaymentRequest();
+        $request = new Operations\CapturePaymentRequest();
     $request->referencedPayment = new Shared\ReferencedPayment();
     $request->referencedPayment->amount = 100;
     $request->referencedPayment->authorization = 'ET3516';
@@ -559,7 +545,7 @@ try {
     $request->referencedPayment->softDescriptor->street = 'Fairfield Ranch';
     $request->referencedPayment->softDescriptor->submerchantId = 'xyz123';
     $request->referencedPayment->softDescriptor->taxId = 'abc123';
-    $request->paymentId = 'string';
+    $request->paymentId = 'string';;
 
     $response = $sdk->payments->capturePayment($request);
 
@@ -600,15 +586,13 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetPaymentRequest();
-    $request->paymentId = 'string';
+        $request = new Operations\GetPaymentRequest();
+    $request->paymentId = 'string';;
 
     $response = $sdk->payments->getPayment($request);
 
@@ -649,17 +633,15 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetPaymentsRequest();
+        $request = new Operations\GetPaymentsRequest();
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
-    $request->dollarSort = '-name';
+    $request->dollarSort = '-name';;
 
     $response = $sdk->payments->getPayments($request);
 
@@ -699,14 +681,12 @@ use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Shared\NewPayment();
+        $request = new Shared\NewPayment();
     $request->amount = 10;
     $request->capture = true;
     $request->customer = new Shared\NewPaymentCustomer();
@@ -786,7 +766,7 @@ try {
     $request->threeDSecure->cavv = 'cavv123';
     $request->threeDSecure->directoryServerTransactionId = 'trans123';
     $request->threeDSecure->programProtocol = Shared\ProgramProtocol::One;
-    $request->threeDSecure->xid = 'id123';
+    $request->threeDSecure->xid = 'id123';;
 
     $response = $sdk->payments->postPayment($request);
 
@@ -827,14 +807,12 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RefundPaymentRequest();
+        $request = new Operations\RefundPaymentRequest();
     $request->referencedPayment = new Shared\ReferencedPayment();
     $request->referencedPayment->amount = 100;
     $request->referencedPayment->authorization = 'ET3516';
@@ -863,7 +841,7 @@ try {
     $request->referencedPayment->softDescriptor->street = 'Fairfield Ranch';
     $request->referencedPayment->softDescriptor->submerchantId = 'xyz123';
     $request->referencedPayment->softDescriptor->taxId = 'abc123';
-    $request->paymentId = 'string';
+    $request->paymentId = 'string';;
 
     $response = $sdk->payments->refundPayment($request);
 
@@ -904,14 +882,12 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\VoidPaymentRequest();
+        $request = new Operations\VoidPaymentRequest();
     $request->referencedPayment = new Shared\ReferencedPayment();
     $request->referencedPayment->amount = 100;
     $request->referencedPayment->authorization = 'ET3516';
@@ -940,7 +916,7 @@ try {
     $request->referencedPayment->softDescriptor->street = 'Fairfield Ranch';
     $request->referencedPayment->softDescriptor->submerchantId = 'xyz123';
     $request->referencedPayment->softDescriptor->taxId = 'abc123';
-    $request->paymentId = 'string';
+    $request->paymentId = 'string';;
 
     $response = $sdk->payments->voidPayment($request);
 

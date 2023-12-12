@@ -25,21 +25,19 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateApplicationTokenRequest();
+        $request = new Operations\CreateApplicationTokenRequest();
     $request->requestBody = new Operations\CreateApplicationTokenRequestBody();
     $request->requestBody->label = 'Transactions Application Token';
     $request->requestBody->mode = Operations\Mode::Live;
     $request->requestBody->permissions = [
         Shared\Permissions::ChargesCreate,
     ];
-    $request->applicationId = 'string';
+    $request->applicationId = 'string';;
 
     $response = $sdk->authentication->createApplicationToken($request);
 
@@ -80,14 +78,12 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateUserTokenRequest();
+        $request = new Operations\CreateUserTokenRequest();
     $request->requestBody = new Operations\CreateUserTokenRequestBody();
     $request->requestBody->account = '64b04d6d198ce11d0d64ca2a';
     $request->requestBody->accountType = Operations\AccountType::Account;
@@ -96,7 +92,7 @@ try {
     $request->requestBody->mode = Shared\AccountMode::Live;
     $request->requestBody->password = 'E*3q&87uBHc5xiIsiLK0';
     $request->requestBody->user = '64b04d6d198ce11d0d64ca2a';
-    $request->xApplicationId = 'admin-pwa';
+    $request->xApplicationId = 'admin-pwa';;
 
     $response = $sdk->authentication->createUserToken($request);
 
@@ -137,16 +133,14 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\DeleteApplicationTokenRequest();
+        $request = new Operations\DeleteApplicationTokenRequest();
     $request->applicationId = 'string';
-    $request->tokenId = 'string';
+    $request->tokenId = 'string';;
 
     $response = $sdk->authentication->deleteApplicationToken($request);
 
@@ -187,18 +181,16 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\QueryApplicationTokenRequest();
+        $request = new Operations\QueryApplicationTokenRequest();
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = 'createdAt:asc';
-    $request->applicationId = 'string';
+    $request->applicationId = 'string';;
 
     $response = $sdk->authentication->queryApplicationToken($request);
 

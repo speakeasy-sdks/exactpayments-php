@@ -33,16 +33,14 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\AccountDeletePaymentMethodRequest();
+        $request = new Operations\AccountDeletePaymentMethodRequest();
     $request->accountId = 'string';
-    $request->tokenId = 'string';
+    $request->tokenId = 'string';;
 
     $response = $sdk->paymentMethods->accountDeletePaymentMethod($request);
 
@@ -85,16 +83,14 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\AccountGetPaymentMethodRequest();
+        $request = new Operations\AccountGetPaymentMethodRequest();
     $request->accountId = 'string';
-    $request->tokenId = 'string';
+    $request->tokenId = 'string';;
 
     $response = $sdk->paymentMethods->accountGetPaymentMethod($request);
 
@@ -139,16 +135,14 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\AccountPostPaymentMethodRequest();
+        $request = new Operations\AccountPostPaymentMethodRequest();
     $request->requestBody = 'string';
-    $request->accountId = 'string';
+    $request->accountId = 'string';;
 
     $response = $sdk->paymentMethods->accountPostPaymentMethod($request);
 
@@ -193,19 +187,17 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\AccountPostVerifyMicrodepositsRequest();
+        $request = new Operations\AccountPostVerifyMicrodepositsRequest();
     $request->microDepositVerificationRequest = new Shared\MicroDepositVerificationRequest();
     $request->microDepositVerificationRequest->amount1 = 768582;
     $request->microDepositVerificationRequest->amount2 = 195872;
     $request->accountId = 'string';
-    $request->paymentToken = 'string';
+    $request->paymentToken = 'string';;
 
     $response = $sdk->paymentMethods->accountPostVerifyMicrodeposits($request);
 
@@ -246,15 +238,13 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\DeletePaymentMethodRequest();
-    $request->tokenId = 'string';
+        $request = new Operations\DeletePaymentMethodRequest();
+    $request->tokenId = 'string';;
 
     $response = $sdk->paymentMethods->deletePaymentMethod($request);
 
@@ -295,15 +285,13 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetPaymentMethodRequest();
-    $request->tokenId = 'string';
+        $request = new Operations\GetPaymentMethodRequest();
+    $request->tokenId = 'string';;
 
     $response = $sdk->paymentMethods->getPaymentMethod($request);
 
@@ -347,14 +335,12 @@ use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-'string'
+    'string';
 
     $response = $sdk->paymentMethods->postPaymentMethod($request);
 
@@ -399,18 +385,16 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PostVerifyMicrodepositsRequest();
+        $request = new Operations\PostVerifyMicrodepositsRequest();
     $request->microDepositVerificationRequest = new Shared\MicroDepositVerificationRequest();
     $request->microDepositVerificationRequest->amount1 = 849170;
     $request->microDepositVerificationRequest->amount2 = 669926;
-    $request->paymentToken = 'string';
+    $request->paymentToken = 'string';;
 
     $response = $sdk->paymentMethods->postVerifyMicrodeposits($request);
 

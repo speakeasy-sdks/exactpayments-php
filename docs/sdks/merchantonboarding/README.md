@@ -30,14 +30,12 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateOnboardingRequest();
+        $request = new Operations\CreateOnboardingRequest();
     $request->onboardingRequest = new Shared\OnboardingRequest();
     $request->onboardingRequest->clientIp = '63.45.12.34';
     $request->onboardingRequest->merchant = new Shared\OnboardingMerchant();
@@ -96,7 +94,7 @@ try {
     $request->onboardingRequest->merchant->twitter = 'www.twitter.com/acmecorp';
     $request->onboardingRequest->type = Shared\OnboardingRequestType::Organization;
     $request->onboardingRequest->workflow = '63efb29650b4bb4b4f6fd5f4';
-    $request->organizationId = 'string';
+    $request->organizationId = 'string';;
 
     $response = $sdk->merchantOnboarding->createOnboarding($request);
 
@@ -137,16 +135,14 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\DeleteOnboardingByIdRequest();
+        $request = new Operations\DeleteOnboardingByIdRequest();
     $request->onboardingId = 'string';
-    $request->organizationId = 'string';
+    $request->organizationId = 'string';;
 
     $response = $sdk->merchantOnboarding->deleteOnboardingById($request);
 
@@ -187,16 +183,14 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListFilterOptionsRequest();
+        $request = new Operations\ListFilterOptionsRequest();
     $request->isDeleted = false;
-    $request->organizationId = 'string';
+    $request->organizationId = 'string';;
 
     $response = $sdk->merchantOnboarding->listFilterOptions($request);
 
@@ -236,11 +230,9 @@ use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
     $response = $sdk->merchantOnboarding->listMerchantCategoryCodes();
@@ -276,19 +268,17 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListOnboardingByOrganizationRequest();
+        $request = new Operations\ListOnboardingByOrganizationRequest();
     $request->dollarLimit = 10;
     $request->dollarSelect = 'createdAt,status,merchant.name';
     $request->dollarSkip = 10;
     $request->dollarSort = 'createdAt:asc';
-    $request->organizationId = 'string';
+    $request->organizationId = 'string';;
 
     $response = $sdk->merchantOnboarding->listOnboardingByOrganization($request);
 
@@ -329,18 +319,16 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListOnboardingsRequest();
+        $request = new Operations\ListOnboardingsRequest();
     $request->dollarLimit = 10;
     $request->dollarSelect = 'createdAt,status,merchant.name';
     $request->dollarSkip = 10;
-    $request->dollarSort = 'createdAt:asc';
+    $request->dollarSort = 'createdAt:asc';;
 
     $response = $sdk->merchantOnboarding->listOnboardings($request);
 
@@ -381,16 +369,14 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RetrieveOnboardingByIdRequest();
+        $request = new Operations\RetrieveOnboardingByIdRequest();
     $request->onboardingId = 'string';
-    $request->organizationId = 'string';
+    $request->organizationId = 'string';;
 
     $response = $sdk->merchantOnboarding->retrieveOnboardingById($request);
 
@@ -431,18 +417,16 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\SearchOnboardingByBusinessNameRequest();
+        $request = new Operations\SearchOnboardingByBusinessNameRequest();
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = 'createdAt:asc';
-    $request->businessName = 'ACME';
+    $request->businessName = 'ACME';;
 
     $response = $sdk->merchantOnboarding->searchOnboardingByBusinessName($request);
 
@@ -483,19 +467,17 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\SearchOnboardingByOrganizationIdAndBusinessNameRequest();
+        $request = new Operations\SearchOnboardingByOrganizationIdAndBusinessNameRequest();
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = 'createdAt:asc';
     $request->businessName = 'ACME';
-    $request->organizationId = 'string';
+    $request->organizationId = 'string';;
 
     $response = $sdk->merchantOnboarding->searchOnboardingByOrganizationIdAndBusinessName($request);
 

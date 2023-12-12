@@ -29,19 +29,17 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\AccountRegisterApplePayDomainsRequest();
+        $request = new Operations\AccountRegisterApplePayDomainsRequest();
     $request->applePayDomains = new Shared\ApplePayDomains();
     $request->applePayDomains->domains = [
         'string',
     ];
-    $request->accountId = 'string';
+    $request->accountId = 'string';;
 
     $response = $sdk->accountManagement->accountRegisterApplePayDomains($request);
 
@@ -82,15 +80,13 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetOrganizationOrganizationIdAccountRequest();
-    $request->organizationId = 'string';
+        $request = new Operations\GetOrganizationOrganizationIdAccountRequest();
+    $request->organizationId = 'string';;
 
     $response = $sdk->accountManagement->getOrganizationOrganizationIdAccount($request);
 
@@ -131,16 +127,14 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetOrganizationOrganizationIdAccountSearchRequest();
+        $request = new Operations\GetOrganizationOrganizationIdAccountSearchRequest();
     $request->organizationId = 'string';
-    $request->q = 'string';
+    $request->q = 'string';;
 
     $response = $sdk->accountManagement->getOrganizationOrganizationIdAccountSearch($request);
 
@@ -181,16 +175,14 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetOrganizationOrganizationIdAccountAccountIdRequest();
+        $request = new Operations\GetOrganizationOrganizationIdAccountAccountIdRequest();
     $request->accountId = 'string';
-    $request->organizationId = 'string';
+    $request->organizationId = 'string';;
 
     $response = $sdk->accountManagement->getOrganizationOrganizationIdAccountAccountId($request);
 
@@ -231,15 +223,13 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListApplePayDomainsRequest();
-    $request->accountId = 'string';
+        $request = new Operations\ListApplePayDomainsRequest();
+    $request->accountId = 'string';;
 
     $response = $sdk->accountManagement->listApplePayDomains($request);
 
@@ -280,14 +270,12 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PutOrganizationOrganizationIdAccountAccountIdRequest();
+        $request = new Operations\PutOrganizationOrganizationIdAccountAccountIdRequest();
     $request->accountRequest = new Shared\AccountRequest();
     $request->accountRequest->address = new Shared\Address();
     $request->accountRequest->address->city = 'Ottawa';
@@ -304,7 +292,7 @@ try {
     $request->accountRequest->phone = '1111111111';
     $request->accountRequest->twitter = 'twitter';
     $request->accountId = 'string';
-    $request->organizationId = 'string';
+    $request->organizationId = 'string';;
 
     $response = $sdk->accountManagement->putOrganizationOrganizationIdAccountAccountId($request);
 

@@ -35,16 +35,14 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\AccountDeleteWebhookRequest();
+        $request = new Operations\AccountDeleteWebhookRequest();
     $request->accountId = 'string';
-    $request->webhookId = 'string';
+    $request->webhookId = 'string';;
 
     $response = $sdk->webhooks->accountDeleteWebhook($request);
 
@@ -85,16 +83,14 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\AccountDisableWebhookRequest();
+        $request = new Operations\AccountDisableWebhookRequest();
     $request->accountId = 'string';
-    $request->webhookId = 'string';
+    $request->webhookId = 'string';;
 
     $response = $sdk->webhooks->accountDisableWebhook($request);
 
@@ -135,16 +131,14 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\AccountEnableWebhookRequest();
+        $request = new Operations\AccountEnableWebhookRequest();
     $request->accountId = 'string';
-    $request->webhookId = 'string';
+    $request->webhookId = 'string';;
 
     $response = $sdk->webhooks->accountEnableWebhook($request);
 
@@ -185,18 +179,16 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\AccountGetListWebhooksRequest();
+        $request = new Operations\AccountGetListWebhooksRequest();
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = '-name';
-    $request->accountId = 'string';
+    $request->accountId = 'string';;
 
     $response = $sdk->webhooks->accountGetListWebhooks($request);
 
@@ -237,16 +229,14 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\AccountGetRetrieveWebhookRequest();
+        $request = new Operations\AccountGetRetrieveWebhookRequest();
     $request->accountId = 'string';
-    $request->webhookId = 'string';
+    $request->webhookId = 'string';;
 
     $response = $sdk->webhooks->accountGetRetrieveWebhook($request);
 
@@ -287,21 +277,19 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\AccountPostCreateWebhookRequest();
+        $request = new Operations\AccountPostCreateWebhookRequest();
     $request->webhookRequest = new Shared\WebhookRequest();
     $request->webhookRequest->description = 'Completed reports for this account.';
     $request->webhookRequest->event = Shared\WebhookEventField::PaymentMethodEnsure;
     $request->webhookRequest->urls = [
         '["https://736d1e71-c9ae-409b-81ff-c2c38c68ad4b.mock.pstmn.io/dev/hook/success","https://736d1e71-c9ae-409b-81ff-c2c38c68ad4b.mock.pstmn.io/dev/hook/finished"]',
     ];
-    $request->accountId = 'string';
+    $request->accountId = 'string';;
 
     $response = $sdk->webhooks->accountPostCreateWebhook($request);
 
@@ -342,14 +330,12 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\AccountUpdateWebhookRequest();
+        $request = new Operations\AccountUpdateWebhookRequest();
     $request->updatableWebhookRequest = new Shared\UpdatableWebhookRequest();
     $request->updatableWebhookRequest->description = 'Completed reports for this account.';
     $request->updatableWebhookRequest->event = Shared\WebhookEventField::PaymentMethodUnlinkFromCustomer;
@@ -357,7 +343,7 @@ try {
         '["https://736d1e71-c9ae-409b-81ff-c2c38c68ad4b.mock.pstmn.io/dev/hook/success","https://736d1e71-c9ae-409b-81ff-c2c38c68ad4b.mock.pstmn.io/dev/hook/finished"]',
     ];
     $request->accountId = 'string';
-    $request->webhookId = 'string';
+    $request->webhookId = 'string';;
 
     $response = $sdk->webhooks->accountUpdateWebhook($request);
 
@@ -398,16 +384,14 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\DeleteOrganizationOrganizationIdWebhookWebhookIdRequest();
+        $request = new Operations\DeleteOrganizationOrganizationIdWebhookWebhookIdRequest();
     $request->organizationId = 'string';
-    $request->webhookId = 'string';
+    $request->webhookId = 'string';;
 
     $response = $sdk->webhooks->deleteOrganizationOrganizationIdWebhookWebhookId($request);
 
@@ -448,18 +432,16 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetOrganizationOrganizationIdWebhookRequest();
+        $request = new Operations\GetOrganizationOrganizationIdWebhookRequest();
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
     $request->dollarSort = '-name';
-    $request->organizationId = 'string';
+    $request->organizationId = 'string';;
 
     $response = $sdk->webhooks->getOrganizationOrganizationIdWebhook($request);
 
@@ -500,16 +482,14 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetOrganizationOrganizationIdWebhookWebhookIdRequest();
+        $request = new Operations\GetOrganizationOrganizationIdWebhookWebhookIdRequest();
     $request->organizationId = 'string';
-    $request->webhookId = 'string';
+    $request->webhookId = 'string';;
 
     $response = $sdk->webhooks->getOrganizationOrganizationIdWebhookWebhookId($request);
 
@@ -550,21 +530,19 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PostOrganizationOrganizationIdWebhookRequest();
+        $request = new Operations\PostOrganizationOrganizationIdWebhookRequest();
     $request->webhookRequest = new Shared\WebhookRequest();
     $request->webhookRequest->description = 'Completed reports for this account.';
     $request->webhookRequest->event = Shared\WebhookEventField::CustomerCreate;
     $request->webhookRequest->urls = [
         '["https://736d1e71-c9ae-409b-81ff-c2c38c68ad4b.mock.pstmn.io/dev/hook/success","https://736d1e71-c9ae-409b-81ff-c2c38c68ad4b.mock.pstmn.io/dev/hook/finished"]',
     ];
-    $request->organizationId = 'string';
+    $request->organizationId = 'string';;
 
     $response = $sdk->webhooks->postOrganizationOrganizationIdWebhook($request);
 
@@ -605,14 +583,12 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PutOrganizationOrganizationIdWebhookWebhookIdRequest();
+        $request = new Operations\PutOrganizationOrganizationIdWebhookWebhookIdRequest();
     $request->updatableWebhookRequest = new Shared\UpdatableWebhookRequest();
     $request->updatableWebhookRequest->description = 'Completed reports for this account.';
     $request->updatableWebhookRequest->event = Shared\WebhookEventField::ReportCreate;
@@ -620,7 +596,7 @@ try {
         '["https://736d1e71-c9ae-409b-81ff-c2c38c68ad4b.mock.pstmn.io/dev/hook/success","https://736d1e71-c9ae-409b-81ff-c2c38c68ad4b.mock.pstmn.io/dev/hook/finished"]',
     ];
     $request->organizationId = 'string';
-    $request->webhookId = 'string';
+    $request->webhookId = 'string';;
 
     $response = $sdk->webhooks->putOrganizationOrganizationIdWebhookWebhookId($request);
 
@@ -661,16 +637,14 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PutOrganizationOrganizationIdWebhookWebhookIdDisableRequest();
+        $request = new Operations\PutOrganizationOrganizationIdWebhookWebhookIdDisableRequest();
     $request->organizationId = 'string';
-    $request->webhookId = 'string';
+    $request->webhookId = 'string';;
 
     $response = $sdk->webhooks->putOrganizationOrganizationIdWebhookWebhookIdDisable($request);
 
@@ -711,16 +685,14 @@ use \TheLogicStudio\ExactPayments\Models\Shared;
 use \TheLogicStudio\ExactPayments\Models\Operations;
 
 $security = new Shared\Security();
-$security->apiKey = '';
+$security->apiKey = '<YOUR_API_KEY_HERE>';
 
-$sdk = ExactPayments\ExactPayments::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PutOrganizationOrganizationIdWebhookWebhookIdEnableRequest();
+        $request = new Operations\PutOrganizationOrganizationIdWebhookWebhookIdEnableRequest();
     $request->organizationId = 'string';
-    $request->webhookId = 'string';
+    $request->webhookId = 'string';;
 
     $response = $sdk->webhooks->putOrganizationOrganizationIdWebhookWebhookIdEnable($request);
 
