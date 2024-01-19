@@ -4,16 +4,16 @@ management:
   docChecksum: 0a54b14e7954a3d0bddeb5578cb53fde
   docVersion: 1.0.4
   speakeasyVersion: internal
-  generationVersion: 2.225.2
-  releaseVersion: 0.9.0
-  configChecksum: bc482196997900685c65c9980b58ba7e
+  generationVersion: 2.237.2
+  releaseVersion: 0.9.1
+  configChecksum: 234f7ae2aac965f803a196c67c9eca4f
   repoURL: https://github.com/speakeasy-sdks/exactpayments-php.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/exactpayments-php
 features:
   php:
     core: 3.3.0
-    globalSecurity: 2.81.2
+    globalSecurity: 2.81.3
     globalServerURLs: 2.82.1
     inputOutputModels: 2.83.0
 generatedFiles:
