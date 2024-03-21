@@ -19,9 +19,6 @@ class PutAccountAccountIdOrdersOrderIdRequest
 	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=accountId')]
     public string $accountId;
     
-	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\TheLogicStudio\ExactPayments\Models\Shared\Order $order = null;
-    
     /**
      * The Order identifier.
      * 
@@ -30,10 +27,13 @@ class PutAccountAccountIdOrdersOrderIdRequest
 	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=orderId')]
     public string $orderId;
     
+	#[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?\TheLogicStudio\ExactPayments\Models\Shared\Order $order = null;
+    
 	public function __construct()
 	{
 		$this->accountId = "";
-		$this->order = null;
 		$this->orderId = "";
+		$this->order = null;
 	}
 }

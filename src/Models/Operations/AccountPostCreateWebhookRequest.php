@@ -12,14 +12,6 @@ use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class AccountPostCreateWebhookRequest
 {
     /**
-     * Fields that compose a webhook definition inside Exact Payments ecosystem.
-     * 
-     * @var \TheLogicStudio\ExactPayments\Models\Shared\WebhookRequest $webhookRequest
-     */
-	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public \TheLogicStudio\ExactPayments\Models\Shared\WebhookRequest $webhookRequest;
-    
-    /**
      * The Account identifier. Represents the Merchant that this operation is going to be executed for.
      * 
      * @var string $accountId
@@ -27,9 +19,17 @@ class AccountPostCreateWebhookRequest
 	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=accountId')]
     public string $accountId;
     
+    /**
+     * Fields that compose a webhook definition inside Exact Payments ecosystem.
+     * 
+     * @var \TheLogicStudio\ExactPayments\Models\Shared\WebhookRequest $webhookRequest
+     */
+	#[SpeakeasyMetadata('request:mediaType=application/json')]
+    public \TheLogicStudio\ExactPayments\Models\Shared\WebhookRequest $webhookRequest;
+    
 	public function __construct()
 	{
-		$this->webhookRequest = new \TheLogicStudio\ExactPayments\Models\Shared\WebhookRequest();
 		$this->accountId = "";
+		$this->webhookRequest = new \TheLogicStudio\ExactPayments\Models\Shared\WebhookRequest();
 	}
 }

@@ -45,16 +45,6 @@ class DeleteDocumentRequestByIdResponse
     public ?string $notFound = null;
     
     /**
-     * **Service Unavailable**
-     * 
-     * 
-     * 
-     * @var ?string $serviceUnavailable
-     */
-	
-    public ?string $serviceUnavailable = null;
-    
-    /**
      * HTTP response status code for this operation
      * 
      * @var int $statusCode
@@ -69,6 +59,16 @@ class DeleteDocumentRequestByIdResponse
      */
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse;
+    
+    /**
+     * **Service Unavailable**
+     * 
+     * 
+     * 
+     * @var ?string $serviceUnavailable
+     */
+	
+    public ?string $serviceUnavailable = null;
     
     /**
      * **Unauthorized**\
@@ -89,9 +89,9 @@ class DeleteDocumentRequestByIdResponse
 		$this->contentType = "";
 		$this->internalServerError = null;
 		$this->notFound = null;
-		$this->serviceUnavailable = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
+		$this->serviceUnavailable = null;
 		$this->unauthorized = null;
 	}
 }

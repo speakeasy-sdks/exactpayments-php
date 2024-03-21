@@ -256,7 +256,7 @@ class Customers
             
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->anies = $serializer->deserialize((string)$httpResponse->getBody(), 'array<mixed>', 'json');
+                $response->payments = $serializer->deserialize((string)$httpResponse->getBody(), 'array<mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 401 or $httpResponse->getStatusCode() === 404 or $httpResponse->getStatusCode() === 500 or $httpResponse->getStatusCode() === 503) {
@@ -298,13 +298,13 @@ class Customers
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->twoHundredApplicationJsonAnies = $serializer->deserialize((string)$httpResponse->getBody(), 'array<mixed>', 'json');
+                $response->anies = $serializer->deserialize((string)$httpResponse->getBody(), 'array<mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 403) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->fourHundredAndThreeApplicationJsonObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerDefaultPaymentMethodResponseBody', 'json');
+                $response->error403 = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Shared\Error403', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 404) {
@@ -316,13 +316,13 @@ class Customers
         else if ($httpResponse->getStatusCode() === 500) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->fiveHundredApplicationJsonObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerDefaultPaymentMethodCustomersResponseBody', 'json');
+                $response->error500 = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Shared\Error500', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 503) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->fiveHundredAndThreeApplicationJsonObject = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerDefaultPaymentMethodCustomersResponseResponseBody', 'json');
+                $response->error503 = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Shared\Error503', 'json');
             }
         }
 
@@ -782,7 +782,7 @@ class Customers
             
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->anies = $serializer->deserialize((string)$httpResponse->getBody(), 'array<mixed>', 'json');
+                $response->payments = $serializer->deserialize((string)$httpResponse->getBody(), 'array<mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 401 or $httpResponse->getStatusCode() === 404 or $httpResponse->getStatusCode() === 500 or $httpResponse->getStatusCode() === 503) {
@@ -869,7 +869,7 @@ class Customers
             
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->anies = $serializer->deserialize((string)$httpResponse->getBody(), 'array<mixed>', 'json');
+                $response->paymentMethods = $serializer->deserialize((string)$httpResponse->getBody(), 'array<mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 401 or $httpResponse->getStatusCode() === 404 or $httpResponse->getStatusCode() === 500 or $httpResponse->getStatusCode() === 503) {

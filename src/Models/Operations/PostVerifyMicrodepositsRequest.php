@@ -11,9 +11,6 @@ namespace TheLogicStudio\ExactPayments\Models\Operations;
 use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class PostVerifyMicrodepositsRequest
 {
-	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\TheLogicStudio\ExactPayments\Models\Shared\MicroDepositVerificationRequest $microDepositVerificationRequest = null;
-    
     /**
      * Payment token Id
      * 
@@ -22,9 +19,12 @@ class PostVerifyMicrodepositsRequest
 	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=payment-token')]
     public string $paymentToken;
     
+	#[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?\TheLogicStudio\ExactPayments\Models\Shared\MicroDepositVerificationRequest $microDepositVerificationRequest = null;
+    
 	public function __construct()
 	{
-		$this->microDepositVerificationRequest = null;
 		$this->paymentToken = "";
+		$this->microDepositVerificationRequest = null;
 	}
 }

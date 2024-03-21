@@ -12,6 +12,22 @@ use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class GetCustomerCustomerIdPaymentsRequest
 {
     /**
+     * The Customer identifier. Represents the Customer that this operation is going to be executed for.
+     * 
+     * @var string $customerId
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=customerId')]
+    public string $customerId;
+    
+    /**
+     * Sets the sort order If an object is passed, values allowed are asc, desc, ascending, descending, 1, and -1. If a string is passed, it must be a space delimited list of path names. The sort order of each path is ascending unless the path name is prefixed with - which will be treated as descending.
+     * 
+     * @var ?string $dollarSort
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=$sort')]
+    public ?string $dollarSort = null;
+    
+    /**
      * The maximum number of items to retrieve within the current page of results.
      * 
      * @var ?int $dollarLimit
@@ -27,27 +43,11 @@ class GetCustomerCustomerIdPaymentsRequest
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=$skip')]
     public ?int $dollarSkip = null;
     
-    /**
-     * Sets the sort order If an object is passed, values allowed are asc, desc, ascending, descending, 1, and -1. If a string is passed, it must be a space delimited list of path names. The sort order of each path is ascending unless the path name is prefixed with - which will be treated as descending.
-     * 
-     * @var ?string $dollarSort
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=$sort')]
-    public ?string $dollarSort = null;
-    
-    /**
-     * The Customer identifier. Represents the Customer that this operation is going to be executed for.
-     * 
-     * @var string $customerId
-     */
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=customerId')]
-    public string $customerId;
-    
 	public function __construct()
 	{
+		$this->customerId = "";
+		$this->dollarSort = null;
 		$this->dollarLimit = null;
 		$this->dollarSkip = null;
-		$this->dollarSort = null;
-		$this->customerId = "";
 	}
 }

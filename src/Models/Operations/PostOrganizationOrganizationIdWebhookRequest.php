@@ -12,14 +12,6 @@ use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class PostOrganizationOrganizationIdWebhookRequest
 {
     /**
-     * Fields that compose a webhook definition inside Exact Payments ecosystem.
-     * 
-     * @var \TheLogicStudio\ExactPayments\Models\Shared\WebhookRequest $webhookRequest
-     */
-	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public \TheLogicStudio\ExactPayments\Models\Shared\WebhookRequest $webhookRequest;
-    
-    /**
      * The Organization identifier.
      * 
      * @var string $organizationId
@@ -27,9 +19,17 @@ class PostOrganizationOrganizationIdWebhookRequest
 	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=organizationId')]
     public string $organizationId;
     
+    /**
+     * Fields that compose a webhook definition inside Exact Payments ecosystem.
+     * 
+     * @var \TheLogicStudio\ExactPayments\Models\Shared\WebhookRequest $webhookRequest
+     */
+	#[SpeakeasyMetadata('request:mediaType=application/json')]
+    public \TheLogicStudio\ExactPayments\Models\Shared\WebhookRequest $webhookRequest;
+    
 	public function __construct()
 	{
-		$this->webhookRequest = new \TheLogicStudio\ExactPayments\Models\Shared\WebhookRequest();
 		$this->organizationId = "";
+		$this->webhookRequest = new \TheLogicStudio\ExactPayments\Models\Shared\WebhookRequest();
 	}
 }

@@ -12,12 +12,12 @@ use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class PutOrganizationOrganizationIdOnboardingOnboardingIdRetryRuleRequest
 {
     /**
-     * ruleName is an existing rule name in the workflow assigned to a merchant application
+     * The Organization identifier.
      * 
-     * @var \TheLogicStudio\ExactPayments\Models\Shared\OnboardingRetryRuleRequest $onboardingRetryRuleRequest
+     * @var string $organizationId
      */
-	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public \TheLogicStudio\ExactPayments\Models\Shared\OnboardingRetryRuleRequest $onboardingRetryRuleRequest;
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=organizationId')]
+    public string $organizationId;
     
     /**
      * The Onboarding Application identifier.
@@ -28,17 +28,17 @@ class PutOrganizationOrganizationIdOnboardingOnboardingIdRetryRuleRequest
     public string $onboardingId;
     
     /**
-     * The Organization identifier.
+     * ruleName is an existing rule name in the workflow assigned to a merchant application
      * 
-     * @var string $organizationId
+     * @var \TheLogicStudio\ExactPayments\Models\Shared\OnboardingRetryRuleRequest $onboardingRetryRuleRequest
      */
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=organizationId')]
-    public string $organizationId;
+	#[SpeakeasyMetadata('request:mediaType=application/json')]
+    public \TheLogicStudio\ExactPayments\Models\Shared\OnboardingRetryRuleRequest $onboardingRetryRuleRequest;
     
 	public function __construct()
 	{
-		$this->onboardingRetryRuleRequest = new \TheLogicStudio\ExactPayments\Models\Shared\OnboardingRetryRuleRequest();
-		$this->onboardingId = "";
 		$this->organizationId = "";
+		$this->onboardingId = "";
+		$this->onboardingRetryRuleRequest = new \TheLogicStudio\ExactPayments\Models\Shared\OnboardingRetryRuleRequest();
 	}
 }

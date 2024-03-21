@@ -12,64 +12,20 @@ namespace TheLogicStudio\ExactPayments\Models\Operations;
 class AccountGetPaymentResponse
 {
     /**
-     * Payment Created
-     * 
-     * @var mixed $twoHundredApplicationJsonPayment
-     */
-	
-    public mixed $twoHundredApplicationJsonPayment = null;
-    
-    /**
-     * **Access Denied**\
-     * 
-     * Credentials supplied do not grant access to the requested resource.
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentResponseBody $fourHundredAndThreeApplicationJsonObject
-     */
-	
-    public ?AccountGetPaymentResponseBody $fourHundredAndThreeApplicationJsonObject = null;
-    
-    /**
-     * **Not Found**\
-     * 
-     * \
-     * When you'll get `401 Unauthorized` response:
-     * - When there are no Accounts/Orders/Payment found.
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentPaymentsResponseBody $fourHundredAndFourApplicationJsonObject
-     */
-	
-    public ?AccountGetPaymentPaymentsResponseBody $fourHundredAndFourApplicationJsonObject = null;
-    
-    /**
-     * **Internal Server Error**
-     * 
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentPaymentsResponseResponseBody $fiveHundredApplicationJsonObject
-     */
-	
-    public ?AccountGetPaymentPaymentsResponseResponseBody $fiveHundredApplicationJsonObject = null;
-    
-    /**
-     * **Service Unavailable**
-     * 
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentPaymentsResponse503ResponseBody $fiveHundredAndThreeApplicationJsonObject
-     */
-	
-    public ?AccountGetPaymentPaymentsResponse503ResponseBody $fiveHundredAndThreeApplicationJsonObject = null;
-    
-    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
      */
 	
     public string $contentType;
+    
+    /**
+     * Payment Created
+     * 
+     * @var mixed $payment
+     */
+	
+    public mixed $payment = null;
     
     /**
      * HTTP response status code for this operation
@@ -87,15 +43,59 @@ class AccountGetPaymentResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse;
     
+    /**
+     * **Access Denied**\
+     * 
+     * Credentials supplied do not grant access to the requested resource.
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\Error403 $error403
+     */
+	
+    public ?\TheLogicStudio\ExactPayments\Models\Shared\Error403 $error403 = null;
+    
+    /**
+     * **Internal Server Error**
+     * 
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\Error500 $error500
+     */
+	
+    public ?\TheLogicStudio\ExactPayments\Models\Shared\Error500 $error500 = null;
+    
+    /**
+     * **Service Unavailable**
+     * 
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\Error503 $error503
+     */
+	
+    public ?\TheLogicStudio\ExactPayments\Models\Shared\Error503 $error503 = null;
+    
+    /**
+     * **Not Found**\
+     * 
+     * \
+     * When you'll get `401 Unauthorized` response:
+     * - When there are no Accounts/Orders/Payment found.
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\PaymentsError404 $paymentsError404
+     */
+	
+    public ?\TheLogicStudio\ExactPayments\Models\Shared\PaymentsError404 $paymentsError404 = null;
+    
 	public function __construct()
 	{
-		$this->twoHundredApplicationJsonPayment = null;
-		$this->fourHundredAndThreeApplicationJsonObject = null;
-		$this->fourHundredAndFourApplicationJsonObject = null;
-		$this->fiveHundredApplicationJsonObject = null;
-		$this->fiveHundredAndThreeApplicationJsonObject = null;
 		$this->contentType = "";
+		$this->payment = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
+		$this->error403 = null;
+		$this->error500 = null;
+		$this->error503 = null;
+		$this->paymentsError404 = null;
 	}
 }

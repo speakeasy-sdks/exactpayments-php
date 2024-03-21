@@ -11,8 +11,13 @@ namespace TheLogicStudio\ExactPayments\Models\Operations;
 use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class UploadDocumentRequest
 {
-	#[SpeakeasyMetadata('request:mediaType=multipart/form-data')]
-    public ?\TheLogicStudio\ExactPayments\Models\Shared\OnboardingDocumentUploadRequest $onboardingDocumentUploadRequest = null;
+    /**
+     * The Organization identifier.
+     * 
+     * @var string $organizationId
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=organizationId')]
+    public string $organizationId;
     
     /**
      * The Onboarding Application identifier.
@@ -22,18 +27,13 @@ class UploadDocumentRequest
 	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=onboardingId')]
     public string $onboardingId;
     
-    /**
-     * The Organization identifier.
-     * 
-     * @var string $organizationId
-     */
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=organizationId')]
-    public string $organizationId;
+	#[SpeakeasyMetadata('request:mediaType=multipart/form-data')]
+    public ?\TheLogicStudio\ExactPayments\Models\Shared\OnboardingDocumentUploadRequest $onboardingDocumentUploadRequest = null;
     
 	public function __construct()
 	{
-		$this->onboardingDocumentUploadRequest = null;
-		$this->onboardingId = "";
 		$this->organizationId = "";
+		$this->onboardingId = "";
+		$this->onboardingDocumentUploadRequest = null;
 	}
 }

@@ -12,20 +12,12 @@ use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class ListOnboardingByOrganizationRequest
 {
     /**
-     * The maximum number of items to retrieve within the current page of results.
+     * The Organization identifier.
      * 
-     * @var ?int $dollarLimit
+     * @var string $organizationId
      */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=$limit')]
-    public ?int $dollarLimit = null;
-    
-    /**
-     * Allows users to select specific fields they want to retrieve in the response object. It is a comma-separated list of items. To `$select` by fields in the nested object, use `objectName` or `objectName.fieldName`.
-     * 
-     * @var ?string $dollarSelect
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=$select')]
-    public ?string $dollarSelect = null;
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=organizationId')]
+    public string $organizationId;
     
     /**
      * The number of records to be skipped per call. By default, starts with `0` and you should provide the current value plus the `$limit` value in subsequent calls to retrieve following sets of values (pages). So it will skip the number of records on the previous page and bring the next set of records.
@@ -36,6 +28,14 @@ class ListOnboardingByOrganizationRequest
     public ?int $dollarSkip = null;
     
     /**
+     * The maximum number of items to retrieve within the current page of results.
+     * 
+     * @var ?int $dollarLimit
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=$limit')]
+    public ?int $dollarLimit = null;
+    
+    /**
      * Sets the sort order if the field names are passed. Sorting can be done by multiple fields in the specified order, `asc` (ascending) or `desc` (descending). To sort by a `fieldName`, use the `fieldName:` followed by the sort order. To sort by fields in the nested object, use `objectName.fieldName` followed by the sort order. Sorting can be done by multiple fields by providing the `fieldNames` with sort direction as comma-separated values.
      * 
      * @var ?string $dollarSort
@@ -44,19 +44,19 @@ class ListOnboardingByOrganizationRequest
     public ?string $dollarSort = null;
     
     /**
-     * The Organization identifier.
+     * Allows users to select specific fields they want to retrieve in the response object. It is a comma-separated list of items. To `$select` by fields in the nested object, use `objectName` or `objectName.fieldName`.
      * 
-     * @var string $organizationId
+     * @var ?string $dollarSelect
      */
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=organizationId')]
-    public string $organizationId;
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=$select')]
+    public ?string $dollarSelect = null;
     
 	public function __construct()
 	{
-		$this->dollarLimit = null;
-		$this->dollarSelect = null;
-		$this->dollarSkip = null;
-		$this->dollarSort = null;
 		$this->organizationId = "";
+		$this->dollarSkip = null;
+		$this->dollarLimit = null;
+		$this->dollarSort = null;
+		$this->dollarSelect = null;
 	}
 }

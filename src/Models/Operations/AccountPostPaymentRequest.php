@@ -11,9 +11,6 @@ namespace TheLogicStudio\ExactPayments\Models\Operations;
 use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class AccountPostPaymentRequest
 {
-	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\TheLogicStudio\ExactPayments\Models\Shared\NewPayment $newPayment = null;
-    
     /**
      * The Account identifier. Represents the Merchant that this operation is going to be executed for.
      * 
@@ -22,9 +19,12 @@ class AccountPostPaymentRequest
 	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=accountId')]
     public string $accountId;
     
+	#[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?\TheLogicStudio\ExactPayments\Models\Shared\NewPayment $newPayment = null;
+    
 	public function __construct()
 	{
-		$this->newPayment = null;
 		$this->accountId = "";
+		$this->newPayment = null;
 	}
 }

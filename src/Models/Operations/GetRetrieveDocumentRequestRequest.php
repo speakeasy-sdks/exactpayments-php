@@ -12,12 +12,12 @@ use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class GetRetrieveDocumentRequestRequest
 {
     /**
-     * The Document Request identifier.
+     * The Organization identifier.
      * 
-     * @var string $documentRequestId
+     * @var string $organizationId
      */
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=documentRequestId')]
-    public string $documentRequestId;
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=organizationId')]
+    public string $organizationId;
     
     /**
      * The Onboarding Application identifier.
@@ -28,17 +28,17 @@ class GetRetrieveDocumentRequestRequest
     public string $onboardingId;
     
     /**
-     * The Organization identifier.
+     * The Document Request identifier.
      * 
-     * @var string $organizationId
+     * @var string $documentRequestId
      */
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=organizationId')]
-    public string $organizationId;
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=documentRequestId')]
+    public string $documentRequestId;
     
 	public function __construct()
 	{
-		$this->documentRequestId = "";
-		$this->onboardingId = "";
 		$this->organizationId = "";
+		$this->onboardingId = "";
+		$this->documentRequestId = "";
 	}
 }

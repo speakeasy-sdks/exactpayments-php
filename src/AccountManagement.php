@@ -67,7 +67,7 @@ class AccountManagement
         else if ($httpResponse->getStatusCode() === 400) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->object = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Operations\AccountRegisterApplePayDomainsResponseBody', 'json');
+                $response->appleError400 = $serializer->deserialize((string)$httpResponse->getBody(), 'TheLogicStudio\ExactPayments\Models\Shared\AppleError400', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 401) {

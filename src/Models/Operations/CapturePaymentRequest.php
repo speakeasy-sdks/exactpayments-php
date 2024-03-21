@@ -11,15 +11,15 @@ namespace TheLogicStudio\ExactPayments\Models\Operations;
 use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class CapturePaymentRequest
 {
-	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\TheLogicStudio\ExactPayments\Models\Shared\ReferencedPayment $referencedPayment = null;
-    
 	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=paymentId')]
     public string $paymentId;
     
+	#[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?\TheLogicStudio\ExactPayments\Models\Shared\ReferencedPayment $referencedPayment = null;
+    
 	public function __construct()
 	{
-		$this->referencedPayment = null;
 		$this->paymentId = "";
+		$this->referencedPayment = null;
 	}
 }

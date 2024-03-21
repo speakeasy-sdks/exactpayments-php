@@ -3,7 +3,8 @@
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use TheLogicStudio\ExactPayments;
 use TheLogicStudio\ExactPayments\Models\Shared;
@@ -18,16 +19,16 @@ $sdk = ExactPayments\ExactPayments::builder()
 
 try {
     $request = new Operations\AccountRegisterApplePayDomainsRequest();
+    $request->accountId = '<value>';
     $request->applePayDomains = new Shared\ApplePayDomains();
-    $request->applePayDomains->domains = ['string'];
-    $request->accountId = 'string';
+    $request->applePayDomains->domains = ['<value>'];
 
     $response = $sdk->accountManagement->accountRegisterApplePayDomains($request);
 
     if ($response->applePayDomains !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 

@@ -12,45 +12,6 @@ namespace TheLogicStudio\ExactPayments\Models\Operations;
 class AccountGetCustomerDefaultPaymentMethodResponse
 {
     /**
-     * The response contains the details of the Payment Method that was marked as default for this Customer.
-     * 
-     * @var ?array<mixed> $twoHundredApplicationJsonAnies
-     */
-	
-    public ?array $twoHundredApplicationJsonAnies = null;
-    
-    /**
-     * **Access Denied**\
-     * 
-     * Credentials supplied do not grant access to the requested resource.
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerDefaultPaymentMethodResponseBody $fourHundredAndThreeApplicationJsonObject
-     */
-	
-    public ?AccountGetCustomerDefaultPaymentMethodResponseBody $fourHundredAndThreeApplicationJsonObject = null;
-    
-    /**
-     * **Internal Server Error**
-     * 
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerDefaultPaymentMethodCustomersResponseBody $fiveHundredApplicationJsonObject
-     */
-	
-    public ?AccountGetCustomerDefaultPaymentMethodCustomersResponseBody $fiveHundredApplicationJsonObject = null;
-    
-    /**
-     * **Service Unavailable**
-     * 
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetCustomerDefaultPaymentMethodCustomersResponseResponseBody $fiveHundredAndThreeApplicationJsonObject
-     */
-	
-    public ?AccountGetCustomerDefaultPaymentMethodCustomersResponseResponseBody $fiveHundredAndThreeApplicationJsonObject = null;
-    
-    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -85,15 +46,54 @@ class AccountGetCustomerDefaultPaymentMethodResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse;
     
+    /**
+     * The response contains the details of the Payment Method that was marked as default for this Customer.
+     * 
+     * @var ?array<mixed> $anies
+     */
+	
+    public ?array $anies = null;
+    
+    /**
+     * **Access Denied**\
+     * 
+     * Credentials supplied do not grant access to the requested resource.
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\Error403 $error403
+     */
+	
+    public ?\TheLogicStudio\ExactPayments\Models\Shared\Error403 $error403 = null;
+    
+    /**
+     * **Internal Server Error**
+     * 
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\Error500 $error500
+     */
+	
+    public ?\TheLogicStudio\ExactPayments\Models\Shared\Error500 $error500 = null;
+    
+    /**
+     * **Service Unavailable**
+     * 
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\Error503 $error503
+     */
+	
+    public ?\TheLogicStudio\ExactPayments\Models\Shared\Error503 $error503 = null;
+    
 	public function __construct()
 	{
-		$this->twoHundredApplicationJsonAnies = null;
-		$this->fourHundredAndThreeApplicationJsonObject = null;
-		$this->fiveHundredApplicationJsonObject = null;
-		$this->fiveHundredAndThreeApplicationJsonObject = null;
 		$this->contentType = "";
 		$this->notFoundError = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
+		$this->anies = null;
+		$this->error403 = null;
+		$this->error500 = null;
+		$this->error503 = null;
 	}
 }

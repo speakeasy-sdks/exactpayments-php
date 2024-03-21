@@ -15,7 +15,8 @@ A method in which you can check wether or not the Exact Payments service is oper
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -31,7 +32,7 @@ try {
     if ($response->object !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

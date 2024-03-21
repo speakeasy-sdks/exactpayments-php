@@ -12,14 +12,6 @@ use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class GetReportRequest
 {
     /**
-     * The format of the file that will be downloaded.
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\Format $format
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=format')]
-    public ?Format $format = null;
-    
-    /**
      * The ID of the report query
      * 
      * @var string $reportId
@@ -35,10 +27,18 @@ class GetReportRequest
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=select')]
     public ?string $select = null;
     
+    /**
+     * The format of the file that will be downloaded.
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\Format $format
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=format')]
+    public ?Format $format = null;
+    
 	public function __construct()
 	{
-		$this->format = null;
 		$this->reportId = "";
 		$this->select = null;
+		$this->format = null;
 	}
 }

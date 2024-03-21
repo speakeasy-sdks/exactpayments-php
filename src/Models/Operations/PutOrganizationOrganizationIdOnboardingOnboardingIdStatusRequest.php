@@ -12,12 +12,12 @@ use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class PutOrganizationOrganizationIdOnboardingOnboardingIdStatusRequest
 {
     /**
-     * The new status and the change reason
+     * The Organization identifier.
      * 
-     * @var \TheLogicStudio\ExactPayments\Models\Shared\UpdateOnboardingStatusRequest $updateOnboardingStatusRequest
+     * @var string $organizationId
      */
-	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public \TheLogicStudio\ExactPayments\Models\Shared\UpdateOnboardingStatusRequest $updateOnboardingStatusRequest;
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=organizationId')]
+    public string $organizationId;
     
     /**
      * The Onboarding Application identifier.
@@ -28,17 +28,17 @@ class PutOrganizationOrganizationIdOnboardingOnboardingIdStatusRequest
     public string $onboardingId;
     
     /**
-     * The Organization identifier.
+     * The new status and the change reason
      * 
-     * @var string $organizationId
+     * @var \TheLogicStudio\ExactPayments\Models\Shared\UpdateOnboardingStatusRequest $updateOnboardingStatusRequest
      */
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=organizationId')]
-    public string $organizationId;
+	#[SpeakeasyMetadata('request:mediaType=application/json')]
+    public \TheLogicStudio\ExactPayments\Models\Shared\UpdateOnboardingStatusRequest $updateOnboardingStatusRequest;
     
 	public function __construct()
 	{
-		$this->updateOnboardingStatusRequest = new \TheLogicStudio\ExactPayments\Models\Shared\UpdateOnboardingStatusRequest();
-		$this->onboardingId = "";
 		$this->organizationId = "";
+		$this->onboardingId = "";
+		$this->updateOnboardingStatusRequest = new \TheLogicStudio\ExactPayments\Models\Shared\UpdateOnboardingStatusRequest();
 	}
 }

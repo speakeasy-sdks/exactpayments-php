@@ -12,14 +12,6 @@ use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class DeleteOnboardingByIdRequest
 {
     /**
-     * The Identifier of the Onboarding Application which you want to delete.
-     * 
-     * @var string $onboardingId
-     */
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=onboardingId')]
-    public string $onboardingId;
-    
-    /**
      * The Identifier of the Organization that created the specific Onboarding.
      * 
      * @var string $organizationId
@@ -27,9 +19,17 @@ class DeleteOnboardingByIdRequest
 	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=organizationId')]
     public string $organizationId;
     
+    /**
+     * The Identifier of the Onboarding Application which you want to delete.
+     * 
+     * @var string $onboardingId
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=onboardingId')]
+    public string $onboardingId;
+    
 	public function __construct()
 	{
-		$this->onboardingId = "";
 		$this->organizationId = "";
+		$this->onboardingId = "";
 	}
 }

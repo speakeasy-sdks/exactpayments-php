@@ -1,11 +1,12 @@
 # Message
 
-Message explaining the authorization error.
+Error Message.
 
 
 ## Values
 
-| Name                                               | Value                                              |
-| -------------------------------------------------- | -------------------------------------------------- |
-| `YouDoNotHavePermissionToAccessThisResource`       | You do not have permission to access this resource |
-| `AccountNotFound`                                  | Account not found                                  |
+| Name                          | Value                         |
+| ----------------------------- | ----------------------------- |
+| `OnboardingWorkflowNotFound`  | Onboarding Workflow Not Found |
+| `SystemTokenNotFound`         | System Token Not Found        |
+| `OrganizationNotFound`        | Organization Not Found        |

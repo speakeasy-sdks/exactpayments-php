@@ -12,14 +12,6 @@ use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class AccountRegisterApplePayDomainsRequest
 {
     /**
-     * An array of domains you wish to use with Apple Pay &amp; ExactJS.
-     * 
-     * @var \TheLogicStudio\ExactPayments\Models\Shared\ApplePayDomains $applePayDomains
-     */
-	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public \TheLogicStudio\ExactPayments\Models\Shared\ApplePayDomains $applePayDomains;
-    
-    /**
      * The Account identifier. Represents the Merchant that this operation is going to be executed for.
      * 
      * @var string $accountId
@@ -27,9 +19,17 @@ class AccountRegisterApplePayDomainsRequest
 	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=accountId')]
     public string $accountId;
     
+    /**
+     * An array of domains you wish to use with Apple Pay &amp; ExactJS.
+     * 
+     * @var \TheLogicStudio\ExactPayments\Models\Shared\ApplePayDomains $applePayDomains
+     */
+	#[SpeakeasyMetadata('request:mediaType=application/json')]
+    public \TheLogicStudio\ExactPayments\Models\Shared\ApplePayDomains $applePayDomains;
+    
 	public function __construct()
 	{
-		$this->applePayDomains = new \TheLogicStudio\ExactPayments\Models\Shared\ApplePayDomains();
 		$this->accountId = "";
+		$this->applePayDomains = new \TheLogicStudio\ExactPayments\Models\Shared\ApplePayDomains();
 	}
 }

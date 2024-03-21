@@ -22,7 +22,8 @@ Please [read our guide](./docs/ExactJS-ApplePay) on the setup steps required bef
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -35,18 +36,18 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\AccountRegisterApplePayDomainsRequest();
+    $request->accountId = '<value>';
     $request->applePayDomains = new Shared\ApplePayDomains();
     $request->applePayDomains->domains = [
-        'string',
-    ];
-    $request->accountId = 'string';;
+        '<value>',
+    ];;
 
     $response = $sdk->accountManagement->accountRegisterApplePayDomains($request);
 
     if ($response->applePayDomains !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -73,7 +74,8 @@ Retrieve a list of accounts underneath an organization.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -86,14 +88,14 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetOrganizationOrganizationIdAccountRequest();
-    $request->organizationId = 'string';;
+    $request->organizationId = '<value>';;
 
     $response = $sdk->accountManagement->getOrganizationOrganizationIdAccount($request);
 
     if ($response->classes !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -120,7 +122,8 @@ Retrieve a segmented list of merchant accounts under a parent organization that 
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -133,15 +136,15 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetOrganizationOrganizationIdAccountSearchRequest();
-    $request->organizationId = 'string';
-    $request->q = 'string';;
+    $request->organizationId = '<value>';
+    $request->q = '<value>';;
 
     $response = $sdk->accountManagement->getOrganizationOrganizationIdAccountSearch($request);
 
     if ($response->classes !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -168,7 +171,8 @@ Retrieve a list of properties associated with a specific merchant account by ID.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -181,15 +185,15 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetOrganizationOrganizationIdAccountAccountIdRequest();
-    $request->accountId = 'string';
-    $request->organizationId = 'string';;
+    $request->organizationId = '<value>';
+    $request->accountId = '<value>';;
 
     $response = $sdk->accountManagement->getOrganizationOrganizationIdAccountAccountId($request);
 
     if ($response->accountResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -216,7 +220,8 @@ This endpoint allows you to retrieve a list of your domains which are registered
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -229,14 +234,14 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListApplePayDomainsRequest();
-    $request->accountId = 'string';;
+    $request->accountId = '<value>';;
 
     $response = $sdk->accountManagement->listApplePayDomains($request);
 
     if ($response->applePayDomains !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -263,7 +268,8 @@ Update a specific merchant account by ID.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -276,6 +282,8 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\PutOrganizationOrganizationIdAccountAccountIdRequest();
+    $request->organizationId = '<value>';
+    $request->accountId = '<value>';
     $request->accountRequest = new Shared\AccountRequest();
     $request->accountRequest->address = new Shared\Address();
     $request->accountRequest->address->city = 'Ottawa';
@@ -290,16 +298,14 @@ try {
     $request->accountRequest->name = 'Exact Payments';
     $request->accountRequest->onlinePresence = 'Online presence';
     $request->accountRequest->phone = '1111111111';
-    $request->accountRequest->twitter = 'twitter';
-    $request->accountId = 'string';
-    $request->organizationId = 'string';;
+    $request->accountRequest->twitter = 'twitter';;
 
     $response = $sdk->accountManagement->putOrganizationOrganizationIdAccountAccountId($request);
 
     if ($response->statusCode === 200) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

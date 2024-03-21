@@ -12,12 +12,12 @@ use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class GetDownloadAllDocumentsRequest
 {
     /**
-     * Indicates whether to download all of the Documents for deleted Onboarding or not. If not sent, it will download all the Documents for currently active Onboardings under your Organization.
+     * The Organization identifier.
      * 
-     * @var ?bool $isDeleted
+     * @var string $organizationId
      */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=isDeleted')]
-    public ?bool $isDeleted = null;
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=organizationId')]
+    public string $organizationId;
     
     /**
      * The Onboarding Application identifier.
@@ -28,17 +28,17 @@ class GetDownloadAllDocumentsRequest
     public string $onboardingId;
     
     /**
-     * The Organization identifier.
+     * Indicates whether to download all of the Documents for deleted Onboarding or not. If not sent, it will download all the Documents for currently active Onboardings under your Organization.
      * 
-     * @var string $organizationId
+     * @var ?bool $isDeleted
      */
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=organizationId')]
-    public string $organizationId;
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=isDeleted')]
+    public ?bool $isDeleted = null;
     
 	public function __construct()
 	{
-		$this->isDeleted = null;
-		$this->onboardingId = "";
 		$this->organizationId = "";
+		$this->onboardingId = "";
+		$this->isDeleted = null;
 	}
 }

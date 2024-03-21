@@ -23,7 +23,8 @@ Create a new Onboarding Application for the new Account or Sub Organization.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -36,6 +37,7 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\CreateOnboardingRequest();
+    $request->organizationId = '<value>';
     $request->onboardingRequest = new Shared\OnboardingRequest();
     $request->onboardingRequest->clientIp = '63.45.12.34';
     $request->onboardingRequest->merchant = new Shared\OnboardingMerchant();
@@ -93,15 +95,14 @@ try {
     $request->onboardingRequest->merchant->termsNConditions->notifications = true;
     $request->onboardingRequest->merchant->twitter = 'www.twitter.com/acmecorp';
     $request->onboardingRequest->type = Shared\OnboardingRequestType::Organization;
-    $request->onboardingRequest->workflow = '63efb29650b4bb4b4f6fd5f4';
-    $request->organizationId = 'string';;
+    $request->onboardingRequest->workflow = '63efb29650b4bb4b4f6fd5f4';;
 
     $response = $sdk->merchantOnboarding->createOnboarding($request);
 
     if ($response->onboardingCreateResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -128,7 +129,8 @@ Delete a specific Onboarding Application for the given Organization and Onboardi
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -141,15 +143,15 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\DeleteOnboardingByIdRequest();
-    $request->onboardingId = 'string';
-    $request->organizationId = 'string';;
+    $request->organizationId = '<value>';
+    $request->onboardingId = '<value>';;
 
     $response = $sdk->merchantOnboarding->deleteOnboardingById($request);
 
     if ($response->statusCode === 200) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -176,7 +178,8 @@ Retrieve a list of options that can be used as a filter when retrieving the Onbo
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -189,15 +192,15 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListFilterOptionsRequest();
-    $request->isDeleted = false;
-    $request->organizationId = 'string';;
+    $request->organizationId = '<value>';
+    $request->isDeleted = false;;
 
     $response = $sdk->merchantOnboarding->listFilterOptions($request);
 
     if ($response->filterOnboardings !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -224,7 +227,8 @@ Retrieve the list of Merchant Category Codes supported by Exact Payments.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -240,7 +244,7 @@ try {
     if ($response->classes !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -261,7 +265,8 @@ Retrieve the list of Onboarding Applications associated for the given Organizati
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -274,18 +279,18 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListOnboardingByOrganizationRequest();
-    $request->dollarLimit = 10;
-    $request->dollarSelect = 'createdAt,status,merchant.name';
+    $request->organizationId = '<value>';
     $request->dollarSkip = 10;
+    $request->dollarLimit = 10;
     $request->dollarSort = 'createdAt:asc';
-    $request->organizationId = 'string';;
+    $request->dollarSelect = 'createdAt,status,merchant.name';;
 
     $response = $sdk->merchantOnboarding->listOnboardingByOrganization($request);
 
     if ($response->classes !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -312,7 +317,8 @@ Retrieve the list of Onboarding Applications under the session account.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -325,17 +331,17 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ListOnboardingsRequest();
-    $request->dollarLimit = 10;
-    $request->dollarSelect = 'createdAt,status,merchant.name';
     $request->dollarSkip = 10;
-    $request->dollarSort = 'createdAt:asc';;
+    $request->dollarLimit = 10;
+    $request->dollarSort = 'createdAt:asc';
+    $request->dollarSelect = 'createdAt,status,merchant.name';;
 
     $response = $sdk->merchantOnboarding->listOnboardings($request);
 
     if ($response->classes !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -362,7 +368,8 @@ Retrieve a specific Onboarding Application for the given Organization and Onboar
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -375,15 +382,15 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RetrieveOnboardingByIdRequest();
-    $request->onboardingId = 'string';
-    $request->organizationId = 'string';;
+    $request->organizationId = '<value>';
+    $request->onboardingId = '<value>';;
 
     $response = $sdk->merchantOnboarding->retrieveOnboardingById($request);
 
     if ($response->onboardingWithPrincipalResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -410,7 +417,8 @@ Retrieve the list of Onboarding Applications submitted under your Organization m
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -423,17 +431,17 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\SearchOnboardingByBusinessNameRequest();
-    $request->dollarLimit = 10;
+    $request->businessName = 'ACME';
     $request->dollarSkip = 10;
-    $request->dollarSort = 'createdAt:asc';
-    $request->businessName = 'ACME';;
+    $request->dollarLimit = 10;
+    $request->dollarSort = 'createdAt:asc';;
 
     $response = $sdk->merchantOnboarding->searchOnboardingByBusinessName($request);
 
     if ($response->classes !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -460,7 +468,8 @@ Retrieve the list of Onboarding Applications matching the Business Name provided
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -473,18 +482,18 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\SearchOnboardingByOrganizationIdAndBusinessNameRequest();
-    $request->dollarLimit = 10;
-    $request->dollarSkip = 10;
-    $request->dollarSort = 'createdAt:asc';
+    $request->organizationId = '<value>';
     $request->businessName = 'ACME';
-    $request->organizationId = 'string';;
+    $request->dollarSkip = 10;
+    $request->dollarLimit = 10;
+    $request->dollarSort = 'createdAt:asc';;
 
     $response = $sdk->merchantOnboarding->searchOnboardingByOrganizationIdAndBusinessName($request);
 
     if ($response->classes !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

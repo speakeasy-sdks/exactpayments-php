@@ -12,58 +12,6 @@ namespace TheLogicStudio\ExactPayments\Models\Operations;
 class AccountGetPaymentsResponse
 {
     /**
-     * Example response
-     * 
-     * @var ?array<mixed> $twoHundredApplicationJsonAnies
-     */
-	
-    public ?array $twoHundredApplicationJsonAnies = null;
-    
-    /**
-     * **Access Denied**\
-     * 
-     * Credentials supplied do not grant access to the requested resource.
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentsResponseBody $fourHundredAndThreeApplicationJsonObject
-     */
-	
-    public ?AccountGetPaymentsResponseBody $fourHundredAndThreeApplicationJsonObject = null;
-    
-    /**
-     * **Not Found**\
-     * 
-     * \
-     * When you'll get `401 Unauthorized` response:
-     * - When there are no Accounts/Orders/Payment found.
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentsPaymentsResponseBody $fourHundredAndFourApplicationJsonObject
-     */
-	
-    public ?AccountGetPaymentsPaymentsResponseBody $fourHundredAndFourApplicationJsonObject = null;
-    
-    /**
-     * **Internal Server Error**
-     * 
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentsPaymentsResponseResponseBody $fiveHundredApplicationJsonObject
-     */
-	
-    public ?AccountGetPaymentsPaymentsResponseResponseBody $fiveHundredApplicationJsonObject = null;
-    
-    /**
-     * **Service Unavailable**
-     * 
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountGetPaymentsPaymentsResponse503ResponseBody $fiveHundredAndThreeApplicationJsonObject
-     */
-	
-    public ?AccountGetPaymentsPaymentsResponse503ResponseBody $fiveHundredAndThreeApplicationJsonObject = null;
-    
-    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -78,6 +26,14 @@ class AccountGetPaymentsResponse
      */
 	
     public array $headers;
+    
+    /**
+     * Example response
+     * 
+     * @var ?array<mixed> $payments
+     */
+	
+    public ?array $payments = null;
     
     /**
      * HTTP response status code for this operation
@@ -95,16 +51,60 @@ class AccountGetPaymentsResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse;
     
+    /**
+     * **Access Denied**\
+     * 
+     * Credentials supplied do not grant access to the requested resource.
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\Error403 $error403
+     */
+	
+    public ?\TheLogicStudio\ExactPayments\Models\Shared\Error403 $error403 = null;
+    
+    /**
+     * **Internal Server Error**
+     * 
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\Error500 $error500
+     */
+	
+    public ?\TheLogicStudio\ExactPayments\Models\Shared\Error500 $error500 = null;
+    
+    /**
+     * **Service Unavailable**
+     * 
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\Error503 $error503
+     */
+	
+    public ?\TheLogicStudio\ExactPayments\Models\Shared\Error503 $error503 = null;
+    
+    /**
+     * **Not Found**\
+     * 
+     * \
+     * When you'll get `401 Unauthorized` response:
+     * - When there are no Accounts/Orders/Payment found.
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\PaymentsError404 $paymentsError404
+     */
+	
+    public ?\TheLogicStudio\ExactPayments\Models\Shared\PaymentsError404 $paymentsError404 = null;
+    
 	public function __construct()
 	{
-		$this->twoHundredApplicationJsonAnies = null;
-		$this->fourHundredAndThreeApplicationJsonObject = null;
-		$this->fourHundredAndFourApplicationJsonObject = null;
-		$this->fiveHundredApplicationJsonObject = null;
-		$this->fiveHundredAndThreeApplicationJsonObject = null;
 		$this->contentType = "";
 		$this->headers = [];
+		$this->payments = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
+		$this->error403 = null;
+		$this->error500 = null;
+		$this->error503 = null;
+		$this->paymentsError404 = null;
 	}
 }

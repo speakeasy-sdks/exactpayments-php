@@ -51,16 +51,6 @@ class GetRetrieveDocumentRequestResponse
     public ?\TheLogicStudio\ExactPayments\Models\Shared\OnboardingDocumentRequestResponse $onboardingDocumentRequestResponse = null;
     
     /**
-     * **Service Unavailable**
-     * 
-     * 
-     * 
-     * @var ?string $serviceUnavailable
-     */
-	
-    public ?string $serviceUnavailable = null;
-    
-    /**
      * HTTP response status code for this operation
      * 
      * @var int $statusCode
@@ -75,6 +65,16 @@ class GetRetrieveDocumentRequestResponse
      */
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse;
+    
+    /**
+     * **Service Unavailable**
+     * 
+     * 
+     * 
+     * @var ?string $serviceUnavailable
+     */
+	
+    public ?string $serviceUnavailable = null;
     
     /**
      * **Unauthorized**\
@@ -104,9 +104,9 @@ class GetRetrieveDocumentRequestResponse
 		$this->internalServerError = null;
 		$this->notFound = null;
 		$this->onboardingDocumentRequestResponse = null;
-		$this->serviceUnavailable = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
+		$this->serviceUnavailable = null;
 		$this->unauthorized = null;
 		$this->contextErrorResponseSystemError = null;
 	}

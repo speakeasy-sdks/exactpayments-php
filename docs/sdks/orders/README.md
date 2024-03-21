@@ -26,7 +26,8 @@ Retrieve a specific Order for the given Account and Order identifiers.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -39,15 +40,15 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetAccountAccountIdOrdersOrderIdRequest();
-    $request->accountId = 'string';
-    $request->orderId = 'string';;
+    $request->accountId = '<value>';
+    $request->orderId = '<value>';;
 
     $response = $sdk->orders->getAccountAccountIdOrdersOrderId($request);
 
     if ($response->orderResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -74,7 +75,8 @@ List all Orders for API key's account, paginated and optionally restricted to a 
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -89,15 +91,15 @@ try {
         $request = new Operations\GetOrdersRequest();
     $request->dollarLimit = 10;
     $request->dollarSkip = 10;
-    $request->from = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-01T00:00:00.000Z');
-    $request->to = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-31T00:00:00.000Z');;
+    $request->to = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-12-31T00:00:00.000Z');
+    $request->from = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-01-01T00:00:00.000Z');;
 
     $response = $sdk->orders->getOrders($request);
 
     if ($response->orderSearch !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -124,7 +126,8 @@ Pay for Order with Token
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -137,18 +140,18 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\PostAccountAccountIdOrdersOrderIdPayRequest();
+    $request->accountId = '<value>';
+    $request->orderId = '<value>';
     $request->requestBody = new Operations\PostAccountAccountIdOrdersOrderIdPayRequestBody();
     $request->requestBody->paymentMethod = new Operations\PaymentMethod();
-    $request->requestBody->paymentMethod->token = 'f0db7065-be66-4501-b49b-5eb56e265cb1';
-    $request->accountId = 'string';
-    $request->orderId = 'string';;
+    $request->requestBody->paymentMethod->token = 'f0db7065-be66-4501-b49b-5eb56e265cb1';;
 
     $response = $sdk->orders->postAccountAccountIdOrdersOrderIdPay($request);
 
-    if ($response->twoHundredApplicationJsonObject !== null) {
+    if ($response->object !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -175,7 +178,8 @@ Create an Order, needs to specify which account the Order will belong to.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -188,7 +192,7 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\PostAccountAccountIdOrdersRequest();
-    $request->accountId = 'string';
+    $request->accountId = '<value>';
     $request->order = new Shared\Order();
     $request->order->amount = 123;
     $request->order->billing = new Shared\CustomerDetails();
@@ -262,7 +266,7 @@ try {
     if ($response->orderResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -289,7 +293,8 @@ Create an Order.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -373,7 +378,7 @@ try {
     if ($response->orderResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -400,7 +405,8 @@ Create a new access token for this Order. This will invalidate any existing acce
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -413,14 +419,14 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\PostOrdersOrderIdAccessTokenRequest();
-    $request->orderId = 'string';;
+    $request->orderId = '<value>';;
 
     $response = $sdk->orders->postOrdersOrderIdAccessToken($request);
 
     if ($response->orderAccessToken !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -447,7 +453,8 @@ Update details of an existing Order.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -460,7 +467,8 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\PutAccountAccountIdOrdersOrderIdRequest();
-    $request->accountId = 'string';
+    $request->accountId = '<value>';
+    $request->orderId = '<value>';
     $request->order = new Shared\Order();
     $request->order->amount = 123;
     $request->order->billing = new Shared\CustomerDetails();
@@ -527,15 +535,14 @@ try {
     $request->order->softDescriptor->submerchantId = 'xyz123';
     $request->order->softDescriptor->taxId = 'abc123';
     $request->order->surchargeAmount = 123;
-    $request->order->taxAmount = 123;
-    $request->orderId = 'string';;
+    $request->order->taxAmount = 123;;
 
     $response = $sdk->orders->putAccountAccountIdOrdersOrderId($request);
 
     if ($response->orderResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -562,7 +569,8 @@ Reset failed payment attempts count to zero for this Order.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -575,14 +583,14 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\PutOrdersOrderIdResetRequest();
-    $request->orderId = 'string';;
+    $request->orderId = '<value>';;
 
     $response = $sdk->orders->putOrdersOrderIdReset($request);
 
     if ($response->orderResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

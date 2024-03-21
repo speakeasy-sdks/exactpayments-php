@@ -18,7 +18,8 @@ Deletes an specific Report for the given Report identifier.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -31,14 +32,14 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\DeleteReportRequest();
-    $request->reportId = 'string';;
+    $request->reportId = '<value>';;
 
     $response = $sdk->reporting->deleteReport($request);
 
     if ($response->statusCode === 200) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -65,7 +66,8 @@ Download report query results in JSON or CSV format.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -78,16 +80,16 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetReportRequest();
-    $request->format = Operations\Format::Csv;
-    $request->reportId = 'string';
-    $request->select = 'string';;
+    $request->reportId = '<value>';
+    $request->select = '<value>';
+    $request->format = Operations\Format::Csv;;
 
     $response = $sdk->reporting->getReport($request);
 
     if ($response->anies !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -114,7 +116,8 @@ Retrieves the details of a report query that a user has previously created.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -127,17 +130,17 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetReportDetailsRequest();
-    $request->dollarLimit = 10;
+    $request->reportId = '<value>';
     $request->dollarSkip = 10;
-    $request->dollarSort = '-name';
-    $request->reportId = 'string';;
+    $request->dollarLimit = 10;
+    $request->dollarSort = '-name';;
 
     $response = $sdk->reporting->getReportDetails($request);
 
     if ($response->anies !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -164,7 +167,8 @@ Retrieves a list of report queries that a user has previously created.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -177,8 +181,8 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetReportsRequest();
-    $request->dollarLimit = 10;
     $request->dollarSkip = 10;
+    $request->dollarLimit = 10;
     $request->dollarSort = '-name';;
 
     $response = $sdk->reporting->getReports($request);
@@ -186,7 +190,7 @@ try {
     if ($response->classes !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

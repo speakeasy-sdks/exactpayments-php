@@ -12,14 +12,6 @@ use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class AccountPostPaymentMethodRequest
 {
     /**
-     * Country code must be in CAPS
-     * 
-     * @var mixed $requestBody
-     */
-	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public mixed $requestBody = null;
-    
-    /**
      * The Account identifier. Represents the Merchant that this operation is going to be executed for.
      * 
      * @var string $accountId
@@ -27,9 +19,17 @@ class AccountPostPaymentMethodRequest
 	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=accountId')]
     public string $accountId;
     
+    /**
+     * Country code must be in CAPS
+     * 
+     * @var mixed $requestBody
+     */
+	#[SpeakeasyMetadata('request:mediaType=application/json')]
+    public mixed $requestBody = null;
+    
 	public function __construct()
 	{
-		$this->requestBody = null;
 		$this->accountId = "";
+		$this->requestBody = null;
 	}
 }

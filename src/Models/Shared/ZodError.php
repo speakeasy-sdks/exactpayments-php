@@ -20,12 +20,12 @@ class ZodError
     /**
      * Validation error code. The retrieved value will drive which extra fields will be shown.
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\Code $code
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\ZodErrorCode $code
      */
 	#[\JMS\Serializer\Annotation\SerializedName('code')]
-    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\Code>')]
+    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\ZodErrorCode>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?Code $code = null;
+    public ?ZodErrorCode $code = null;
     
     /**
      * Expected field type. It is only retrieved when `code = invalid_type`.

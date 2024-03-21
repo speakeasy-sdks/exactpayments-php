@@ -28,7 +28,8 @@ Delete a webhook and its associated properties.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -41,15 +42,15 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\AccountDeleteWebhookRequest();
-    $request->accountId = 'string';
-    $request->webhookId = 'string';;
+    $request->accountId = '<value>';
+    $request->webhookId = '<value>';;
 
     $response = $sdk->webhooks->accountDeleteWebhook($request);
 
     if ($response->statusCode === 200) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -76,7 +77,8 @@ Disable a webhook notification.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -89,15 +91,15 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\AccountDisableWebhookRequest();
-    $request->accountId = 'string';
-    $request->webhookId = 'string';;
+    $request->accountId = '<value>';
+    $request->webhookId = '<value>';;
 
     $response = $sdk->webhooks->accountDisableWebhook($request);
 
     if ($response->statusCode === 200) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -124,7 +126,8 @@ Enable a webhook notification to be sent to requestor
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -137,15 +140,15 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\AccountEnableWebhookRequest();
-    $request->accountId = 'string';
-    $request->webhookId = 'string';;
+    $request->accountId = '<value>';
+    $request->webhookId = '<value>';;
 
     $response = $sdk->webhooks->accountEnableWebhook($request);
 
     if ($response->statusCode === 200) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -172,7 +175,8 @@ Retrieve a list of webhooks created under an organization.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -185,17 +189,17 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\AccountGetListWebhooksRequest();
-    $request->dollarLimit = 10;
+    $request->accountId = '<value>';
     $request->dollarSkip = 10;
-    $request->dollarSort = '-name';
-    $request->accountId = 'string';;
+    $request->dollarLimit = 10;
+    $request->dollarSort = '-name';;
 
     $response = $sdk->webhooks->accountGetListWebhooks($request);
 
     if ($response->classes !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -222,7 +226,8 @@ Retrieve the details associated with an existing webhook.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -235,15 +240,15 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\AccountGetRetrieveWebhookRequest();
-    $request->accountId = 'string';
-    $request->webhookId = 'string';;
+    $request->accountId = '<value>';
+    $request->webhookId = '<value>';;
 
     $response = $sdk->webhooks->accountGetRetrieveWebhook($request);
 
     if ($response->webhookResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -270,7 +275,8 @@ Create a new webhook and associate a callback URL.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -283,20 +289,20 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\AccountPostCreateWebhookRequest();
+    $request->accountId = '<value>';
     $request->webhookRequest = new Shared\WebhookRequest();
     $request->webhookRequest->description = 'Completed reports for this account.';
     $request->webhookRequest->event = Shared\WebhookEventField::PaymentMethodEnsure;
     $request->webhookRequest->urls = [
         '["https://736d1e71-c9ae-409b-81ff-c2c38c68ad4b.mock.pstmn.io/dev/hook/success","https://736d1e71-c9ae-409b-81ff-c2c38c68ad4b.mock.pstmn.io/dev/hook/finished"]',
-    ];
-    $request->accountId = 'string';;
+    ];;
 
     $response = $sdk->webhooks->accountPostCreateWebhook($request);
 
     if ($response->webhookResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -323,7 +329,8 @@ Update the properties of an existing webhook.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -336,21 +343,21 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\AccountUpdateWebhookRequest();
+    $request->accountId = '<value>';
+    $request->webhookId = '<value>';
     $request->updatableWebhookRequest = new Shared\UpdatableWebhookRequest();
     $request->updatableWebhookRequest->description = 'Completed reports for this account.';
     $request->updatableWebhookRequest->event = Shared\WebhookEventField::PaymentMethodUnlinkFromCustomer;
     $request->updatableWebhookRequest->urls = [
         '["https://736d1e71-c9ae-409b-81ff-c2c38c68ad4b.mock.pstmn.io/dev/hook/success","https://736d1e71-c9ae-409b-81ff-c2c38c68ad4b.mock.pstmn.io/dev/hook/finished"]',
-    ];
-    $request->accountId = 'string';
-    $request->webhookId = 'string';;
+    ];;
 
     $response = $sdk->webhooks->accountUpdateWebhook($request);
 
     if ($response->statusCode === 200) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -377,7 +384,8 @@ Delete a webhook and its associated properties.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -390,15 +398,15 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\DeleteOrganizationOrganizationIdWebhookWebhookIdRequest();
-    $request->organizationId = 'string';
-    $request->webhookId = 'string';;
+    $request->organizationId = '<value>';
+    $request->webhookId = '<value>';;
 
     $response = $sdk->webhooks->deleteOrganizationOrganizationIdWebhookWebhookId($request);
 
     if ($response->statusCode === 200) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -425,7 +433,8 @@ Retrieve a list of webhooks created under an organization.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -438,17 +447,17 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetOrganizationOrganizationIdWebhookRequest();
-    $request->dollarLimit = 10;
+    $request->organizationId = '<value>';
     $request->dollarSkip = 10;
-    $request->dollarSort = '-name';
-    $request->organizationId = 'string';;
+    $request->dollarLimit = 10;
+    $request->dollarSort = '-name';;
 
     $response = $sdk->webhooks->getOrganizationOrganizationIdWebhook($request);
 
     if ($response->classes !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -475,7 +484,8 @@ Retrieve the details associated with an existing webhook.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -488,15 +498,15 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetOrganizationOrganizationIdWebhookWebhookIdRequest();
-    $request->organizationId = 'string';
-    $request->webhookId = 'string';;
+    $request->organizationId = '<value>';
+    $request->webhookId = '<value>';;
 
     $response = $sdk->webhooks->getOrganizationOrganizationIdWebhookWebhookId($request);
 
     if ($response->webhookResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -523,7 +533,8 @@ Create a new webhook and associate a callback URL.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -536,20 +547,20 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\PostOrganizationOrganizationIdWebhookRequest();
+    $request->organizationId = '<value>';
     $request->webhookRequest = new Shared\WebhookRequest();
     $request->webhookRequest->description = 'Completed reports for this account.';
     $request->webhookRequest->event = Shared\WebhookEventField::CustomerCreate;
     $request->webhookRequest->urls = [
         '["https://736d1e71-c9ae-409b-81ff-c2c38c68ad4b.mock.pstmn.io/dev/hook/success","https://736d1e71-c9ae-409b-81ff-c2c38c68ad4b.mock.pstmn.io/dev/hook/finished"]',
-    ];
-    $request->organizationId = 'string';;
+    ];;
 
     $response = $sdk->webhooks->postOrganizationOrganizationIdWebhook($request);
 
     if ($response->webhookResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -576,7 +587,8 @@ Update the properties of an existing webhook.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -589,21 +601,21 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\PutOrganizationOrganizationIdWebhookWebhookIdRequest();
+    $request->organizationId = '<value>';
+    $request->webhookId = '<value>';
     $request->updatableWebhookRequest = new Shared\UpdatableWebhookRequest();
     $request->updatableWebhookRequest->description = 'Completed reports for this account.';
     $request->updatableWebhookRequest->event = Shared\WebhookEventField::ReportCreate;
     $request->updatableWebhookRequest->urls = [
         '["https://736d1e71-c9ae-409b-81ff-c2c38c68ad4b.mock.pstmn.io/dev/hook/success","https://736d1e71-c9ae-409b-81ff-c2c38c68ad4b.mock.pstmn.io/dev/hook/finished"]',
-    ];
-    $request->organizationId = 'string';
-    $request->webhookId = 'string';;
+    ];;
 
     $response = $sdk->webhooks->putOrganizationOrganizationIdWebhookWebhookId($request);
 
     if ($response->statusCode === 200) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -630,7 +642,8 @@ Disable a webhook notification.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -643,15 +656,15 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\PutOrganizationOrganizationIdWebhookWebhookIdDisableRequest();
-    $request->organizationId = 'string';
-    $request->webhookId = 'string';;
+    $request->organizationId = '<value>';
+    $request->webhookId = '<value>';;
 
     $response = $sdk->webhooks->putOrganizationOrganizationIdWebhookWebhookIdDisable($request);
 
     if ($response->statusCode === 200) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -678,7 +691,8 @@ Enable a webhook notification to be sent to requestor
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -691,15 +705,15 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\PutOrganizationOrganizationIdWebhookWebhookIdEnableRequest();
-    $request->organizationId = 'string';
-    $request->webhookId = 'string';;
+    $request->organizationId = '<value>';
+    $request->webhookId = '<value>';;
 
     $response = $sdk->webhooks->putOrganizationOrganizationIdWebhookWebhookIdEnable($request);
 
     if ($response->statusCode === 200) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

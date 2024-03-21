@@ -12,6 +12,18 @@ namespace TheLogicStudio\ExactPayments\Models\Operations;
 class PutOrganizationOrganizationIdOnboardingWorkflowWorkflowIdResponse
 {
     /**
+     * **Bad Request**\
+     * 
+     * \
+     * The request body contains a malformed request or is incomplete.
+     * 
+     * 
+     * @var mixed $badRequestCreateAndUpdateWorkflowResponse
+     */
+	
+    public mixed $badRequestCreateAndUpdateWorkflowResponse = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -44,16 +56,6 @@ class PutOrganizationOrganizationIdOnboardingWorkflowWorkflowIdResponse
     public ?string $notFound = null;
     
     /**
-     * **Service Unavailable**
-     * 
-     * 
-     * 
-     * @var ?string $serviceUnavailable
-     */
-	
-    public ?string $serviceUnavailable = null;
-    
-    /**
      * HTTP response status code for this operation
      * 
      * @var int $statusCode
@@ -70,6 +72,16 @@ class PutOrganizationOrganizationIdOnboardingWorkflowWorkflowIdResponse
     public ?\Psr\Http\Message\ResponseInterface $rawResponse;
     
     /**
+     * **Service Unavailable**
+     * 
+     * 
+     * 
+     * @var ?string $serviceUnavailable
+     */
+	
+    public ?string $serviceUnavailable = null;
+    
+    /**
      * **Unauthorized**\
      * 
      * \
@@ -83,27 +95,15 @@ class PutOrganizationOrganizationIdOnboardingWorkflowWorkflowIdResponse
 	
     public ?string $unauthorized = null;
     
-    /**
-     * **Bad Request**\
-     * 
-     * \
-     * The request body contains a malformed request or is incomplete.
-     * 
-     * 
-     * @var mixed $oneOf
-     */
-	
-    public mixed $oneOf = null;
-    
 	public function __construct()
 	{
+		$this->badRequestCreateAndUpdateWorkflowResponse = null;
 		$this->contentType = "";
 		$this->internalServerError = null;
 		$this->notFound = null;
-		$this->serviceUnavailable = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
+		$this->serviceUnavailable = null;
 		$this->unauthorized = null;
-		$this->oneOf = null;
 	}
 }

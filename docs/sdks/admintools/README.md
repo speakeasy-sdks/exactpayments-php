@@ -19,7 +19,8 @@ Retrieve a list of Notes for the given Organization and Onboarding identifier.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -32,18 +33,18 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetListNotesRequest();
-    $request->dollarLimit = 10;
+    $request->organizationId = '<value>';
+    $request->onboardingId = '<value>';
     $request->dollarSkip = 10;
-    $request->dollarSort = 'createdAt:asc';
-    $request->onboardingId = 'string';
-    $request->organizationId = 'string';;
+    $request->dollarLimit = 10;
+    $request->dollarSort = 'createdAt:asc';;
 
     $response = $sdk->adminTools->getListNotes($request);
 
     if ($response->classes !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -70,7 +71,8 @@ Create a Note for a specific Onboarding Application for the given Organization a
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -83,18 +85,18 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\PostCreateNotesRequest();
+    $request->organizationId = '<value>';
+    $request->onboardingId = '<value>';
     $request->requestBody = new Operations\PostCreateNotesRequestBody();
     $request->requestBody->note = 'Some more documents are needed to verify the account\'s eligibility. Jen Will contact the merchant to collect further details by 2nd Aug.';
-    $request->requestBody->onboardingIsDeleted = false;
-    $request->onboardingId = 'string';
-    $request->organizationId = 'string';;
+    $request->requestBody->onboardingIsDeleted = false;;
 
     $response = $sdk->adminTools->postCreateNotes($request);
 
     if ($response->onboardingNote !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -121,7 +123,8 @@ Manually request all verifications in an underwriting workflow to be performed o
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -134,15 +137,15 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdRecheckRequest();
-    $request->onboardingId = 'string';
-    $request->organizationId = 'string';;
+    $request->organizationId = '<value>';
+    $request->onboardingId = '<value>';;
 
     $response = $sdk->adminTools->putOrganizationOrganizationIdOnboardingOnboardingIdRecheck($request);
 
     if ($response->statusCode === 200) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -169,7 +172,8 @@ Manually request an underwriting workflow verification to be performed outside o
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -182,17 +186,17 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdRetryRuleRequest();
+    $request->organizationId = '<value>';
+    $request->onboardingId = '<value>';
     $request->onboardingRetryRuleRequest = new Shared\OnboardingRetryRuleRequest();
-    $request->onboardingRetryRuleRequest->ruleName = 'string';
-    $request->onboardingId = 'string';
-    $request->organizationId = 'string';;
+    $request->onboardingRetryRuleRequest->ruleName = '<value>';;
 
     $response = $sdk->adminTools->putOrganizationOrganizationIdOnboardingOnboardingIdRetryRule($request);
 
     if ($response->statusCode === 200) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -219,7 +223,8 @@ Manually update the merchant onboarding application status after being automatic
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -232,20 +237,20 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\PutOrganizationOrganizationIdOnboardingOnboardingIdStatusRequest();
+    $request->organizationId = '<value>';
+    $request->onboardingId = '<value>';
     $request->updateOnboardingStatusRequest = new Shared\UpdateOnboardingStatusRequest();
-    $request->updateOnboardingStatusRequest->isDeleted = 'string';
+    $request->updateOnboardingStatusRequest->isDeleted = '<value>';
     $request->updateOnboardingStatusRequest->status = Shared\UpdateOnboardingStatusRequestStatus::Approved;
     $request->updateOnboardingStatusRequest->statusChangeReason = Shared\UpdateOnboardingStatusRequestStatusChangeReason::GeneralRiskConcern;
-    $request->updateOnboardingStatusRequest->statusChangeReasonNote = 'string';
-    $request->onboardingId = 'string';
-    $request->organizationId = 'string';;
+    $request->updateOnboardingStatusRequest->statusChangeReasonNote = '<value>';;
 
     $response = $sdk->adminTools->putOrganizationOrganizationIdOnboardingOnboardingIdStatus($request);
 
     if ($response->statusCode === 200) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

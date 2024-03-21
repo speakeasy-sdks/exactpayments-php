@@ -12,14 +12,6 @@ use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class GetOrganizationOrganizationIdAccountAccountIdRequest
 {
     /**
-     * The Account identifier. Represents the Merchant that this operation is going to be executed for.
-     * 
-     * @var string $accountId
-     */
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=accountId')]
-    public string $accountId;
-    
-    /**
      * The Organization identifier.
      * 
      * @var string $organizationId
@@ -27,9 +19,17 @@ class GetOrganizationOrganizationIdAccountAccountIdRequest
 	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=organizationId')]
     public string $organizationId;
     
+    /**
+     * The Account identifier. Represents the Merchant that this operation is going to be executed for.
+     * 
+     * @var string $accountId
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=accountId')]
+    public string $accountId;
+    
 	public function __construct()
 	{
-		$this->accountId = "";
 		$this->organizationId = "";
+		$this->accountId = "";
 	}
 }

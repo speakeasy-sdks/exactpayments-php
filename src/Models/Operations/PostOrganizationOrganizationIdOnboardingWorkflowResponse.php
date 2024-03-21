@@ -12,6 +12,18 @@ namespace TheLogicStudio\ExactPayments\Models\Operations;
 class PostOrganizationOrganizationIdOnboardingWorkflowResponse
 {
     /**
+     * **Bad Request**\
+     * 
+     * \
+     * The request body contains a malformed request or is incomplete.
+     * 
+     * 
+     * @var mixed $badRequestCreateAndUpdateWorkflowResponse
+     */
+	
+    public mixed $badRequestCreateAndUpdateWorkflowResponse = null;
+    
+    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
@@ -90,20 +102,9 @@ class PostOrganizationOrganizationIdOnboardingWorkflowResponse
 	
     public ?PostOrganizationOrganizationIdOnboardingWorkflowResponseBody $object = null;
     
-    /**
-     * **Bad Request**\
-     * 
-     * \
-     * The request body contains a malformed request or is incomplete.
-     * 
-     * 
-     * @var mixed $oneOf
-     */
-	
-    public mixed $oneOf = null;
-    
 	public function __construct()
 	{
+		$this->badRequestCreateAndUpdateWorkflowResponse = null;
 		$this->contentType = "";
 		$this->internalServerError = null;
 		$this->notFound = null;
@@ -112,6 +113,5 @@ class PostOrganizationOrganizationIdOnboardingWorkflowResponse
 		$this->serviceUnavailable = null;
 		$this->unauthorized = null;
 		$this->object = null;
-		$this->oneOf = null;
 	}
 }

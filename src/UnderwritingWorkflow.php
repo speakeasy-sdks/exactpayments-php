@@ -345,7 +345,7 @@ class UnderwritingWorkflow
         else if ($httpResponse->getStatusCode() === 400) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->oneOf = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+                $response->badRequestCreateAndUpdateWorkflowResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 401) {
@@ -412,7 +412,7 @@ class UnderwritingWorkflow
         else if ($httpResponse->getStatusCode() === 400) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->oneOf = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+                $response->badRequestCreateAndUpdateWorkflowResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 401) {

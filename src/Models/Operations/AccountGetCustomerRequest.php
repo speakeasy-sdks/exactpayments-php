@@ -12,6 +12,14 @@ use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class AccountGetCustomerRequest
 {
     /**
+     * The Account identifier. Represents the Merchant that this operation is going to be executed for.
+     * 
+     * @var string $accountId
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=accountId')]
+    public string $accountId;
+    
+    /**
      * Sets the number of documents to return, and defaults to 100. It has a maximum of 1000.
      * 
      * @var ?float $dollarLimit
@@ -35,19 +43,11 @@ class AccountGetCustomerRequest
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=$sort')]
     public ?string $dollarSort = null;
     
-    /**
-     * The Account identifier. Represents the Merchant that this operation is going to be executed for.
-     * 
-     * @var string $accountId
-     */
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=accountId')]
-    public string $accountId;
-    
 	public function __construct()
 	{
+		$this->accountId = "";
 		$this->dollarLimit = null;
 		$this->dollarSkip = null;
 		$this->dollarSort = null;
-		$this->accountId = "";
 	}
 }

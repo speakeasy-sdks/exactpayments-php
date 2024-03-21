@@ -11,9 +11,6 @@ namespace TheLogicStudio\ExactPayments\Models\Operations;
 use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class PostCustomerIdPaymentMethodRequest
 {
-	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?PostCustomerIdPaymentMethodRequestBody $requestBody = null;
-    
     /**
      * The Customer identifier. Represents the Customer that this operation is going to be executed for.
      * 
@@ -22,9 +19,12 @@ class PostCustomerIdPaymentMethodRequest
 	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=customerId')]
     public string $customerId;
     
+	#[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?PostCustomerIdPaymentMethodRequestBody $requestBody = null;
+    
 	public function __construct()
 	{
-		$this->requestBody = null;
 		$this->customerId = "";
+		$this->requestBody = null;
 	}
 }

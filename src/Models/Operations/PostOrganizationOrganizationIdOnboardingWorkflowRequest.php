@@ -11,9 +11,6 @@ namespace TheLogicStudio\ExactPayments\Models\Operations;
 use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class PostOrganizationOrganizationIdOnboardingWorkflowRequest
 {
-	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public \TheLogicStudio\ExactPayments\Models\Shared\UnderwritingWorkflowRequestCreateWorkflow $underwritingWorkflowRequestCreateWorkflow;
-    
     /**
      * The Organization identifier.
      * 
@@ -22,9 +19,12 @@ class PostOrganizationOrganizationIdOnboardingWorkflowRequest
 	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=organizationId')]
     public string $organizationId;
     
+	#[SpeakeasyMetadata('request:mediaType=application/json')]
+    public \TheLogicStudio\ExactPayments\Models\Shared\UnderwritingWorkflowRequestCreateWorkflow $underwritingWorkflowRequestCreateWorkflow;
+    
 	public function __construct()
 	{
-		$this->underwritingWorkflowRequestCreateWorkflow = new \TheLogicStudio\ExactPayments\Models\Shared\UnderwritingWorkflowRequestCreateWorkflow();
 		$this->organizationId = "";
+		$this->underwritingWorkflowRequestCreateWorkflow = new \TheLogicStudio\ExactPayments\Models\Shared\UnderwritingWorkflowRequestCreateWorkflow();
 	}
 }

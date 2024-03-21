@@ -38,16 +38,6 @@ class CreateOnboardingResponse
     public ?\TheLogicStudio\ExactPayments\Models\Shared\OnboardingCreateResponse $onboardingCreateResponse = null;
     
     /**
-     * **Service Unavailable**
-     * 
-     * 
-     * 
-     * @var ?string $serviceUnavailable
-     */
-	
-    public ?string $serviceUnavailable = null;
-    
-    /**
      * HTTP response status code for this operation
      * 
      * @var int $statusCode
@@ -62,6 +52,16 @@ class CreateOnboardingResponse
      */
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse;
+    
+    /**
+     * **Service Unavailable**
+     * 
+     * 
+     * 
+     * @var ?string $serviceUnavailable
+     */
+	
+    public ?string $serviceUnavailable = null;
     
     /**
      * **Not Found**\
@@ -95,9 +95,9 @@ class CreateOnboardingResponse
 		$this->contentType = "";
 		$this->internalServerError = null;
 		$this->onboardingCreateResponse = null;
-		$this->serviceUnavailable = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
+		$this->serviceUnavailable = null;
 		$this->object = null;
 		$this->oneOf = null;
 	}

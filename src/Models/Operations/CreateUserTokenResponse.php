@@ -85,6 +85,16 @@ class CreateUserTokenResponse
     public ?string $notFound = null;
     
     /**
+     * **Service Unavailable**
+     * 
+     * 
+     * 
+     * @var ?string $serviceUnavailable
+     */
+	
+    public ?string $serviceUnavailable = null;
+    
+    /**
      * HTTP response status code for this operation
      * 
      * @var int $statusCode
@@ -99,16 +109,6 @@ class CreateUserTokenResponse
      */
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse;
-    
-    /**
-     * **Service Unavailable**
-     * 
-     * 
-     * 
-     * @var ?string $serviceUnavailable
-     */
-	
-    public ?string $serviceUnavailable = null;
     
     /**
      * **Unauthorized**\
@@ -142,9 +142,9 @@ class CreateUserTokenResponse
 		$this->internalServerError = null;
 		$this->locked = null;
 		$this->notFound = null;
+		$this->serviceUnavailable = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->serviceUnavailable = null;
 		$this->unauthorized = null;
 		$this->userToken = null;
 	}

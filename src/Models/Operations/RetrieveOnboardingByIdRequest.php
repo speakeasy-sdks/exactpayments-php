@@ -12,14 +12,6 @@ use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class RetrieveOnboardingByIdRequest
 {
     /**
-     * The Onboarding Application identifier.
-     * 
-     * @var string $onboardingId
-     */
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=onboardingId')]
-    public string $onboardingId;
-    
-    /**
      * The Organization identifier.
      * 
      * @var string $organizationId
@@ -27,9 +19,17 @@ class RetrieveOnboardingByIdRequest
 	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=organizationId')]
     public string $organizationId;
     
+    /**
+     * The Onboarding Application identifier.
+     * 
+     * @var string $onboardingId
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=onboardingId')]
+    public string $onboardingId;
+    
 	public function __construct()
 	{
-		$this->onboardingId = "";
 		$this->organizationId = "";
+		$this->onboardingId = "";
 	}
 }

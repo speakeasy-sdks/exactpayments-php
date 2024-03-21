@@ -9,17 +9,9 @@ declare(strict_types=1);
 namespace TheLogicStudio\ExactPayments\Models\Shared;
 
 
-/** Validation error code. The retrieved value will drive which extra fields will be shown. */
+/** Code of the authorization error. */
 enum Code: string
 {
-    case InvalidType = 'invalid_type';
-    case UnrecognizedKeys = 'unrecognized_keys';
-    case InvalidUnion = 'invalid_union';
-    case InvalidEnumValue = 'invalid_enum_value';
-    case InvalidDate = 'invalid_date';
-    case InvalidString = 'invalid_string';
-    case InvalidLiteral = 'invalid_literal';
-    case TooSmall = 'too_small';
-    case TooBig = 'too_big';
-    case Custom = 'custom';
+    case OrderForbiddenError = 'order-forbidden-error';
+    case PaymentsForbiddenError = 'payments-forbidden-error';
 }

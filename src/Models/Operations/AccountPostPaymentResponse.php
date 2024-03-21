@@ -12,72 +12,20 @@ namespace TheLogicStudio\ExactPayments\Models\Operations;
 class AccountPostPaymentResponse
 {
     /**
-     * Payment Created
-     * 
-     * @var mixed $twoHundredAndOneApplicationJsonPayment
-     */
-	
-    public mixed $twoHundredAndOneApplicationJsonPayment = null;
-    
-    /**
-     * **Bad Request**\
-     * 
-     * When there are errors in the payload
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountPostPaymentResponseBody $fourHundredApplicationJsonObject
-     */
-	
-    public ?AccountPostPaymentResponseBody $fourHundredApplicationJsonObject = null;
-    
-    /**
-     * **Access Denied**\
-     * 
-     * Credentials supplied do not grant access to the requested resource.
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountPostPaymentPaymentsResponseBody $fourHundredAndThreeApplicationJsonObject
-     */
-	
-    public ?AccountPostPaymentPaymentsResponseBody $fourHundredAndThreeApplicationJsonObject = null;
-    
-    /**
-     * **Unprocessable Content**
-     * 
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountPostPaymentPaymentsResponseResponseBody $fourHundredAndTwentyTwoApplicationJsonObject
-     */
-	
-    public ?AccountPostPaymentPaymentsResponseResponseBody $fourHundredAndTwentyTwoApplicationJsonObject = null;
-    
-    /**
-     * **Internal Server Error**
-     * 
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountPostPaymentPaymentsResponse500ResponseBody $fiveHundredApplicationJsonObject
-     */
-	
-    public ?AccountPostPaymentPaymentsResponse500ResponseBody $fiveHundredApplicationJsonObject = null;
-    
-    /**
-     * **Service Unavailable**
-     * 
-     * 
-     * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountPostPaymentPaymentsResponse503ResponseBody $fiveHundredAndThreeApplicationJsonObject
-     */
-	
-    public ?AccountPostPaymentPaymentsResponse503ResponseBody $fiveHundredAndThreeApplicationJsonObject = null;
-    
-    /**
      * HTTP response content type for this operation
      * 
      * @var string $contentType
      */
 	
     public string $contentType;
+    
+    /**
+     * Payment Created
+     * 
+     * @var mixed $payment
+     */
+	
+    public mixed $payment = null;
     
     /**
      * HTTP response status code for this operation
@@ -95,16 +43,68 @@ class AccountPostPaymentResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse;
     
+    /**
+     * **Bad Request**\
+     * 
+     * When there are errors in the payload
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\Error400 $error400
+     */
+	
+    public ?\TheLogicStudio\ExactPayments\Models\Shared\Error400 $error400 = null;
+    
+    /**
+     * **Access Denied**\
+     * 
+     * Credentials supplied do not grant access to the requested resource.
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\Error403 $error403
+     */
+	
+    public ?\TheLogicStudio\ExactPayments\Models\Shared\Error403 $error403 = null;
+    
+    /**
+     * **Unprocessable Content**
+     * 
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\Error422 $error422
+     */
+	
+    public ?\TheLogicStudio\ExactPayments\Models\Shared\Error422 $error422 = null;
+    
+    /**
+     * **Internal Server Error**
+     * 
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\Error500 $error500
+     */
+	
+    public ?\TheLogicStudio\ExactPayments\Models\Shared\Error500 $error500 = null;
+    
+    /**
+     * **Service Unavailable**
+     * 
+     * 
+     * 
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\Error503 $error503
+     */
+	
+    public ?\TheLogicStudio\ExactPayments\Models\Shared\Error503 $error503 = null;
+    
 	public function __construct()
 	{
-		$this->twoHundredAndOneApplicationJsonPayment = null;
-		$this->fourHundredApplicationJsonObject = null;
-		$this->fourHundredAndThreeApplicationJsonObject = null;
-		$this->fourHundredAndTwentyTwoApplicationJsonObject = null;
-		$this->fiveHundredApplicationJsonObject = null;
-		$this->fiveHundredAndThreeApplicationJsonObject = null;
 		$this->contentType = "";
+		$this->payment = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
+		$this->error400 = null;
+		$this->error403 = null;
+		$this->error422 = null;
+		$this->error500 = null;
+		$this->error503 = null;
 	}
 }

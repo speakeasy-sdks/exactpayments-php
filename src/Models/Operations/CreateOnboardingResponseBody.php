@@ -27,12 +27,12 @@ class CreateOnboardingResponseBody
     /**
      * Error Message.
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\CreateOnboardingMessage $message
+     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\Message $message
      */
 	#[\JMS\Serializer\Annotation\SerializedName('message')]
-    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Operations\CreateOnboardingMessage>')]
+    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Operations\Message>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?CreateOnboardingMessage $message = null;
+    public ?Message $message = null;
     
     /**
      * Format Type.

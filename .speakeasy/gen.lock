@@ -1,19 +1,19 @@
 lockVersion: 2.0.0
 id: ede68d41-4745-4206-9a3e-682b8d3da237
 management:
-  docChecksum: 0a54b14e7954a3d0bddeb5578cb53fde
+  docChecksum: d8bebc414fa534483ef9771b392f0bc0
   docVersion: 1.0.4
-  speakeasyVersion: internal
-  generationVersion: 2.237.2
-  releaseVersion: 0.9.1
-  configChecksum: 234f7ae2aac965f803a196c67c9eca4f
+  speakeasyVersion: 1.218.0
+  generationVersion: 2.286.5
+  releaseVersion: 0.9.2
+  configChecksum: 44da98469bf40fcf883acd72b04a7068
   repoURL: https://github.com/speakeasy-sdks/exactpayments-php.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/exactpayments-php
 features:
   php:
-    core: 3.3.0
-    globalSecurity: 2.81.3
+    core: 3.3.3
+    globalSecurity: 2.81.6
     globalServerURLs: 2.82.1
     inputOutputModels: 2.83.0
 generatedFiles:
@@ -35,6 +35,7 @@ generatedFiles:
   - src/ExactPaymentsBuilder.php
   - composer.json
   - phpstan.neon
+  - rector.php
   - src/Utils/EnumHandler.php
   - src/Utils/FormMetadata.php
   - src/Utils/Headers.php
@@ -52,12 +53,6 @@ generatedFiles:
   - src/Utils/SpeakeasyMetadata.php
   - src/Utils/Utils.php
   - src/Models/Operations/AccountRegisterApplePayDomainsRequest.php
-  - src/Models/Operations/AccountRegisterApplePayDomainsCode.php
-  - src/Models/Operations/Expected.php
-  - src/Models/Operations/Received.php
-  - src/Models/Operations/AccountRegisterApplePayDomainsType.php
-  - src/Models/Operations/Issues.php
-  - src/Models/Operations/AccountRegisterApplePayDomainsResponseBody.php
   - src/Models/Operations/AccountRegisterApplePayDomainsResponse.php
   - src/Models/Operations/GetOrganizationOrganizationIdAccountRequest.php
   - src/Models/Operations/GetOrganizationOrganizationIdAccountResponse.php
@@ -84,11 +79,6 @@ generatedFiles:
   - src/Models/Operations/AccountGetCustomerCustomerIdPaymentsRequest.php
   - src/Models/Operations/AccountGetCustomerCustomerIdPaymentsResponse.php
   - src/Models/Operations/AccountGetCustomerDefaultPaymentMethodRequest.php
-  - src/Models/Operations/AccountGetCustomerDefaultPaymentMethodCustomersResponseResponseBody.php
-  - src/Models/Operations/AccountGetCustomerDefaultPaymentMethodCustomersResponseBody.php
-  - src/Models/Operations/Code.php
-  - src/Models/Operations/Message.php
-  - src/Models/Operations/AccountGetCustomerDefaultPaymentMethodResponseBody.php
   - src/Models/Operations/AccountGetCustomerDefaultPaymentMethodResponse.php
   - src/Models/Operations/AccountGetCustomerIdPaymentMethodRequest.php
   - src/Models/Operations/AccountGetCustomerIdPaymentMethodResponse.php
@@ -128,103 +118,23 @@ generatedFiles:
   - src/Models/Operations/PutCustomerIdRequest.php
   - src/Models/Operations/PutCustomerIdResponse.php
   - src/Models/Operations/GetAccountAccountIdOrdersOrderIdRequest.php
-  - src/Models/Operations/GetAccountAccountIdOrdersOrderIdOrdersResponse503ResponseBody.php
-  - src/Models/Operations/GetAccountAccountIdOrdersOrderIdOrdersResponseResponseBody.php
-  - src/Models/Operations/GetAccountAccountIdOrdersOrderIdOrdersMessage.php
-  - src/Models/Operations/Messages.php
-  - src/Models/Operations/GetAccountAccountIdOrdersOrderIdOrdersResponseMessage.php
-  - src/Models/Operations/Metadata.php
-  - src/Models/Operations/GetAccountAccountIdOrdersOrderIdOrdersResponseBody.php
-  - src/Models/Operations/GetAccountAccountIdOrdersOrderIdCode.php
-  - src/Models/Operations/GetAccountAccountIdOrdersOrderIdMessage.php
-  - src/Models/Operations/GetAccountAccountIdOrdersOrderIdResponseBody.php
   - src/Models/Operations/GetAccountAccountIdOrdersOrderIdResponse.php
   - src/Models/Operations/GetOrdersRequest.php
-  - src/Models/Operations/GetOrdersOrdersResponseResponseBody.php
-  - src/Models/Operations/GetOrdersOrdersResponseBody.php
-  - src/Models/Operations/GetOrdersCode.php
-  - src/Models/Operations/GetOrdersMessage.php
-  - src/Models/Operations/GetOrdersResponseBody.php
   - src/Models/Operations/GetOrdersResponse.php
   - src/Models/Operations/PaymentMethod.php
   - src/Models/Operations/PostAccountAccountIdOrdersOrderIdPayRequestBody.php
   - src/Models/Operations/PostAccountAccountIdOrdersOrderIdPayRequest.php
-  - src/Models/Operations/PostAccountAccountIdOrdersOrderIdPayOrdersResponse503ResponseBody.php
-  - src/Models/Operations/PostAccountAccountIdOrdersOrderIdPayOrdersResponse500ResponseBody.php
-  - src/Models/Operations/PostAccountAccountIdOrdersOrderIdPayOrdersMessage.php
-  - src/Models/Operations/PostAccountAccountIdOrdersOrderIdPayOrdersMetadata.php
-  - src/Models/Operations/PostAccountAccountIdOrdersOrderIdPayOrdersResponse404ResponseBody.php
-  - src/Models/Operations/PostAccountAccountIdOrdersOrderIdPayCode.php
-  - src/Models/Operations/PostAccountAccountIdOrdersOrderIdPayMessage.php
-  - src/Models/Operations/PostAccountAccountIdOrdersOrderIdPayOrdersResponseResponseBody.php
-  - src/Models/Operations/PostAccountAccountIdOrdersOrderIdPayMetadata.php
-  - src/Models/Operations/PostAccountAccountIdOrdersOrderIdPayOrdersResponseBody.php
   - src/Models/Operations/Order.php
   - src/Models/Operations/PostAccountAccountIdOrdersOrderIdPayResponseBody.php
   - src/Models/Operations/PostAccountAccountIdOrdersOrderIdPayResponse.php
   - src/Models/Operations/PostAccountAccountIdOrdersRequest.php
-  - src/Models/Operations/PostAccountAccountIdOrdersOrdersResponse503ResponseBody.php
-  - src/Models/Operations/PostAccountAccountIdOrdersOrdersResponseResponseBody.php
-  - src/Models/Operations/PostAccountAccountIdOrdersCode.php
-  - src/Models/Operations/PostAccountAccountIdOrdersMessage.php
-  - src/Models/Operations/PostAccountAccountIdOrdersOrdersResponseBody.php
-  - src/Models/Operations/Details.php
-  - src/Models/Operations/Field.php
-  - src/Models/Operations/PostAccountAccountIdOrdersType.php
-  - src/Models/Operations/PathIssues.php
-  - src/Models/Operations/PostAccountAccountIdOrdersResponseBody.php
   - src/Models/Operations/PostAccountAccountIdOrdersResponse.php
-  - src/Models/Operations/PostOrdersOrdersResponse503ResponseBody.php
-  - src/Models/Operations/PostOrdersOrdersResponseResponseBody.php
-  - src/Models/Operations/PostOrdersCode.php
-  - src/Models/Operations/PostOrdersMessage.php
-  - src/Models/Operations/PostOrdersOrdersResponseBody.php
-  - src/Models/Operations/PostOrdersDetails.php
-  - src/Models/Operations/PostOrdersField.php
-  - src/Models/Operations/PostOrdersType.php
-  - src/Models/Operations/PostOrdersPathIssues.php
-  - src/Models/Operations/PostOrdersResponseBody.php
   - src/Models/Operations/PostOrdersResponse.php
   - src/Models/Operations/PostOrdersOrderIdAccessTokenRequest.php
-  - src/Models/Operations/PostOrdersOrderIdAccessTokenOrdersResponse503ResponseBody.php
-  - src/Models/Operations/PostOrdersOrderIdAccessTokenOrdersResponseResponseBody.php
-  - src/Models/Operations/PostOrdersOrderIdAccessTokenOrdersMessage.php
-  - src/Models/Operations/PostOrdersOrderIdAccessTokenMessages.php
-  - src/Models/Operations/PostOrdersOrderIdAccessTokenOrdersResponseMessage.php
-  - src/Models/Operations/PostOrdersOrderIdAccessTokenMetadata.php
-  - src/Models/Operations/PostOrdersOrderIdAccessTokenOrdersResponseBody.php
-  - src/Models/Operations/PostOrdersOrderIdAccessTokenCode.php
-  - src/Models/Operations/PostOrdersOrderIdAccessTokenMessage.php
-  - src/Models/Operations/PostOrdersOrderIdAccessTokenResponseBody.php
   - src/Models/Operations/PostOrdersOrderIdAccessTokenResponse.php
   - src/Models/Operations/PutAccountAccountIdOrdersOrderIdRequest.php
-  - src/Models/Operations/PutAccountAccountIdOrdersOrderIdOrdersResponse503ResponseBody.php
-  - src/Models/Operations/PutAccountAccountIdOrdersOrderIdOrdersResponse500ResponseBody.php
-  - src/Models/Operations/PutAccountAccountIdOrdersOrderIdOrdersMessage.php
-  - src/Models/Operations/PutAccountAccountIdOrdersOrderIdMessages.php
-  - src/Models/Operations/PutAccountAccountIdOrdersOrderIdOrdersResponseMessage.php
-  - src/Models/Operations/PutAccountAccountIdOrdersOrderIdMetadata.php
-  - src/Models/Operations/PutAccountAccountIdOrdersOrderIdOrdersResponseResponseBody.php
-  - src/Models/Operations/PutAccountAccountIdOrdersOrderIdCode.php
-  - src/Models/Operations/PutAccountAccountIdOrdersOrderIdMessage.php
-  - src/Models/Operations/PutAccountAccountIdOrdersOrderIdOrdersResponseBody.php
-  - src/Models/Operations/PutAccountAccountIdOrdersOrderIdDetails.php
-  - src/Models/Operations/PutAccountAccountIdOrdersOrderIdField.php
-  - src/Models/Operations/PutAccountAccountIdOrdersOrderIdType.php
-  - src/Models/Operations/PutAccountAccountIdOrdersOrderIdPathIssues.php
-  - src/Models/Operations/PutAccountAccountIdOrdersOrderIdResponseBody.php
   - src/Models/Operations/PutAccountAccountIdOrdersOrderIdResponse.php
   - src/Models/Operations/PutOrdersOrderIdResetRequest.php
-  - src/Models/Operations/PutOrdersOrderIdResetOrdersResponse503ResponseBody.php
-  - src/Models/Operations/PutOrdersOrderIdResetOrdersResponseResponseBody.php
-  - src/Models/Operations/PutOrdersOrderIdResetOrdersMessage.php
-  - src/Models/Operations/PutOrdersOrderIdResetMessages.php
-  - src/Models/Operations/PutOrdersOrderIdResetOrdersResponseMessage.php
-  - src/Models/Operations/PutOrdersOrderIdResetMetadata.php
-  - src/Models/Operations/PutOrdersOrderIdResetOrdersResponseBody.php
-  - src/Models/Operations/PutOrdersOrderIdResetCode.php
-  - src/Models/Operations/PutOrdersOrderIdResetMessage.php
-  - src/Models/Operations/PutOrdersOrderIdResetResponseBody.php
   - src/Models/Operations/PutOrdersOrderIdResetResponse.php
   - src/Models/Operations/AccountDeletePaymentMethodRequest.php
   - src/Models/Operations/AccountDeletePaymentMethodResponse.php
@@ -242,149 +152,27 @@ generatedFiles:
   - src/Models/Operations/PostVerifyMicrodepositsRequest.php
   - src/Models/Operations/PostVerifyMicrodepositsResponse.php
   - src/Models/Operations/AccountCapturePaymentRequest.php
-  - src/Models/Operations/AccountCapturePaymentPaymentsResponse503ResponseBody.php
-  - src/Models/Operations/AccountCapturePaymentPaymentsResponse500ResponseBody.php
-  - src/Models/Operations/AccountCapturePaymentPaymentsMessage.php
-  - src/Models/Operations/AccountCapturePaymentPaymentsResponseResponseBody.php
-  - src/Models/Operations/AccountCapturePaymentCode.php
-  - src/Models/Operations/AccountCapturePaymentMessage.php
-  - src/Models/Operations/AccountCapturePaymentPaymentsResponseBody.php
-  - src/Models/Operations/AccountCapturePaymentMessages.php
-  - src/Models/Operations/AccountCapturePaymentPaymentsResponseMessage.php
-  - src/Models/Operations/AccountCapturePaymentMetadata.php
-  - src/Models/Operations/AccountCapturePaymentType.php
-  - src/Models/Operations/AccountCapturePaymentResponseBody.php
   - src/Models/Operations/AccountCapturePaymentResponse.php
   - src/Models/Operations/AccountGetPaymentRequest.php
-  - src/Models/Operations/AccountGetPaymentPaymentsResponse503ResponseBody.php
-  - src/Models/Operations/AccountGetPaymentPaymentsResponseResponseBody.php
-  - src/Models/Operations/AccountGetPaymentPaymentsMessage.php
-  - src/Models/Operations/AccountGetPaymentPaymentsResponseBody.php
-  - src/Models/Operations/AccountGetPaymentCode.php
-  - src/Models/Operations/AccountGetPaymentMessage.php
-  - src/Models/Operations/AccountGetPaymentResponseBody.php
   - src/Models/Operations/AccountGetPaymentResponse.php
   - src/Models/Operations/AccountGetPaymentsRequest.php
-  - src/Models/Operations/AccountGetPaymentsPaymentsResponse503ResponseBody.php
-  - src/Models/Operations/AccountGetPaymentsPaymentsResponseResponseBody.php
-  - src/Models/Operations/AccountGetPaymentsPaymentsMessage.php
-  - src/Models/Operations/AccountGetPaymentsPaymentsResponseBody.php
-  - src/Models/Operations/AccountGetPaymentsCode.php
-  - src/Models/Operations/AccountGetPaymentsMessage.php
-  - src/Models/Operations/AccountGetPaymentsResponseBody.php
   - src/Models/Operations/AccountGetPaymentsResponse.php
   - src/Models/Operations/AccountPostPaymentRequest.php
-  - src/Models/Operations/AccountPostPaymentPaymentsResponse503ResponseBody.php
-  - src/Models/Operations/AccountPostPaymentPaymentsResponse500ResponseBody.php
-  - src/Models/Operations/AccountPostPaymentPaymentsResponseResponseBody.php
-  - src/Models/Operations/AccountPostPaymentCode.php
-  - src/Models/Operations/AccountPostPaymentMessage.php
-  - src/Models/Operations/AccountPostPaymentPaymentsResponseBody.php
-  - src/Models/Operations/AccountPostPaymentDetails.php
-  - src/Models/Operations/AccountPostPaymentField.php
-  - src/Models/Operations/AccountPostPaymentType.php
-  - src/Models/Operations/AccountPostPaymentPathIssues.php
-  - src/Models/Operations/AccountPostPaymentResponseBody.php
   - src/Models/Operations/AccountPostPaymentResponse.php
   - src/Models/Operations/AccountRefundPaymentRequest.php
-  - src/Models/Operations/AccountRefundPaymentPaymentsResponse503ResponseBody.php
-  - src/Models/Operations/AccountRefundPaymentPaymentsResponse500ResponseBody.php
-  - src/Models/Operations/AccountRefundPaymentPaymentsMessage.php
-  - src/Models/Operations/AccountRefundPaymentPaymentsResponseResponseBody.php
-  - src/Models/Operations/AccountRefundPaymentCode.php
-  - src/Models/Operations/AccountRefundPaymentMessage.php
-  - src/Models/Operations/AccountRefundPaymentPaymentsResponseBody.php
-  - src/Models/Operations/AccountRefundPaymentMessages.php
-  - src/Models/Operations/AccountRefundPaymentPaymentsResponseMessage.php
-  - src/Models/Operations/AccountRefundPaymentMetadata.php
-  - src/Models/Operations/AccountRefundPaymentType.php
-  - src/Models/Operations/AccountRefundPaymentResponseBody.php
   - src/Models/Operations/AccountRefundPaymentResponse.php
   - src/Models/Operations/AccountVoidPaymentRequest.php
-  - src/Models/Operations/AccountVoidPaymentPaymentsResponse503ResponseBody.php
-  - src/Models/Operations/AccountVoidPaymentPaymentsResponse500ResponseBody.php
-  - src/Models/Operations/AccountVoidPaymentPaymentsMessage.php
-  - src/Models/Operations/AccountVoidPaymentPaymentsResponseResponseBody.php
-  - src/Models/Operations/AccountVoidPaymentCode.php
-  - src/Models/Operations/AccountVoidPaymentMessage.php
-  - src/Models/Operations/AccountVoidPaymentPaymentsResponseBody.php
-  - src/Models/Operations/AccountVoidPaymentMessages.php
-  - src/Models/Operations/AccountVoidPaymentPaymentsResponseMessage.php
-  - src/Models/Operations/AccountVoidPaymentMetadata.php
-  - src/Models/Operations/AccountVoidPaymentType.php
-  - src/Models/Operations/AccountVoidPaymentResponseBody.php
   - src/Models/Operations/AccountVoidPaymentResponse.php
   - src/Models/Operations/CapturePaymentRequest.php
-  - src/Models/Operations/CapturePaymentPaymentsResponse503ResponseBody.php
-  - src/Models/Operations/CapturePaymentPaymentsResponse500ResponseBody.php
-  - src/Models/Operations/CapturePaymentPaymentsMessage.php
-  - src/Models/Operations/CapturePaymentPaymentsResponseResponseBody.php
-  - src/Models/Operations/CapturePaymentCode.php
-  - src/Models/Operations/CapturePaymentMessage.php
-  - src/Models/Operations/CapturePaymentPaymentsResponseBody.php
-  - src/Models/Operations/CapturePaymentMessages.php
-  - src/Models/Operations/CapturePaymentPaymentsResponseMessage.php
-  - src/Models/Operations/CapturePaymentMetadata.php
-  - src/Models/Operations/CapturePaymentType.php
-  - src/Models/Operations/CapturePaymentResponseBody.php
   - src/Models/Operations/CapturePaymentResponse.php
   - src/Models/Operations/GetPaymentRequest.php
-  - src/Models/Operations/GetPaymentPaymentsResponse503ResponseBody.php
-  - src/Models/Operations/GetPaymentPaymentsResponseResponseBody.php
-  - src/Models/Operations/GetPaymentPaymentsMessage.php
-  - src/Models/Operations/GetPaymentPaymentsResponseBody.php
-  - src/Models/Operations/GetPaymentCode.php
-  - src/Models/Operations/GetPaymentMessage.php
-  - src/Models/Operations/GetPaymentResponseBody.php
   - src/Models/Operations/GetPaymentResponse.php
   - src/Models/Operations/GetPaymentsRequest.php
-  - src/Models/Operations/GetPaymentsPaymentsResponse503ResponseBody.php
-  - src/Models/Operations/GetPaymentsPaymentsResponseResponseBody.php
-  - src/Models/Operations/GetPaymentsPaymentsMessage.php
-  - src/Models/Operations/GetPaymentsPaymentsResponseBody.php
-  - src/Models/Operations/GetPaymentsCode.php
-  - src/Models/Operations/GetPaymentsMessage.php
-  - src/Models/Operations/GetPaymentsResponseBody.php
   - src/Models/Operations/GetPaymentsResponse.php
-  - src/Models/Operations/PostPaymentPaymentsResponse503ResponseBody.php
-  - src/Models/Operations/PostPaymentPaymentsResponse500ResponseBody.php
-  - src/Models/Operations/PostPaymentPaymentsResponseResponseBody.php
-  - src/Models/Operations/PostPaymentCode.php
-  - src/Models/Operations/PostPaymentMessage.php
-  - src/Models/Operations/PostPaymentPaymentsResponseBody.php
-  - src/Models/Operations/PostPaymentDetails.php
-  - src/Models/Operations/PostPaymentField.php
-  - src/Models/Operations/PostPaymentType.php
-  - src/Models/Operations/PostPaymentPathIssues.php
-  - src/Models/Operations/PostPaymentResponseBody.php
   - src/Models/Operations/PostPaymentResponse.php
   - src/Models/Operations/RefundPaymentRequest.php
-  - src/Models/Operations/RefundPaymentPaymentsResponse503ResponseBody.php
-  - src/Models/Operations/RefundPaymentPaymentsResponse500ResponseBody.php
-  - src/Models/Operations/RefundPaymentPaymentsMessage.php
-  - src/Models/Operations/RefundPaymentPaymentsResponseResponseBody.php
-  - src/Models/Operations/RefundPaymentCode.php
-  - src/Models/Operations/RefundPaymentMessage.php
-  - src/Models/Operations/RefundPaymentPaymentsResponseBody.php
-  - src/Models/Operations/RefundPaymentMessages.php
-  - src/Models/Operations/RefundPaymentPaymentsResponseMessage.php
-  - src/Models/Operations/RefundPaymentMetadata.php
-  - src/Models/Operations/RefundPaymentType.php
-  - src/Models/Operations/RefundPaymentResponseBody.php
   - src/Models/Operations/RefundPaymentResponse.php
   - src/Models/Operations/VoidPaymentRequest.php
-  - src/Models/Operations/VoidPaymentPaymentsResponse503ResponseBody.php
-  - src/Models/Operations/VoidPaymentPaymentsResponse500ResponseBody.php
-  - src/Models/Operations/VoidPaymentPaymentsMessage.php
-  - src/Models/Operations/VoidPaymentPaymentsResponseResponseBody.php
-  - src/Models/Operations/VoidPaymentCode.php
-  - src/Models/Operations/VoidPaymentMessage.php
-  - src/Models/Operations/VoidPaymentPaymentsResponseBody.php
-  - src/Models/Operations/VoidPaymentMessages.php
-  - src/Models/Operations/VoidPaymentPaymentsResponseMessage.php
-  - src/Models/Operations/VoidPaymentMetadata.php
-  - src/Models/Operations/VoidPaymentType.php
-  - src/Models/Operations/VoidPaymentResponseBody.php
   - src/Models/Operations/VoidPaymentResponse.php
   - src/Models/Operations/AccountDeleteWebhookRequest.php
   - src/Models/Operations/AccountDeleteWebhookResponse.php
@@ -461,7 +249,7 @@ generatedFiles:
   - src/Models/Operations/UploadDocumentByTokenRequest.php
   - src/Models/Operations/UploadDocumentByTokenResponse.php
   - src/Models/Operations/CreateOnboardingRequest.php
-  - src/Models/Operations/CreateOnboardingMessage.php
+  - src/Models/Operations/Message.php
   - src/Models/Operations/CreateOnboardingType.php
   - src/Models/Operations/CreateOnboardingResponseBody.php
   - src/Models/Operations/CreateOnboardingResponse.php
@@ -520,6 +308,12 @@ generatedFiles:
   - src/Models/Operations/GetReportsResponse.php
   - src/Models/Operations/GetStatusResponseBody.php
   - src/Models/Operations/GetStatusResponse.php
+  - src/Models/Shared/AppleError400Code.php
+  - src/Models/Shared/AppleError400Expected.php
+  - src/Models/Shared/AppleError400Received.php
+  - src/Models/Shared/AppleError400Type.php
+  - src/Models/Shared/Issues.php
+  - src/Models/Shared/AppleError400.php
   - src/Models/Shared/ApplePayDomains.php
   - src/Models/Shared/Ach.php
   - src/Models/Shared/AccountResponse.php
@@ -529,6 +323,11 @@ generatedFiles:
   - src/Models/Shared/AccountRequest.php
   - src/Models/Shared/Addresses.php
   - src/Models/Shared/Customer.php
+  - src/Models/Shared/Error503.php
+  - src/Models/Shared/Error500.php
+  - src/Models/Shared/Code.php
+  - src/Models/Shared/Message.php
+  - src/Models/Shared/Error403.php
   - src/Models/Shared/NotFoundError.php
   - src/Models/Shared/NewCustomerAddresses.php
   - src/Models/Shared/NewCustomer.php
@@ -537,8 +336,8 @@ generatedFiles:
   - src/Models/Shared/OrderResponsePhoneType.php
   - src/Models/Shared/Billing.php
   - src/Models/Shared/OrderResponseLineItems.php
-  - src/Models/Shared/OrderResponseSchemasAddress.php
-  - src/Models/Shared/OrderResponseSchemasPhoneType.php
+  - src/Models/Shared/OrderResponseLevel3Address.php
+  - src/Models/Shared/OrderResponseLevel3PhoneType.php
   - src/Models/Shared/OrderResponseShipTo.php
   - src/Models/Shared/OrderResponseLevel3.php
   - src/Models/Shared/OrderResponseEcommerceFlag.php
@@ -546,7 +345,22 @@ generatedFiles:
   - src/Models/Shared/OrderResponseReference.php
   - src/Models/Shared/OrderResponseSoftDescriptor.php
   - src/Models/Shared/OrderResponse.php
+  - src/Models/Shared/Error404Message.php
+  - src/Models/Shared/Messages.php
+  - src/Models/Shared/Error404MetadataMessage.php
+  - src/Models/Shared/Metadata.php
+  - src/Models/Shared/Error404.php
   - src/Models/Shared/OrderSearch.php
+  - src/Models/Shared/PayError404Message.php
+  - src/Models/Shared/PayError404Metadata.php
+  - src/Models/Shared/PayError404.php
+  - src/Models/Shared/PayError400Metadata.php
+  - src/Models/Shared/PayError400.php
+  - src/Models/Shared/Details.php
+  - src/Models/Shared/Field.php
+  - src/Models/Shared/Error400Type.php
+  - src/Models/Shared/PathIssues.php
+  - src/Models/Shared/Error400.php
   - src/Models/Shared/Order.php
   - src/Models/Shared/SoftDescriptor.php
   - src/Models/Shared/Reference.php
@@ -567,18 +381,26 @@ generatedFiles:
   - src/Models/Shared/BillingDetails.php
   - src/Models/Shared/PaymentAchSchema.php
   - src/Models/Shared/MicroDepositVerificationRequest.php
+  - src/Models/Shared/PaymentsError404Message.php
+  - src/Models/Shared/PaymentsError404.php
+  - src/Models/Shared/PaymentsError400Messages.php
+  - src/Models/Shared/PaymentsError400Message.php
+  - src/Models/Shared/PaymentsError400Metadata.php
+  - src/Models/Shared/Type.php
+  - src/Models/Shared/PaymentsError400.php
   - src/Models/Shared/ReferencedPaymentEcommerceFlag.php
   - src/Models/Shared/ReferencedPaymentOptions.php
   - src/Models/Shared/ReferencedPaymentReference.php
   - src/Models/Shared/ReferencedPaymentSoftDescriptor.php
   - src/Models/Shared/ReferencedPayment.php
+  - src/Models/Shared/Error422.php
   - src/Models/Shared/NewPaymentAddress.php
   - src/Models/Shared/NewPaymentPhoneType.php
   - src/Models/Shared/NewPaymentCustomer.php
   - src/Models/Shared/Language.php
   - src/Models/Shared/LineItems.php
-  - src/Models/Shared/NewPaymentSchemasAddress.php
-  - src/Models/Shared/NewPaymentSchemasPhoneType.php
+  - src/Models/Shared/NewPaymentLevel3Address.php
+  - src/Models/Shared/NewPaymentLevel3PhoneType.php
   - src/Models/Shared/NewPaymentShipTo.php
   - src/Models/Shared/NewPaymentLevel3.php
   - src/Models/Shared/NewPaymentEcommerceFlag.php
@@ -594,7 +416,7 @@ generatedFiles:
   - src/Models/Shared/WebhookRequest.php
   - src/Models/Shared/UpdatableWebhookRequest.php
   - src/Models/Shared/BadRequestZodError.php
-  - src/Models/Shared/Code.php
+  - src/Models/Shared/ZodErrorCode.php
   - src/Models/Shared/Expected.php
   - src/Models/Shared/Received.php
   - src/Models/Shared/ZodErrorType.php
@@ -610,7 +432,7 @@ generatedFiles:
   - src/Models/Shared/ApplicationTokenResponse.php
   - src/Models/Shared/OnboardingDocumentRequestCreate.php
   - src/Models/Shared/ContextErrorResponseSystemError.php
-  - src/Models/Shared/Type.php
+  - src/Models/Shared/DocumentType.php
   - src/Models/Shared/Document.php
   - src/Models/Shared/OnboardingDocumentRequestResponseType.php
   - src/Models/Shared/OnboardingDocumentRequestResponse.php
@@ -682,7 +504,7 @@ generatedFiles:
   - src/Models/Shared/RuleStatus.php
   - src/Models/Shared/DocumentRequest.php
   - src/Models/Shared/UnderwritingWorkflowResponse.php
-  - src/Models/Shared/Metadata.php
+  - src/Models/Shared/UnderwritingWorkflowRequestCreateWorkflowMetadata.php
   - src/Models/Shared/UnderwritingWorkflowRequestCreateWorkflow.php
   - src/Models/Shared/UnderwritingWorkflowRequestUpdateWorkflowMetadata.php
   - src/Models/Shared/UnderwritingWorkflowRequestUpdateWorkflow.php
@@ -695,12 +517,6 @@ generatedFiles:
   - src/Models/Shared/ReportQueryResponse.php
   - src/Models/Shared/Security.php
   - docs/Models/Operations/AccountRegisterApplePayDomainsRequest.md
-  - docs/Models/Operations/AccountRegisterApplePayDomainsCode.md
-  - docs/Models/Operations/Expected.md
-  - docs/Models/Operations/Received.md
-  - docs/Models/Operations/AccountRegisterApplePayDomainsType.md
-  - docs/Models/Operations/Issues.md
-  - docs/Models/Operations/AccountRegisterApplePayDomainsResponseBody.md
   - docs/Models/Operations/AccountRegisterApplePayDomainsResponse.md
   - docs/Models/Operations/GetOrganizationOrganizationIdAccountRequest.md
   - docs/Models/Operations/GetOrganizationOrganizationIdAccountResponse.md
@@ -727,11 +543,6 @@ generatedFiles:
   - docs/Models/Operations/AccountGetCustomerCustomerIdPaymentsRequest.md
   - docs/Models/Operations/AccountGetCustomerCustomerIdPaymentsResponse.md
   - docs/Models/Operations/AccountGetCustomerDefaultPaymentMethodRequest.md
-  - docs/Models/Operations/AccountGetCustomerDefaultPaymentMethodCustomersResponseResponseBody.md
-  - docs/Models/Operations/AccountGetCustomerDefaultPaymentMethodCustomersResponseBody.md
-  - docs/Models/Operations/Code.md
-  - docs/Models/Operations/Message.md
-  - docs/Models/Operations/AccountGetCustomerDefaultPaymentMethodResponseBody.md
   - docs/Models/Operations/AccountGetCustomerDefaultPaymentMethodResponse.md
   - docs/Models/Operations/AccountGetCustomerIdPaymentMethodRequest.md
   - docs/Models/Operations/AccountGetCustomerIdPaymentMethodResponse.md
@@ -771,103 +582,23 @@ generatedFiles:
   - docs/Models/Operations/PutCustomerIdRequest.md
   - docs/Models/Operations/PutCustomerIdResponse.md
   - docs/Models/Operations/GetAccountAccountIdOrdersOrderIdRequest.md
-  - docs/Models/Operations/GetAccountAccountIdOrdersOrderIdOrdersResponse503ResponseBody.md
-  - docs/Models/Operations/GetAccountAccountIdOrdersOrderIdOrdersResponseResponseBody.md
-  - docs/Models/Operations/GetAccountAccountIdOrdersOrderIdOrdersMessage.md
-  - docs/Models/Operations/Messages.md
-  - docs/Models/Operations/GetAccountAccountIdOrdersOrderIdOrdersResponseMessage.md
-  - docs/Models/Operations/Metadata.md
-  - docs/Models/Operations/GetAccountAccountIdOrdersOrderIdOrdersResponseBody.md
-  - docs/Models/Operations/GetAccountAccountIdOrdersOrderIdCode.md
-  - docs/Models/Operations/GetAccountAccountIdOrdersOrderIdMessage.md
-  - docs/Models/Operations/GetAccountAccountIdOrdersOrderIdResponseBody.md
   - docs/Models/Operations/GetAccountAccountIdOrdersOrderIdResponse.md
   - docs/Models/Operations/GetOrdersRequest.md
-  - docs/Models/Operations/GetOrdersOrdersResponseResponseBody.md
-  - docs/Models/Operations/GetOrdersOrdersResponseBody.md
-  - docs/Models/Operations/GetOrdersCode.md
-  - docs/Models/Operations/GetOrdersMessage.md
-  - docs/Models/Operations/GetOrdersResponseBody.md
   - docs/Models/Operations/GetOrdersResponse.md
   - docs/Models/Operations/PaymentMethod.md
   - docs/Models/Operations/PostAccountAccountIdOrdersOrderIdPayRequestBody.md
   - docs/Models/Operations/PostAccountAccountIdOrdersOrderIdPayRequest.md
-  - docs/Models/Operations/PostAccountAccountIdOrdersOrderIdPayOrdersResponse503ResponseBody.md
-  - docs/Models/Operations/PostAccountAccountIdOrdersOrderIdPayOrdersResponse500ResponseBody.md
-  - docs/Models/Operations/PostAccountAccountIdOrdersOrderIdPayOrdersMessage.md
-  - docs/Models/Operations/PostAccountAccountIdOrdersOrderIdPayOrdersMetadata.md
-  - docs/Models/Operations/PostAccountAccountIdOrdersOrderIdPayOrdersResponse404ResponseBody.md
-  - docs/Models/Operations/PostAccountAccountIdOrdersOrderIdPayCode.md
-  - docs/Models/Operations/PostAccountAccountIdOrdersOrderIdPayMessage.md
-  - docs/Models/Operations/PostAccountAccountIdOrdersOrderIdPayOrdersResponseResponseBody.md
-  - docs/Models/Operations/PostAccountAccountIdOrdersOrderIdPayMetadata.md
-  - docs/Models/Operations/PostAccountAccountIdOrdersOrderIdPayOrdersResponseBody.md
   - docs/Models/Operations/Order.md
   - docs/Models/Operations/PostAccountAccountIdOrdersOrderIdPayResponseBody.md
   - docs/Models/Operations/PostAccountAccountIdOrdersOrderIdPayResponse.md
   - docs/Models/Operations/PostAccountAccountIdOrdersRequest.md
-  - docs/Models/Operations/PostAccountAccountIdOrdersOrdersResponse503ResponseBody.md
-  - docs/Models/Operations/PostAccountAccountIdOrdersOrdersResponseResponseBody.md
-  - docs/Models/Operations/PostAccountAccountIdOrdersCode.md
-  - docs/Models/Operations/PostAccountAccountIdOrdersMessage.md
-  - docs/Models/Operations/PostAccountAccountIdOrdersOrdersResponseBody.md
-  - docs/Models/Operations/Details.md
-  - docs/Models/Operations/Field.md
-  - docs/Models/Operations/PostAccountAccountIdOrdersType.md
-  - docs/Models/Operations/PathIssues.md
-  - docs/Models/Operations/PostAccountAccountIdOrdersResponseBody.md
   - docs/Models/Operations/PostAccountAccountIdOrdersResponse.md
-  - docs/Models/Operations/PostOrdersOrdersResponse503ResponseBody.md
-  - docs/Models/Operations/PostOrdersOrdersResponseResponseBody.md
-  - docs/Models/Operations/PostOrdersCode.md
-  - docs/Models/Operations/PostOrdersMessage.md
-  - docs/Models/Operations/PostOrdersOrdersResponseBody.md
-  - docs/Models/Operations/PostOrdersDetails.md
-  - docs/Models/Operations/PostOrdersField.md
-  - docs/Models/Operations/PostOrdersType.md
-  - docs/Models/Operations/PostOrdersPathIssues.md
-  - docs/Models/Operations/PostOrdersResponseBody.md
   - docs/Models/Operations/PostOrdersResponse.md
   - docs/Models/Operations/PostOrdersOrderIdAccessTokenRequest.md
-  - docs/Models/Operations/PostOrdersOrderIdAccessTokenOrdersResponse503ResponseBody.md
-  - docs/Models/Operations/PostOrdersOrderIdAccessTokenOrdersResponseResponseBody.md
-  - docs/Models/Operations/PostOrdersOrderIdAccessTokenOrdersMessage.md
-  - docs/Models/Operations/PostOrdersOrderIdAccessTokenMessages.md
-  - docs/Models/Operations/PostOrdersOrderIdAccessTokenOrdersResponseMessage.md
-  - docs/Models/Operations/PostOrdersOrderIdAccessTokenMetadata.md
-  - docs/Models/Operations/PostOrdersOrderIdAccessTokenOrdersResponseBody.md
-  - docs/Models/Operations/PostOrdersOrderIdAccessTokenCode.md
-  - docs/Models/Operations/PostOrdersOrderIdAccessTokenMessage.md
-  - docs/Models/Operations/PostOrdersOrderIdAccessTokenResponseBody.md
   - docs/Models/Operations/PostOrdersOrderIdAccessTokenResponse.md
   - docs/Models/Operations/PutAccountAccountIdOrdersOrderIdRequest.md
-  - docs/Models/Operations/PutAccountAccountIdOrdersOrderIdOrdersResponse503ResponseBody.md
-  - docs/Models/Operations/PutAccountAccountIdOrdersOrderIdOrdersResponse500ResponseBody.md
-  - docs/Models/Operations/PutAccountAccountIdOrdersOrderIdOrdersMessage.md
-  - docs/Models/Operations/PutAccountAccountIdOrdersOrderIdMessages.md
-  - docs/Models/Operations/PutAccountAccountIdOrdersOrderIdOrdersResponseMessage.md
-  - docs/Models/Operations/PutAccountAccountIdOrdersOrderIdMetadata.md
-  - docs/Models/Operations/PutAccountAccountIdOrdersOrderIdOrdersResponseResponseBody.md
-  - docs/Models/Operations/PutAccountAccountIdOrdersOrderIdCode.md
-  - docs/Models/Operations/PutAccountAccountIdOrdersOrderIdMessage.md
-  - docs/Models/Operations/PutAccountAccountIdOrdersOrderIdOrdersResponseBody.md
-  - docs/Models/Operations/PutAccountAccountIdOrdersOrderIdDetails.md
-  - docs/Models/Operations/PutAccountAccountIdOrdersOrderIdField.md
-  - docs/Models/Operations/PutAccountAccountIdOrdersOrderIdType.md
-  - docs/Models/Operations/PutAccountAccountIdOrdersOrderIdPathIssues.md
-  - docs/Models/Operations/PutAccountAccountIdOrdersOrderIdResponseBody.md
   - docs/Models/Operations/PutAccountAccountIdOrdersOrderIdResponse.md
   - docs/Models/Operations/PutOrdersOrderIdResetRequest.md
-  - docs/Models/Operations/PutOrdersOrderIdResetOrdersResponse503ResponseBody.md
-  - docs/Models/Operations/PutOrdersOrderIdResetOrdersResponseResponseBody.md
-  - docs/Models/Operations/PutOrdersOrderIdResetOrdersMessage.md
-  - docs/Models/Operations/PutOrdersOrderIdResetMessages.md
-  - docs/Models/Operations/PutOrdersOrderIdResetOrdersResponseMessage.md
-  - docs/Models/Operations/PutOrdersOrderIdResetMetadata.md
-  - docs/Models/Operations/PutOrdersOrderIdResetOrdersResponseBody.md
-  - docs/Models/Operations/PutOrdersOrderIdResetCode.md
-  - docs/Models/Operations/PutOrdersOrderIdResetMessage.md
-  - docs/Models/Operations/PutOrdersOrderIdResetResponseBody.md
   - docs/Models/Operations/PutOrdersOrderIdResetResponse.md
   - docs/Models/Operations/AccountDeletePaymentMethodRequest.md
   - docs/Models/Operations/AccountDeletePaymentMethodResponse.md
@@ -885,149 +616,27 @@ generatedFiles:
   - docs/Models/Operations/PostVerifyMicrodepositsRequest.md
   - docs/Models/Operations/PostVerifyMicrodepositsResponse.md
   - docs/Models/Operations/AccountCapturePaymentRequest.md
-  - docs/Models/Operations/AccountCapturePaymentPaymentsResponse503ResponseBody.md
-  - docs/Models/Operations/AccountCapturePaymentPaymentsResponse500ResponseBody.md
-  - docs/Models/Operations/AccountCapturePaymentPaymentsMessage.md
-  - docs/Models/Operations/AccountCapturePaymentPaymentsResponseResponseBody.md
-  - docs/Models/Operations/AccountCapturePaymentCode.md
-  - docs/Models/Operations/AccountCapturePaymentMessage.md
-  - docs/Models/Operations/AccountCapturePaymentPaymentsResponseBody.md
-  - docs/Models/Operations/AccountCapturePaymentMessages.md
-  - docs/Models/Operations/AccountCapturePaymentPaymentsResponseMessage.md
-  - docs/Models/Operations/AccountCapturePaymentMetadata.md
-  - docs/Models/Operations/AccountCapturePaymentType.md
-  - docs/Models/Operations/AccountCapturePaymentResponseBody.md
   - docs/Models/Operations/AccountCapturePaymentResponse.md
   - docs/Models/Operations/AccountGetPaymentRequest.md
-  - docs/Models/Operations/AccountGetPaymentPaymentsResponse503ResponseBody.md
-  - docs/Models/Operations/AccountGetPaymentPaymentsResponseResponseBody.md
-  - docs/Models/Operations/AccountGetPaymentPaymentsMessage.md
-  - docs/Models/Operations/AccountGetPaymentPaymentsResponseBody.md
-  - docs/Models/Operations/AccountGetPaymentCode.md
-  - docs/Models/Operations/AccountGetPaymentMessage.md
-  - docs/Models/Operations/AccountGetPaymentResponseBody.md
   - docs/Models/Operations/AccountGetPaymentResponse.md
   - docs/Models/Operations/AccountGetPaymentsRequest.md
-  - docs/Models/Operations/AccountGetPaymentsPaymentsResponse503ResponseBody.md
-  - docs/Models/Operations/AccountGetPaymentsPaymentsResponseResponseBody.md
-  - docs/Models/Operations/AccountGetPaymentsPaymentsMessage.md
-  - docs/Models/Operations/AccountGetPaymentsPaymentsResponseBody.md
-  - docs/Models/Operations/AccountGetPaymentsCode.md
-  - docs/Models/Operations/AccountGetPaymentsMessage.md
-  - docs/Models/Operations/AccountGetPaymentsResponseBody.md
   - docs/Models/Operations/AccountGetPaymentsResponse.md
   - docs/Models/Operations/AccountPostPaymentRequest.md
-  - docs/Models/Operations/AccountPostPaymentPaymentsResponse503ResponseBody.md
-  - docs/Models/Operations/AccountPostPaymentPaymentsResponse500ResponseBody.md
-  - docs/Models/Operations/AccountPostPaymentPaymentsResponseResponseBody.md
-  - docs/Models/Operations/AccountPostPaymentCode.md
-  - docs/Models/Operations/AccountPostPaymentMessage.md
-  - docs/Models/Operations/AccountPostPaymentPaymentsResponseBody.md
-  - docs/Models/Operations/AccountPostPaymentDetails.md
-  - docs/Models/Operations/AccountPostPaymentField.md
-  - docs/Models/Operations/AccountPostPaymentType.md
-  - docs/Models/Operations/AccountPostPaymentPathIssues.md
-  - docs/Models/Operations/AccountPostPaymentResponseBody.md
   - docs/Models/Operations/AccountPostPaymentResponse.md
   - docs/Models/Operations/AccountRefundPaymentRequest.md
-  - docs/Models/Operations/AccountRefundPaymentPaymentsResponse503ResponseBody.md
-  - docs/Models/Operations/AccountRefundPaymentPaymentsResponse500ResponseBody.md
-  - docs/Models/Operations/AccountRefundPaymentPaymentsMessage.md
-  - docs/Models/Operations/AccountRefundPaymentPaymentsResponseResponseBody.md
-  - docs/Models/Operations/AccountRefundPaymentCode.md
-  - docs/Models/Operations/AccountRefundPaymentMessage.md
-  - docs/Models/Operations/AccountRefundPaymentPaymentsResponseBody.md
-  - docs/Models/Operations/AccountRefundPaymentMessages.md
-  - docs/Models/Operations/AccountRefundPaymentPaymentsResponseMessage.md
-  - docs/Models/Operations/AccountRefundPaymentMetadata.md
-  - docs/Models/Operations/AccountRefundPaymentType.md
-  - docs/Models/Operations/AccountRefundPaymentResponseBody.md
   - docs/Models/Operations/AccountRefundPaymentResponse.md
   - docs/Models/Operations/AccountVoidPaymentRequest.md
-  - docs/Models/Operations/AccountVoidPaymentPaymentsResponse503ResponseBody.md
-  - docs/Models/Operations/AccountVoidPaymentPaymentsResponse500ResponseBody.md
-  - docs/Models/Operations/AccountVoidPaymentPaymentsMessage.md
-  - docs/Models/Operations/AccountVoidPaymentPaymentsResponseResponseBody.md
-  - docs/Models/Operations/AccountVoidPaymentCode.md
-  - docs/Models/Operations/AccountVoidPaymentMessage.md
-  - docs/Models/Operations/AccountVoidPaymentPaymentsResponseBody.md
-  - docs/Models/Operations/AccountVoidPaymentMessages.md
-  - docs/Models/Operations/AccountVoidPaymentPaymentsResponseMessage.md
-  - docs/Models/Operations/AccountVoidPaymentMetadata.md
-  - docs/Models/Operations/AccountVoidPaymentType.md
-  - docs/Models/Operations/AccountVoidPaymentResponseBody.md
   - docs/Models/Operations/AccountVoidPaymentResponse.md
   - docs/Models/Operations/CapturePaymentRequest.md
-  - docs/Models/Operations/CapturePaymentPaymentsResponse503ResponseBody.md
-  - docs/Models/Operations/CapturePaymentPaymentsResponse500ResponseBody.md
-  - docs/Models/Operations/CapturePaymentPaymentsMessage.md
-  - docs/Models/Operations/CapturePaymentPaymentsResponseResponseBody.md
-  - docs/Models/Operations/CapturePaymentCode.md
-  - docs/Models/Operations/CapturePaymentMessage.md
-  - docs/Models/Operations/CapturePaymentPaymentsResponseBody.md
-  - docs/Models/Operations/CapturePaymentMessages.md
-  - docs/Models/Operations/CapturePaymentPaymentsResponseMessage.md
-  - docs/Models/Operations/CapturePaymentMetadata.md
-  - docs/Models/Operations/CapturePaymentType.md
-  - docs/Models/Operations/CapturePaymentResponseBody.md
   - docs/Models/Operations/CapturePaymentResponse.md
   - docs/Models/Operations/GetPaymentRequest.md
-  - docs/Models/Operations/GetPaymentPaymentsResponse503ResponseBody.md
-  - docs/Models/Operations/GetPaymentPaymentsResponseResponseBody.md
-  - docs/Models/Operations/GetPaymentPaymentsMessage.md
-  - docs/Models/Operations/GetPaymentPaymentsResponseBody.md
-  - docs/Models/Operations/GetPaymentCode.md
-  - docs/Models/Operations/GetPaymentMessage.md
-  - docs/Models/Operations/GetPaymentResponseBody.md
   - docs/Models/Operations/GetPaymentResponse.md
   - docs/Models/Operations/GetPaymentsRequest.md
-  - docs/Models/Operations/GetPaymentsPaymentsResponse503ResponseBody.md
-  - docs/Models/Operations/GetPaymentsPaymentsResponseResponseBody.md
-  - docs/Models/Operations/GetPaymentsPaymentsMessage.md
-  - docs/Models/Operations/GetPaymentsPaymentsResponseBody.md
-  - docs/Models/Operations/GetPaymentsCode.md
-  - docs/Models/Operations/GetPaymentsMessage.md
-  - docs/Models/Operations/GetPaymentsResponseBody.md
   - docs/Models/Operations/GetPaymentsResponse.md
-  - docs/Models/Operations/PostPaymentPaymentsResponse503ResponseBody.md
-  - docs/Models/Operations/PostPaymentPaymentsResponse500ResponseBody.md
-  - docs/Models/Operations/PostPaymentPaymentsResponseResponseBody.md
-  - docs/Models/Operations/PostPaymentCode.md
-  - docs/Models/Operations/PostPaymentMessage.md
-  - docs/Models/Operations/PostPaymentPaymentsResponseBody.md
-  - docs/Models/Operations/PostPaymentDetails.md
-  - docs/Models/Operations/PostPaymentField.md
-  - docs/Models/Operations/PostPaymentType.md
-  - docs/Models/Operations/PostPaymentPathIssues.md
-  - docs/Models/Operations/PostPaymentResponseBody.md
   - docs/Models/Operations/PostPaymentResponse.md
   - docs/Models/Operations/RefundPaymentRequest.md
-  - docs/Models/Operations/RefundPaymentPaymentsResponse503ResponseBody.md
-  - docs/Models/Operations/RefundPaymentPaymentsResponse500ResponseBody.md
-  - docs/Models/Operations/RefundPaymentPaymentsMessage.md
-  - docs/Models/Operations/RefundPaymentPaymentsResponseResponseBody.md
-  - docs/Models/Operations/RefundPaymentCode.md
-  - docs/Models/Operations/RefundPaymentMessage.md
-  - docs/Models/Operations/RefundPaymentPaymentsResponseBody.md
-  - docs/Models/Operations/RefundPaymentMessages.md
-  - docs/Models/Operations/RefundPaymentPaymentsResponseMessage.md
-  - docs/Models/Operations/RefundPaymentMetadata.md
-  - docs/Models/Operations/RefundPaymentType.md
-  - docs/Models/Operations/RefundPaymentResponseBody.md
   - docs/Models/Operations/RefundPaymentResponse.md
   - docs/Models/Operations/VoidPaymentRequest.md
-  - docs/Models/Operations/VoidPaymentPaymentsResponse503ResponseBody.md
-  - docs/Models/Operations/VoidPaymentPaymentsResponse500ResponseBody.md
-  - docs/Models/Operations/VoidPaymentPaymentsMessage.md
-  - docs/Models/Operations/VoidPaymentPaymentsResponseResponseBody.md
-  - docs/Models/Operations/VoidPaymentCode.md
-  - docs/Models/Operations/VoidPaymentMessage.md
-  - docs/Models/Operations/VoidPaymentPaymentsResponseBody.md
-  - docs/Models/Operations/VoidPaymentMessages.md
-  - docs/Models/Operations/VoidPaymentPaymentsResponseMessage.md
-  - docs/Models/Operations/VoidPaymentMetadata.md
-  - docs/Models/Operations/VoidPaymentType.md
-  - docs/Models/Operations/VoidPaymentResponseBody.md
   - docs/Models/Operations/VoidPaymentResponse.md
   - docs/Models/Operations/AccountDeleteWebhookRequest.md
   - docs/Models/Operations/AccountDeleteWebhookResponse.md
@@ -1104,7 +713,7 @@ generatedFiles:
   - docs/Models/Operations/UploadDocumentByTokenRequest.md
   - docs/Models/Operations/UploadDocumentByTokenResponse.md
   - docs/Models/Operations/CreateOnboardingRequest.md
-  - docs/Models/Operations/CreateOnboardingMessage.md
+  - docs/Models/Operations/Message.md
   - docs/Models/Operations/CreateOnboardingType.md
   - docs/Models/Operations/CreateOnboardingResponseBody.md
   - docs/Models/Operations/CreateOnboardingResponse.md
@@ -1163,6 +772,12 @@ generatedFiles:
   - docs/Models/Operations/GetReportsResponse.md
   - docs/Models/Operations/GetStatusResponseBody.md
   - docs/Models/Operations/GetStatusResponse.md
+  - docs/Models/Shared/AppleError400Code.md
+  - docs/Models/Shared/AppleError400Expected.md
+  - docs/Models/Shared/AppleError400Received.md
+  - docs/Models/Shared/AppleError400Type.md
+  - docs/Models/Shared/Issues.md
+  - docs/Models/Shared/AppleError400.md
   - docs/Models/Shared/ApplePayDomains.md
   - docs/Models/Shared/Ach.md
   - docs/Models/Shared/AccountResponse.md
@@ -1172,6 +787,11 @@ generatedFiles:
   - docs/Models/Shared/AccountRequest.md
   - docs/Models/Shared/Addresses.md
   - docs/Models/Shared/Customer.md
+  - docs/Models/Shared/Error503.md
+  - docs/Models/Shared/Error500.md
+  - docs/Models/Shared/Code.md
+  - docs/Models/Shared/Message.md
+  - docs/Models/Shared/Error403.md
   - docs/Models/Shared/NotFoundError.md
   - docs/Models/Shared/NewCustomerAddresses.md
   - docs/Models/Shared/NewCustomer.md
@@ -1180,8 +800,8 @@ generatedFiles:
   - docs/Models/Shared/OrderResponsePhoneType.md
   - docs/Models/Shared/Billing.md
   - docs/Models/Shared/OrderResponseLineItems.md
-  - docs/Models/Shared/OrderResponseSchemasAddress.md
-  - docs/Models/Shared/OrderResponseSchemasPhoneType.md
+  - docs/Models/Shared/OrderResponseLevel3Address.md
+  - docs/Models/Shared/OrderResponseLevel3PhoneType.md
   - docs/Models/Shared/OrderResponseShipTo.md
   - docs/Models/Shared/OrderResponseLevel3.md
   - docs/Models/Shared/OrderResponseEcommerceFlag.md
@@ -1189,7 +809,22 @@ generatedFiles:
   - docs/Models/Shared/OrderResponseReference.md
   - docs/Models/Shared/OrderResponseSoftDescriptor.md
   - docs/Models/Shared/OrderResponse.md
+  - docs/Models/Shared/Error404Message.md
+  - docs/Models/Shared/Messages.md
+  - docs/Models/Shared/Error404MetadataMessage.md
+  - docs/Models/Shared/Metadata.md
+  - docs/Models/Shared/Error404.md
   - docs/Models/Shared/OrderSearch.md
+  - docs/Models/Shared/PayError404Message.md
+  - docs/Models/Shared/PayError404Metadata.md
+  - docs/Models/Shared/PayError404.md
+  - docs/Models/Shared/PayError400Metadata.md
+  - docs/Models/Shared/PayError400.md
+  - docs/Models/Shared/Details.md
+  - docs/Models/Shared/Field.md
+  - docs/Models/Shared/Error400Type.md
+  - docs/Models/Shared/PathIssues.md
+  - docs/Models/Shared/Error400.md
   - docs/Models/Shared/Order.md
   - docs/Models/Shared/SoftDescriptor.md
   - docs/Models/Shared/Reference.md
@@ -1210,18 +845,26 @@ generatedFiles:
   - docs/Models/Shared/BillingDetails.md
   - docs/Models/Shared/PaymentAchSchema.md
   - docs/Models/Shared/MicroDepositVerificationRequest.md
+  - docs/Models/Shared/PaymentsError404Message.md
+  - docs/Models/Shared/PaymentsError404.md
+  - docs/Models/Shared/PaymentsError400Messages.md
+  - docs/Models/Shared/PaymentsError400Message.md
+  - docs/Models/Shared/PaymentsError400Metadata.md
+  - docs/Models/Shared/Type.md
+  - docs/Models/Shared/PaymentsError400.md
   - docs/Models/Shared/ReferencedPaymentEcommerceFlag.md
   - docs/Models/Shared/ReferencedPaymentOptions.md
   - docs/Models/Shared/ReferencedPaymentReference.md
   - docs/Models/Shared/ReferencedPaymentSoftDescriptor.md
   - docs/Models/Shared/ReferencedPayment.md
+  - docs/Models/Shared/Error422.md
   - docs/Models/Shared/NewPaymentAddress.md
   - docs/Models/Shared/NewPaymentPhoneType.md
   - docs/Models/Shared/NewPaymentCustomer.md
   - docs/Models/Shared/Language.md
   - docs/Models/Shared/LineItems.md
-  - docs/Models/Shared/NewPaymentSchemasAddress.md
-  - docs/Models/Shared/NewPaymentSchemasPhoneType.md
+  - docs/Models/Shared/NewPaymentLevel3Address.md
+  - docs/Models/Shared/NewPaymentLevel3PhoneType.md
   - docs/Models/Shared/NewPaymentShipTo.md
   - docs/Models/Shared/NewPaymentLevel3.md
   - docs/Models/Shared/NewPaymentEcommerceFlag.md
@@ -1237,7 +880,7 @@ generatedFiles:
   - docs/Models/Shared/WebhookRequest.md
   - docs/Models/Shared/UpdatableWebhookRequest.md
   - docs/Models/Shared/BadRequestZodError.md
-  - docs/Models/Shared/Code.md
+  - docs/Models/Shared/ZodErrorCode.md
   - docs/Models/Shared/Expected.md
   - docs/Models/Shared/Received.md
   - docs/Models/Shared/ZodErrorType.md
@@ -1253,7 +896,7 @@ generatedFiles:
   - docs/Models/Shared/ApplicationTokenResponse.md
   - docs/Models/Shared/OnboardingDocumentRequestCreate.md
   - docs/Models/Shared/ContextErrorResponseSystemError.md
-  - docs/Models/Shared/Type.md
+  - docs/Models/Shared/DocumentType.md
   - docs/Models/Shared/Document.md
   - docs/Models/Shared/OnboardingDocumentRequestResponseType.md
   - docs/Models/Shared/OnboardingDocumentRequestResponse.md
@@ -1325,7 +968,7 @@ generatedFiles:
   - docs/Models/Shared/RuleStatus.md
   - docs/Models/Shared/DocumentRequest.md
   - docs/Models/Shared/UnderwritingWorkflowResponse.md
-  - docs/Models/Shared/Metadata.md
+  - docs/Models/Shared/UnderwritingWorkflowRequestCreateWorkflowMetadata.md
   - docs/Models/Shared/UnderwritingWorkflowRequestCreateWorkflow.md
   - docs/Models/Shared/UnderwritingWorkflowRequestUpdateWorkflowMetadata.md
   - docs/Models/Shared/UnderwritingWorkflowRequestUpdateWorkflow.md

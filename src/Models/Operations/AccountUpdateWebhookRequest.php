@@ -12,14 +12,6 @@ use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class AccountUpdateWebhookRequest
 {
     /**
-     * Fields that are updatable in the webhook definition.
-     * 
-     * @var \TheLogicStudio\ExactPayments\Models\Shared\UpdatableWebhookRequest $updatableWebhookRequest
-     */
-	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public \TheLogicStudio\ExactPayments\Models\Shared\UpdatableWebhookRequest $updatableWebhookRequest;
-    
-    /**
      * The Account identifier. Represents the Merchant that this operation is going to be executed for.
      * 
      * @var string $accountId
@@ -35,10 +27,18 @@ class AccountUpdateWebhookRequest
 	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=webhookId')]
     public string $webhookId;
     
+    /**
+     * Fields that are updatable in the webhook definition.
+     * 
+     * @var \TheLogicStudio\ExactPayments\Models\Shared\UpdatableWebhookRequest $updatableWebhookRequest
+     */
+	#[SpeakeasyMetadata('request:mediaType=application/json')]
+    public \TheLogicStudio\ExactPayments\Models\Shared\UpdatableWebhookRequest $updatableWebhookRequest;
+    
 	public function __construct()
 	{
-		$this->updatableWebhookRequest = new \TheLogicStudio\ExactPayments\Models\Shared\UpdatableWebhookRequest();
 		$this->accountId = "";
 		$this->webhookId = "";
+		$this->updatableWebhookRequest = new \TheLogicStudio\ExactPayments\Models\Shared\UpdatableWebhookRequest();
 	}
 }

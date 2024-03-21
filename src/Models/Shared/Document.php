@@ -104,12 +104,12 @@ class Document
     /**
      * Type of the Document uploaded.
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\Type $type
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\DocumentType $type
      */
 	#[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\Type>')]
+    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\DocumentType>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?Type $type = null;
+    public ?DocumentType $type = null;
     
     /**
      * The date and time when the Document upload was last updated.

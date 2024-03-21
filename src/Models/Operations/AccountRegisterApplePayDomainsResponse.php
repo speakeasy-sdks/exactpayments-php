@@ -51,16 +51,6 @@ class AccountRegisterApplePayDomainsResponse
     public ?string $notFound = null;
     
     /**
-     * **Service Unavailable**
-     * 
-     * 
-     * 
-     * @var ?string $serviceUnavailable
-     */
-	
-    public ?string $serviceUnavailable = null;
-    
-    /**
      * HTTP response status code for this operation
      * 
      * @var int $statusCode
@@ -75,6 +65,16 @@ class AccountRegisterApplePayDomainsResponse
      */
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse;
+    
+    /**
+     * **Service Unavailable**
+     * 
+     * 
+     * 
+     * @var ?string $serviceUnavailable
+     */
+	
+    public ?string $serviceUnavailable = null;
     
     /**
      * **Unauthorized**\
@@ -97,10 +97,10 @@ class AccountRegisterApplePayDomainsResponse
      * The request body contains a malformed request or is incomplete.
      * 
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Operations\AccountRegisterApplePayDomainsResponseBody $object
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\AppleError400 $appleError400
      */
 	
-    public ?AccountRegisterApplePayDomainsResponseBody $object = null;
+    public ?\TheLogicStudio\ExactPayments\Models\Shared\AppleError400 $appleError400 = null;
     
 	public function __construct()
 	{
@@ -108,10 +108,10 @@ class AccountRegisterApplePayDomainsResponse
 		$this->contentType = "";
 		$this->internalServerError = null;
 		$this->notFound = null;
-		$this->serviceUnavailable = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
+		$this->serviceUnavailable = null;
 		$this->unauthorized = null;
-		$this->object = null;
+		$this->appleError400 = null;
 	}
 }

@@ -61,16 +61,6 @@ class PutUpdateDocumentTypeByIdResponse
     public ?string $notFound = null;
     
     /**
-     * **Service Unavailable**
-     * 
-     * 
-     * 
-     * @var ?string $serviceUnavailable
-     */
-	
-    public ?string $serviceUnavailable = null;
-    
-    /**
      * HTTP response status code for this operation
      * 
      * @var int $statusCode
@@ -85,6 +75,16 @@ class PutUpdateDocumentTypeByIdResponse
      */
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse;
+    
+    /**
+     * **Service Unavailable**
+     * 
+     * 
+     * 
+     * @var ?string $serviceUnavailable
+     */
+	
+    public ?string $serviceUnavailable = null;
     
     /**
      * **Unauthorized**\
@@ -120,9 +120,9 @@ class PutUpdateDocumentTypeByIdResponse
 		$this->contentType = "";
 		$this->internalServerError = null;
 		$this->notFound = null;
-		$this->serviceUnavailable = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
+		$this->serviceUnavailable = null;
 		$this->unauthorized = null;
 		$this->contextErrorResponseSystemError = null;
 	}

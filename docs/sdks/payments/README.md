@@ -34,7 +34,8 @@ Capture completes the transaction so that it can be funded. Captures can be for 
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -47,6 +48,8 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\AccountCapturePaymentRequest();
+    $request->accountId = '<value>';
+    $request->paymentId = '<value>';
     $request->referencedPayment = new Shared\ReferencedPayment();
     $request->referencedPayment->amount = 100;
     $request->referencedPayment->authorization = 'ET3516';
@@ -74,16 +77,14 @@ try {
     $request->referencedPayment->softDescriptor->state = 'CA';
     $request->referencedPayment->softDescriptor->street = 'Fairfield Ranch';
     $request->referencedPayment->softDescriptor->submerchantId = 'xyz123';
-    $request->referencedPayment->softDescriptor->taxId = 'abc123';
-    $request->accountId = 'string';
-    $request->paymentId = 'string';;
+    $request->referencedPayment->softDescriptor->taxId = 'abc123';;
 
     $response = $sdk->payments->accountCapturePayment($request);
 
-    if ($response->twoHundredAndOneApplicationJsonPayment !== null) {
+    if ($response->payment !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -112,7 +113,8 @@ Please note that the Organization(partner) needs to authenticate using the partn
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -125,15 +127,15 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\AccountGetPaymentRequest();
-    $request->accountId = 'string';
-    $request->paymentId = 'string';;
+    $request->accountId = '<value>';
+    $request->paymentId = '<value>';;
 
     $response = $sdk->payments->accountGetPayment($request);
 
-    if ($response->twoHundredApplicationJsonPayment !== null) {
+    if ($response->payment !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -162,7 +164,8 @@ Please note that the Organization(partner) needs to authenticate using the partn
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -175,17 +178,17 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\AccountGetPaymentsRequest();
-    $request->dollarLimit = 10;
-    $request->dollarSkip = 10;
+    $request->accountId = '<value>';
     $request->dollarSort = '-name';
-    $request->accountId = 'string';;
+    $request->dollarLimit = 10;
+    $request->dollarSkip = 10;;
 
     $response = $sdk->payments->accountGetPayments($request);
 
-    if ($response->twoHundredApplicationJsonAnies !== null) {
+    if ($response->payments !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -214,7 +217,8 @@ Please note that the Organization(partner) needs to authenticate using the partn
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -227,6 +231,7 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\AccountPostPaymentRequest();
+    $request->accountId = '<value>';
     $request->newPayment = new Shared\NewPayment();
     $request->newPayment->amount = 10;
     $request->newPayment->capture = true;
@@ -254,7 +259,7 @@ try {
     ];
     $request->newPayment->level3->shipFromZip = '901601';
     $request->newPayment->level3->shipTo = new Shared\NewPaymentShipTo();
-    $request->newPayment->level3->shipTo->address = new Shared\NewPaymentSchemasAddress();
+    $request->newPayment->level3->shipTo->address = new Shared\NewPaymentLevel3Address();
     $request->newPayment->level3->shipTo->address->city = 'Ontario';
     $request->newPayment->level3->shipTo->address->countryCode = 'USA';
     $request->newPayment->level3->shipTo->address->line1 = 'Fairfield Ranch';
@@ -265,7 +270,7 @@ try {
     $request->newPayment->level3->shipTo->email = 'john@example.com';
     $request->newPayment->level3->shipTo->name = 'John Doe';
     $request->newPayment->level3->shipTo->phone = '8886178190';
-    $request->newPayment->level3->shipTo->phoneType = Shared\NewPaymentSchemasPhoneType::N;
+    $request->newPayment->level3->shipTo->phoneType = Shared\NewPaymentLevel3PhoneType::N;
     $request->newPayment->level3->taxAmount = 10;
     $request->newPayment->level3->taxRate = 5;
     $request->newPayment->options = new Shared\Options();
@@ -274,7 +279,7 @@ try {
     $request->newPayment->options->generateReceipt = true;
     $request->newPayment->options->installmentNumber = '12';
     $request->newPayment->options->thirdPartyId = 'partyid123';
-    $request->newPayment->paymentMethod = 'string';
+    $request->newPayment->paymentMethod = '<value>';
     $request->newPayment->reference = new Shared\NewPaymentReference();
     $request->newPayment->reference->correlationId = 'abc123';
     $request->newPayment->reference->customerRef = 'ref123';
@@ -307,15 +312,14 @@ try {
     $request->newPayment->threeDSecure->cavv = 'cavv123';
     $request->newPayment->threeDSecure->directoryServerTransactionId = 'trans123';
     $request->newPayment->threeDSecure->programProtocol = Shared\ProgramProtocol::Two;
-    $request->newPayment->threeDSecure->xid = 'id123';
-    $request->accountId = 'string';;
+    $request->newPayment->threeDSecure->xid = 'id123';;
 
     $response = $sdk->payments->accountPostPayment($request);
 
-    if ($response->twoHundredAndOneApplicationJsonPayment !== null) {
+    if ($response->payment !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -346,7 +350,8 @@ Refunds typically happen after a batch closes and refunds a partial or whole amo
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -359,6 +364,8 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\AccountRefundPaymentRequest();
+    $request->accountId = '<value>';
+    $request->paymentId = '<value>';
     $request->referencedPayment = new Shared\ReferencedPayment();
     $request->referencedPayment->amount = 100;
     $request->referencedPayment->authorization = 'ET3516';
@@ -386,16 +393,14 @@ try {
     $request->referencedPayment->softDescriptor->state = 'CA';
     $request->referencedPayment->softDescriptor->street = 'Fairfield Ranch';
     $request->referencedPayment->softDescriptor->submerchantId = 'xyz123';
-    $request->referencedPayment->softDescriptor->taxId = 'abc123';
-    $request->accountId = 'string';
-    $request->paymentId = 'string';;
+    $request->referencedPayment->softDescriptor->taxId = 'abc123';;
 
     $response = $sdk->payments->accountRefundPayment($request);
 
-    if ($response->twoHundredAndOneApplicationJsonPayment !== null) {
+    if ($response->payment !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -426,7 +431,8 @@ Note that ACH transactions are not voidable. Voids typically happen before a bat
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -439,6 +445,8 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\AccountVoidPaymentRequest();
+    $request->accountId = '<value>';
+    $request->paymentId = '<value>';
     $request->referencedPayment = new Shared\ReferencedPayment();
     $request->referencedPayment->amount = 100;
     $request->referencedPayment->authorization = 'ET3516';
@@ -466,16 +474,14 @@ try {
     $request->referencedPayment->softDescriptor->state = 'CA';
     $request->referencedPayment->softDescriptor->street = 'Fairfield Ranch';
     $request->referencedPayment->softDescriptor->submerchantId = 'xyz123';
-    $request->referencedPayment->softDescriptor->taxId = 'abc123';
-    $request->accountId = 'string';
-    $request->paymentId = 'string';;
+    $request->referencedPayment->softDescriptor->taxId = 'abc123';;
 
     $response = $sdk->payments->accountVoidPayment($request);
 
-    if ($response->twoHundredAndOneApplicationJsonPayment !== null) {
+    if ($response->payment !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -504,7 +510,8 @@ Capture completes the transaction so that it can be funded. Captures can be for 
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -517,6 +524,7 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\CapturePaymentRequest();
+    $request->paymentId = '<value>';
     $request->referencedPayment = new Shared\ReferencedPayment();
     $request->referencedPayment->amount = 100;
     $request->referencedPayment->authorization = 'ET3516';
@@ -544,15 +552,14 @@ try {
     $request->referencedPayment->softDescriptor->state = 'CA';
     $request->referencedPayment->softDescriptor->street = 'Fairfield Ranch';
     $request->referencedPayment->softDescriptor->submerchantId = 'xyz123';
-    $request->referencedPayment->softDescriptor->taxId = 'abc123';
-    $request->paymentId = 'string';;
+    $request->referencedPayment->softDescriptor->taxId = 'abc123';;
 
     $response = $sdk->payments->capturePayment($request);
 
-    if ($response->twoHundredAndOneApplicationJsonPayment !== null) {
+    if ($response->payment !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -579,7 +586,8 @@ API for a merchant to retrieve the details of a specific Payment.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -592,14 +600,14 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetPaymentRequest();
-    $request->paymentId = 'string';;
+    $request->paymentId = '<value>';;
 
     $response = $sdk->payments->getPayment($request);
 
-    if ($response->twoHundredApplicationJsonPayment !== null) {
+    if ($response->payment !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -626,7 +634,8 @@ API for a merchant to fetch a list of Payments.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -639,16 +648,16 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetPaymentsRequest();
+    $request->dollarSort = '-name';
     $request->dollarLimit = 10;
-    $request->dollarSkip = 10;
-    $request->dollarSort = '-name';;
+    $request->dollarSkip = 10;;
 
     $response = $sdk->payments->getPayments($request);
 
-    if ($response->twoHundredApplicationJsonAnies !== null) {
+    if ($response->payments !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -675,7 +684,8 @@ API for a merchant to create a Payment.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -713,7 +723,7 @@ try {
     ];
     $request->level3->shipFromZip = '901601';
     $request->level3->shipTo = new Shared\NewPaymentShipTo();
-    $request->level3->shipTo->address = new Shared\NewPaymentSchemasAddress();
+    $request->level3->shipTo->address = new Shared\NewPaymentLevel3Address();
     $request->level3->shipTo->address->city = 'Ontario';
     $request->level3->shipTo->address->countryCode = 'USA';
     $request->level3->shipTo->address->line1 = 'Fairfield Ranch';
@@ -724,7 +734,7 @@ try {
     $request->level3->shipTo->email = 'john@example.com';
     $request->level3->shipTo->name = 'John Doe';
     $request->level3->shipTo->phone = '8886178190';
-    $request->level3->shipTo->phoneType = Shared\NewPaymentSchemasPhoneType::W;
+    $request->level3->shipTo->phoneType = Shared\NewPaymentLevel3PhoneType::W;
     $request->level3->taxAmount = 10;
     $request->level3->taxRate = 5;
     $request->options = new Shared\Options();
@@ -733,7 +743,7 @@ try {
     $request->options->generateReceipt = true;
     $request->options->installmentNumber = '12';
     $request->options->thirdPartyId = 'partyid123';
-    $request->paymentMethod = 'string';
+    $request->paymentMethod = '<value>';
     $request->reference = new Shared\NewPaymentReference();
     $request->reference->correlationId = 'abc123';
     $request->reference->customerRef = 'ref123';
@@ -770,10 +780,10 @@ try {
 
     $response = $sdk->payments->postPayment($request);
 
-    if ($response->twoHundredAndOneApplicationJsonPayment !== null) {
+    if ($response->payment !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -800,7 +810,8 @@ API for a merchant to refund a specific payment. Note that ACH transactions are 
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -813,6 +824,7 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RefundPaymentRequest();
+    $request->paymentId = '<value>';
     $request->referencedPayment = new Shared\ReferencedPayment();
     $request->referencedPayment->amount = 100;
     $request->referencedPayment->authorization = 'ET3516';
@@ -840,15 +852,14 @@ try {
     $request->referencedPayment->softDescriptor->state = 'CA';
     $request->referencedPayment->softDescriptor->street = 'Fairfield Ranch';
     $request->referencedPayment->softDescriptor->submerchantId = 'xyz123';
-    $request->referencedPayment->softDescriptor->taxId = 'abc123';
-    $request->paymentId = 'string';;
+    $request->referencedPayment->softDescriptor->taxId = 'abc123';;
 
     $response = $sdk->payments->refundPayment($request);
 
-    if ($response->twoHundredAndOneApplicationJsonPayment !== null) {
+    if ($response->payment !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -875,7 +886,8 @@ API for a merchant to void a specific Payment. Note that ACH transactions are no
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -888,6 +900,7 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\VoidPaymentRequest();
+    $request->paymentId = '<value>';
     $request->referencedPayment = new Shared\ReferencedPayment();
     $request->referencedPayment->amount = 100;
     $request->referencedPayment->authorization = 'ET3516';
@@ -915,15 +928,14 @@ try {
     $request->referencedPayment->softDescriptor->state = 'CA';
     $request->referencedPayment->softDescriptor->street = 'Fairfield Ranch';
     $request->referencedPayment->softDescriptor->submerchantId = 'xyz123';
-    $request->referencedPayment->softDescriptor->taxId = 'abc123';
-    $request->paymentId = 'string';;
+    $request->referencedPayment->softDescriptor->taxId = 'abc123';;
 
     $response = $sdk->payments->voidPayment($request);
 
-    if ($response->twoHundredAndOneApplicationJsonPayment !== null) {
+    if ($response->payment !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

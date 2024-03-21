@@ -28,6 +28,14 @@ class AccountGetCustomerCustomerIdPaymentsResponse
     public array $headers;
     
     /**
+     * Example response
+     * 
+     * @var ?array<mixed> $payments
+     */
+	
+    public ?array $payments = null;
+    
+    /**
      * HTTP response status code for this operation
      * 
      * @var int $statusCode
@@ -43,20 +51,12 @@ class AccountGetCustomerCustomerIdPaymentsResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse;
     
-    /**
-     * Example response
-     * 
-     * @var ?array<mixed> $anies
-     */
-	
-    public ?array $anies = null;
-    
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->headers = [];
+		$this->payments = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->anies = null;
 	}
 }

@@ -1,18 +1,11 @@
 # Type
 
-Type of the Document uploaded.
+Type of the validation error.
 
 
 ## Values
 
-| Name                      | Value                     |
-| ------------------------- | ------------------------- |
-| `ArticlesOfIncorporation` | articles-of-incorporation |
-| `BankLetter`              | bank-letter               |
-| `BusinessLicense`         | business-license          |
-| `Passport`                | passport                  |
-| `UtilityBill`             | utility-bill              |
-| `Ss4Form`                 | ss-4-form                 |
-| `DriversLicense`          | drivers-license           |
-| `Other`                   | other                     |
-| `IdCard`                  | id-card                   |
+| Name                  | Value                 |
+| --------------------- | --------------------- |
+| `ApiError`            | api-error             |
+| `InvalidRequestError` | invalid-request-error |

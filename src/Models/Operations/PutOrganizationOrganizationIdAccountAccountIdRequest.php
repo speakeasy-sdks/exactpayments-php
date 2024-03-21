@@ -12,12 +12,12 @@ use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class PutOrganizationOrganizationIdAccountAccountIdRequest
 {
     /**
-     * Fields that are required in the request body.
+     * The Organization identifier.
      * 
-     * @var \TheLogicStudio\ExactPayments\Models\Shared\AccountRequest $accountRequest
+     * @var string $organizationId
      */
-	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public \TheLogicStudio\ExactPayments\Models\Shared\AccountRequest $accountRequest;
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=organizationId')]
+    public string $organizationId;
     
     /**
      * The Account identifier. Represents the Merchant that this operation is going to be executed for.
@@ -28,17 +28,17 @@ class PutOrganizationOrganizationIdAccountAccountIdRequest
     public string $accountId;
     
     /**
-     * The Organization identifier.
+     * Fields that are required in the request body.
      * 
-     * @var string $organizationId
+     * @var \TheLogicStudio\ExactPayments\Models\Shared\AccountRequest $accountRequest
      */
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=organizationId')]
-    public string $organizationId;
+	#[SpeakeasyMetadata('request:mediaType=application/json')]
+    public \TheLogicStudio\ExactPayments\Models\Shared\AccountRequest $accountRequest;
     
 	public function __construct()
 	{
-		$this->accountRequest = new \TheLogicStudio\ExactPayments\Models\Shared\AccountRequest();
-		$this->accountId = "";
 		$this->organizationId = "";
+		$this->accountId = "";
+		$this->accountRequest = new \TheLogicStudio\ExactPayments\Models\Shared\AccountRequest();
 	}
 }

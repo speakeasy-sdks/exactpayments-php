@@ -12,12 +12,12 @@ use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class QueryApplicationTokenRequest
 {
     /**
-     * The maximum number of items to retrieve within the current page of results.
+     * Application ID calling the API. Specify your assigned Application ID, otherwise, use the default value if you are not assigned any Application ID. If you're building your own application, refer to our [guide](https://developer.exactpay.com/docs/authentication) on how to get an Application ID.
      * 
-     * @var ?int $dollarLimit
+     * @var string $applicationId
      */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=$limit')]
-    public ?int $dollarLimit = null;
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=applicationId')]
+    public string $applicationId;
     
     /**
      * The number of records to be skipped per call. By default, starts with `0` and you should provide the current value plus the `$limit` value in subsequent calls to retrieve following sets of values (pages). So it will skip the number of records on the previous page and bring the next set of records.
@@ -36,18 +36,18 @@ class QueryApplicationTokenRequest
     public ?string $dollarSort = null;
     
     /**
-     * Application ID calling the API. Specify your assigned Application ID, otherwise, use the default value if you are not assigned any Application ID. If you're building your own application, refer to our [guide](https://developer.exactpay.com/docs/authentication) on how to get an Application ID.
+     * The maximum number of items to retrieve within the current page of results.
      * 
-     * @var string $applicationId
+     * @var ?int $dollarLimit
      */
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=applicationId')]
-    public string $applicationId;
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=$limit')]
+    public ?int $dollarLimit = null;
     
 	public function __construct()
 	{
-		$this->dollarLimit = null;
+		$this->applicationId = "";
 		$this->dollarSkip = null;
 		$this->dollarSort = null;
-		$this->applicationId = "";
+		$this->dollarLimit = null;
 	}
 }

@@ -11,9 +11,6 @@ namespace TheLogicStudio\ExactPayments\Models\Operations;
 use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class UploadDocumentByTokenRequest
 {
-	#[SpeakeasyMetadata('request:mediaType=multipart/form-data')]
-    public ?\TheLogicStudio\ExactPayments\Models\Shared\OnboardingDocumentUploadTokenRequest $onboardingDocumentUploadTokenRequest = null;
-    
     /**
      * The Onboarding Token returned in [Create Onboarding](/operations/createOnboarding) response. This token is valid only for 10 mintues after the Onboarding Application is submitted.
      * 
@@ -22,9 +19,12 @@ class UploadDocumentByTokenRequest
 	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=token')]
     public string $token;
     
+	#[SpeakeasyMetadata('request:mediaType=multipart/form-data')]
+    public ?\TheLogicStudio\ExactPayments\Models\Shared\OnboardingDocumentUploadTokenRequest $onboardingDocumentUploadTokenRequest = null;
+    
 	public function __construct()
 	{
-		$this->onboardingDocumentUploadTokenRequest = null;
 		$this->token = "";
+		$this->onboardingDocumentUploadTokenRequest = null;
 	}
 }

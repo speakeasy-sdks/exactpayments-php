@@ -22,7 +22,8 @@ Delete a specific Workflow by Organization and Workflow identifiers.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -35,15 +36,15 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\DeleteWorkflowByIdRequest();
-    $request->organizationId = 'string';
-    $request->workflowId = 'string';;
+    $request->organizationId = '<value>';
+    $request->workflowId = '<value>';;
 
     $response = $sdk->underwritingWorkflow->deleteWorkflowById($request);
 
     if ($response->statusCode === 200) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -70,7 +71,8 @@ Disable a specific Workflow by Organization and Workflow identifiers.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -83,15 +85,15 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\DisableWorkflowByIdRequest();
-    $request->organizationId = 'string';
-    $request->workflowId = 'string';;
+    $request->organizationId = '<value>';
+    $request->workflowId = '<value>';;
 
     $response = $sdk->underwritingWorkflow->disableWorkflowById($request);
 
     if ($response->statusCode === 200) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -118,7 +120,8 @@ Enable a specific Workflow by Organization and Workflow identifiers.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -131,15 +134,15 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\EnableWorkflowByIdRequest();
-    $request->organizationId = 'string';
-    $request->workflowId = 'string';;
+    $request->organizationId = '<value>';
+    $request->workflowId = '<value>';;
 
     $response = $sdk->underwritingWorkflow->enableWorkflowById($request);
 
     if ($response->statusCode === 200) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -166,7 +169,8 @@ Retrieve a list of active underwriting workflows associated with your organizati
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -179,17 +183,17 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetOrganizationOrganizationIdOnboardingWorkflowRequest();
-    $request->dollarLimit = 10;
-    $request->dollarSkip = 10;
+    $request->organizationId = '<value>';
     $request->dollarSort = '-name';
-    $request->organizationId = 'string';;
+    $request->dollarSkip = 10;
+    $request->dollarLimit = 10;;
 
     $response = $sdk->underwritingWorkflow->getOrganizationOrganizationIdOnboardingWorkflow($request);
 
     if ($response->classes !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -216,7 +220,8 @@ Retrieve a list of properties associated with a specific workflow ID.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -229,15 +234,15 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetOrganizationOrganizationIdOnboardingWorkflowWorkflowIdRequest();
-    $request->organizationId = 'string';
-    $request->workflowId = 'string';;
+    $request->organizationId = '<value>';
+    $request->workflowId = '<value>';;
 
     $response = $sdk->underwritingWorkflow->getOrganizationOrganizationIdOnboardingWorkflowWorkflowId($request);
 
     if ($response->underwritingWorkflowResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -264,7 +269,8 @@ Create a new Underwriting Workflow for the Organization to evaluate Onboarding A
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -277,21 +283,21 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\PostOrganizationOrganizationIdOnboardingWorkflowRequest();
+    $request->organizationId = '<value>';
     $request->underwritingWorkflowRequestCreateWorkflow = new Shared\UnderwritingWorkflowRequestCreateWorkflow();
     $request->underwritingWorkflowRequestCreateWorkflow->entryRule = 'Know Your Customer Check';
-    $request->underwritingWorkflowRequestCreateWorkflow->metadata = new Shared\Metadata();
+    $request->underwritingWorkflowRequestCreateWorkflow->metadata = new Shared\UnderwritingWorkflowRequestCreateWorkflowMetadata();
     $request->underwritingWorkflowRequestCreateWorkflow->name = 'Main Workflow';
     $request->underwritingWorkflowRequestCreateWorkflow->rules = [
-        'string',
-    ];
-    $request->organizationId = 'string';;
+        '<value>',
+    ];;
 
     $response = $sdk->underwritingWorkflow->postOrganizationOrganizationIdOnboardingWorkflow($request);
 
     if ($response->object !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -318,7 +324,8 @@ Update Underwriting Workflow properties for the given Organization and Workflow 
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -331,22 +338,22 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\PutOrganizationOrganizationIdOnboardingWorkflowWorkflowIdRequest();
+    $request->organizationId = '<value>';
+    $request->workflowId = '<value>';
     $request->underwritingWorkflowRequestUpdateWorkflow = new Shared\UnderwritingWorkflowRequestUpdateWorkflow();
     $request->underwritingWorkflowRequestUpdateWorkflow->entryRule = 'Know Your Customer Check';
     $request->underwritingWorkflowRequestUpdateWorkflow->metadata = new Shared\UnderwritingWorkflowRequestUpdateWorkflowMetadata();
     $request->underwritingWorkflowRequestUpdateWorkflow->name = 'Main Workflow';
     $request->underwritingWorkflowRequestUpdateWorkflow->rules = [
-        'string',
-    ];
-    $request->organizationId = 'string';
-    $request->workflowId = 'string';;
+        '<value>',
+    ];;
 
     $response = $sdk->underwritingWorkflow->putOrganizationOrganizationIdOnboardingWorkflowWorkflowId($request);
 
     if ($response->statusCode === 200) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -373,7 +380,8 @@ Set a specific Workflow as the default to process the new Onboarding for the giv
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \TheLogicStudio\ExactPayments;
 use \TheLogicStudio\ExactPayments\Models\Shared;
@@ -386,15 +394,15 @@ $sdk = ExactPayments\ExactPayments::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\SetDefaultWorkflowByIdRequest();
-    $request->organizationId = 'string';
-    $request->workflowId = 'string';;
+    $request->organizationId = '<value>';
+    $request->workflowId = '<value>';;
 
     $response = $sdk->underwritingWorkflow->setDefaultWorkflowById($request);
 
     if ($response->statusCode === 200) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

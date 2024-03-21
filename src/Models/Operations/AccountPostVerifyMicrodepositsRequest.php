@@ -11,9 +11,6 @@ namespace TheLogicStudio\ExactPayments\Models\Operations;
 use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class AccountPostVerifyMicrodepositsRequest
 {
-	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\TheLogicStudio\ExactPayments\Models\Shared\MicroDepositVerificationRequest $microDepositVerificationRequest = null;
-    
     /**
      * The Account identifier. Represents the Merchant that this operation is going to be executed for.
      * 
@@ -30,10 +27,13 @@ class AccountPostVerifyMicrodepositsRequest
 	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=payment-token')]
     public string $paymentToken;
     
+	#[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?\TheLogicStudio\ExactPayments\Models\Shared\MicroDepositVerificationRequest $microDepositVerificationRequest = null;
+    
 	public function __construct()
 	{
-		$this->microDepositVerificationRequest = null;
 		$this->accountId = "";
 		$this->paymentToken = "";
+		$this->microDepositVerificationRequest = null;
 	}
 }

@@ -11,6 +11,9 @@ namespace TheLogicStudio\ExactPayments\Models\Operations;
 use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class GetCustomerTokenPaymentMethodRequest
 {
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=customerToken')]
+    public string $customerToken;
+    
     /**
      * Sets the number of documents to return, and defaults to 100. It has a maximum of 1000.
      * 
@@ -27,13 +30,10 @@ class GetCustomerTokenPaymentMethodRequest
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=$skip')]
     public ?string $dollarSkip = null;
     
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=customerToken')]
-    public string $customerToken;
-    
 	public function __construct()
 	{
+		$this->customerToken = "";
 		$this->dollarLimit = null;
 		$this->dollarSkip = null;
-		$this->customerToken = "";
 	}
 }

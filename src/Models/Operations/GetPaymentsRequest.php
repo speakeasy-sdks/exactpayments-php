@@ -12,6 +12,14 @@ use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class GetPaymentsRequest
 {
     /**
+     * Sets the sort order If an object is passed, values allowed are asc, desc, ascending, descending, 1, and -1. If a string is passed, it must be a space delimited list of path names. The sort order of each path is ascending unless the path name is prefixed with - which will be treated as descending.
+     * 
+     * @var ?string $dollarSort
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=$sort')]
+    public ?string $dollarSort = null;
+    
+    /**
      * The maximum number of items to retrieve within the current page of results.
      * 
      * @var ?int $dollarLimit
@@ -27,18 +35,10 @@ class GetPaymentsRequest
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=$skip')]
     public ?int $dollarSkip = null;
     
-    /**
-     * Sets the sort order If an object is passed, values allowed are asc, desc, ascending, descending, 1, and -1. If a string is passed, it must be a space delimited list of path names. The sort order of each path is ascending unless the path name is prefixed with - which will be treated as descending.
-     * 
-     * @var ?string $dollarSort
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=$sort')]
-    public ?string $dollarSort = null;
-    
 	public function __construct()
 	{
+		$this->dollarSort = null;
 		$this->dollarLimit = null;
 		$this->dollarSkip = null;
-		$this->dollarSort = null;
 	}
 }

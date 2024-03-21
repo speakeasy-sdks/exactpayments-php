@@ -11,9 +11,6 @@ namespace TheLogicStudio\ExactPayments\Models\Operations;
 use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class PutCustomerIdRequest
 {
-	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\TheLogicStudio\ExactPayments\Models\Shared\NewCustomer $newCustomer = null;
-    
     /**
      * The Customer identifier. Represents the Customer that this operation is going to be executed for.
      * 
@@ -22,9 +19,12 @@ class PutCustomerIdRequest
 	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=customerId')]
     public string $customerId;
     
+	#[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?\TheLogicStudio\ExactPayments\Models\Shared\NewCustomer $newCustomer = null;
+    
 	public function __construct()
 	{
-		$this->newCustomer = null;
 		$this->customerId = "";
+		$this->newCustomer = null;
 	}
 }

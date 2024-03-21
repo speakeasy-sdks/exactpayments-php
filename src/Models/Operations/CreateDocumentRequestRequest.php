@@ -11,8 +11,13 @@ namespace TheLogicStudio\ExactPayments\Models\Operations;
 use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class CreateDocumentRequestRequest
 {
-	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?CreateDocumentRequestRequestBody $requestBody = null;
+    /**
+     * The Organization identifier.
+     * 
+     * @var string $organizationId
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=organizationId')]
+    public string $organizationId;
     
     /**
      * The Onboarding Application identifier.
@@ -22,18 +27,13 @@ class CreateDocumentRequestRequest
 	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=onboardingId')]
     public string $onboardingId;
     
-    /**
-     * The Organization identifier.
-     * 
-     * @var string $organizationId
-     */
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=organizationId')]
-    public string $organizationId;
+	#[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?CreateDocumentRequestRequestBody $requestBody = null;
     
 	public function __construct()
 	{
-		$this->requestBody = null;
-		$this->onboardingId = "";
 		$this->organizationId = "";
+		$this->onboardingId = "";
+		$this->requestBody = null;
 	}
 }

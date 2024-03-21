@@ -28,14 +28,6 @@ class GetOrdersRequest
     public ?int $dollarSkip = null;
     
     /**
-     * Datetime to start the search from, in ISO8601 format. Defaults to one month ago. Maximum search window is 6 months.
-     * 
-     * @var ?\DateTime $from
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=from,dateTimeFormat=Y-m-d\TH:i:s.up')]
-    public ?\DateTime $from = null;
-    
-    /**
      * Datetime to limit the search to, in ISO8601 format. Defaults to today
      * 
      * @var ?\DateTime $to
@@ -43,11 +35,19 @@ class GetOrdersRequest
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=to,dateTimeFormat=Y-m-d\TH:i:s.up')]
     public ?\DateTime $to = null;
     
+    /**
+     * Datetime to start the search from, in ISO8601 format. Defaults to one month ago. Maximum search window is 6 months.
+     * 
+     * @var ?\DateTime $from
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=from,dateTimeFormat=Y-m-d\TH:i:s.up')]
+    public ?\DateTime $from = null;
+    
 	public function __construct()
 	{
 		$this->dollarLimit = null;
 		$this->dollarSkip = null;
-		$this->from = null;
 		$this->to = null;
+		$this->from = null;
 	}
 }

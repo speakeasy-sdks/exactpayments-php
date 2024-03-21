@@ -12,6 +12,22 @@ use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class GetDocumentByIdRequest
 {
     /**
+     * The Organization identifier.
+     * 
+     * @var string $organizationId
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=organizationId')]
+    public string $organizationId;
+    
+    /**
+     * The Onboarding Application identifier.
+     * 
+     * @var string $onboardingId
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=onboardingId')]
+    public string $onboardingId;
+    
+    /**
      * The Document identifier.
      * 
      * @var string $documentId
@@ -27,27 +43,11 @@ class GetDocumentByIdRequest
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=isDeleted')]
     public ?bool $isDeleted = null;
     
-    /**
-     * The Onboarding Application identifier.
-     * 
-     * @var string $onboardingId
-     */
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=onboardingId')]
-    public string $onboardingId;
-    
-    /**
-     * The Organization identifier.
-     * 
-     * @var string $organizationId
-     */
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=organizationId')]
-    public string $organizationId;
-    
 	public function __construct()
 	{
+		$this->organizationId = "";
+		$this->onboardingId = "";
 		$this->documentId = "";
 		$this->isDeleted = null;
-		$this->onboardingId = "";
-		$this->organizationId = "";
 	}
 }

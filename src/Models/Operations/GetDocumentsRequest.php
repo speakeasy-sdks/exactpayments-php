@@ -12,6 +12,22 @@ use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class GetDocumentsRequest
 {
     /**
+     * The Organization identifier.
+     * 
+     * @var string $organizationId
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=organizationId')]
+    public string $organizationId;
+    
+    /**
+     * The Onboarding Application identifier.
+     * 
+     * @var string $onboardingId
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=onboardingId')]
+    public string $onboardingId;
+    
+    /**
      * The maximum number of items to retrieve within the current page of results.
      * 
      * @var ?int $dollarLimit
@@ -35,28 +51,12 @@ class GetDocumentsRequest
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=$sort')]
     public ?string $dollarSort = null;
     
-    /**
-     * The Onboarding Application identifier.
-     * 
-     * @var string $onboardingId
-     */
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=onboardingId')]
-    public string $onboardingId;
-    
-    /**
-     * The Organization identifier.
-     * 
-     * @var string $organizationId
-     */
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=organizationId')]
-    public string $organizationId;
-    
 	public function __construct()
 	{
+		$this->organizationId = "";
+		$this->onboardingId = "";
 		$this->dollarLimit = null;
 		$this->dollarSkip = null;
 		$this->dollarSort = null;
-		$this->onboardingId = "";
-		$this->organizationId = "";
 	}
 }

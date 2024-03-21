@@ -38,16 +38,6 @@ class QueryApplicationTokenResponse
     public ?string $internalServerError = null;
     
     /**
-     * **Service Unavailable**
-     * 
-     * 
-     * 
-     * @var ?string $serviceUnavailable
-     */
-	
-    public ?string $serviceUnavailable = null;
-    
-    /**
      * HTTP response status code for this operation
      * 
      * @var int $statusCode
@@ -64,6 +54,16 @@ class QueryApplicationTokenResponse
     public ?\Psr\Http\Message\ResponseInterface $rawResponse;
     
     /**
+     * **Service Unavailable**
+     * 
+     * 
+     * 
+     * @var ?string $serviceUnavailable
+     */
+	
+    public ?string $serviceUnavailable = null;
+    
+    /**
      * **OK**
      * 
      * @var ?array<\TheLogicStudio\ExactPayments\Models\Shared\ApplicationTokenResponse> $classes
@@ -76,9 +76,9 @@ class QueryApplicationTokenResponse
 		$this->contentType = "";
 		$this->headers = [];
 		$this->internalServerError = null;
-		$this->serviceUnavailable = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
+		$this->serviceUnavailable = null;
 		$this->classes = null;
 	}
 }

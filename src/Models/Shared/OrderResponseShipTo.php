@@ -12,9 +12,9 @@ namespace TheLogicStudio\ExactPayments\Models\Shared;
 class OrderResponseShipTo
 {
 	#[\JMS\Serializer\Annotation\SerializedName('address')]
-    #[\JMS\Serializer\Annotation\Type('TheLogicStudio\ExactPayments\Models\Shared\OrderResponseSchemasAddress')]
+    #[\JMS\Serializer\Annotation\Type('TheLogicStudio\ExactPayments\Models\Shared\OrderResponseLevel3Address')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?OrderResponseSchemasAddress $address = null;
+    public ?OrderResponseLevel3Address $address = null;
     
     /**
      * Email of the customer.
@@ -49,12 +49,12 @@ class OrderResponseShipTo
     /**
      * Phone type of the customer.
      * 
-     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\OrderResponseSchemasPhoneType $phoneType
+     * @var ?\TheLogicStudio\ExactPayments\Models\Shared\OrderResponseLevel3PhoneType $phoneType
      */
 	#[\JMS\Serializer\Annotation\SerializedName('phoneType')]
-    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\OrderResponseSchemasPhoneType>')]
+    #[\JMS\Serializer\Annotation\Type('enum<TheLogicStudio\ExactPayments\Models\Shared\OrderResponseLevel3PhoneType>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?OrderResponseSchemasPhoneType $phoneType = null;
+    public ?OrderResponseLevel3PhoneType $phoneType = null;
     
 	public function __construct()
 	{

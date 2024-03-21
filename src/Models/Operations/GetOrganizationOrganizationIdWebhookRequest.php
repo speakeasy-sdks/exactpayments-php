@@ -12,12 +12,12 @@ use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class GetOrganizationOrganizationIdWebhookRequest
 {
     /**
-     * The maximum number of items to retrieve within the current page of results.
+     * The Organization identifier.
      * 
-     * @var ?int $dollarLimit
+     * @var string $organizationId
      */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=$limit')]
-    public ?int $dollarLimit = null;
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=organizationId')]
+    public string $organizationId;
     
     /**
      * The number of records to be skipped per call. By default, starts with `0` and you should provide the current value plus the `$limit` value in subsequent calls to retrieve following sets of values (pages). So it will skip the number of records on the previous page and bring the next set of records.
@@ -28,6 +28,14 @@ class GetOrganizationOrganizationIdWebhookRequest
     public ?int $dollarSkip = null;
     
     /**
+     * The maximum number of items to retrieve within the current page of results.
+     * 
+     * @var ?int $dollarLimit
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=$limit')]
+    public ?int $dollarLimit = null;
+    
+    /**
      * Sets the sort order If an object is passed, values allowed are asc, desc, ascending, descending, 1, and -1. If a string is passed, it must be a space delimited list of path names. The sort order of each path is ascending unless the path name is prefixed with - which will be treated as descending.
      * 
      * @var ?string $dollarSort
@@ -35,19 +43,11 @@ class GetOrganizationOrganizationIdWebhookRequest
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=$sort')]
     public ?string $dollarSort = null;
     
-    /**
-     * The Organization identifier.
-     * 
-     * @var string $organizationId
-     */
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=organizationId')]
-    public string $organizationId;
-    
 	public function __construct()
 	{
-		$this->dollarLimit = null;
-		$this->dollarSkip = null;
-		$this->dollarSort = null;
 		$this->organizationId = "";
+		$this->dollarSkip = null;
+		$this->dollarLimit = null;
+		$this->dollarSort = null;
 	}
 }

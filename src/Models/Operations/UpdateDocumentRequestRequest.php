@@ -11,16 +11,13 @@ namespace TheLogicStudio\ExactPayments\Models\Operations;
 use \TheLogicStudio\ExactPayments\Utils\SpeakeasyMetadata;
 class UpdateDocumentRequestRequest
 {
-	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\TheLogicStudio\ExactPayments\Models\Shared\OnboardingDocumentRequestUpdate $onboardingDocumentRequestUpdate = null;
-    
     /**
-     * The Document Request identifier.
+     * The Organization identifier.
      * 
-     * @var string $documentRequestId
+     * @var string $organizationId
      */
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=documentRequestId')]
-    public string $documentRequestId;
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=organizationId')]
+    public string $organizationId;
     
     /**
      * The Onboarding Application identifier.
@@ -31,18 +28,21 @@ class UpdateDocumentRequestRequest
     public string $onboardingId;
     
     /**
-     * The Organization identifier.
+     * The Document Request identifier.
      * 
-     * @var string $organizationId
+     * @var string $documentRequestId
      */
-	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=organizationId')]
-    public string $organizationId;
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=documentRequestId')]
+    public string $documentRequestId;
+    
+	#[SpeakeasyMetadata('request:mediaType=application/json')]
+    public ?\TheLogicStudio\ExactPayments\Models\Shared\OnboardingDocumentRequestUpdate $onboardingDocumentRequestUpdate = null;
     
 	public function __construct()
 	{
-		$this->onboardingDocumentRequestUpdate = null;
-		$this->documentRequestId = "";
-		$this->onboardingId = "";
 		$this->organizationId = "";
+		$this->onboardingId = "";
+		$this->documentRequestId = "";
+		$this->onboardingDocumentRequestUpdate = null;
 	}
 }

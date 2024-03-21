@@ -9,15 +9,15 @@ declare(strict_types=1);
 namespace TheLogicStudio\ExactPayments\Models\Shared;
 
 
-/**
- * Metadata - Extra information related to a Workflow. It is usually used for display purposes on the web application and not applicable to API users. This data can be used to construct the visual view of the workflow using [React Flow](https://reactflow.dev/) component library.
- * 
- * @package TheLogicStudio\ExactPayments\Models\Shared
- * @access public
- */
 class Metadata
 {
+	#[\JMS\Serializer\Annotation\SerializedName('message')]
+    #[\JMS\Serializer\Annotation\Type('TheLogicStudio\ExactPayments\Models\Shared\Error404MetadataMessage')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?Error404MetadataMessage $message = null;
+    
 	public function __construct()
 	{
+		$this->message = null;
 	}
 }
